@@ -17,14 +17,14 @@ public class AuthManager : MonoBehaviour {
     }
 
     public void SignUpNewUserWithEmailAndPassword(string email, string password) {
-        auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(task => {
+        /*auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(task => {
             StartCoroutine(authCallback(task, "sign_up"));
-        });
+        });*/
     }
 
     public void LoginExistingUser(string email, string password) {
-        auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith (task => {
+        /*auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith (task => {
             StartCoroutine(authCallback(task, "login"));
-        });
+        });*/
     }
 }
