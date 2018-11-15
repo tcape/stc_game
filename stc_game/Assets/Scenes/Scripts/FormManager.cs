@@ -82,7 +82,7 @@ public class FormManager : MonoBehaviour {
             else if (www.responseCode.Equals(429))
             {
                 statusText.fontSize = 14;
-                statusText.text = "Too many login attempts: Please try again later";
+                statusText.text = "Too many invalid login attempts: Please try again later";
             }
             else
             {
@@ -91,7 +91,6 @@ public class FormManager : MonoBehaviour {
                 Debug.Log(www.error + " " + www.responseCode);
             }
         }
-        
         else if (www.responseCode.Equals(200))
         {
             SceneManager.LoadScene("Temp Scene");
