@@ -52,7 +52,7 @@ public class AuthService {
 
         if (www.responseCode.Equals(200))
         {
-            auth.Authenticate(request).completed += AuthCallback;
+            auth.Authenticate(authRequest).completed += AuthCallback;
         }
         else
         {
