@@ -23,7 +23,6 @@ public class LoginFormManager : MonoBehaviour {
     {
         // registering callback for sign-up and login callbacks
         authService.AuthCallback += HandleAuthCallback;
-
         // registering button-click and other triggered events
         signUpButton.onClick.AddListener(OnSignUp);
         loginButton.onClick.AddListener(OnLogin);
@@ -93,6 +92,8 @@ public class LoginFormManager : MonoBehaviour {
         }
         else if (www.responseCode.Equals(200))
         {
+            AuthRes authRes = JsonUtility.FromJson<AuthRes>(www.downloadHandler.text);
+            authService.GetUserData(authRes);
             SceneManager.LoadScene("Temp Scene");
         }
     }

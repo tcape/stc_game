@@ -6,7 +6,7 @@ public class SceneSwitcher : MonoBehaviour
 {
     public Button switchScene;
 
-    private void Awake()
+    public void Awake()
     {
         switchScene.onClick.AddListener(GoToLoginScene);
     }

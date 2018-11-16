@@ -15,13 +15,13 @@ public class AuthApi {
 
     public static AuthApi Instance { get; } = new AuthApi();
 
-    public UnityWebRequestAsyncOperation Create(User user)
+    public UnityWebRequestAsyncOperation Create(AuthReq request)
     {
         WWWForm form = new WWWForm();
         form.AddField("connection", userConnection);
         form.AddField("client_id", userClientId);
-        form.AddField("email", user.email);
-        form.AddField("password", user.password);
+        form.AddField("email", request.email);
+        form.AddField("password", request.password);
         UnityWebRequest www = UnityWebRequest.Post(baseURL + signupURL, form);
         
         return www.SendWebRequest();
@@ -32,18 +32,19 @@ public class AuthApi {
         UnityWebRequest www = UnityWebRequest.Get(baseURL + userInfo);
 
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
-
         return www.SendWebRequest();
     }
 
-    public UnityWebRequestAsyncOperation Authenticate(User user)
+    public UnityWebRequestAsyncOperation Authenticate(AuthReq request)
     {
         WWWForm form = new WWWForm();
         form.AddField("grant_type", "password");
         form.AddField("audience", baseURL + defaultApiEndpoint);
         form.AddField("client_id", userClientId);
-        form.AddField("username", user.email);
-        form.AddField("password", user.password);
+        form.AddField("username", request.email);
+        form.AddField("password", request.password);
+        form.AddField("scope", "openid");
+
         UnityWebRequest www = UnityWebRequest.Post(baseURL + loginURL, form);
 
         return www.SendWebRequest();
