@@ -98,7 +98,22 @@ public class LoginFormManager : MonoBehaviour {
         }
     }
 
-	void onDestroy() {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (emailInput.GetComponent<InputField>().isFocused)
+            {
+                passwordInput.GetComponent<InputField>().Select();
+            }
+            if (passwordInput.GetComponent<InputField>().isFocused)
+            {
+                loginButton.GetComponent<Button>().Select();
+            }
+        }
+    }
+
+    void onDestroy() {
 		authService.AuthCallback -= HandleAuthCallback;
 	}
 
