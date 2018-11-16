@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class FormManager : MonoBehaviour {
+public class LoginFormManager : MonoBehaviour {
 
     private AuthService authService = AuthService.Instance;
 

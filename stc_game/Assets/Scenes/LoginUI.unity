@@ -1099,7 +1099,6 @@ GameObject:
   - component: {fileID: 1579472893}
   - component: {fileID: 1579472895}
   - component: {fileID: 1579472894}
-  - component: {fileID: 1579472896}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -1169,17 +1168,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579472892}
   m_CullTransparentMesh: 0
---- !u!114 &1579472896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1579472892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6529f3b7c5f4248aa497fd68eec99e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1607362887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1179,6 @@ GameObject:
   - component: {fileID: 1607362891}
   - component: {fileID: 1607362890}
   - component: {fileID: 1607362889}
-  - component: {fileID: 1607362892}
   m_Layer: 5
   m_Name: LoginButton
   m_TagString: Untagged
@@ -1293,17 +1280,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1607362887}
   m_CullTransparentMesh: 0
---- !u!114 &1607362892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1607362887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6529f3b7c5f4248aa497fd68eec99e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1652028219
 GameObject:
   m_ObjectHideFlags: 0
