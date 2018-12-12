@@ -13,11 +13,15 @@ public class CameraController : MonoBehaviour{
 	Vector3 lastPosition;
 
 	void Start(){
-		lastPosition = new Vector3(cameraTarget.transform.position.x, cameraTarget.transform.position.y + offsetHeight, cameraTarget.transform.position.z - offsetDistance);
-		offset = new Vector3(cameraTarget.transform.position.x, cameraTarget.transform.position.y + offsetHeight, cameraTarget.transform.position.z - offsetDistance);
-	}
+        lastPosition = new Vector3(cameraTarget.transform.position.x, cameraTarget.transform.position.y + offsetHeight, cameraTarget.transform.position.z - offsetDistance);
+        //offset = new Vector3(cameraTarget.transform.position.x, cameraTarget.transform.position.y + offsetHeight, cameraTarget.transform.position.z - offsetDistance);
+        offset = new Vector3(offsetDistance, offsetHeight, offsetDistance);
 
-	void Update(){
+        transform.position = cameraTarget.transform.position + offset;
+
+    }
+
+    void Update(){
 		if(Input.GetKeyDown(KeyCode.F)){
 			if(following){
 				following = false;
@@ -36,19 +40,28 @@ public class CameraController : MonoBehaviour{
 			rotate = 0;
 		}
 		if(following){
-			offset = Quaternion.AngleAxis(rotate * rotateSpeed, Vector3.up) * offset;
-			transform.position = cameraTarget.transform.position + offset; 
-			transform.position = new Vector3(Mathf.Lerp(lastPosition.x, cameraTarget.transform.position.x + offset.x, smoothing * Time.deltaTime), 
-				Mathf.Lerp(lastPosition.y, cameraTarget.transform.position.y + offset.y, smoothing * Time.deltaTime), 
-				Mathf.Lerp(lastPosition.z, cameraTarget.transform.position.z + offset.z, smoothing * Time.deltaTime));
-		} 
-		else{
-			transform.position = lastPosition; 
+
+            //offset = transform.position - cameraTarget.transform.position;
+            //return;
+
+            offset = Quaternion.AngleAxis(rotate * rotateSpeed, Vector3.up) * offset;
+            transform.position = cameraTarget.transform.position + offset;
+            //transform.position = new Vector3(Mathf.Lerp(lastPosition.x, cameraTarget.transform.position.x + offset.x, smoothing * Time.deltaTime),
+            //    Mathf.Lerp(lastPosition.y, cameraTarget.transform.position.y + offset.y, smoothing * Time.deltaTime),
+            //    Mathf.Lerp(lastPosition.z, cameraTarget.transform.position.z + offset.z, smoothing * Time.deltaTime));
+            transform.position = Vector3.Lerp(transform.position, cameraTarget.transform.position + offset, Time.deltaTime * smoothing);
+
+        }
+
+
+        else
+        {
+			//transform.position = lastPosition; 
 		}
-		transform.LookAt(cameraTarget.transform.position);
-	}
+        transform.LookAt(cameraTarget.transform.position);
+    }
 
 	void LateUpdate(){
-		lastPosition = transform.position;
-	}
+        lastPosition = transform.position;
+    }
 }

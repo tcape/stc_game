@@ -92,9 +92,9 @@ public class WarriorAnimationDemo : MonoBehaviour{
 
 	void Start(){
 		animator = this.GetComponent<Animator>();
-		rigidBody = GetComponent<Rigidbody>();
-        agent = GetComponent<NavMeshAgent>();
-		if(warrior == Warrior.Archer){
+        rigidBody = GetComponent<Rigidbody>();
+        //      agent = GetComponent<NavMeshAgent>();
+        if (warrior == Warrior.Archer){
 			secondaryWeaponModel.gameObject.SetActive(false);
 		}
 		//sets the weight on any additional layers to 0
@@ -261,16 +261,7 @@ public class WarriorAnimationDemo : MonoBehaviour{
 			}
 		}
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                //Move Agent
-                agent.SetDestination(hit.point);
-            }
-        }
+        
     }
 
 	void CameraRelativeInput(){
@@ -351,7 +342,7 @@ public class WarriorAnimationDemo : MonoBehaviour{
 		if(!isStrafing  && !isWall){
 			//if not strafing, face character along input direction
 			if(!ledgeGui || !ledge){
-				RotateTowardMovementDirection();
+                RotateTowardMovementDirection();
 			}
 		}
 		//if targetting button is held look at the target

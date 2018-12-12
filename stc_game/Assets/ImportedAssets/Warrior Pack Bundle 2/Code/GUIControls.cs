@@ -11,47 +11,7 @@ public class GUIControls : MonoBehaviour{
 		warriorAnimationDemo = GetComponent<WarriorAnimationDemo>();
 	}
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = warriorAnimationDemo.camera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                //Move Agent
-                warriorAnimationDemo.agent.SetDestination(hit.point);
-                var speed = warriorAnimationDemo.agent.velocity.magnitude;
-                if (speed > 0)
-                {
-                    warriorAnimationDemo.animator.SetBool("Moving", true);
-                }
-                warriorAnimationDemo.animator.SetFloat("Input Z", speed);
-            }
-        }
-        //Vector3 pos = transform.position;
-
-        //if (Input.GetKey("w"))
-        //{
-        //    pos.z += speed * Time.deltaTime;
-
-        //}
-        //if (Input.GetKey("s"))
-        //{
-        //    pos.z -= speed * Time.deltaTime;
-        //}
-        //if (Input.GetKey("d"))
-        //{
-        //    pos.x += speed * Time.deltaTime;
-        //}
-        //if (Input.GetKey("a"))
-        //{
-        //    pos.x -= speed * Time.deltaTime;
-        //}
-
-
-        //transform.position = pos;
-    }
+ 
 
     void OnGUI(){
 		if(!warriorAnimationDemo.dead){
