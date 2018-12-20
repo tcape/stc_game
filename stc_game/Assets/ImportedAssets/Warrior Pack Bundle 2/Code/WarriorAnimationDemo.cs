@@ -413,6 +413,7 @@ public class WarriorAnimationDemo : MonoBehaviour{
 	public IEnumerator _Jump(float jumpTime){
 		animator.SetTrigger("JumpTrigger");
 		canJump = false;
+        agent.isStopped = true;
 		rigidBody.velocity += jumpSpeed * Vector3.up;
 		animator.SetInteger("Jumping", 1);
 		yield return new WaitForSeconds(jumpTime);
