@@ -24,8 +24,6 @@ ExportedObj/
 *.pdb
 *.opendb
 *.mdb
-*.png
-*.mat
 *.a
 *.bundle
 
