@@ -195,7 +195,7 @@ namespace Assets.ImportedAssets.Warrior_Pack_Bundle_2.Code
             }
             else if(aggroTriggered && !aggro)
             {
-                ReturnToStartPosition();
+                ReturnToStartPosition(stopDistance);
             }
             else
             {
@@ -204,9 +204,10 @@ namespace Assets.ImportedAssets.Warrior_Pack_Bundle_2.Code
             }
         }
 
-        private void ReturnToStartPosition()
+        private void ReturnToStartPosition(float defaultStoppingDistance)
         {
             var distance = Math.Abs(Vector3.Distance(transform.position, startPosition));
+            agent.stoppingDistance = 0.5f;
             if (distance > agent.stoppingDistance)
             {
 
@@ -221,6 +222,7 @@ namespace Assets.ImportedAssets.Warrior_Pack_Bundle_2.Code
             }
             else
             {
+                agent.stoppingDistance = defaultStoppingDistance;
                 aggroTriggered = false;
                 animator.SetBool("Moving", false);
                 animator.SetBool("Running", false);

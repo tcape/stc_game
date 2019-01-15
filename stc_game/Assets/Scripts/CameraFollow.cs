@@ -9,38 +9,38 @@ public class CameraFollow : MonoBehaviour
     Vector3 offset;
     public float smoothness;
     bool b;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        // mouse scroll wheel zoom
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 && GetComponent<Camera>().fieldOfView > 35)
+        {
+            GetComponent<Camera>().fieldOfView -= 5;
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 && GetComponent<Camera>().fieldOfView < 60)
+        {
+            GetComponent<Camera>().fieldOfView += 5;
+        }
 
-        if (Input.GetAxis ("Mouse ScrollWheel") > 0 && GetComponent<Camera>().fieldOfView > 20)
-        {
-            GetComponent<Camera>().fieldOfView--;
-        }
-        if (Input.GetAxis ("Mouse ScrollWheel") < 0 && GetComponent<Camera>().fieldOfView < 60)
-        {
-            GetComponent<Camera>().fieldOfView++;
-        }
-        
     }
 
     private void LateUpdate()
     {
         if (target == null)
         {
-            target = GameObject.FindGameObjectsWithTag("Player")[0];
+            target = GameObject.FindGameObjectWithTag("Player");
             return;
         }
         else
         {
-            if(!b)
+            if (!b)
             {
                 offset = transform.position - target.transform.position;
                 b = true;
@@ -51,3 +51,5 @@ public class CameraFollow : MonoBehaviour
         }
     }
 }
+    
+

@@ -13,14 +13,14 @@ public class HeroNavigation : MonoBehaviour
     public float speedFactor;
     public GameObject target;
     public float rotationSpeed;
+    public float runThreshold;
 
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        target = null;
-        
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -43,29 +43,33 @@ public class HeroNavigation : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.rigidbody.gameObject.tag.Equals("Enemy"))
+                if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
                 {
                     target = hit.rigidbody.gameObject;
                 }
 
                 else
                 {
-                    target = null;
+                    target = GameObject.FindGameObjectWithTag("Player");
                 }
             }
-
-                
             
         }
 
-        if (!target.Equals(null))
+        if (target.Equals(GameObject.FindGameObjectWithTag("Player")))
+        {
+            return;
+        }
+
+        else
         {
             float speed = agent.velocity.magnitude * speedFactor;
             if (speed < 0.1f)
             {
                 //transform.LookAt(target.transform);
                 Vector3 deltaVec = target.transform.position - transform.position;
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * rotationSpeed);
+                if (deltaVec != Vector3.zero)
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * rotationSpeed);
             }
             
         }
@@ -82,6 +86,11 @@ public class HeroNavigation : MonoBehaviour
             animator.SetBool("Moving", false);
             animator.SetBool("Running", false);
             
+        }
+        else if (speed >= 0.1f && speed < runThreshold)
+        {
+            animator.SetBool("Moving", true);
+            animator.SetBool("Running", false);
         }
         else
         {
