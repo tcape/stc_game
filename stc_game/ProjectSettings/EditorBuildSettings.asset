@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Temp Scene.unity
     guid: 65e6606b921d4544fb9f6adaacfab594
+  - enabled: 0
+    path: Assets/Scenes/PlayerHub.unity
+    guid: 523f69c5d48773249b56ced9f707356b
+  - enabled: 1
+    path: Assets/Scenes/TrainingGrounds.unity
+    guid: 8c170899a15c38a438e97834bfcea27f
   m_configObjects: {}
