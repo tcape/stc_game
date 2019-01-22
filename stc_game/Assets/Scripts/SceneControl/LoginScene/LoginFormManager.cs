@@ -94,7 +94,7 @@ public class LoginFormManager : MonoBehaviour {
         {
             AuthRes authRes = JsonUtility.FromJson<AuthRes>(www.downloadHandler.text);
             authService.GetUserData(authRes);
-            SceneManager.LoadScene("Temp Scene");
+            SceneManager.LoadScene("TrainingGrounds");
         }
     }
 
