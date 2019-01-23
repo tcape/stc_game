@@ -16,6 +16,11 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("LoginUI");
     }
 
+    public void GoToDungeon01()
+    {
+        SceneManager.LoadScene("TrainingGrounds");
+    }
+
     //Can create simple loads for different scenes
     //Makes this script a kind of master-key to get to scenes
 }
