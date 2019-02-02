@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu (menuName ="PluggableAI/Actions/ReturnToStart")]
-public class ReturnToStartPosition : CharacterAction
+public class ReturnToStartPositionAction : CharacterAction
 {
     public override void Act(StateController controller)
     {

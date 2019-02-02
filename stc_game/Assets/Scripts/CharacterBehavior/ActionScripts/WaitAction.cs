@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu (menuName ="PluggableAI/Actions/IdleWait")]
-public class IdleWait : CharacterAction
+public class WaitAction : CharacterAction
 {
     public override void Act(StateController controller)
     {
