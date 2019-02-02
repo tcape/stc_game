@@ -21,4 +21,7 @@ public class PatrolAction : CharacterAction
             controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.waypointList.Count;
         }
     }
+
+    
+    
 }

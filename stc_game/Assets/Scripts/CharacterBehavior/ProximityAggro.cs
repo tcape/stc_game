@@ -10,8 +10,7 @@ public class ProximityAggro : Decision
 
     public override bool Decide(StateController controller)
     {
-        aggro = Proximity(controller);
-        return aggro;
+        return  Proximity(controller);
     }
 
     private bool Proximity(StateController controller)

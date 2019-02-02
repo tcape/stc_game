@@ -16,7 +16,7 @@ public class StopPatrolDecision : Decision
     {
         var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.startPosition));
         Debug.LogError(distance);
-        if (distance > .5)
+        if (distance > 2)
         {
             Debug.LogError(distance);
             return true;
