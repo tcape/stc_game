@@ -14,12 +14,7 @@ public class WaitDecision : Decision
 
     private bool AtWaypoint(StateController controller)
     {
-        if (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance && !controller.navMeshAgent.pathPending)
-        {
-            return true;
-        }
-        else
-            return false;
+        return (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance && !controller.navMeshAgent.pathPending);
     }
 
 }

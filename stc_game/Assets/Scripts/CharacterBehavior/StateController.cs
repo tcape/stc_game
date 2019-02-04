@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class StateController : MonoBehaviour
 {
     public BehaviorStats stats;
+    public State startState;
     public State currentState;
     public State remainState;
     public Animator animator;
@@ -24,9 +25,10 @@ public class StateController : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
-        head = transform.position + new Vector3(0, 1, 0);
+        head = transform.position;
         startPosition = transform.position;
         SetupAI(true, GetComponent<StateController>().waypointList);
+        currentState = startState;
     }
 
     public void SetupAI(bool aiActivationFromCharacter, List<Transform> waypointsFromCharacter)
@@ -49,13 +51,16 @@ public class StateController : MonoBehaviour
         if (!aiActive)
             return;
         currentState.UpdateState(this);
-        head = transform.position + new Vector3(0, stats.headOffset, 0);
+        //head = transform.position + new Vector3(0, stats.headOffset, 0);
+        OnDrawGizmos();
     }
 
 
     private void FixedUpdate()
     {
         UpdateAnimator();
+        head = transform.position + new Vector3(0, stats.headOffset, 0);
+
     }
 
     private void OnDrawGizmos()
