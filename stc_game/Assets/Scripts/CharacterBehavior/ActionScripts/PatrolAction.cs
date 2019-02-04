@@ -13,6 +13,7 @@ public class PatrolAction : CharacterAction
 
     private void Patrol(StateController controller)
     {
+        controller.navMeshAgent.speed = controller.stats.patrolSpeed;
         controller.navMeshAgent.stoppingDistance = 1;
         controller.navMeshAgent.destination = controller.waypointList[controller.nextWayPoint].position;
 
@@ -21,7 +22,4 @@ public class PatrolAction : CharacterAction
             controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.waypointList.Count;
         }
     }
-
-    
-    
 }

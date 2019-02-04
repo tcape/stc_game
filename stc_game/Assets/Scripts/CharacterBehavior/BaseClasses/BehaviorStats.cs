@@ -12,7 +12,8 @@ public class BehaviorStats : ScriptableObject
     public float patrolStopDistance = 0.2f;
     public float rotationSpeed = 15f;
     public float aggroDistance = 15f;
-    public float idleWaitTime = 5f;
-    public bool waiting = false;
+    public float waitTime = 5f;
+    public float patrolSpeed = 5f;
+    public float chaseSpeed = 8f;
    
 }

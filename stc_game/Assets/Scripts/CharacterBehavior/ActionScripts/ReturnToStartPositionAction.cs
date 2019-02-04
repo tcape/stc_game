@@ -13,6 +13,7 @@ public class ReturnToStartPositionAction : CharacterAction
 
     private void ReturnToStart(StateController controller)
     {
+        controller.navMeshAgent.stoppingDistance = 1;
         controller.navMeshAgent.destination = controller.startPosition;
     }
 }

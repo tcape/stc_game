@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headOffset: 1.7
   headGizmoRadius: 0.5
-  stopFollowDistance: 10
+  stopFollowDistance: 18
   patrolStopDistance: 3.72
   rotationSpeed: 15
-  aggroDistance: 15
+  aggroDistance: 13
+  waitTime: 5
+  patrolSpeed: 4
+  chaseSpeed: 7

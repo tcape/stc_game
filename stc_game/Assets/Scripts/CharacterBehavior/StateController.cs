@@ -9,6 +9,7 @@ public class StateController : MonoBehaviour
     public State remainState;
     public Animator animator;
     public GameObject target;
+    [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 head;
     [HideInInspector] public Vector3 startPosition;
     [HideInInspector] public NavMeshAgent navMeshAgent;
@@ -49,7 +50,6 @@ public class StateController : MonoBehaviour
             return;
         currentState.UpdateState(this);
         head = transform.position + new Vector3(0, stats.headOffset, 0);
-
     }
 
 
@@ -95,6 +95,18 @@ public class StateController : MonoBehaviour
         if (nextState != remainState)
         {
             currentState = nextState;
+            OnExitState();
         }
+    }
+
+    public bool CheckIfCountDownElapsed(float duration)
+    {
+        stateTimeElapsed += Time.deltaTime;
+        return (stateTimeElapsed >= duration);
+    }
+
+    private void OnExitState()
+    {
+        stateTimeElapsed = 0;
     }
 }

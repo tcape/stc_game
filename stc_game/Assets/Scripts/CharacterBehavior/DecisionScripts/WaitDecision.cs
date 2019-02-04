@@ -14,17 +14,12 @@ public class WaitDecision : Decision
 
     private bool AtWaypoint(StateController controller)
     {
-        if (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance && !controller.navMeshAgent.pathPending && controller.nextWayPoint % 2 != 1)
+        if (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance && !controller.navMeshAgent.pathPending)
         {
-            //WaitForSeconds(controller.stats.idleWaitTime);
             return true;
         }
         else
             return false;
     }
 
-    private IEnumerable WaitForSeconds(float seconds)
-    {
-        yield return WaitForSeconds(seconds);
-    }
 }
