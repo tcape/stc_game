@@ -19,5 +19,5 @@ MonoBehaviour:
   rotationSpeed: 15
   aggroDistance: 13
   waitTime: 5
-  patrolSpeed: 4
+  patrolSpeed: 2.5
   chaseSpeed: 7

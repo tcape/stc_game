@@ -19,3 +19,4 @@ MonoBehaviour:
     trueState: {fileID: 11400000, guid: f982db7478d86dc4681e8edd26a0e45f, type: 2}
     falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
   sceneGizmoColor: {r: 1, g: 0.033018887, b: 0.033018887, a: 1}
+  isAggro: 1

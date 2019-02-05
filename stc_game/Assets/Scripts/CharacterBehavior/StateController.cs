@@ -8,8 +8,9 @@ public class StateController : MonoBehaviour
     public State startState;
     public State currentState;
     public State remainState;
-    public Animator animator;
-    public GameObject target;
+    public GameObject aggroSergent;
+    [HideInInspector] public Animator animator;
+    [HideInInspector] public GameObject target;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 head;
     [HideInInspector] public Vector3 startPosition;
@@ -20,6 +21,11 @@ public class StateController : MonoBehaviour
     private bool aiActive;
 
 
+    private void Start()
+    {
+        currentState = startState;
+    }
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -28,7 +34,7 @@ public class StateController : MonoBehaviour
         head = transform.position;
         startPosition = transform.position;
         SetupAI(true, GetComponent<StateController>().waypointList);
-        currentState = startState;
+        
     }
 
     public void SetupAI(bool aiActivationFromCharacter, List<Transform> waypointsFromCharacter)
@@ -52,7 +58,7 @@ public class StateController : MonoBehaviour
             return;
         currentState.UpdateState(this);
         //head = transform.position + new Vector3(0, stats.headOffset, 0);
-        OnDrawGizmos();
+        //OnDrawGizmos();
     }
 
 

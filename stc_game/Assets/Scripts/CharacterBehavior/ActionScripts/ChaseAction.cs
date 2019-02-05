@@ -14,8 +14,8 @@ public class ChaseAction : CharacterAction
 
     private void Chase (StateController controller)
     {
-        var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
-        if (distance < controller.stats.aggroDistance)
+        //var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
+        //if (distance < controller.stats.aggroDistance)
         {
             controller.navMeshAgent.speed = controller.stats.chaseSpeed;
             controller.navMeshAgent.stoppingDistance = 4;
