@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652a37efe793b014a98576b83761fc6f, type: 3}
+  m_Name: Patrol_Idle_Aggro
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 13dc846cfd7f4cb41bbe743432f79299, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: dabe6da2e02fddb4ca56b620d14889e4, type: 2}
+    trueState: {fileID: 11400000, guid: 437786f6a56f5e74ea59ddca0585ae1c, type: 2}
+    falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
+  - decision: {fileID: 11400000, guid: dfc2cd498560e824d9066e8b515876c0, type: 2}
+    trueState: {fileID: 11400000, guid: 77c514a9b96fa9e439752af79c87d6b8, type: 2}
+    falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
+  sceneGizmoColor: {r: 0, g: 1, b: 0, a: 1}
+  isAggro: 0
