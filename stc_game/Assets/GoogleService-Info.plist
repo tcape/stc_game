@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>288719389633-t74qcm35da942bcs4ch9o9t5oo10qb52.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.288719389633-t74qcm35da942bcs4ch9o9t5oo10qb52</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8Lp-0et2Fs2TFyW8KO3JryEtToMvhM0Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>288719389633</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.oitjuniorprojectgame.stc-game</string>
+	<key>PROJECT_ID</key>
+	<string>oitjuniorprojectgame</string>
+	<key>STORAGE_BUCKET</key>
+	<string>oitjuniorprojectgame.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:288719389633:ios:03591d2c2be93f09</string>
+	<key>DATABASE_URL</key>
+	<string>https://oitjuniorprojectgame.firebaseio.com</string>
+</dict>
+</plist>

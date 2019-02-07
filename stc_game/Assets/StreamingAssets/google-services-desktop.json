@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 0
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "288719389633-t74qcm35da942bcs4ch9o9t5oo10qb52.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8Lp-0et2Fs2TFyW8KO3JryEtToMvhM0Y"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:288719389633:ios:03591d2c2be93f09", 
+        "android_client_info": {
+          "package_name": "com.oitjuniorprojectgame.stc-game"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "oitjuniorprojectgame.appspot.com", 
+    "project_id": "oitjuniorprojectgame", 
+    "firebase_url": "https://oitjuniorprojectgame.firebaseio.com", 
+    "project_number": "288719389633"
+  }
+}
