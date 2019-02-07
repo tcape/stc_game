@@ -17,7 +17,6 @@ public class StopMeleeAttackDecision : Decision
         var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
         if (distance > controller.stats.meleeAttackRadius)
         {
-            controller.animator.SetInteger("Attack", 0);
             return true;
         }
         else return false;
