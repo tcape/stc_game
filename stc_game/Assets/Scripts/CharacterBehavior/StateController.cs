@@ -9,13 +9,13 @@ public class StateController : MonoBehaviour
     public State currentState;
     public State remainState;
     public GameObject aggroSergent;
+    public GameObject target;
+    public List<Transform> waypointList;
     [HideInInspector] public Animator animator;
-    [HideInInspector] public GameObject target;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 head;
     [HideInInspector] public Vector3 startPosition;
     [HideInInspector] public NavMeshAgent navMeshAgent;
-    public List<Transform> waypointList;
     [HideInInspector] public int nextWayPoint;
 
     private bool aiActive;
@@ -57,8 +57,6 @@ public class StateController : MonoBehaviour
         if (!aiActive)
             return;
         currentState.UpdateState(this);
-        //head = transform.position + new Vector3(0, stats.headOffset, 0);
-        //OnDrawGizmos();
     }
 
 
@@ -66,7 +64,6 @@ public class StateController : MonoBehaviour
     {
         UpdateAnimator();
         head = transform.position + new Vector3(0, stats.headOffset, 0);
-
     }
 
     private void OnDrawGizmos()
@@ -82,23 +79,8 @@ public class StateController : MonoBehaviour
     {
         var speed = navMeshAgent.velocity.magnitude;
         animator.SetFloat("Speed", speed);
-        if (speed > .1f)
-        {
-            animator.SetBool("Moving", true);
-            if (speed > .4f)
-            {
-                animator.SetBool("Running", true);
-            }
-            else
-            {
-                animator.SetBool("Running", false);
-            }
-        }
-        else
-        {
-            animator.SetBool("Moving", false);
-            animator.SetBool("Running", false);
-        }
+
+        animator.SetBool("Moving", speed > .1);
     }
 
     public void TransitionToState(State nextState)

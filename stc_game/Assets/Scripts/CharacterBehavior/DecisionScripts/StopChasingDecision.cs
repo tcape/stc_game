@@ -15,13 +15,6 @@ public class StopChasingDecision : Decision
     {
         var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
 
-        if (distance > controller.stats.stopFollowDistance)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (distance > controller.stats.stopFollowDistance);
     }
 }

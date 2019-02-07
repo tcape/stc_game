@@ -14,6 +14,7 @@ public class PatrolAction : CharacterAction
     private void Patrol(StateController controller)
     {
         controller.navMeshAgent.speed = controller.stats.patrolSpeed;
+        // set stopping distance to 1 so enemy makes it very close to waypoint before stopping
         controller.navMeshAgent.stoppingDistance = 1;
         controller.navMeshAgent.destination = controller.waypointList[controller.nextWayPoint].position;
 

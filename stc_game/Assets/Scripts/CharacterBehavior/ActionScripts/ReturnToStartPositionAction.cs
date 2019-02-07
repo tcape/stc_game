@@ -13,6 +13,8 @@ public class ReturnToStartPositionAction : CharacterAction
 
     private void ReturnToStart(StateController controller)
     {
+        // set stopping distance to 1 so character gets very close to start position
+        controller.animator.SetBool("Attacking", false);
         controller.navMeshAgent.stoppingDistance = 1;
         controller.navMeshAgent.destination = controller.startPosition;
     }

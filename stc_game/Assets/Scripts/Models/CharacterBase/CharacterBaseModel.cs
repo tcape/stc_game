@@ -1,7 +1,9 @@
 ﻿using System;
+using UnityEngine;
 
 [Serializable]
-public class CharacterBaseModel
+[CreateAssetMenu (menuName ="PluggableAI/BaseModelStats")]
+public class CharacterBaseModel : ScriptableObject
 {
     public double Level { get; private set; }
     public double HealthPoints { get; private set; }

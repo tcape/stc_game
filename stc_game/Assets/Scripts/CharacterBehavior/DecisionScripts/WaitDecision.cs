@@ -16,5 +16,4 @@ public class WaitDecision : Decision
     {
         return (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance && !controller.navMeshAgent.pathPending);
     }
-
 }
