@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStats : MonoBehaviour
+public class CharacterStats: MonoBehaviour
 {
     public CharacterBaseModel baseStats;
     public double MaxHP;
@@ -19,4 +19,23 @@ public class CharacterStats : MonoBehaviour
     public double AttackSpeed;
     public double MovementSpeed;
     private bool Dead;
+
+    private void Awake()
+    {
+        MaxHP = baseStats.HealthPoints;
+        MaxAP = baseStats.AbilityPoints;
+        CurrentHP = baseStats.HealthPoints;
+        CurrentAP = baseStats.AbilityPoints;
+        Strength = baseStats.Strength;
+        Attack = baseStats.Attack;
+        AbilityAttack = baseStats.AbilityAttack;
+        MeleeCritRate = baseStats.CriticalRate;
+        AbilityCritRate = baseStats.AbilityCriticalRate;
+        Defense = baseStats.Defense;
+        DodgeRate = baseStats.Dodge;
+        AttackSpeed = baseStats.AttackSpeed;
+        MovementSpeed = baseStats.MovementSpeed;
+        Dead = false;
+    }
+    
 }
