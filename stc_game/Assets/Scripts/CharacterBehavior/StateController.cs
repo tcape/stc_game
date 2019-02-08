@@ -11,6 +11,7 @@ public class StateController : MonoBehaviour
     public GameObject aggroSergent;
     public GameObject target;
     public List<Transform> waypointList;
+    
     [HideInInspector] public Animator animator;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 head;
