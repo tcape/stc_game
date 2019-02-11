@@ -13,7 +13,6 @@ public class BackAtStartDecision : Decision
 
     private bool AtStart(StateController controller)
     {
-        controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
         return (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance);
     }
 }

@@ -102,8 +102,6 @@ public class HeroNavigation : MonoBehaviour
                 {
                     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * rotationSpeed);
                 }
-              
-               
             }
             
         }
@@ -115,9 +113,6 @@ public class HeroNavigation : MonoBehaviour
             if (distance > attackDistance)
                 agent.SetDestination(target.transform.position);
         }
-      
-
-
     }
 
     private void FixedUpdate()
@@ -125,7 +120,6 @@ public class HeroNavigation : MonoBehaviour
         // get speed and set animator values
         float speed = agent.velocity.magnitude;
         animator.SetFloat("Input Z", speed);
-
 
         if (speed < runThreshold)
         {
@@ -188,14 +182,12 @@ public class HeroNavigation : MonoBehaviour
                     return;
                 }
             }
-
         }
         else
         {
             animator.SetBool("Moving", true);
             animator.SetBool("Running", true);
             animator.SetInteger("Attack", 0);
-
         }
     }
 }

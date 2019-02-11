@@ -14,7 +14,6 @@ public class ChaseAction : CharacterAction
 
     private void Chase (StateController controller)
     {
-
         controller.navMeshAgent.speed = controller.stats.chaseSpeed;
         controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
         controller.animator.SetBool("Attacking", false);
