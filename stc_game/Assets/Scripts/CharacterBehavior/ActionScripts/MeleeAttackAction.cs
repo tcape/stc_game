@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu (menuName ="PluggableAI/Actions/MeleeAttack")]
+[CreateAssetMenu(menuName = "PluggableAI/Actions/MeleeAttack")]
 public class MeleeAttackAction : CharacterAction
 {
     public override void Act(StateController controller)
@@ -33,5 +33,13 @@ public class MeleeAttackAction : CharacterAction
         {
             controller.animator.SetInteger("Attack", 1);
         }
+
+
+        var weaponCollision = controller.GetComponentInChildren<WeaponCollision>();
+        var opponent = controller.target.GetComponents<CapsuleCollider>()[1];
+
+       
+        
     }
+
 }
