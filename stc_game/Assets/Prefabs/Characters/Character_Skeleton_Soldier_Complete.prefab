@@ -3047,10 +3047,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 3
   m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!195 &6675855284006796106
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3111,20 +3111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2713685d9b90c4897e1f19bea78896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats: {fileID: 0}
-  MaxHP: 0
-  MaxAP: 0
-  CurrentHP: 0
-  CurrentAP: 0
-  Strength: 0
-  Attack: 0
-  AbilityAttack: 0
-  MeleeCritRate: 0
-  AbilityCritRate: 0
-  Defense: 0
-  DodgeRate: 0
-  AttackSpeed: 0
-  MovementSpeed: 0
+  maxHP: 100
+  maxAP: 0
+  currentHP: 100
+  currentAP: 0
+  strength: 0
+  attack: 0
+  abilityAttack: 0
+  meleeCritRate: 0
+  abilityCritRate: 0
+  defense: 0
+  dodgeRate: 0
+  attackSpeed: 0
+  movementSpeed: 0
 --- !u!1 &172642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,10 +4711,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 422336}
     m_Modifications:
-    - target: {fileID: 148790, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
-      propertyPath: m_Name
-      value: SM_Wep_Straightsword_01_Complete
-      objectReference: {fileID: 0}
     - target: {fileID: 420254, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.4
@@ -4772,6 +4767,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 148790, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
+      propertyPath: m_Name
+      value: SM_Wep_Straightsword_01_Complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923370000344274727, guid: 30b1b533f1ed9bd458af8a2d9cb29afe,
+        type: 3}
+      propertyPath: m_Height
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923370000344274727, guid: 30b1b533f1ed9bd458af8a2d9cb29afe,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
 --- !u!4 &1390035980285196189 stripped
@@ -4787,10 +4796,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486080}
     m_Modifications:
-    - target: {fileID: 107784, guid: 35230b9677512fb4a80d28a9f766e8b6, type: 3}
-      propertyPath: m_Name
-      value: SM_Wep_Shield_Chitin_01
-      objectReference: {fileID: 0}
     - target: {fileID: 435174, guid: 35230b9677512fb4a80d28a9f766e8b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.2
@@ -4846,6 +4851,10 @@ PrefabInstance:
     - target: {fileID: 435174, guid: 35230b9677512fb4a80d28a9f766e8b6, type: 3}
       propertyPath: m_LocalScale.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 107784, guid: 35230b9677512fb4a80d28a9f766e8b6, type: 3}
+      propertyPath: m_Name
+      value: SM_Wep_Shield_Chitin_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35230b9677512fb4a80d28a9f766e8b6, type: 3}

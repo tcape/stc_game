@@ -30,6 +30,7 @@ public class WeaponCollision : MonoBehaviour
         {
             hittingTarget = true;
             Debug.Log("Entered Target");
+            other.gameObject.GetComponent<CharacterStats>().DoDamage(GetComponentInParent<CharacterStats>());
         }
 
     }

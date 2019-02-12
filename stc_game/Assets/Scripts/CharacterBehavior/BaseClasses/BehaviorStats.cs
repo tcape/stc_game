@@ -17,4 +17,5 @@ public class BehaviorStats : ScriptableObject
     public float waitTime = 5f;
     public float patrolSpeed = 5f;
     public float chaseSpeed = 8f;
+    public float yTargetPosition = .25f;
 }

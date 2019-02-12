@@ -13,6 +13,10 @@ public class MeleeAttackAction : CharacterAction
 
     private void MeleeAttack(StateController controller)
     {
+        if (controller.target.Equals(null))
+        {
+            return;
+        }
         // look at target
         Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
         controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
@@ -33,12 +37,6 @@ public class MeleeAttackAction : CharacterAction
         {
             controller.animator.SetInteger("Attack", 1);
         }
-
-
-        var weaponCollision = controller.GetComponentInChildren<WeaponCollision>();
-        var opponent = controller.target.GetComponents<CapsuleCollider>()[1];
-
-       
         
     }
 
