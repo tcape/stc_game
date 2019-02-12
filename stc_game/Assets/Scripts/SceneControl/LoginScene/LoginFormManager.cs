@@ -22,7 +22,7 @@ public class LoginFormManager : MonoBehaviour {
     void Awake()
     {
         // registering callback for sign-up and login callbacks
-        authService.AuthCallback += HandleAuthCallback;
+        authService.LoginUICallback += HandleLoginUICallback;
         // registering button-click and other triggered events
         signUpButton.onClick.AddListener(OnSignUp);
         loginButton.onClick.AddListener(OnLogin);
@@ -33,7 +33,8 @@ public class LoginFormManager : MonoBehaviour {
         ToggleButtonStates(false);
 	}
 
-    private void ValidateEmail(string email) {
+    private void ValidateEmail(string email)
+    {
 		var regexPattern = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
 		if (email != "" && Regex.IsMatch(email, regexPattern)) {
             emailValid = true;
@@ -53,21 +54,26 @@ public class LoginFormManager : MonoBehaviour {
         SetButtonStates();
     }
 
-	public void OnSignUp() {
+	public void OnSignUp()
+    {
 		authService.SignUpNewUserWithEmailAndPassword(emailInput.text, passwordInput.text);
 	}
 
-	public void OnLogin() {
+	public void OnLogin()
+    {
 		authService.LoginExistingUser(emailInput.text, passwordInput.text);
         
 	}
 
-	void HandleAuthCallback (AsyncOperation res) {
+    // handles the sign up or the authentication result from the auth service
+	void HandleLoginUICallback (AsyncOperation res)
+    {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;
         UnityWebRequest www = unityWebRequestAsyncOperation.webRequest;
 
         if (www.isNetworkError || www.isHttpError)
         {
+            Debug.Log(www.responseCode);
             if (www.responseCode.Equals(403) || www.responseCode.Equals(401))
             {
                 statusText.fontSize = 14;
@@ -114,7 +120,7 @@ public class LoginFormManager : MonoBehaviour {
     }
 
     void onDestroy() {
-		authService.AuthCallback -= HandleAuthCallback;
+		authService.LoginUICallback -= HandleLoginUICallback;
 	}
 
     private void SetButtonStates()
