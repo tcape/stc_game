@@ -1018,8 +1018,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.8
-  m_Height: 2
+  m_Radius: 1.5
+  m_Height: 3.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.95, z: 0}
 --- !u!195 &7804807622747986222
@@ -1062,12 +1062,15 @@ MonoBehaviour:
   remainState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
   aggroSergent: {fileID: 0}
   target: {fileID: 0}
+  cam: {fileID: 0}
+  destination: {fileID: 0}
   waypointList: []
   characterStats: {fileID: 0}
   animator: {fileID: 0}
   stateTimeElapsed: 0
   head: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  startRotation: {x: 0, y: 0, z: 0, w: 0}
   navMeshAgent: {fileID: 0}
   nextWayPoint: 0
 --- !u!114 &2046857015405670074
@@ -1082,20 +1085,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2713685d9b90c4897e1f19bea78896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats: {fileID: 0}
-  MaxHP: 0
-  MaxAP: 0
-  CurrentHP: 0
-  CurrentAP: 0
-  Strength: 0
-  Attack: 0
-  AbilityAttack: 0
-  MeleeCritRate: 0
-  AbilityCritRate: 0
-  Defense: 0
-  DodgeRate: 0
-  AttackSpeed: 0
-  MovementSpeed: 0
+  presetStats: {fileID: 0}
+  maxHP: 100
+  maxAP: 0
+  currentHP: 100
+  currentAP: 0
+  strength: 0
+  attack: 0
+  abilityAttack: 0
+  meleeCritRate: 0
+  abilityCritRate: 0
+  defense: 0
+  dodgeRate: 0
+  movementSpeed: 0
+  dead: 0
 --- !u!1 &126850
 GameObject:
   m_ObjectHideFlags: 0

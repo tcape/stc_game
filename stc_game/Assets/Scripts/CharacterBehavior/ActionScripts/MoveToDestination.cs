@@ -27,16 +27,21 @@ public class MoveToDestination : CharacterAction
             // if hit something
             if (Physics.Raycast(ray, out hit))
             {
-                // set destination of nav mesh agent
-                controller.navMeshAgent.SetDestination(hit.point);
+              
 
                 // if hit enemy or player, put the destination target on the floor rather than on body
-                if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1") || hit.rigidbody.gameObject.tag.Equals("Player"))
+                if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
                 {
-                    controller.destination.transform.position = new Vector3(hit.point.x, controller.stats.yTargetPosition, hit.point.z);
+                    controller.target = hit.rigidbody.gameObject;
+                    //controller.destination.transform.position = new Vector3(hit.point.x, controller.stats.yTargetPosition, hit.point.z);
+                    controller.destination.transform.position = new Vector3(hit.rigidbody.gameObject.transform.position.x,
+                                                     hit.rigidbody.gameObject.transform.position.y + controller.stats.yTargetPosition,
+                                                     hit.rigidbody.gameObject.transform.position.z);
                 }
                 else
                 {
+                    // set destination of nav mesh agent
+                    controller.navMeshAgent.SetDestination(hit.point);
                     controller.destination.transform.position = hit.point;
                     controller.target = null;
                     
@@ -75,7 +80,7 @@ public class MoveToDestination : CharacterAction
 
         }
 
-        // if target is self, return
+        // if target is null, return
         if (!controller.target)
         {
             controller.navMeshAgent.stoppingDistance = 1f;
@@ -96,6 +101,7 @@ public class MoveToDestination : CharacterAction
             }
 
         }
+
         if (controller.target.gameObject.tag.Equals("Enemy") || controller.target.gameObject.tag.Equals("Boss1"))
         {
             controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;

@@ -13,5 +13,6 @@ public class DeathAction : CharacterAction
     public void Die(StateController controller)
     {
         controller.animator.SetBool("Dead", true);
+        controller.gameObject.layer = 2;
     }
 }

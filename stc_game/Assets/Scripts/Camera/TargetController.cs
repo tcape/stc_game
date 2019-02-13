@@ -28,6 +28,14 @@ public class TargetController : MonoBehaviour
     void Update()
     {
 
+
+        if (hero.GetComponent<StateController>().target == null)
+        {
+            target = null;
+            floorTarget.transform.position = new Vector3(0, -1000, 0);
+        }
+
+
         // if right-click
         if (Input.GetMouseButton(1))
         {
@@ -51,7 +59,7 @@ public class TargetController : MonoBehaviour
                 {
                     target = hit.rigidbody.gameObject;
                     transform.position = new Vector3(hit.rigidbody.gameObject.transform.position.x + xOffset,
-                                                     hit.rigidbody.gameObject.transform.position.y + yOffset + boss1Offset,
+                                                     hit.rigidbody.gameObject.transform.position.y + yOffset,
                                                      hit.rigidbody.gameObject.transform.position.z + zOffset);
                     floorTarget.transform.position = target.transform.position + floorOffset;
 
@@ -59,7 +67,7 @@ public class TargetController : MonoBehaviour
                 //otherwise set target to self and leave view
                 else
                 {
-                    target = GameObject.FindGameObjectWithTag("Target");
+                    target = this.gameObject;
                     transform.position = new Vector3(0, -1000, 0);
                     floorTarget.transform.position = transform.position;
 
@@ -101,9 +109,4 @@ public class TargetController : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        if (hero.GetComponent<StateController>().target.Equals(null))
-            floorTarget.transform.position = new Vector3(0, -1000, 0);
-    }
 }

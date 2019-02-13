@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3396988}
   - component: {fileID: 2310560}
   - component: {fileID: 2734434094936206418}
+  - component: {fileID: 3860899661542289595}
   m_Layer: 0
-  m_Name: SM_Wep_Greatsword_Curved_02
+  m_Name: SM_Wep_Greatsword_Curved_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,3 +93,17 @@ CapsuleCollider:
   m_Height: 1.2008228
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0.8, z: -0.038021907}
+--- !u!114 &3860899661542289595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittingTarget: 0
+  target: {fileID: 0}

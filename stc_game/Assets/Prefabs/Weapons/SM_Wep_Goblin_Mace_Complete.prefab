@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3324994}
   - component: {fileID: 2307140}
   - component: {fileID: 2899429472439543865}
+  - component: {fileID: 1609503432092874210}
   m_Layer: 0
-  m_Name: SM_Wep_Goblin_Mace_02
+  m_Name: SM_Wep_Goblin_Mace_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +89,21 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.15
-  m_Height: 0.324906
+  m_Radius: 0.1
+  m_Height: 3
   m_Direction: 1
-  m_Center: {x: -0.004193306, y: 0.61, z: 0.00000011920929}
+  m_Center: {x: -0.004193306, y: 1.5, z: 0.00000011920929}
+--- !u!114 &1609503432092874210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittingTarget: 0
+  target: {fileID: 0}

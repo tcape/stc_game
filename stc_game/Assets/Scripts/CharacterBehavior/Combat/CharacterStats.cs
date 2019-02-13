@@ -26,7 +26,7 @@ public class CharacterStats: MonoBehaviour
         currentHP = presetStats.maxHP;
         currentAP = presetStats.maxAP;
         strength = presetStats.strength;
-        //attack = presetStats.attack;
+        attack = presetStats.attack;
         abilityAttack = presetStats.abilityAttack;
         meleeCritRate = presetStats.meleeCritRate;
         abilityCritRate = presetStats.abilityCritRate;
