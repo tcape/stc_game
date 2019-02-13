@@ -18,6 +18,7 @@ public class StateController : MonoBehaviour
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 head;
     [HideInInspector] public Vector3 startPosition;
+    [HideInInspector] public Quaternion startRotation;
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public int nextWayPoint;
 
@@ -42,6 +43,7 @@ public class StateController : MonoBehaviour
         destination = GameObject.FindGameObjectWithTag("Destination");
         head = transform.position;
         startPosition = transform.position;
+        startRotation = transform.rotation;
         SetupAI(true, GetComponent<StateController>().waypointList);
         characterStats = GetComponent<CharacterStats>();
 
@@ -67,6 +69,7 @@ public class StateController : MonoBehaviour
         if (!aiActive)
             return;
         currentState.UpdateState(this);
+
       }
 
 

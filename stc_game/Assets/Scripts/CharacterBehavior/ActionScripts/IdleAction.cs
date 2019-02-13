@@ -8,6 +8,6 @@ public class IdleAction : CharacterAction
 {
     public override void Act(StateController controller)
     {
-        
+        controller.transform.rotation = controller.startRotation;
     }
 }

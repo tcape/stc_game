@@ -104,6 +104,8 @@ public class MoveToDestination : CharacterAction
             if (distance > controller.stats.meleeAttackRadius)
                 controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
+
+        
     }
         
 }

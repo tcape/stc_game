@@ -27,6 +27,7 @@ public class TargetController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // if right-click
         if (Input.GetMouseButton(1))
         {
@@ -59,20 +60,21 @@ public class TargetController : MonoBehaviour
                 else
                 {
                     target = GameObject.FindGameObjectWithTag("Target");
-                    transform.position = new Vector3(0,-1000,0);
+                    transform.position = new Vector3(0, -1000, 0);
                     floorTarget.transform.position = transform.position;
 
                 }
             }
         }
+
         if (Input.GetMouseButton(0))
         {
             target = GameObject.FindGameObjectWithTag("Target");
             transform.position = new Vector3(0, -1000, 0);
             floorTarget.transform.position = transform.position;
         }
-            // Keep transform above target object if no mouse click
-            if (target.tag.Equals("Enemy"))
+        // Keep transform above target object if no mouse click
+        if (target.tag.Equals("Enemy"))
         {
             transform.position = new Vector3(target.transform.position.x + xOffset,
                                              target.transform.position.y + yOffset,
@@ -94,5 +96,14 @@ public class TargetController : MonoBehaviour
             floorTarget.transform.position = transform.position;
 
         }
+
+        
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (hero.GetComponent<StateController>().target.Equals(null))
+            floorTarget.transform.position = new Vector3(0, -1000, 0);
     }
 }

@@ -26,7 +26,7 @@ public class CharacterStats: MonoBehaviour
         currentHP = presetStats.maxHP;
         currentAP = presetStats.maxAP;
         strength = presetStats.strength;
-        attack = presetStats.attack;
+        //attack = presetStats.attack;
         abilityAttack = presetStats.abilityAttack;
         meleeCritRate = presetStats.meleeCritRate;
         abilityCritRate = presetStats.abilityCritRate;
@@ -52,7 +52,7 @@ public class CharacterStats: MonoBehaviour
     private double CalculateDamage(CharacterStats otherStats)
     {
         // TODO: Take stats from damage doer and this character's stats and calculate damage done
-        return 5;
+        return otherStats.attack;
     }
 
 
