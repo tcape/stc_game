@@ -14,7 +14,7 @@ public class StartMeleeAttackDecision : Decision
 
     private bool InMeleeAttackRange(StateController controller)
     {
-        if (controller.target.Equals(null))
+        if (!controller.target)
             return false;
         var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
         return (distance <= controller.stats.meleeAttackRadius);

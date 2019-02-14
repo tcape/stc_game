@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu (menuName = "PluggableAI/Actions/MoveToDestination")]
+[CreateAssetMenu(menuName = "PluggableAI/Actions/MoveToDestination")]
 public class MoveToDestination : CharacterAction
 {
     public override void Act(StateController controller)
@@ -27,26 +27,21 @@ public class MoveToDestination : CharacterAction
             // if hit something
             if (Physics.Raycast(ray, out hit))
             {
-              
+
 
                 // if hit enemy or player, put the destination target on the floor rather than on body
                 if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
                 {
                     controller.target = hit.rigidbody.gameObject;
-                    //controller.destination.transform.position = new Vector3(hit.point.x, controller.stats.yTargetPosition, hit.point.z);
-                    controller.destination.transform.position = new Vector3(hit.rigidbody.gameObject.transform.position.x,
-                                                     hit.rigidbody.gameObject.transform.position.y + controller.stats.yTargetPosition,
-                                                     hit.rigidbody.gameObject.transform.position.z);
                 }
                 else
                 {
                     // set destination of nav mesh agent
                     controller.navMeshAgent.SetDestination(hit.point);
-                    controller.destination.transform.position = hit.point;
                     controller.target = null;
-                    
+
                 }
-                
+
             }
         }
 
@@ -64,7 +59,6 @@ public class MoveToDestination : CharacterAction
                 if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
                 {
                     controller.target = hit.rigidbody.gameObject;
-                    controller.destination.transform.position = new Vector3(0, -1000, 0);
                     var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
 
                     if (distance > controller.stats.meleeAttackRadius)
@@ -73,7 +67,6 @@ public class MoveToDestination : CharacterAction
                 // otherwise, set hero's target to null
                 else
                 {
-                    //controller.target = GameObject.FindGameObjectWithTag("Player");
                     controller.target = null;
                 }
             }
@@ -99,7 +92,6 @@ public class MoveToDestination : CharacterAction
                     controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
                 }
             }
-
         }
 
         if (controller.target.gameObject.tag.Equals("Enemy") || controller.target.gameObject.tag.Equals("Boss1"))
@@ -107,11 +99,10 @@ public class MoveToDestination : CharacterAction
             controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
             var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
 
-            if (distance > controller.stats.meleeAttackRadius)
+            if (distance < controller.stats.meleeAttackRadius)
                 controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
-
-        
     }
-        
 }
+
+
