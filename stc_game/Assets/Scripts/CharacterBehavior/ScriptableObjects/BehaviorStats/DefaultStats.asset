@@ -20,6 +20,6 @@ MonoBehaviour:
   rotationSpeed: 15
   aggroDistance: 13
   meleeAttackRadius: 4
-  waitTime: 5
+  waitTime: 3
   patrolSpeed: 2.5
   chaseSpeed: 7
