@@ -7,14 +7,10 @@ public class TargetController : MonoBehaviour
 
     public Camera cam;
     public GameObject target;
-    public GameObject floorTarget;
     public GameObject hero;
+    public GameObject destination;
     public Vector3 targetOffset;
     public Vector3 floorOffset;
-    public float xOffset;
-    public float yOffset;
-    public float zOffset;
-    public float boss1Offset;
 
 
     // Start is called before the first frame update
@@ -27,49 +23,34 @@ public class TargetController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if (hero.GetComponent<StateController>().target == null)
         {
             target = null;
-            floorTarget.transform.position = new Vector3(0, -1000, 0);
+            transform.position = new Vector3(0, -1000, 0); // TODO: set inactive
         }
-
         else
         {
+            // TODO: set active
             target = hero.GetComponent<StateController>().target;
-
-            transform.position = new Vector3(target.transform.position.x,
-                                             target.transform.position.y,
-                                             target.transform.position.z);
-
-            floorTarget.transform.position = target.transform.position + floorOffset;
+            transform.position = target.transform.position + floorOffset;
+            destination.GetComponent<DestinationController>().target = target;
         }
 
         if (Input.GetMouseButton(0))
         {
             target = GameObject.FindGameObjectWithTag("Target");
             transform.position = new Vector3(0, -1000, 0);
-            floorTarget.transform.position = transform.position;
+            transform.position = transform.position;
         }
-
 
         // Keep transform below target object if no mouse click
         if (target && target.tag.Equals("Enemy") || target.tag.Equals("Boss1"))
         {
-            transform.position = new Vector3(target.transform.position.x + xOffset,
-                                             target.transform.position.y + yOffset,
-                                             target.transform.position.z + zOffset);
-            floorTarget.transform.position = target.transform.position + floorOffset;
-
+            transform.position = target.transform.position + floorOffset;
         }
         else
         {
             transform.position = new Vector3(0, -1000, 0);
-            floorTarget.transform.position = transform.position;
-
         }
-        
     }
-
 }

@@ -19,10 +19,8 @@ public class DestinationController : MonoBehaviour
         target = gameObject;
     }
 
-
     void Update()
     {
-        
         if (Input.GetMouseButton(0))
         {
             // raycast at mouse position
@@ -36,20 +34,14 @@ public class DestinationController : MonoBehaviour
                 if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
                 {
                     target = hit.rigidbody.gameObject;
-
-                    transform.position = new Vector3(target.transform.position.x,
-                                                        target.transform.position.y,
-                                                        target.transform.position.z) + floorOffset;
                 }
                 else
                 {
                     target = null;
                     transform.position = hit.point;
                 }
-
             }
         }
-
 
         if (Input.GetMouseButton(1))
         {
@@ -84,6 +76,5 @@ public class DestinationController : MonoBehaviour
 
         if (distance < hero.GetComponent<StateController>().stats.stoppingDistance)
             transform.position = new Vector3(0, -1000, 0);
-
     }
 }
