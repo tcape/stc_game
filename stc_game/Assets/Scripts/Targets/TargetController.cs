@@ -33,7 +33,8 @@ public class TargetController : MonoBehaviour
             // TODO: set active
             target = hero.GetComponent<StateController>().target;
             transform.position = target.transform.position + floorOffset;
-            destination.GetComponent<DestinationController>().target = target;
+            if (!hero.GetComponent<StateController>().currentState.isAggro)
+                destination.GetComponent<DestinationController>().target = target;
         }
 
         if (Input.GetMouseButton(0))

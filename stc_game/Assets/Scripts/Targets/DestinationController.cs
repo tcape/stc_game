@@ -53,7 +53,7 @@ public class DestinationController : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 // if hit enemy, put the destination target on the floor rather than on body
-                if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
+                //if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
                 {
                     transform.position = new Vector3(0, -1000, 0);
                 }

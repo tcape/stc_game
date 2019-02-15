@@ -33,6 +33,7 @@ public class CharacterStats: MonoBehaviour
         defense = presetStats.defense;
         dodgeRate = presetStats.dodgeRate;
         dead = false;
+        
     }
 
     public void DoDamage(CharacterStats otherStats)

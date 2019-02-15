@@ -27,8 +27,6 @@ public class MoveToDestination : CharacterAction
             // if hit something
             if (Physics.Raycast(ray, out hit))
             {
-
-
                 // if hit enemy or player, put the destination target on the floor rather than on body
                 if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
                 {
@@ -41,7 +39,6 @@ public class MoveToDestination : CharacterAction
                     controller.target = null;
 
                 }
-
             }
         }
 
@@ -70,11 +67,10 @@ public class MoveToDestination : CharacterAction
                     controller.target = null;
                 }
             }
-
         }
 
         // if target is null, return
-        if (!controller.target)
+        if (controller.target == null)
         {
             controller.navMeshAgent.stoppingDistance = 1f;
             return;
@@ -99,8 +95,8 @@ public class MoveToDestination : CharacterAction
             controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
             var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
 
-            if (distance < controller.stats.meleeAttackRadius)
-                controller.navMeshAgent.SetDestination(controller.target.transform.position);
+            //if (distance < controller.stats.meleeAttackRadius)
+            //    controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
     }
 }
