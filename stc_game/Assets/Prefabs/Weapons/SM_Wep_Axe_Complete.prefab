@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3353052}
   - component: {fileID: 2365474}
   - component: {fileID: 7630980740970142160}
+  - component: {fileID: 6357719638907142510}
   m_Layer: 0
   m_Name: SM_Wep_Axe_Complete
   m_TagString: Untagged
@@ -92,3 +93,17 @@ CapsuleCollider:
   m_Height: 0.5916958
   m_Direction: 1
   m_Center: {x: 0.009445906, y: 0.59872234, z: -0.0000011920929}
+--- !u!114 &6357719638907142510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittingTarget: 0
+  target: {fileID: 0}

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3336428}
   - component: {fileID: 2364494}
   - component: {fileID: 1093278726256773399}
+  - component: {fileID: 1284954904126785133}
   m_Layer: 0
-  m_Name: SM_Wep_Goblin_Machete_Spikes_02
+  m_Name: SM_Wep_Goblin_Machete_Spikes_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,3 +93,17 @@ CapsuleCollider:
   m_Height: 0.74825346
   m_Direction: 1
   m_Center: {x: -0.00000047683716, y: 0.54651374, z: -0.012149811}
+--- !u!114 &1284954904126785133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittingTarget: 0
+  target: {fileID: 0}

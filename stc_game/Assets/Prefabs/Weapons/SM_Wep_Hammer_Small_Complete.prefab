@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3396490}
   - component: {fileID: 2304712}
   - component: {fileID: 86355889232726562}
+  - component: {fileID: 7558106048255680881}
   m_Layer: 0
-  m_Name: SM_Wep_Hammer_Small_03
+  m_Name: SM_Wep_Hammer_Small_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,3 +93,17 @@ CapsuleCollider:
   m_Height: 0.42803764
   m_Direction: 1
   m_Center: {x: -0.01602602, y: 0.49, z: -0.0005617291}
+--- !u!114 &7558106048255680881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittingTarget: 0
+  target: {fileID: 0}

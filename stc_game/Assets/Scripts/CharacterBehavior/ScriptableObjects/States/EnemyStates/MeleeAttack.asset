@@ -15,8 +15,14 @@ MonoBehaviour:
   actions:
   - {fileID: 11400000, guid: 9f39c978126e1da4e9ab738f81cad159, type: 2}
   transitions:
+  - decision: {fileID: 11400000, guid: 93e8274456cc141438afe8c4e8f82dc9, type: 2}
+    trueState: {fileID: 11400000, guid: e6b82ec0c15d702479af799812701d14, type: 2}
+    falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
   - decision: {fileID: 11400000, guid: fc02e499d8cd6ce40ad2c8da7cd25c7b, type: 2}
     trueState: {fileID: 11400000, guid: cfe3967bd9845d74eba9d874aba078da, type: 2}
+    falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
+  - decision: {fileID: 11400000, guid: 69c2c91ebb5c841418f4ade2091cb936, type: 2}
+    trueState: {fileID: 11400000, guid: f26815f7753569149abf49d0fb9a56c5, type: 2}
     falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
   sceneGizmoColor: {r: 0.9433962, g: 0.5658694, b: 0, a: 1}
   isAggro: 1

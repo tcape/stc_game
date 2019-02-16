@@ -10,12 +10,15 @@ public class StateController : MonoBehaviour
     public State remainState;
     public GameObject aggroSergent;
     public GameObject target;
+    public Camera cam;
+    public GameObject destination;
     public List<Transform> waypointList;
     [HideInInspector] public CharacterStats characterStats;
     [HideInInspector] public Animator animator;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 head;
     [HideInInspector] public Vector3 startPosition;
+    [HideInInspector] public Quaternion startRotation;
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public int nextWayPoint;
 
@@ -25,6 +28,10 @@ public class StateController : MonoBehaviour
     private void Start()
     {
         currentState = startState;
+        if (gameObject.tag.Equals("Player"))
+        {
+            target = null;
+        }
     }
 
     private void Awake()
@@ -32,10 +39,14 @@ public class StateController : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player");
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        destination = GameObject.FindGameObjectWithTag("Destination");
         head = transform.position;
         startPosition = transform.position;
+        startRotation = transform.rotation;
         SetupAI(true, GetComponent<StateController>().waypointList);
         characterStats = GetComponent<CharacterStats>();
+
     }
 
     public void SetupAI(bool aiActivationFromCharacter, List<Transform> waypointsFromCharacter)
@@ -58,7 +69,8 @@ public class StateController : MonoBehaviour
         if (!aiActive)
             return;
         currentState.UpdateState(this);
-    }
+
+      }
 
 
     private void FixedUpdate()

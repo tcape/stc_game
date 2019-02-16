@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 3383672}
   - component: {fileID: 2352252}
   - component: {fileID: 4060049803787145751}
+  - component: {fileID: 2595906299528546873}
   m_Layer: 0
-  m_Name: SM_Wep_Ornate_Axe_03
+  m_Name: SM_Wep_Ornate_Axe_1_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,3 +93,17 @@ CapsuleCollider:
   m_Height: 0.51195973
   m_Direction: 1
   m_Center: {x: 0, y: 0.4528176, z: 0.10391101}
+--- !u!114 &2595906299528546873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittingTarget: 0
+  target: {fileID: 0}
