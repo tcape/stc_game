@@ -5,20 +5,16 @@ using UnityEngine.UI;
 public class SceneSwitcher : MonoBehaviour
 {
     public Button switchScene;
+    public string targetScene = "LoginScene";
 
     public void Awake()
     {
-        switchScene.onClick.AddListener(GoToLoginScene);
+        switchScene.onClick.AddListener(SwitchScene);
     }
 
-    public void GoToLoginScene()
+    public void SwitchScene()
     {
-        SceneManager.LoadScene("LoginUI");
-    }
-
-    public void GoToDungeon01()
-    {
-        SceneManager.LoadScene("TrainingGrounds");
+        SceneManager.LoadScene(targetScene);
     }
 
     //Can create simple loads for different scenes
