@@ -12,7 +12,9 @@ public class StatsPreset : ScriptableObject
     public double attack;
     public double abilityAttack;
     public double meleeCritRate;
+    public double meleeCritPower;
     public double abilityCritRate;
+    public double abilityCritPower;
     public double defense;
     public double dodgeRate;
     private bool dead;

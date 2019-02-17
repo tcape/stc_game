@@ -17,7 +17,9 @@ MonoBehaviour:
   strength: 10
   attack: 5
   abilityAttack: 5
-  meleeCritRate: 0.1
+  meleeCritRate: 0.33
+  meleeCritPower: 2
   abilityCritRate: 0.1
+  abilityCritPower: 0
   defense: 5
   dodgeRate: 0.1
