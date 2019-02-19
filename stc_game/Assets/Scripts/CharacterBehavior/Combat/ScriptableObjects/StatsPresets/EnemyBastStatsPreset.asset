@@ -18,6 +18,8 @@ MonoBehaviour:
   attack: 5
   abilityAttack: 5
   meleeCritRate: 0.1
+  meleeCritPower: 1.5
   abilityCritRate: 0.1
-  defense: 5
+  abilityCritPower: 0
+  defense: 1
   dodgeRate: 0.1
