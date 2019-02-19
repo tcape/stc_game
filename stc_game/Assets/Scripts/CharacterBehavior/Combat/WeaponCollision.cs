@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class WeaponCollision : MonoBehaviour
 {
-
     public bool hittingTarget;
     public GameObject target;
-    
 
     private void Awake()
     {
@@ -29,10 +27,9 @@ public class WeaponCollision : MonoBehaviour
         if (other.gameObject.Equals(target))
         {
             hittingTarget = true;
-            Debug.Log("Entered Target");
-            other.gameObject.GetComponent<CharacterStats>().DoDamage(GetComponentInParent<CharacterStats>());
+            //Debug.Log("Entered Target");
+            other.gameObject.GetComponent<CharacterStats>().TakeMeleeDamage(GetComponentInParent<CharacterStats>());
         }
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -45,8 +42,7 @@ public class WeaponCollision : MonoBehaviour
         if (other.gameObject.Equals(target))
         {
             hittingTarget = false;
-            Debug.Log("Exited Target");
+            //Debug.Log("Exited Target");
         }
     }
-    
 }
