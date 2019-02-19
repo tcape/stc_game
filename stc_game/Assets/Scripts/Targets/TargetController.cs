@@ -13,11 +13,18 @@ public class TargetController : MonoBehaviour
     public Vector3 floorOffset;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         hero = GameObject.FindGameObjectWithTag("Player");
         target = GameObject.FindGameObjectWithTag("Target");
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //hero = GameObject.FindGameObjectWithTag("Player");
+        //target = GameObject.FindGameObjectWithTag("Target");
     }
 
     // Update is called once per frame
@@ -25,7 +32,7 @@ public class TargetController : MonoBehaviour
     {
         if (hero.GetComponent<StateController>().target == null)
         {
-            target = null;
+            target = GameObject.FindGameObjectWithTag("Target");
             transform.position = new Vector3(0, -1000, 0); // TODO: set inactive
         }
         else
@@ -45,7 +52,7 @@ public class TargetController : MonoBehaviour
         }
 
         // Keep transform below target object if no mouse click
-        if (target && target.tag.Equals("Enemy") || target.tag.Equals("Boss1"))
+        if (target && target.tag.Equals("Enemy") || target.tag.Equals("NPC"))
         {
             transform.position = target.transform.position + floorOffset;
         }

@@ -16,7 +16,11 @@ public class StartMeleeAttackDecision : Decision
     {
         if (!controller.target)
             return false;
-        var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
-        return (distance <= controller.stats.meleeAttackRadius);
+        if (controller.target.tag.Equals("Enemy"))
+        {
+            var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
+            return (distance <= controller.stats.meleeAttackRadius);
+        }
+        return false;
     }
 }

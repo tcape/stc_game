@@ -28,9 +28,9 @@ public class MoveToDestination : CharacterAction
             if (Physics.Raycast(ray, out hit))
             {
                 // if hit enemy or player, put the destination target on the floor rather than on body
-                if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
+                if (hit.collider.gameObject.tag.Equals("Enemy") || hit.collider.gameObject.tag.Equals("NPC"))
                 {
-                    controller.target = hit.rigidbody.gameObject;
+                    controller.target = hit.collider.gameObject;
                 }
                 else
                 {
@@ -53,9 +53,9 @@ public class MoveToDestination : CharacterAction
             if (Physics.Raycast(ray, out hit))
             {
                 // if hit enemy or boss, set hero's target
-                if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
+                if (hit.collider.gameObject.tag.Equals("Enemy") || hit.collider.gameObject.tag.Equals("NPC"))
                 {
-                    controller.target = hit.rigidbody.gameObject;
+                    controller.target = hit.collider.gameObject;
                     var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
 
                     if (distance > controller.stats.meleeAttackRadius)
@@ -90,7 +90,7 @@ public class MoveToDestination : CharacterAction
             }
         }
 
-        if (controller.target.gameObject.tag.Equals("Enemy") || controller.target.gameObject.tag.Equals("Boss1"))
+        if (controller.target.gameObject.tag.Equals("Enemy") || controller.target.gameObject.tag.Equals("NPC"))
         {
             controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
             var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
