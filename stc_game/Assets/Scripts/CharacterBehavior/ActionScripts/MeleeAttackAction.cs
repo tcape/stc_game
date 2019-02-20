@@ -21,6 +21,8 @@ public class MeleeAttackAction : CharacterAction
         Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
         controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
 
+        controller.navMeshAgent.SetDestination(controller.transform.position);
+
         controller.animator.SetBool("Attacking", true);
 
         if (controller.animator.GetInteger("Attack").Equals(0))

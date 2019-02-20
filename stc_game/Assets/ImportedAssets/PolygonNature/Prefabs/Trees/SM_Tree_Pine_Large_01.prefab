@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4433853144909754}
   - component: {fileID: 33317909810101244}
   - component: {fileID: 23701031044341392}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Tree_Pine_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4320883887219790}
   - component: {fileID: 205816532301938180}
   - component: {fileID: 6005548077743591730}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Tree_Pine_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 4330190805953166}
   - component: {fileID: 33899514990880048}
   - component: {fileID: 23137049528668130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Tree_Pine_Large_01_LOD_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
