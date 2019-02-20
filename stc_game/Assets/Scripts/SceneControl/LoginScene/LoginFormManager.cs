@@ -100,7 +100,7 @@ public class LoginFormManager : MonoBehaviour {
         {
             AuthRes authRes = JsonUtility.FromJson<AuthRes>(www.downloadHandler.text);
             authService.GetUserData(authRes);
-            SceneManager.LoadScene("PlayerHub");
+            SceneManager.LoadScene("Outdoor_1");
         }
     }
 
