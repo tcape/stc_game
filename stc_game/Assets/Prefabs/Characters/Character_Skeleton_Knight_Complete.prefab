@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 6213031588039634834}
   - component: {fileID: 3015662134747839618}
   - component: {fileID: 416424734257482873}
+  - component: {fileID: 1930401533041062207}
   m_Layer: 0
   m_Name: Character_Skeleton_Knight_Complete
   m_TagString: Enemy
@@ -1374,11 +1375,27 @@ MonoBehaviour:
   attack: 0
   abilityAttack: 0
   meleeCritRate: 0
+  meleeCritPower: 0
   abilityCritRate: 0
+  abilityCritPower: 0
   defense: 0
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
+--- !u!114 &1930401533041062207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128260}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hittingTarget: 0
+  target: {fileID: 0}
 --- !u!1 &130074
 GameObject:
   m_ObjectHideFlags: 0

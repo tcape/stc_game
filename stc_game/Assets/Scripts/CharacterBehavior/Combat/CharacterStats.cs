@@ -46,7 +46,7 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         if (!dead)
         {
             if (currentHP > 0)
-                currentHP -= amount;
+                currentHP -= Math.Round(amount);
             if (currentHP <= 0)
             {
                 currentHP = 0;

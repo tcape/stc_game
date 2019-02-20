@@ -20,7 +20,7 @@ public class WeaponCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!target)
+        if (!target || !other.isTrigger)
         {
             return;
         }
@@ -28,7 +28,7 @@ public class WeaponCollision : MonoBehaviour
         {
             hittingTarget = true;
             //Debug.Log("Entered Target");
-            if (other.gameObject.tag.Equals("Enemy"))
+            if (other.gameObject.tag.Equals("Enemy") || other.gameObject.tag.Equals("Player"))
             {
                 other.gameObject.GetComponent<CharacterStats>().TakeMeleeDamage(GetComponentInParent<CharacterStats>());
             }
