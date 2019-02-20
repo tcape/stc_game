@@ -94,9 +94,6 @@ public class MoveToDestination : CharacterAction
         {
             controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
             var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
-
-            //if (distance < controller.stats.meleeAttackRadius)
-            //    controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
     }
 }

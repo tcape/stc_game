@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3388744}
   - component: {fileID: 2384120}
   - component: {fileID: 4165487600697917075}
-  - component: {fileID: 4499113003526997325}
+  - component: {fileID: 2578006032784466171}
   m_Layer: 0
   m_Name: SM_Wep_Ornate_Sword_Complete
   m_TagString: Untagged
@@ -93,7 +93,7 @@ CapsuleCollider:
   m_Height: 1.2077875
   m_Direction: 1
   m_Center: {x: 0, y: 0.7965188, z: 0.0000009536743}
---- !u!114 &4499113003526997325
+--- !u!114 &2578006032784466171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

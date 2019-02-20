@@ -705,7 +705,9 @@ MonoBehaviour:
   attack: 0
   abilityAttack: 0
   meleeCritRate: 0
+  meleeCritPower: 0
   abilityCritRate: 0
+  abilityCritPower: 0
   defense: 0
   dodgeRate: 0
   movementSpeed: 0
@@ -717,7 +719,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142645202443866}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac8c24f485e1eb469da375c17c81d69, type: 3}
   m_Name: 
@@ -7769,20 +7771,6 @@ Transform:
   m_Father: {fileID: 4444130581976600}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &833334893283920135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2381820732588700391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hittingTarget: 0
-  target: {fileID: 0}
 --- !u!1001 &2381820732588868671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7862,12 +7850,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9757e56a5662877458c9911e037ee3d0, type: 3}
---- !u!1 &2381820732588700391 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 194264, guid: 9757e56a5662877458c9911e037ee3d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2381820732588868671}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2381820732588434403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 452572, guid: 9757e56a5662877458c9911e037ee3d0,
