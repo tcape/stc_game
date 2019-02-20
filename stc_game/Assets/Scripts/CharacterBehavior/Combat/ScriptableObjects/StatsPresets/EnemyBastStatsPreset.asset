@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd6f3dbfa5fa0b40afcfdc411e46da6, type: 3}
   m_Name: EnemyBastStatsPreset
   m_EditorClassIdentifier: 
-  maxHP: 125
+  maxHP: 100
   maxAP: 100
   strength: 10
   attack: 5
