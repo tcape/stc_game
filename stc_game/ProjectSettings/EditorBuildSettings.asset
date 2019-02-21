@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/LoginUI.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/Scenes/Temp Scene.unity
+    path: 
     guid: 65e6606b921d4544fb9f6adaacfab594
   - enabled: 0
-    path: Assets/Scenes/PlayerHub.unity
+    path: 
     guid: 523f69c5d48773249b56ced9f707356b
   - enabled: 1
     path: Assets/Scenes/Dungeon1.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outdoor_1.unity
     guid: 3f813d51b54287e48a240174cd5a245e
+  - enabled: 1
+    path: Assets/Scenes/PersistentScene.unity
+    guid: 71c0fc5b66dbc874891ee6790f74fafd
   m_configObjects: {}

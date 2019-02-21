@@ -28,7 +28,7 @@ public class TriggerToDungeon : MonoBehaviour
 
         if (num == 1)
         {
-            loadingScreen.SetActive(true);
+            //loadingScreen.SetActive(true);
             LoadLevel("Dungeon1");
         }
     }
@@ -51,7 +51,7 @@ public class TriggerToDungeon : MonoBehaviour
 
     IEnumerator LoadAsynchronously(string scene)
     {
-        operation = SceneManager.LoadSceneAsync(scene);
+        operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
