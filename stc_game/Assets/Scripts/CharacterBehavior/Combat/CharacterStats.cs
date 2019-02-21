@@ -90,6 +90,7 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         {
             if (other.gameObject.tag.Equals("Player"))
             {
+                Debug.Log("NORMAL");
                 Debug.Log(other.attack - defense);
             }
             return other.attack - defense;

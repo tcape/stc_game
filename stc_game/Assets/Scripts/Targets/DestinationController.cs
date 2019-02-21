@@ -52,11 +52,7 @@ public class DestinationController : MonoBehaviour
             // if hit something
             if (Physics.Raycast(ray, out hit))
             {
-                // if hit enemy, put the destination target on the floor rather than on body
-                //if (hit.rigidbody.gameObject.tag.Equals("Enemy") || hit.rigidbody.gameObject.tag.Equals("Boss1"))
-                {
-                    transform.position = new Vector3(0, -1000, 0);
-                }
+                transform.position = new Vector3(0, -1000, 0);
             }
         }
 
@@ -74,7 +70,7 @@ public class DestinationController : MonoBehaviour
 
         var distance = Math.Abs(Vector3.Distance(hero.transform.position, transform.position));
 
-        if (distance < hero.GetComponent<StateController>().stats.stoppingDistance)
+        if (distance <= 1)
             transform.position = new Vector3(0, -1000, 0);
     }
 }
