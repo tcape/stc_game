@@ -1,0 +1,51 @@
+﻿using Assets.Scripts.CharacterBehavior.BaseClasses;
+using Assets.Scripts.CharacterBehavior.Combat;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu (menuName ="Ability/Ability")]
+public class Ability : ScriptableObject, IAbility
+{
+
+    private float lastCalled = 0f;
+    public string trigger;
+    public float cooldown;
+    public float duration;
+    public KeyCode hotkey;
+    public float startTime;
+    public List<AbilityAction> actions;
+
+
+    public void TriggerAnimator(AbilityManager manager)
+    {
+        manager.animator.SetTrigger(trigger);
+    }
+
+    public bool CanUse()
+    {
+        if (Time.time > lastCalled + cooldown)
+        {
+            lastCalled = Time.time;
+            Debug.Log(trigger + " Performed");
+            return true;
+        }
+        else
+        {
+            Debug.Log(trigger + " on Cooldown");
+        }
+        return false;
+    }
+
+    private void Awake()
+    {
+        lastCalled = 0f;
+    }
+
+    private void OnEnable()
+    {
+        lastCalled = Time.time - cooldown;
+    }
+
+}
