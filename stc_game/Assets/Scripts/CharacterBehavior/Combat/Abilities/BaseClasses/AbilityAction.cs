@@ -13,6 +13,7 @@ namespace Assets.Scripts.CharacterBehavior.BaseClasses
         public double amount;
         public float percentage;
         public double effectTotal;
+        [HideInInspector] public GameObject target;
 
         public enum ActionType { Instant, Periodic };
         public enum ActionPersistance { Permanent, Temporary };

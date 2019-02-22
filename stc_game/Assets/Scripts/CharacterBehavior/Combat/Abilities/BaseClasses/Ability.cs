@@ -10,17 +10,18 @@ public class Ability : ScriptableObject, IAbility
 {
 
     private float lastCalled = 0f;
-    public string trigger;
+    public string animationTrigger;
     public float cooldown;
     public float duration;
     public KeyCode hotkey;
-    public float startTime;
+    [HideInInspector] public float startTime;
     public List<AbilityAction> actions;
+    [HideInInspector] public GameObject target;
 
 
     public void TriggerAnimator(AbilityManager manager)
     {
-        manager.animator.SetTrigger(trigger);
+        manager.animator.SetTrigger(animationTrigger);
     }
 
     public bool CanUse()
@@ -28,12 +29,12 @@ public class Ability : ScriptableObject, IAbility
         if (Time.time > lastCalled + cooldown)
         {
             lastCalled = Time.time;
-            Debug.Log(trigger + " Performed");
+            Debug.Log(animationTrigger + " Performed");
             return true;
         }
         else
         {
-            Debug.Log(trigger + " on Cooldown");
+            Debug.Log(animationTrigger + " on Cooldown");
         }
         return false;
     }

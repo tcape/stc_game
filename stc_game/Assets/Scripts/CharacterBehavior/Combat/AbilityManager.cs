@@ -10,27 +10,32 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 {
     public class AbilityManager : MonoBehaviour
     {
-        public List<Ability> allAbiliies;
+        public List<Ability> myAbilities;
         private List<Ability> activeAbilites;
         [HideInInspector] public CharacterStats stats;
         [HideInInspector] public Animator animator;
+        [HideInInspector] public StateController controller;
+
 
         private void Awake()
         {
             stats = GetComponent<CharacterStats>();
             animator = GetComponent<Animator>();
             activeAbilites = new List<Ability>();
+            controller = GetComponent<StateController>();
         }
 
         private void Update()
         {
-            foreach (var ability in allAbiliies)
+            foreach (var ability in myAbilities)
             {
                 if (Input.GetKeyDown(ability.hotkey) && ability.CanUse())
                 {
                     activeAbilites.Add(ability);
                     ability.TriggerAnimator(this);
                     ability.startTime = Time.time;
+                    foreach (var action in ability.actions)
+                        action.target = controller.target;
                     foreach (var action in ability.actions.Where(t => t.type.Equals(AbilityAction.ActionType.Instant)))
                     {
                         action.Act(this);

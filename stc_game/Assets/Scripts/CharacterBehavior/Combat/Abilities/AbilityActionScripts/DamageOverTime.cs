@@ -11,11 +11,12 @@ public class DamageOverTime : AbilityAction
     {
         lastTick = 0;
         effectTotal = 0;
+        target = null;
     }
 
     public override void Act(AbilityManager manager)
     {
-        manager.GetComponent<StateController>().target.GetComponent<CharacterStats>().TakeDamage(amount);
+        target.GetComponent<CharacterStats>().TakeDamage(amount);
     }
 
     public override void RemoveEffect(AbilityManager manager)
