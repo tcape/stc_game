@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faderCanvasGroup: {fileID: 0}
   fadeDuration: 1
-  startingSceneName: Outdoor_1
+  startingSceneName: Town
 --- !u!4 &1976968828
 Transform:
   m_ObjectHideFlags: 0

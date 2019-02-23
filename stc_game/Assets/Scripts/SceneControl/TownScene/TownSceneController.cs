@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TriggerToDungeon : MonoBehaviour
+public class TownSceneController : MonoBehaviour
 {
     public GameObject loadingScreen;
     public Slider slider;
