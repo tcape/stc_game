@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
     public event Action AfterSceneLoad;
     public CanvasGroup faderCanvasGroup;
     public float fadeDuration = 1f;
-    public string startingSceneName = "Outdoor_1";
+    public string startingSceneName = "Town";
     //public string initialStartingPositionName = "DoorToMarket";
     //public SaveData playerSaveData;
 
