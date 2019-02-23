@@ -27,7 +27,7 @@ public class MoveToDestination : CharacterAction
             // if hit something
             if (Physics.Raycast(ray, out hit))
             {
-                // if hit enemy or player, put the destination target on the floor rather than on body
+                // if hit enemy or npc set target
                 if (hit.collider.gameObject.tag.Equals("Enemy") || hit.collider.gameObject.tag.Equals("NPC"))
                 {
                     controller.target = hit.collider.gameObject;
@@ -58,7 +58,7 @@ public class MoveToDestination : CharacterAction
                     controller.target = hit.collider.gameObject;
                     var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
 
-                    if (distance > controller.stats.meleeAttackRadius)
+                    if (distance > controller.stats.stoppingDistance)
                         controller.navMeshAgent.SetDestination(controller.target.transform.position);
                 }
                 // otherwise, set hero's target to null
@@ -94,6 +94,8 @@ public class MoveToDestination : CharacterAction
         {
             controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
             var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
+            if (distance > controller.stats.stoppingDistance && distance <= controller.stats.meleeAttackRadius)
+                controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
     }
 }
