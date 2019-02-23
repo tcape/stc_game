@@ -8,16 +8,14 @@ using UnityEngine;
 [CreateAssetMenu (menuName ="Ability/Ability")]
 public class Ability : ScriptableObject, IAbility
 {
-
-    private float lastCalled = 0f;
+    public List<AbilityAction> actions;
     public string animationTrigger;
     public float cooldown;
     public float duration;
     public KeyCode hotkey;
     [HideInInspector] public float startTime;
-    public List<AbilityAction> actions;
+    [HideInInspector] private float lastCalled = 0f;
     [HideInInspector] public GameObject target;
-
 
     public void TriggerAnimator(AbilityManager manager)
     {
