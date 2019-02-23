@@ -13,11 +13,12 @@ public class TriggerToDungeon : MonoBehaviour
 
     private void Update()
     {
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Outdoor_1"));
         if (operation != null)
         {
             if (operation.progress >= 0.9f)
             {
-                //operation.allowSceneActivation = true;
+                operation.allowSceneActivation = true;
             }
         }
     }
@@ -28,19 +29,9 @@ public class TriggerToDungeon : MonoBehaviour
 
         if (num == 1)
         {
-            //loadingScreen.SetActive(true);
+            loadingScreen.SetActive(true);
             LoadLevel("Dungeon1");
         }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        
     }
 
     public void LoadLevel(string scene)
@@ -51,6 +42,7 @@ public class TriggerToDungeon : MonoBehaviour
 
     IEnumerator LoadAsynchronously(string scene)
     {
+        SceneManager.UnloadSceneAsync("Outdoor_1");
         operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         while (!operation.isDone)
         {
