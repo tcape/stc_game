@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
     public event Action AfterSceneLoad;
     public CanvasGroup faderCanvasGroup;
     public float fadeDuration = 1f;
-    public string startingSceneName = "Town";
+    public string startingSceneName = "Dungeon";
     //public string initialStartingPositionName = "DoorToMarket";
     //public SaveData playerSaveData;
 
@@ -32,9 +32,9 @@ public class SceneController : MonoBehaviour
         }
     }*/
 
-    private IEnumerator FadeAndSwitchScenes(string sceneName)
+    public IEnumerator FadeAndSwitchScenes(string sceneName)
     {
-        //yield return StartCoroutine(Fade(1f));
+        yield return StartCoroutine(Fade(1f));
         if (BeforeSceneUnload != null)
             BeforeSceneUnload();
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
@@ -42,12 +42,11 @@ public class SceneController : MonoBehaviour
         if (AfterSceneLoad != null)
             AfterSceneLoad();
 
-        //yield return StartCoroutine(Fade(0f));
+        yield return StartCoroutine(Fade(0f));
     }
 
-    private IEnumerator LoadSceneAndSetActive(string sceneName)
+    public IEnumerator LoadSceneAndSetActive(string sceneName)
     {
-        LoadSceneAndSetActive("PersistentScene");
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         Scene newlyLoadedScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene(newlyLoadedScene);

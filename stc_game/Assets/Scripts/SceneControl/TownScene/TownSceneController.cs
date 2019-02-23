@@ -10,10 +10,10 @@ public class TownSceneController : MonoBehaviour
     public Slider slider;
     private AsyncOperation operation;
     private int num = 0;
+    private SceneController SceneController = new SceneController();
 
     private void Update()
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Town"));
         if (operation != null)
         {
             if (operation.progress >= 0.9f)
@@ -29,14 +29,14 @@ public class TownSceneController : MonoBehaviour
 
         if (num == 1)
         {
-            loadingScreen.SetActive(true);
-            LoadLevel("Dungeon");
+            SceneController.LoadSceneAndSetActive("Dungeon");
+            //loadingScreen.SetActive(true);
+            //LoadLevel("Dungeon");
         }
     }
 
     public void LoadLevel(string scene)
     {
-        
        StartCoroutine(LoadAsynchronously(scene));
     }
 
