@@ -1133,6 +1133,7 @@ GameObject:
   - component: {fileID: 4399293303009711851}
   - component: {fileID: 3250783621607700411}
   - component: {fileID: 3653578853053040631}
+  - component: {fileID: 4116366516961433798}
   m_Layer: 0
   m_Name: Character_Ghost_01_Complete
   m_TagString: Enemy
@@ -1306,11 +1307,26 @@ MonoBehaviour:
   attack: 0
   abilityAttack: 0
   meleeCritRate: 0
+  meleeCritPower: 0
   abilityCritRate: 0
+  abilityCritPower: 0
   defense: 0
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
+--- !u!114 &4116366516961433798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557e4b8dadd7124c9b831a6706ce542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touching: []
 --- !u!1 &127280
 GameObject:
   m_ObjectHideFlags: 0

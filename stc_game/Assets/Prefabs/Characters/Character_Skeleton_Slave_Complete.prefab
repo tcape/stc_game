@@ -1866,6 +1866,7 @@ GameObject:
   - component: {fileID: 1552108549103412785}
   - component: {fileID: 7348568206325549114}
   - component: {fileID: 3052303641826433481}
+  - component: {fileID: 5975937812695344220}
   m_Layer: 0
   m_Name: Character_Skeleton_Slave_Complete
   m_TagString: Enemy
@@ -2047,6 +2048,19 @@ MonoBehaviour:
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
+--- !u!114 &5975937812695344220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557e4b8dadd7124c9b831a6706ce542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touching: []
 --- !u!1 &145006
 GameObject:
   m_ObjectHideFlags: 0
