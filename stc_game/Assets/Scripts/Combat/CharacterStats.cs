@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 {
@@ -38,7 +39,13 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         abilityCritPower = presetStats.abilityCritPower;
         defense = presetStats.defense;
         dodgeRate = presetStats.dodgeRate;
+        movementSpeed = presetStats.movementSpeed;
         dead = false;
+    }
+
+    private void Update()
+    {
+        GetComponent<NavMeshAgent>().speed = (float)movementSpeed;
     }
 
     public void TakeDamage(double amount)
@@ -102,9 +109,41 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         TakeDamage(CalculateAblilityDamage(other));
     }
 
+    public void TakeAbilityDamage(CharacterStats other, double multiplier)
+    {
+        TakeDamage(CalculateAbilityDamage(other, multiplier));
+    }
+
+
     public double CalculateAblilityDamage(CharacterStats other)
     {
         throw new System.NotImplementedException();
+    }
+
+    public double CalculateAbilityDamage(CharacterStats other, double multiplier)
+    {
+        // Crit?
+        var critRoll = UnityEngine.Random.Range(0.0f, 1f);
+        if (critRoll <= other.abilityCritRate)
+        {
+
+            if (other.gameObject.tag.Equals("Player"))
+            {
+                Debug.Log("CRIT");
+                Debug.Log(other.abilityAttack * multiplier * other.abilityCritPower - defense);
+            }
+
+            return other.abilityAttack * multiplier * other.abilityCritPower - defense;
+        }
+        else
+        {
+            if (other.gameObject.tag.Equals("Player"))
+            {
+                Debug.Log("NORMAL");
+                Debug.Log(other.abilityAttack * multiplier - defense);
+            }
+            return other.abilityAttack * multiplier - defense;
+        }
     }
 
     public void Heal(double amount)

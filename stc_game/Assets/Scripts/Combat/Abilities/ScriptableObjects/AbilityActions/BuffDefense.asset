@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b042fef3d34eba64b8cd2e213db354a3, type: 3}
   m_Name: BuffDefense
   m_EditorClassIdentifier: 
-  amount: 3
-  percentage: 2
-  effectTotal: 0
-  target: {fileID: 0}
   type: 0
   persistance: 1
-  lastTick: 0
+  amount: 3
+  percentage: 0
   interval: 0
+  effectTotal: 0
+  target: {fileID: 0}
+  lastTick: 0

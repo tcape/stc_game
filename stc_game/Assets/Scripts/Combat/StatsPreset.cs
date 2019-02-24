@@ -17,5 +17,6 @@ public class StatsPreset : ScriptableObject
     public double abilityCritPower;
     public double defense;
     public double dodgeRate;
+    public double movementSpeed;
     private bool dead;
 }

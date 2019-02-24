@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a90f5897c72623408c2cb1d17e5b3dc, type: 3}
   m_Name: DamageOverTime
   m_EditorClassIdentifier: 
-  amount: 10
-  percentage: 0
-  effectTotal: 0
-  target: {fileID: 0}
   type: 1
   persistance: 0
-  lastTick: 23.255825
+  amount: 1.5
+  percentage: 0
   interval: 1
+  effectTotal: 0
+  target: {fileID: 0}
+  lastTick: 0

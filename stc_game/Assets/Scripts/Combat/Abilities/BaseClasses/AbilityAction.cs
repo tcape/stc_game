@@ -10,18 +10,18 @@ namespace Assets.Scripts.CharacterBehavior.BaseClasses
 {
     public abstract class AbilityAction : ScriptableObject
     {
-        public double amount;
-        public float percentage;
-        [HideInInspector] public double effectTotal;
-        [HideInInspector] public GameObject target;
-
         public enum ActionType { Instant, Periodic };
         public enum ActionPersistance { Permanent, Temporary };
 
         public ActionType type;
         public ActionPersistance persistance;
-        /*[HideInInspector]*/ public float lastTick;
+        public double amount;
+        public float percentage;
         public float interval;
+        [HideInInspector] public double effectTotal;
+        [HideInInspector] public GameObject target;
+        [HideInInspector] public float lastTick;
+       
 
         public abstract void Act(AbilityManager manager);
 
@@ -30,5 +30,7 @@ namespace Assets.Scripts.CharacterBehavior.BaseClasses
         public abstract void RemoveEffect(AbilityManager manager);
 
         public abstract void ResetEffectTotal();
+
+        
     }
 }

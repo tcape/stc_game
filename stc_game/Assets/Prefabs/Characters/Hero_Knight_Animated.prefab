@@ -547,10 +547,9 @@ GameObject:
   - component: {fileID: 136756517076312042}
   - component: {fileID: 5508886335448256339}
   - component: {fileID: 2083417284}
-  - component: {fileID: 2083417291}
   - component: {fileID: 7547251921712381523}
-  - component: {fileID: 7350914696333979715}
   - component: {fileID: 1910123732}
+  - component: {fileID: 7350914696333979715}
   m_Layer: 2
   m_Name: Hero_Knight_Animated
   m_TagString: Player
@@ -662,30 +661,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
---- !u!114 &2083417291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142645202443866}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d3081522c5d9140a9babc4928424a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  agent: {fileID: 2083417284}
-  animator: {fileID: 95957999365541468}
-  rb: {fileID: 54379354694074918}
-  speedFactor: 1
-  attackDistance: 3
-  target: {fileID: 0}
-  destination: {fileID: 0}
-  rotationSpeed: 20
-  runThreshold: 1
-  offset: {x: 0, y: 0, z: 0}
-  yTargetPosition: 0.25
 --- !u!114 &7547251921712381523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,35 +689,6 @@ MonoBehaviour:
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
---- !u!114 &7350914696333979715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142645202443866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aac8c24f485e1eb469da375c17c81d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: a27165d8021582b4eba601f435b62f10, type: 2}
-  startState: {fileID: 11400000, guid: 28dbb17189a597943a4fc685e2685ab0, type: 2}
-  currentState: {fileID: 0}
-  remainState: {fileID: 11400000, guid: 0406b70cff80efd4abd34c012c4bb820, type: 2}
-  aggroSergent: {fileID: 0}
-  target: {fileID: 0}
-  cam: {fileID: 0}
-  destination: {fileID: 0}
-  waypointList: []
-  characterStats: {fileID: 0}
-  animator: {fileID: 0}
-  stateTimeElapsed: 0
-  head: {x: 0, y: 0, z: 0}
-  startPosition: {x: 0, y: 0, z: 0}
-  startRotation: {x: 0, y: 0, z: 0, w: 0}
-  navMeshAgent: {fileID: 0}
-  nextWayPoint: 0
 --- !u!114 &1910123732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,6 +707,35 @@ MonoBehaviour:
   stats: {fileID: 0}
   animator: {fileID: 0}
   controller: {fileID: 0}
+--- !u!114 &7350914696333979715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142645202443866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac8c24f485e1eb469da375c17c81d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  startState: {fileID: 11400000, guid: 28dbb17189a597943a4fc685e2685ab0, type: 2}
+  currentState: {fileID: 0}
+  remainState: {fileID: 11400000, guid: 0406b70cff80efd4abd34c012c4bb820, type: 2}
+  aggroSergent: {fileID: 0}
+  target: {fileID: 0}
+  cam: {fileID: 0}
+  destination: {fileID: 0}
+  waypointList: []
+  characterStats: {fileID: 0}
+  animator: {fileID: 0}
+  stateTimeElapsed: 0
+  head: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  startRotation: {x: 0, y: 0, z: 0, w: 0}
+  navMeshAgent: {fileID: 0}
+  nextWayPoint: 0
 --- !u!1 &1146744703072694
 GameObject:
   m_ObjectHideFlags: 0

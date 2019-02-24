@@ -15,6 +15,13 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
         // TODO: Make methods for each damage dealing ability
         void TakeAbilityDamage(CharacterStats other);
+
+        void TakeAbilityDamage(CharacterStats other, double multiplier);
+
         double CalculateAblilityDamage(CharacterStats other);
+
+        double CalculateAbilityDamage(CharacterStats other, double multiplier);
+        
+       
     }
 }
