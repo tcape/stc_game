@@ -9,9 +9,6 @@ public class SceneController : MonoBehaviour
     public event Action AfterSceneLoad;
     public CanvasGroup faderCanvasGroup;
     public float fadeDuration = 1f;
-    public string startingSceneName = "Dungeon";
-    //public string initialStartingPositionName = "DoorToMarket";
-    //public SaveData playerSaveData;
 
 
     private bool isFading;
@@ -21,7 +18,7 @@ public class SceneController : MonoBehaviour
 
         //faderCanvasGroup.alpha = 1f;
         //playerSaveData.Save(PlayerMovement.startingPositionKey, initialStartingPositionName);
-        StartCoroutine(LoadSceneAndSetActive(startingSceneName));
+        //StartCoroutine(LoadSceneAndSetActive(startingSceneName));
         //StartCoroutine(Fade(0f));
     }
 
@@ -66,5 +63,25 @@ public class SceneController : MonoBehaviour
         }
         isFading = false;
         faderCanvasGroup.blocksRaycasts = false;
+    }
+
+    // my functions
+    public void LoadLevel(string scene)
+    {
+        StartCoroutine(LoadAsynchronously(scene));
+    }
+
+    IEnumerator LoadAsynchronously(string scene)
+    {
+        SceneManager.UnloadSceneAsync();
+        operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+
+            yield return null;
+        }
+
     }
 }

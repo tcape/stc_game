@@ -6,31 +6,12 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.GameStrings
 {
-    public class GameStrings
+    public static class GameStrings
     {
-        public GameStrings Instance
-        {
-            get
-            {
-                if (this == null)
-                {
-                    return new GameStrings();
-                }
-                else
-                {
-                    return this;
-                }
-            }
-            private set
-            {
-                Instance = this;
-            }
-        }
-
-        string TownScene = "Town";
-        string DungeonScene = "Dungeon";
-        string LoginScene = "Login";
-        string PersistentScene = "PersistentScene";
+        const string TownScene = "Town";
+        const string DungeonScene = "Dungeon";
+        const string LoginScene = "Login";
+        const string PersistentScene = "PersistentScene";
 
     }
 }

@@ -266,7 +266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &228738073
 PrefabInstance:
@@ -862,7 +862,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &919484233
 PrefabInstance:
@@ -1514,12 +1514,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146ee562a0484eb47a7e52add94e4504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!225 &1519658518 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 22572512, guid: b5acabd1c2a301e4b953d280fa75da62,
-    type: 3}
-  m_PrefabInstance: {fileID: 1415117746}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1525670281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,9 +1630,10 @@ GameObject:
   - component: {fileID: 1544097587}
   - component: {fileID: 1544097586}
   - component: {fileID: 1544097585}
+  - component: {fileID: 1544097595}
   - component: {fileID: 1544097593}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PersistentScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,7 +1752,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544097584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a9e85d4b91b30449c5b2bc49fd05e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 31da5dbff7ae7234892fc774e34cf859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1544097594
@@ -1772,54 +1767,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1976968826
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1976968828}
-  - component: {fileID: 1976968827}
-  m_Layer: 0
-  m_Name: SceneController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1976968827
+--- !u!114 &1544097595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976968826}
+  m_GameObject: {fileID: 1544097584}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d54805551d5caa489b162a7c23ca186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faderCanvasGroup: {fileID: 1519658518}
+  faderCanvasGroup: {fileID: 0}
   fadeDuration: 1
-  startingSceneName: Town
---- !u!4 &1976968828
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976968826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 596.33594, y: 289.14032, z: 3.3013926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  startingSceneName: Dungeon
 --- !u!1 &2021227840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1880,7 @@ RectTransform:
   - {fileID: 558572835}
   - {fileID: 1525670282}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
