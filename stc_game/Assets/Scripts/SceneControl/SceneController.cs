@@ -66,12 +66,12 @@ public class SceneController : MonoBehaviour
     }
 
     // my functions
-    public void LoadLevel(string scene)
+    /*public void LoadLevel(string scene)
     {
         StartCoroutine(LoadAsynchronously(scene));
-    }
+    }*/
 
-    IEnumerator LoadAsynchronously(string scene)
+    /*IEnumerator LoadAsynchronously(string scene)
     {
         SceneManager.UnloadSceneAsync();
         operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
@@ -83,5 +83,5 @@ public class SceneController : MonoBehaviour
             yield return null;
         }
 
-    }
+    }*/
 }
