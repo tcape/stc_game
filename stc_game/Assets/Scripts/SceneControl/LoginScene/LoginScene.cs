@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class LoginSceneManager : MonoBehaviour
+public class LoginScene : MonoBehaviour
 {
 
     private AuthService authService = AuthService.Instance;
@@ -107,7 +107,8 @@ public class LoginSceneManager : MonoBehaviour
         {
             AuthRes authRes = JsonUtility.FromJson<AuthRes>(www.downloadHandler.text);
             authService.GetUserData(authRes);
-            SceneManager.LoadScene("Outdoor_1");
+            Debug.Log("dsdfsdfsdfsdfsdf");
+            SceneController.Instance.LoadBitchasScene(GameStrings.Scenes.TownScene);
         }
     }
 

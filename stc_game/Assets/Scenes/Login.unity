@@ -5019,6 +5019,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5f84753629df74e969cbca3dcbd2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emailInput: {fileID: 1773368613}
+  passwordInput: {fileID: 1314865128}
+  statusText: {fileID: 2143492273}
+  signUpButton: {fileID: 631666528}
+  loginButton: {fileID: 1607362889}
 --- !u!4 &445669654
 Transform:
   m_ObjectHideFlags: 0

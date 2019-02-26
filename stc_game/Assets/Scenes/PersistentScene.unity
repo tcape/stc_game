@@ -1932,6 +1932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1544097594}
+  - component: {fileID: 1544097596}
   - component: {fileID: 1544097592}
   - component: {fileID: 1544097591}
   - component: {fileID: 1544097590}
@@ -2091,8 +2092,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d3effd3fe906c4e9d516e7995139f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faderCanvasGroup: {fileID: 0}
+  faderCanvasGroup: {fileID: 1544097596}
+  startingSceneName: Login
   fadeDuration: 1
+  loadingScreen: {fileID: 548217851}
+  slider: {fileID: 436640002}
+--- !u!225 &1544097596
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544097584}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1554178459
 GameObject:
   m_ObjectHideFlags: 0

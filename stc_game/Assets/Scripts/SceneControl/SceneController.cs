@@ -2,35 +2,72 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
+    public static SceneController Instance;
     public event Action BeforeSceneUnload;
     public event Action AfterSceneLoad;
     public CanvasGroup faderCanvasGroup;
+    public string startingSceneName;
     public float fadeDuration = 1f;
+
+    public GameObject loadingScreen;
+    public Slider slider;
+    private AsyncOperation operation;
 
 
     private bool isFading;
 
-    private void Start()
+    private void Awake()
     {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
 
-        //faderCanvasGroup.alpha = 1f;
-        //playerSaveData.Save(PlayerMovement.startingPositionKey, initialStartingPositionName);
-        //StartCoroutine(LoadSceneAndSetActive(startingSceneName));
-        //StartCoroutine(Fade(0f));
+        startingSceneName = GameStrings.Scenes.LoginScene;
+        faderCanvasGroup.alpha = 1f;
     }
 
-    /*public void FadeAndLoadScene(SceneReaction sceneReaction)
+    private void Start()
+    {
+        //playerSaveData.Save(PlayerMovement.startingPositionKey, initialStartingPositionName);
+        StartCoroutine(LoadSceneAndSetActive(startingSceneName));
+        StartCoroutine(Fade(0f));
+    }
+
+    private void Update()
+    {
+        if (operation != null)
+        {
+            if (operation.progress >= 0.9f)
+            {
+                operation.allowSceneActivation = true;
+            }
+        }
+    }
+
+    public void LoadBitchasScene(string scene)
+    {
+        StartCoroutine(LoadSceneAndSetActive(scene));
+    }
+
+    public void FadeAndLoadScene(string sceneName)
     {
         if (!isFading)
         {
-            StartCoroutine(FadeAndSwitchScenes(sceneReaction.sceneName));
+            FadeAndSwitchScenes(sceneName);
         }
-    }*/
+    }
 
-    public IEnumerator FadeAndSwitchScenes(string sceneName)
+    private IEnumerator FadeAndSwitchScenes(string sceneName)
     {
         yield return StartCoroutine(Fade(1f));
         if (BeforeSceneUnload != null)
@@ -66,15 +103,17 @@ public class SceneController : MonoBehaviour
     }
 
     // my functions
-    /*public void LoadLevel(string scene)
+    public void LoadLevel(string scene)
     {
-        StartCoroutine(LoadAsynchronously(scene));
-    }*/
+        LoadAsynchronously(scene);
+    }
 
-    /*IEnumerator LoadAsynchronously(string scene)
+    IEnumerator LoadAsynchronously(string scene)
     {
-        SceneManager.UnloadSceneAsync();
-        operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+        //yield return StartCoroutine(Fade(1f));
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(LoadSceneAndSetActive(scene));
+        var operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
@@ -82,6 +121,7 @@ public class SceneController : MonoBehaviour
 
             yield return null;
         }
+        //yield return StartCoroutine(Fade(0f));
 
-    }*/
+    }
 }
