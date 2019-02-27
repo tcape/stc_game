@@ -5,16 +5,17 @@ using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class LoginFormManager : MonoBehaviour {
+public class LoginScene : MonoBehaviour
+{
 
     private AuthService authService = AuthService.Instance;
 
     public InputField emailInput;
-	public InputField passwordInput;
+    public InputField passwordInput;
     public Text statusText;
 
-	public Button signUpButton;
-	public Button loginButton;
+    public Button signUpButton;
+    public Button loginButton;
 
     private bool emailValid = false;
     private bool passwordValid = false;
@@ -31,42 +32,48 @@ public class LoginFormManager : MonoBehaviour {
 
         // disable form buttons until user inputs a valid email
         ToggleButtonStates(false);
-	}
+    }
 
     private void ValidateEmail(string email)
     {
-		var regexPattern = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
-		if (email != "" && Regex.IsMatch(email, regexPattern)) {
+        var regexPattern = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+        if (email != "" && Regex.IsMatch(email, regexPattern))
+        {
             emailValid = true;
-		} else {
+        }
+        else
+        {
             emailValid = false;
-		}
+        }
         SetButtonStates();
-	}
+    }
 
     private void ValidatePassword(string password)
     {
-        if (password.Length > 7) {
+        if (password.Length > 7)
+        {
             passwordValid = true;
-        } else {
+        }
+        else
+        {
             passwordValid = false;
         }
         SetButtonStates();
     }
 
-	public void OnSignUp()
+    public void OnSignUp()
     {
-		authService.SignUpNewUserWithEmailAndPassword(emailInput.text, passwordInput.text);
-	}
+        authService.SignUpNewUserWithEmailAndPassword(emailInput.text, passwordInput.text);
+    }
 
-	public void OnLogin()
+    public void OnLogin()
     {
-		authService.LoginExistingUser(emailInput.text, passwordInput.text);
-        
-	}
+        authService.LoginExistingUser(emailInput.text, passwordInput.text);
+
+    }
 
     // handles the sign up or the authentication result from the auth service
-	void HandleLoginUICallback (AsyncOperation res)
+    void HandleLoginUICallback(AsyncOperation res)
     {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;
         UnityWebRequest www = unityWebRequestAsyncOperation.webRequest;
@@ -100,7 +107,8 @@ public class LoginFormManager : MonoBehaviour {
         {
             AuthRes authRes = JsonUtility.FromJson<AuthRes>(www.downloadHandler.text);
             authService.GetUserData(authRes);
-            SceneManager.LoadScene("Outdoor_1");
+            Debug.Log("dsdfsdfsdfsdfsdf");
+            SceneManager.LoadSceneAsync(GameStrings.Scenes.PersistentScene);
         }
     }
 
@@ -119,9 +127,10 @@ public class LoginFormManager : MonoBehaviour {
         }
     }
 
-    void onDestroy() {
-		authService.LoginUICallback -= HandleLoginUICallback;
-	}
+    void onDestroy()
+    {
+        authService.LoginUICallback -= HandleLoginUICallback;
+    }
 
     private void SetButtonStates()
     {
@@ -135,8 +144,9 @@ public class LoginFormManager : MonoBehaviour {
         }
     }
 
-	private void ToggleButtonStates(bool toState) {
-		signUpButton.interactable = toState;
-		loginButton.interactable = toState;
-	}
+    private void ToggleButtonStates(bool toState)
+    {
+        signUpButton.interactable = toState;
+        loginButton.interactable = toState;
+    }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PersistentSceneController : MonoBehaviour
+public class PersistentScene : MonoBehaviour
 {
-    public static PersistentSceneController Instance;
+    public static PersistentScene Instance;
     private void Awake()
     {
         if (Instance == null)
