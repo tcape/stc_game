@@ -19,10 +19,7 @@ public class TownScene : MonoBehaviour
 
         if (num == 1)
         {
-            SceneController.Instance.LoadBitchasScene(GameStrings.Scenes.DungeonScene);
-            //
-            //loadingScreen.SetActive(true);
-            //LoadLevel("Dungeon");
+            SceneController.Instance.FadeAndLoadScene(GameStrings.Scenes.DungeonScene);
         }
     }
 

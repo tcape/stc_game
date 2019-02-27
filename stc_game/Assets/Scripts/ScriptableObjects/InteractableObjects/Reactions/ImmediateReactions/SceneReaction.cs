@@ -24,6 +24,6 @@ public class SceneReaction : Reaction
         //playerSaveData.Save(PlayerMovement.startingPositionKey, startingPointInLoadedScene);
 
         // Start the scene loading process.
-        sceneController.FadeAndLoadScene(this);
+        sceneController.FadeAndLoadScene(this.sceneName);
     }
 }

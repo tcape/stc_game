@@ -108,7 +108,7 @@ public class LoginScene : MonoBehaviour
             AuthRes authRes = JsonUtility.FromJson<AuthRes>(www.downloadHandler.text);
             authService.GetUserData(authRes);
             Debug.Log("dsdfsdfsdfsdfsdf");
-            SceneController.Instance.FadeAndLoadScene(GameStrings.Scenes.TownScene);
+            SceneManager.LoadSceneAsync(GameStrings.Scenes.PersistentScene);
         }
     }
 

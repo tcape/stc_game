@@ -11,14 +11,14 @@ using UnityEngine.SceneManagement;
 // the player leaves them.
 public class SceneController : MonoBehaviour
 {
-    public static readonly SceneController Instance;
+    public static SceneController Instance;
     public event Action BeforeSceneUnload;          // Event delegate that is called just before a scene is unloaded.
     public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
 
 
     public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
-    public string startingSceneName = GameStrings.Scenes.LoginScene;
+    public string startingSceneName;
     // The name of the scene that should be loaded first.
     //public string initialStartingPositionName = "DoorToMarket";
     // The name of the StartingPosition in the first scene to be loaded.
@@ -42,6 +42,7 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator Start()
     {
+        startingSceneName = GameStrings.Scenes.TownScene;
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;
 
@@ -58,12 +59,12 @@ public class SceneController : MonoBehaviour
 
     // This is the main external point of contact and influence from the rest of the project.
     // This will be called by a SceneReaction when the player wants to switch scenes.
-    public void FadeAndLoadScene(SceneReaction sceneReaction)
+    public void FadeAndLoadScene(string sceneReaction)
     {
         // If a fade isn't happening then start fading and switching scenes.
         if (!isFading)
         {
-            StartCoroutine(FadeAndSwitchScenes(sceneReaction.sceneName));
+            StartCoroutine(FadeAndSwitchScenes(sceneReaction));
         }
     }
 

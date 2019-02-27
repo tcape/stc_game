@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DungeonScene : MonoBehaviour
 {
+    private int num = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,15 @@ public class DungeonScene : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        num++;
+
+        if (num == 1)
+        {
+            SceneController.Instance.FadeAndLoadScene(GameStrings.Scenes.TownScene);
+        }
     }
 }

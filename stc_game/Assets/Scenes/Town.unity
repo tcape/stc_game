@@ -278,10 +278,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave_Entrance_Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 4854369014365392050, guid: 77adae6a2b5bbfb49a521f3c71a52999,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4854369014365726620, guid: 77adae6a2b5bbfb49a521f3c71a52999,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -77.25772
+      value: -71.3
       objectReference: {fileID: 0}
     - target: {fileID: 4854369014365726620, guid: 77adae6a2b5bbfb49a521f3c71a52999,
         type: 3}
@@ -291,7 +296,7 @@ PrefabInstance:
     - target: {fileID: 4854369014365726620, guid: 77adae6a2b5bbfb49a521f3c71a52999,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.227112
+      value: 21.51
       objectReference: {fileID: 0}
     - target: {fileID: 4854369014365726620, guid: 77adae6a2b5bbfb49a521f3c71a52999,
         type: 3}
@@ -8488,17 +8493,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Skeleton_Slave_Lying_01
       objectReference: {fileID: 0}
+    - target: {fileID: 188464, guid: ec78f1131a3a5464a8882bd020e329ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 442280, guid: ec78f1131a3a5464a8882bd020e329ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4500008
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 442280, guid: ec78f1131a3a5464a8882bd020e329ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 442280, guid: ec78f1131a3a5464a8882bd020e329ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1900024
+      value: 6.64
       objectReference: {fileID: 0}
     - target: {fileID: 442280, guid: ec78f1131a3a5464a8882bd020e329ff, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30005,8 +30014,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2129041417}
-  - component: {fileID: 2129041414}
   - component: {fileID: 2129041415}
+  - component: {fileID: 2129041414}
   m_Layer: 0
   m_Name: TownScene
   m_TagString: Untagged
@@ -30014,20 +30023,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &2129041414
-CapsuleCollider:
+--- !u!65 &2129041414
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129041413}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2129041415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30040,8 +30048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12deb901f48dbc41b00252b1a626032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
 --- !u!4 &2129041417
 Transform:
   m_ObjectHideFlags: 0
@@ -30050,7 +30056,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129041413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.15, y: 0.11, z: 157.8}
+  m_LocalPosition: {x: 27.86, y: 0.11, z: 157.83}
   m_LocalScale: {x: 10, y: 5, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
