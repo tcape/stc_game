@@ -11,14 +11,15 @@ public class CombatZoneController : MonoBehaviour
         zoneEnemies = new List<GameObject>();
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.GetComponent<CharacterStats>().dead && other.gameObject.tag.Equals("Enemy")
-            || other.gameObject.tag.Equals("NPC"))
+        if (( other.gameObject.tag.Equals("Enemy") || other.gameObject.tag.Equals("NPC"))
+            && !other.gameObject.GetComponent<CharacterStats>().dead
+            && other.isTrigger)
             zoneEnemies.Add(other.gameObject);
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         zoneEnemies.Remove(other.gameObject);
     }

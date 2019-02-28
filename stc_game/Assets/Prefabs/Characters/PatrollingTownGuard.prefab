@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 216422655}
   - component: {fileID: 216422658}
   - component: {fileID: 216422659}
+  - component: {fileID: 3455622707494572134}
   m_Layer: 0
   m_Name: PatrollingTownGuard
   m_TagString: NPC
@@ -315,8 +316,11 @@ MonoBehaviour:
   startState: {fileID: 11400000, guid: 13d5ada4e90b5774992125d6e804ae5d, type: 2}
   currentState: {fileID: 0}
   remainState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
+  aggroState: {fileID: 0}
   aggroSergent: {fileID: 0}
   target: {fileID: 0}
+  cam: {fileID: 0}
+  destination: {fileID: 0}
   waypointList:
   - {fileID: 0}
   - {fileID: 0}
@@ -327,6 +331,7 @@ MonoBehaviour:
   stateTimeElapsed: 0
   head: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
+  startRotation: {x: 0, y: 0, z: 0, w: 0}
   navMeshAgent: {fileID: 0}
   nextWayPoint: 0
 --- !u!195 &216422659
@@ -351,6 +356,34 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3455622707494572134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216422654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2713685d9b90c4897e1f19bea78896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presetStats: {fileID: 11400000, guid: 8f0a3bf6e909fe9418fe97398c7b8200, type: 2}
+  maxHP: 0
+  maxAP: 0
+  currentHP: 0
+  currentAP: 0
+  strength: 0
+  attack: 0
+  abilityAttack: 0
+  meleeCritRate: 0
+  meleeCritPower: 0
+  abilityCritRate: 0
+  abilityCritPower: 0
+  defense: 0
+  dodgeRate: 0
+  movementSpeed: 6
+  dead: 0
 --- !u!1 &228718916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,12 +3238,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: 4635624409182612, guid: f84f8699501ba614fa340a0907939748, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1332734118872314, guid: f84f8699501ba614fa340a0907939748, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108637976870375032, guid: f84f8699501ba614fa340a0907939748,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108637976870375032, guid: f84f8699501ba614fa340a0907939748,
+        type: 3}
+      propertyPath: m_Range
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635624409182612, guid: f84f8699501ba614fa340a0907939748, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198794732552819150, guid: f84f8699501ba614fa340a0907939748,
@@ -3222,16 +3265,6 @@ PrefabInstance:
         type: 3}
       propertyPath: VelocityModule.inWorldSpace
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108637976870375032, guid: f84f8699501ba614fa340a0907939748,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108637976870375032, guid: f84f8699501ba614fa340a0907939748,
-        type: 3}
-      propertyPath: m_Range
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84f8699501ba614fa340a0907939748, type: 3}

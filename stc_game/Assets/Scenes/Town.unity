@@ -16057,14 +16057,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2083417291, guid: 06b63c94e425d1345b563fef11c8253f, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2103027792}
-    - target: {fileID: 2083417291, guid: 06b63c94e425d1345b563fef11c8253f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7547251921712381523, guid: 06b63c94e425d1345b563fef11c8253f,
         type: 3}
       propertyPath: presetStats
@@ -16104,6 +16096,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1451025490, guid: 06b63c94e425d1345b563fef11c8253f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083417291, guid: 06b63c94e425d1345b563fef11c8253f, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2103027792}
+    - target: {fileID: 2083417291, guid: 06b63c94e425d1345b563fef11c8253f, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

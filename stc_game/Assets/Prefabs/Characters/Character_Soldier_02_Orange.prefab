@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 24057001}
   - component: {fileID: 24057000}
   - component: {fileID: 2449915776995216680}
+  - component: {fileID: 6574309884485486833}
   m_Layer: 0
   m_Name: Character_Soldier_02_Orange
   m_TagString: NPC
@@ -71,6 +72,34 @@ CapsuleCollider:
   m_Height: 3.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.95, z: 0}
+--- !u!114 &6574309884485486833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24056999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2713685d9b90c4897e1f19bea78896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presetStats: {fileID: 11400000, guid: 8f0a3bf6e909fe9418fe97398c7b8200, type: 2}
+  maxHP: 0
+  maxAP: 0
+  currentHP: 0
+  currentAP: 0
+  strength: 0
+  attack: 0
+  abilityAttack: 0
+  meleeCritRate: 0
+  meleeCritPower: 0
+  abilityCritRate: 0
+  abilityCritPower: 0
+  defense: 0
+  dodgeRate: 0
+  movementSpeed: 0
+  dead: 0
 --- !u!1 &30313059
 GameObject:
   m_ObjectHideFlags: 0

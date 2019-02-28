@@ -13,8 +13,7 @@ public class TargetController : MonoBehaviour
     public Vector3 floorOffset;
     public CombatZoneController zone;
     public StateController controller;
-
-
+    private int currentTarget = -1;
 
     private void Awake()
     {
@@ -29,7 +28,8 @@ public class TargetController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            
+            AdvanceTarget();
+            controller.target = zone.zoneEnemies[currentTarget];
         }
 
         if (controller.target == null)
@@ -64,5 +64,10 @@ public class TargetController : MonoBehaviour
         }
     }
 
-
+    private void AdvanceTarget()
+    {
+        currentTarget++;
+        if (currentTarget >= zone.zoneEnemies.Count)
+            currentTarget = 0;
+    }
 }
