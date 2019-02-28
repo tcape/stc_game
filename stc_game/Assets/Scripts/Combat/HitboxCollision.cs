@@ -14,12 +14,6 @@ public class HitboxCollision : MonoBehaviour
         }
     }
 
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (GetComponentInParent<CharacterStats>().dead || other.gameObject.GetComponent<CharacterStats>().dead)
-    //        touching.Remove(other.gameObject);
-    //}
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag.Equals("Enemy"))
@@ -30,10 +24,4 @@ public class HitboxCollision : MonoBehaviour
             }
         }
     }
-
-    //private void Update()
-    //{
-    //    if (GetComponentInParent<CharacterStats>().dead)
-    //        touching.Clear();
-    //}
 }
