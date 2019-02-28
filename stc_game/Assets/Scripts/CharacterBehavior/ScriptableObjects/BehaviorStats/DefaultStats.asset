@@ -15,7 +15,7 @@ MonoBehaviour:
   headOffset: 1.7
   headGizmoRadius: 0.5
   stoppingDistance: 3
-  stopFollowDistance: 20
+  stopFollowDistance: 30
   patrolStopDistance: 3.72
   rotationSpeed: 15
   aggroDistance: 13
@@ -23,3 +23,4 @@ MonoBehaviour:
   waitTime: 3
   patrolSpeed: 2.5
   chaseSpeed: 7
+  yTargetPosition: 0.25

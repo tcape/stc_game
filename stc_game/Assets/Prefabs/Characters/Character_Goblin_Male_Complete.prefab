@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 3910273914526698151}
   - component: {fileID: 721315338923108770}
   - component: {fileID: 9118579321821184893}
+  - component: {fileID: 230125693817955390}
   m_Layer: 0
   m_Name: Character_Goblin_Male_Complete
   m_TagString: Enemy
@@ -710,6 +711,19 @@ MonoBehaviour:
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
+--- !u!114 &230125693817955390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557e4b8dadd7124c9b831a6706ce542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touching: []
 --- !u!1 &115104
 GameObject:
   m_ObjectHideFlags: 0

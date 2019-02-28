@@ -16,7 +16,8 @@ public class DamageOverTime : AbilityAction
 
     public override void Act(AbilityManager manager)
     {
-        target.GetComponent<CharacterStats>().TakeDamage(amount);
+        target.GetComponent<CharacterStats>().TakeAbilityDamage(manager.stats, amount);
+        target.GetComponent<StateController>().currentState = target.GetComponent<StateController>().aggroState;
     }
 
     public override void RemoveEffect(AbilityManager manager)

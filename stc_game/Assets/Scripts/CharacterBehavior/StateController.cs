@@ -8,6 +8,7 @@ public class StateController : MonoBehaviour
     public State startState;
     public State currentState;
     public State remainState;
+    public State aggroState;
     public GameObject aggroSergent;
     public GameObject target;
     public Camera cam;

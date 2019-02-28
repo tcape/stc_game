@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddd6f3dbfa5fa0b40afcfdc411e46da6, type: 3}
-  m_Name: EnemyBastStatsPreset
+  m_Name: EnemyBaseStatsPreset
   m_EditorClassIdentifier: 
   maxHP: 100
   maxAP: 100
@@ -23,3 +23,4 @@ MonoBehaviour:
   abilityCritPower: 0
   defense: 5
   dodgeRate: 0.1
+  movementSpeed: 6

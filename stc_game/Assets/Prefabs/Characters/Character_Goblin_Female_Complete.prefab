@@ -921,6 +921,7 @@ GameObject:
   - component: {fileID: 7804807622747986222}
   - component: {fileID: 1138544528998633906}
   - component: {fileID: 2046857015405670074}
+  - component: {fileID: 135648803900685487}
   m_Layer: 0
   m_Name: Character_Goblin_Female_Complete
   m_TagString: Enemy
@@ -1102,6 +1103,19 @@ MonoBehaviour:
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
+--- !u!114 &135648803900685487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557e4b8dadd7124c9b831a6706ce542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touching: []
 --- !u!1 &126850
 GameObject:
   m_ObjectHideFlags: 0

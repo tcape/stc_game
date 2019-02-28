@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 6589587019939014895}
   - component: {fileID: 59071811669183975}
   - component: {fileID: 5790142131360177302}
+  - component: {fileID: 8088941791388668764}
   m_Layer: 0
   m_Name: Character_Tormented_Soul_Complete
   m_TagString: Enemy
@@ -222,11 +223,26 @@ MonoBehaviour:
   attack: 0
   abilityAttack: 0
   meleeCritRate: 0
+  meleeCritPower: 0
   abilityCritRate: 0
+  abilityCritPower: 0
   defense: 0
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
+--- !u!114 &8088941791388668764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557e4b8dadd7124c9b831a6706ce542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touching: []
 --- !u!1 &103080
 GameObject:
   m_ObjectHideFlags: 0

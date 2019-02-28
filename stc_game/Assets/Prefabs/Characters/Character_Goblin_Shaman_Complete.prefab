@@ -4123,6 +4123,7 @@ GameObject:
   - component: {fileID: 1642878035880407493}
   - component: {fileID: 7286805971449132413}
   - component: {fileID: 5496241884318802378}
+  - component: {fileID: 3048881227627042271}
   m_Layer: 0
   m_Name: Character_Goblin_Shaman_Complete
   m_TagString: Enemy
@@ -4304,6 +4305,19 @@ MonoBehaviour:
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
+--- !u!114 &3048881227627042271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557e4b8dadd7124c9b831a6706ce542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touching: []
 --- !u!1 &196770
 GameObject:
   m_ObjectHideFlags: 0

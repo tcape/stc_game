@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
-  m_Name: TestAbility 3
+  m_Script: {fileID: 11500000, guid: efc0cdf9b22a3624cb5e6190e5bca05f, type: 3}
+  m_Name: IncreaseSpeed
   m_EditorClassIdentifier: 
-  animationTrigger: 
-  cooldown: 10
-  duration: 0
-  hotkey: 51
-  startTime: 0
-  actions: []
+  type: 0
+  persistance: 1
+  amount: 5
+  percentage: 0
+  interval: 0
+  effectTotal: 0
   target: {fileID: 0}
+  lastTick: 0

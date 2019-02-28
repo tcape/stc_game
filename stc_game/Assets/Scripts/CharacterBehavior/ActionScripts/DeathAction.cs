@@ -14,5 +14,8 @@ public class DeathAction : CharacterAction
     {
         controller.animator.SetBool("Dead", true);
         controller.gameObject.layer = 2;
+        controller.navMeshAgent.enabled = false;
+        controller.GetComponent<Rigidbody>().isKinematic = true;
+        controller.GetComponent<CapsuleCollider>().enabled = false;
     }
 }

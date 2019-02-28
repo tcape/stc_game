@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: Curse
   m_EditorClassIdentifier: 
+  targetType: 1
+  actions:
+  - {fileID: 11400000, guid: a08b223a8787a3549a26b2cb767a748c, type: 2}
   animationTrigger: Ability2
   cooldown: 10
   duration: 10
   hotkey: 50
-  startTime: 14.176906
-  actions:
-  - {fileID: 11400000, guid: a08b223a8787a3549a26b2cb767a748c, type: 2}
+  range: 20
+  startTime: 14.595119
   target: {fileID: 0}
