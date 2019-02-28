@@ -90,7 +90,7 @@ public class MoveToDestination : CharacterAction
             }
         }
 
-        if (controller.target.gameObject.tag.Equals("Enemy") || controller.target.gameObject.tag.Equals("NPC"))
+        if (controller.target.gameObject.tag.Equals("Enemy"))
         {
             controller.navMeshAgent.stoppingDistance = controller.stats.stoppingDistance;
             var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
@@ -99,5 +99,3 @@ public class MoveToDestination : CharacterAction
         }
     }
 }
-
-
