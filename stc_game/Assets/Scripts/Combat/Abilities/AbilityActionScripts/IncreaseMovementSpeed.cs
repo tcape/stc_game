@@ -14,8 +14,8 @@ public class IncreaseMovementSpeed : AbilityAction
     }
     public override void Act(AbilityManager manager)
     {
-        manager.stats.BuffMovementSpeed(amount);
         UpdateEffectTotal();
+        manager.stats.BuffMovementSpeed(amount);
     }
 
     public override void RemoveEffect(AbilityManager manager)

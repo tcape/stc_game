@@ -29,17 +29,24 @@ namespace Assets.Scripts.CharacterBehavior.Combat
         {
             foreach (var ability in myAbilities)
             {
-                if (Input.GetKeyDown(ability.hotkey) && ability.CanUse())
+
+                if (Input.GetKeyDown(ability.hotkey))
                 {
-                    activeAbilites.Add(ability);
-                    ability.TriggerAnimator(this);
-                    ability.startTime = Time.time;
-                    foreach (var action in ability.actions)
-                        action.target = controller.target;
-                    foreach (var action in ability.actions.Where(t => t.type.Equals(AbilityAction.ActionType.Instant)))
+                    ability.target = controller.target;
+
+                    if(ability.CanUse(this))
                     {
-                        action.Act(this);
+                        activeAbilites.Add(ability);
+                        ability.TriggerAnimator(this);
+                        ability.startTime = Time.time;
+                        foreach (var action in ability.actions)
+                            action.target = controller.target;
+                        foreach (var action in ability.actions.Where(t => t.type.Equals(AbilityAction.ActionType.Instant)))
+                        {
+                            action.Act(this);
+                        }
                     }
+                    
                 }
             }
 

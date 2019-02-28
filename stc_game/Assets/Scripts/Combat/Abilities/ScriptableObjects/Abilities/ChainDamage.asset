@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: ChainDamage
   m_EditorClassIdentifier: 
+  targetType: 1
   actions:
   - {fileID: 11400000, guid: 972c3593b9841584483781a4247eafce, type: 2}
   animationTrigger: 
   cooldown: 5
   duration: 0
   hotkey: 53
-  startTime: 34.5016
+  range: 20
+  startTime: 8.820774
   target: {fileID: 0}

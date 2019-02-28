@@ -8,7 +8,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 {
     public interface IAbility
     {
-        bool CanUse();
+        bool CanUse(AbilityManager manager);
         void TriggerAnimator(AbilityManager manager);
     }
 }
