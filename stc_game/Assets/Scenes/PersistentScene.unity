@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faderCanvasGroup: {fileID: 1595152081}
+  loadingText: {fileID: 1406084099}
   fadeDuration: 1
   startingSceneName: Town
 --- !u!1 &178310718
