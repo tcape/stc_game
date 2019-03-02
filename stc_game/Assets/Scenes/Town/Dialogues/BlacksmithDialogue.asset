@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1b04f7aa160c3428767bf8c847bd2b, type: 3}
   m_Name: BlacksmithDialogue
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"name":null,"description":null,"helpUrl":null,"_nodes":[],"conditions":[],"variables":{"variables":[]}}'
+  _serializedJsonString: '{"name":null,"description":null,"helpUrl":null,"_nodes":[{"_index":0,"ownerType":1,"useAutoFocus":true,"_edges":[],"_message":{"_key":"NO_KEY"},"audioInfo":{"audioClip":{"_key":null},"volume":1.0,"pitch":1.0,"loop":false},"motionInfo":{"motion":null,"speed":1.0},"_editorPosition":{"x":0.0,"y":0.0},"$type":"Devdog.QuestSystemPro.Dialogue.EntryNode"}],"conditions":[],"variables":{"variables":[]}}'
   _objectReferences: []
   name: 
   description: 

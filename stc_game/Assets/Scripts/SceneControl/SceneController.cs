@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // This script exists in the Persistent scene and manages the content
 // based scene's loading.  It works on a principle that the
@@ -17,6 +18,7 @@ public class SceneController : MonoBehaviour
 
 
     public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
+    public Text loadingText;
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
     public string startingSceneName;
     // The name of the scene that should be loaded first.
@@ -43,6 +45,7 @@ public class SceneController : MonoBehaviour
     private IEnumerator Start()
     {
         startingSceneName = GameStrings.Scenes.TownScene;
+        loadingText.enabled = false;
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;
 
@@ -72,9 +75,12 @@ public class SceneController : MonoBehaviour
     // This is the coroutine where the 'building blocks' of the script are put together.
     private IEnumerator FadeAndSwitchScenes(string sceneName)
     {
+        loadingText.enabled = false;
         // Start fading to black and wait for it to finish before continuing.
         yield return StartCoroutine(Fade(1f));
 
+
+        loadingText.enabled = true;
         // If this event has any subscribers, call it.
         if (BeforeSceneUnload != null)
             BeforeSceneUnload();
@@ -89,6 +95,7 @@ public class SceneController : MonoBehaviour
         if (AfterSceneLoad != null)
             AfterSceneLoad();
 
+        loadingText.enabled = false;
         // Start fading back in and wait for it to finish before exiting the function.
         yield return StartCoroutine(Fade(0f));
     }
