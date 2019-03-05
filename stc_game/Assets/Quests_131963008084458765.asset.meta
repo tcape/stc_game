@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: d70c871906646484381daf84a22763a9
+guid: a5b47be9cd366ba4d87d22667c0168e0
 labels:
-- Quest
+- QuestDatabase
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
