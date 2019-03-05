@@ -11,16 +11,21 @@ namespace Assets.Scripts.MonoBehaviors
 
         public CharacterStats characterStats;
 
+        
 
         protected override void Load()
         {
             CharacterStats stats = new CharacterStats();
             if (saveData.Load(key, ref stats))
+            {
                 characterStats = stats;
+            }
         }
 
         protected override void Save()
         {
+            characterStats = GetComponent<CharacterStats>();
+
             saveData.Save(key, characterStats);
         }
 

@@ -158,6 +158,7 @@ MonoBehaviour:
   faderCanvasGroup: {fileID: 1595152081}
   fadeDuration: 1
   startingSceneName: Town
+  playerSaveData: {fileID: 11400000, guid: e4869754167ae794f94650072ac8718e, type: 2}
 --- !u!1 &178310718
 GameObject:
   m_ObjectHideFlags: 0

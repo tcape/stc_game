@@ -11,7 +11,7 @@ public abstract class Saver : MonoBehaviour
     public SaveData saveData;                   // Reference to the SaveData scriptable object where the data is stored.
 
 
-    protected string key;                       // A string to identify what is being saved.  This should be set using information about the data as well as the uniqueIdentifier.
+    public string key;                       // A string to identify what is being saved.  This should be set using information about the data as well as the uniqueIdentifier.
 
 
     private SceneController sceneController;    // Reference to the SceneController so that this can subscribe to events that happen before and after scene loads.
