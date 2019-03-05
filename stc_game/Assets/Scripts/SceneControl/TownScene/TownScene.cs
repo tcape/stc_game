@@ -15,9 +15,7 @@ public class TownScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        num++;
-
-        if (num == 1)
+        if (other.gameObject.CompareTag("Player"))
         {
             SceneController.Instance.FadeAndLoadScene(GameStrings.Scenes.DungeonScene);
         }
