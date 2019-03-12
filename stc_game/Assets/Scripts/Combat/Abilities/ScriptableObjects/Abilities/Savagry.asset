@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: Savagry
   m_EditorClassIdentifier: 
+  targetType: 0
   actions:
   - {fileID: 11400000, guid: 4058dffcad1e8a84aaa846c8d96ba554, type: 2}
+  - {fileID: 11400000, guid: 2cce17744fca05847814f996fc0ff8e6, type: 2}
   animationTrigger: Ability2
   cooldown: 10
   duration: 10
   hotkey: 52
-  startTime: 18.073706
+  range: 0
+  startTime: 29.94642
   target: {fileID: 0}
