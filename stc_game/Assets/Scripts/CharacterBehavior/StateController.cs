@@ -116,4 +116,9 @@ public class StateController : MonoBehaviour
     {
         stateTimeElapsed = 0;
     }
+
+    public void CauseAggro()
+    {
+        currentState = aggroState;
+    }
 }
