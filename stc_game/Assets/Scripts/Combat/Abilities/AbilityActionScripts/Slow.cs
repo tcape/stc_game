@@ -16,6 +16,7 @@ public class Slow : AbilityAction
     public override void Act(AbilityManager manager)
     {
         target.GetComponent<CharacterStats>().BuffMovementSpeed(amount);
+        target.GetComponent<StateController>().CauseAggro();
     }
 
     public override void RemoveEffect(AbilityManager manager)

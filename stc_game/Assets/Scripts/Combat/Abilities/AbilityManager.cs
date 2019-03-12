@@ -32,7 +32,12 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
                 if (Input.GetKeyDown(ability.hotkey))
                 {
-                    ability.target = controller.target;
+                    if (ability.targetType.Equals(Ability.TargetType.Self))
+                    {
+                        ability.target = gameObject;
+                    }
+                   else
+                        ability.target = controller.target;
 
                     if(ability.CanUse(this))
                     {
@@ -40,7 +45,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                         ability.TriggerAnimator(this);
                         ability.startTime = Time.time;
                         foreach (var action in ability.actions)
-                            action.target = controller.target;
+                            action.target = ability.target;
                         foreach (var action in ability.actions.Where(t => t.type.Equals(AbilityAction.ActionType.Instant)))
                         {
                             action.Act(this);
@@ -52,7 +57,17 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
             foreach (var ability in activeAbilites)
             {
-                if (ability.startTime + ability.duration < Time.time)
+                if (ability.target.GetComponent<CharacterStats>().dead)
+                {
+                    foreach(var action in ability.actions)
+                    {
+                        action.RemoveEffect(this);
+                    }
+
+                    activeAbilites.Remove(ability);
+                }
+
+                if (ability.startTime + ability.duration <= Time.time)
                 {
                     foreach (var action in ability.actions)
                     {
