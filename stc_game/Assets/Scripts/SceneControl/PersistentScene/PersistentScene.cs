@@ -21,7 +21,6 @@ public class PersistentScene : MonoBehaviour
 
     private void Start()
     {
-        //SceneManager.LoadSceneAsync("Outdoor_1", LoadSceneMode.Additive);
-        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Outdoor_1"));
+        
     }
 }
