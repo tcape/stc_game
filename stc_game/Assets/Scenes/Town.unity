@@ -11607,6 +11607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueIdentifier: myStats
   saveData: {fileID: 11400000, guid: e4869754167ae794f94650072ac8718e, type: 2}
+  key: 
   characterStats: {fileID: 690966963}
 --- !u!114 &690966963 stripped
 MonoBehaviour:
@@ -21079,6 +21080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
   saveData: {fileID: 0}
+  key: 
   transformToSave: {fileID: 1623998896}
 --- !u!4 &1633452401 stripped
 Transform:

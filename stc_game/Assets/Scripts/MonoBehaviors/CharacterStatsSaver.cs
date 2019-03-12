@@ -11,7 +11,10 @@ namespace Assets.Scripts.MonoBehaviors
 
         public CharacterStats characterStats;
 
-        
+        //private void Awake()
+        //{
+        //    characterStats = GetComponent<CharacterStats>();
+        //}
 
         protected override void Load()
         {
