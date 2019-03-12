@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.CharacterBehavior.Combat;
+using Assets.Scripts.MonoBehaviors;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using UnityEngine.AI;
 
 public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 {
+    public CharacterStatsSaver saver;
     public StatsPreset presetStats;
     public double maxHP;
     public double maxAP;
@@ -26,6 +28,49 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 
     private void Awake()
     {
+        saver = GetComponent<CharacterStatsSaver>();
+        LoadPresetStats();
+        
+    }
+
+    private void Start()
+    {
+        if (gameObject.CompareTag("Player"))
+        {
+            CharacterStats savedStats = new CharacterStats();
+            if (saver.saveData.Load(saver.key, ref savedStats))
+            {
+                LoadSavedStats(savedStats);
+            }
+        }
+    }
+
+    private void Update()
+    {
+        GetComponent<NavMeshAgent>().speed = (float)movementSpeed;
+    }
+
+    private void LoadSavedStats(CharacterStats savedStats)
+    {
+        maxHP = savedStats.maxHP;
+        maxAP = savedStats.maxAP;
+        currentHP = savedStats.currentHP;
+        currentAP = savedStats.maxAP;
+        strength = savedStats.strength;
+        attack = savedStats.attack;
+        abilityAttack = savedStats.abilityAttack;
+        meleeCritRate = savedStats.meleeCritRate;
+        meleeCritPower = savedStats.meleeCritPower;
+        abilityCritRate = savedStats.abilityCritRate;
+        abilityCritPower = savedStats.abilityCritPower;
+        defense = savedStats.defense;
+        dodgeRate = savedStats.dodgeRate;
+        movementSpeed = savedStats.movementSpeed;
+        dead = savedStats.dead;
+    }
+
+    private void LoadPresetStats()
+    {
         maxHP = presetStats.maxHP;
         maxAP = presetStats.maxAP;
         currentHP = presetStats.maxHP;
@@ -41,11 +86,6 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         dodgeRate = presetStats.dodgeRate;
         movementSpeed = presetStats.movementSpeed;
         dead = false;
-    }
-
-    private void Update()
-    {
-        GetComponent<NavMeshAgent>().speed = (float)movementSpeed;
     }
 
     public void TakeDamage(double amount)
