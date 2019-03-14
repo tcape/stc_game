@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd6f3dbfa5fa0b40afcfdc411e46da6, type: 3}
   m_Name: RockGolemStatsPreset
   m_EditorClassIdentifier: 
-  level: 0
-  gold: 0
-  XP: 0
+  level: 3
+  gold: 100
+  XP: 15
   maxHP: 200
   maxAP: 100
   strength: 20
