@@ -8,11 +8,11 @@ using UnityEngine;
 
 namespace Assets.Scripts.CharacterBehavior.BaseClasses
 {
+    public enum ActionType { Instant, Periodic };
+    public enum ActionPersistance { Permanent, Temporary };
+
     public abstract class AbilityAction : ScriptableObject
     {
-        public enum ActionType { Instant, Periodic };
-        public enum ActionPersistance { Permanent, Temporary };
-
         public ActionType type;
         public ActionPersistance persistance;
         public double amount;

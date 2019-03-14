@@ -30,7 +30,7 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
     {
         saver = GetComponent<CharacterStatsSaver>();
         LoadPresetStats();
-        
+
     }
 
     private void Start()
@@ -88,6 +88,20 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         dead = false;
     }
 
+    public void UseAbilityPoints(double amount)
+    {
+        currentAP -= amount;
+        if (currentAP < 0)
+            currentAP = 0;
+    }
+
+    public void GainAbilityPoints(double amount)
+    {
+        currentAP += amount;
+        if (currentAP > maxAP)
+            currentAP = maxAP;
+    }
+    
     public void TakeDamage(double amount)
     {
         if (!dead)

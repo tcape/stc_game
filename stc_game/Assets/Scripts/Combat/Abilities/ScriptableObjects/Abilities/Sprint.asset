@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: Sprint
   m_EditorClassIdentifier: 
+  abilityType: 1
+  targetType: 0
   actions:
   - {fileID: 11400000, guid: 2191ae3f95d86b245bdd2455e13f286e, type: 2}
   animationTrigger: Ability2
   cooldown: 10
   duration: 5
+  cost: 15
   hotkey: 51
-  startTime: 50.564476
+  range: 0
+  startTime: 34.069683
   target: {fileID: 0}
