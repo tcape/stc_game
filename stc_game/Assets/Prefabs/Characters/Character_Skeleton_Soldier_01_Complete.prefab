@@ -4575,7 +4575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: {fileID: 138872, guid: 4fd0c7547143bde4c851c20099915676, type: 3}
-  offset: {x: 0.5, y: 0, z: 0.5}
+  offset: {x: 0.5, y: 1.5, z: 0.5}
 --- !u!1 &193148
 GameObject:
   m_ObjectHideFlags: 0

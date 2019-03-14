@@ -8,11 +8,8 @@ using UnityEngine.AI;
 
 public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 {
-    private CharacterStatsSaver saver;
-    public StatsPreset presetStats;
     public double level;
     public double XP;
-    private double nextLevelXP;
     public double gold;
     public double maxHP;
     public double maxAP;
@@ -29,6 +26,11 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
     public double dodgeRate;
     public double movementSpeed;
     public bool dead;
+    public StatsPreset presetStats;
+
+    private CharacterStatsSaver saver;
+    private double nextLevelXP;
+    private static readonly double firstLevelXP = 50;
 
     private void Awake()
     {
@@ -59,7 +61,7 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         level = savedStats.level;
         gold = savedStats.gold;
         XP = savedStats.XP;
-        nextLevelXP = NextLevelXPAmount();
+        nextLevelXP = savedStats.nextLevelXP;
         maxHP = savedStats.maxHP;
         maxAP = savedStats.maxAP;
         currentHP = savedStats.currentHP;
@@ -82,6 +84,7 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         level = presetStats.level;
         gold = presetStats.gold;
         XP = presetStats.XP;
+        nextLevelXP = NextLevelXPAmount();
         maxHP = presetStats.maxHP;
         maxAP = presetStats.maxAP;
         currentHP = presetStats.maxHP;
@@ -106,12 +109,15 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 
     private double NextLevelXPAmount()
     {
+        if (XP == 0)
+            return firstLevelXP;
         return Math.Round(XP + XP * 1.5);
     }
 
     public void LevelUp()
     {
         level++;
+        SetNextLevelXP();
     }
 
     public bool Ding()
@@ -125,7 +131,6 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         if (Ding())
         {
             LevelUp();
-            SetNextLevelXP();
         }
     }
 
@@ -139,7 +144,6 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         gold -= amount;
     }
     
-
     public void TakeDamage(double amount)
     {
         if (!dead)

@@ -11,6 +11,5 @@ namespace Assets.Scripts.CharacterBehavior.Drops
     public class DropBag : MonoBehaviour
     {
         public GameObject[] items;
-        
     }
 }

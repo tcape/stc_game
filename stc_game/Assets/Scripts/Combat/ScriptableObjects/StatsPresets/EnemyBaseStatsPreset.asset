@@ -18,7 +18,7 @@ MonoBehaviour:
   maxHP: 100
   maxAP: 100
   strength: 10
-  attack: 5
+  attack: 15
   abilityAttack: 5
   meleeCritRate: 0.1
   meleeCritPower: 1.5
