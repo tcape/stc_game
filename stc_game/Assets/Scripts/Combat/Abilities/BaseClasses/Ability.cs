@@ -5,16 +5,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum TargetType { Self, Enemy };
+public enum AbilityType { AlwaysActive, Activate };
+
 [CreateAssetMenu (menuName ="Ability/Ability")]
 public class Ability : ScriptableObject, IAbility
 {
-    public enum TargetType { Self, Enemy };
-
+    public AbilityType abilityType;
     public TargetType targetType;
     public List<AbilityAction> actions;
     public string animationTrigger;
     public float cooldown;
     public float duration;
+    public double cost;
     public KeyCode hotkey;
     public float range;
     [HideInInspector] public float startTime;
@@ -32,9 +36,14 @@ public class Ability : ScriptableObject, IAbility
         {
             if (InRange(manager))
             {
-                lastCalled = Time.time;
-                Debug.Log(animationTrigger + " Performed");
-                return true;
+                if (cost <= manager.stats.currentAP)
+                {
+                    lastCalled = Time.time;
+                    
+                    Debug.Log(animationTrigger + " Performed");
+
+                    return true;
+                }
             }
             else
             {

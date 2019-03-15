@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: TestParticles
   m_EditorClassIdentifier: 
+  abilityType: 1
   targetType: 0
   actions:
-  - {fileID: 11400000, guid: 9efd2b5a28052954496e6e1e831a5592, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 603337e16ee096643b58383b5681124f, type: 2}
   animationTrigger: 
   cooldown: 1
   duration: 3
+  cost: 0
   hotkey: 50
   range: 0
   startTime: 42.758904

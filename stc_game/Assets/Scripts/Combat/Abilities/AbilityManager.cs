@@ -16,23 +16,28 @@ namespace Assets.Scripts.CharacterBehavior.Combat
         [HideInInspector] public Animator animator;
         [HideInInspector] public StateController controller;
 
-
         private void Awake()
         {
             stats = GetComponent<CharacterStats>();
             animator = GetComponent<Animator>();
             activeAbilites = new List<Ability>();
             controller = GetComponent<StateController>();
+            foreach (var ability in myAbilities)
+            {
+                if (ability.targetType == TargetType.Self)
+                    ability.target = gameObject;
+                if (ability.abilityType == AbilityType.AlwaysActive)
+                    activeAbilites.Add(ability);
+            }
         }
 
         private void Update()
         {
             foreach (var ability in myAbilities)
             {
-
                 if (Input.GetKeyDown(ability.hotkey))
                 {
-                    if (ability.targetType.Equals(Ability.TargetType.Self))
+                    if (ability.targetType.Equals(TargetType.Self))
                     {
                         ability.target = gameObject;
                     }
@@ -42,11 +47,12 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                     if(ability.CanUse(this))
                     {
                         activeAbilites.Add(ability);
+                        stats.UseAbilityPoints(ability.cost);
                         ability.TriggerAnimator(this);
                         ability.startTime = Time.time;
                         foreach (var action in ability.actions)
                             action.target = ability.target;
-                        foreach (var action in ability.actions.Where(t => t.type.Equals(AbilityAction.ActionType.Instant)))
+                        foreach (var action in ability.actions.Where(t => t.type.Equals(ActionType.Instant)))
                         {
                             action.Act(this);
                         }
@@ -67,11 +73,11 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                     activeAbilites.Remove(ability);
                 }
 
-                if (ability.startTime + ability.duration <= Time.time)
+                if (ability.startTime + ability.duration <= Time.time && ability.abilityType == AbilityType.Activate)
                 {
                     foreach (var action in ability.actions)
                     {
-                        if (action.persistance.Equals(AbilityAction.ActionPersistance.Temporary))
+                        if (action.persistance.Equals(ActionPersistance.Temporary))
                             action.RemoveEffect(this);
 
                         action.ResetEffectTotal();
@@ -79,11 +85,12 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
                     activeAbilites.Remove(ability);
                 }
+               
                 else
                 {
                     foreach (var action in ability.actions)
                     {
-                        if (action.type.Equals(AbilityAction.ActionType.Periodic))
+                        if (action.type.Equals(ActionType.Periodic))
                         {
                             if (Time.time > action.lastTick + action.interval)
                             {
