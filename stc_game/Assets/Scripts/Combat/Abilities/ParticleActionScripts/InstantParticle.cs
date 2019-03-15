@@ -28,6 +28,7 @@ public class InstantParticle : AbilityAction
         //spawn particle effect
         if (notStarted)
         {
+            
             prefabInstance = Instantiate(particlePrefab);
             prefabInstance.transform.position = target.transform.position + offset;
             prefabInstance.transform.parent = target.transform;

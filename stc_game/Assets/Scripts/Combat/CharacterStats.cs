@@ -8,8 +8,9 @@ using UnityEngine.AI;
 
 public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 {
-    public CharacterStatsSaver saver;
-    public StatsPreset presetStats;
+    public double level;
+    public double XP;
+    public double gold;
     public double maxHP;
     public double maxAP;
     public double currentHP;
@@ -25,12 +26,17 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
     public double dodgeRate;
     public double movementSpeed;
     public bool dead;
+    public StatsPreset presetStats;
+
+    private CharacterStatsSaver saver;
+    private double nextLevelXP;
+    private static readonly double firstLevelXP = 50;
 
     private void Awake()
     {
         saver = GetComponent<CharacterStatsSaver>();
-        LoadPresetStats();
-        
+        if (presetStats != null)
+            LoadPresetStats();
     }
 
     private void Start()
@@ -52,6 +58,10 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 
     private void LoadSavedStats(CharacterStats savedStats)
     {
+        level = savedStats.level;
+        gold = savedStats.gold;
+        XP = savedStats.XP;
+        nextLevelXP = savedStats.nextLevelXP;
         maxHP = savedStats.maxHP;
         maxAP = savedStats.maxAP;
         currentHP = savedStats.currentHP;
@@ -71,6 +81,10 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 
     private void LoadPresetStats()
     {
+        level = presetStats.level;
+        gold = presetStats.gold;
+        XP = presetStats.XP;
+        nextLevelXP = NextLevelXPAmount();
         maxHP = presetStats.maxHP;
         maxAP = presetStats.maxAP;
         currentHP = presetStats.maxHP;
@@ -88,6 +102,48 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         dead = false;
     }
 
+    private void SetNextLevelXP()
+    {
+        nextLevelXP = NextLevelXPAmount();
+    }
+
+    private double NextLevelXPAmount()
+    {
+        if (XP == 0)
+            return firstLevelXP;
+        return Math.Round(XP + XP * 1.5);
+    }
+
+    public void LevelUp()
+    {
+        level++;
+        SetNextLevelXP();
+    }
+
+    public bool Ding()
+    {
+        return XP >= nextLevelXP;
+    }
+
+    public void GainXP(double amount)
+    {
+        XP += amount;
+        if (Ding())
+        {
+            LevelUp();
+        }
+    }
+
+    public void GainGold(double amount)
+    {
+        gold += amount;
+    }
+
+    public void LoseGold(double amount)
+    {
+        gold -= amount;
+    }
+    
     public void TakeDamage(double amount)
     {
         if (!dead)

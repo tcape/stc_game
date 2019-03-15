@@ -922,6 +922,7 @@ GameObject:
   - component: {fileID: 1138544528998633906}
   - component: {fileID: 2046857015405670074}
   - component: {fileID: 135648803900685487}
+  - component: {fileID: 4094329266999508744}
   m_Layer: 0
   m_Name: Character_Goblin_Female_Complete
   m_TagString: Enemy
@@ -1062,11 +1063,14 @@ MonoBehaviour:
   startState: {fileID: 11400000, guid: bab1dd25e9db19c409b0df1f47b5f795, type: 2}
   currentState: {fileID: 0}
   remainState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
+  aggroState: {fileID: 0}
   aggroSergent: {fileID: 0}
   target: {fileID: 0}
   cam: {fileID: 0}
   destination: {fileID: 0}
   waypointList: []
+  playerSaveData: {fileID: 0}
+  startingPositionName: 
   characterStats: {fileID: 0}
   animator: {fileID: 0}
   stateTimeElapsed: 0
@@ -1088,6 +1092,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presetStats: {fileID: 0}
+  level: 0
+  XP: 0
+  gold: 0
   maxHP: 100
   maxAP: 0
   currentHP: 100
@@ -1116,6 +1123,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touching: []
+--- !u!114 &4094329266999508744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447eef31cd5938448ba1931cda6ed0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: {fileID: 138872, guid: 4fd0c7547143bde4c851c20099915676, type: 3}
+  offset: {x: 0.5, y: 1.5, z: 0.5}
 --- !u!1 &126850
 GameObject:
   m_ObjectHideFlags: 0
