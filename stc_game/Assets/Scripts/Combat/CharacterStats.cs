@@ -8,35 +8,52 @@ using UnityEngine.AI;
 
 public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 {
+    public StatsPreset presetStats;
+
+    [Space]
     public double level;
     public double XP;
     public double gold;
+    [Space]
     public double maxHP;
     public double maxAP;
     public double currentHP;
     public double currentAP;
+    [Space]
     public double strength;
+    public double intellect;
+    public double dexterity;
+
+    [Space] // Strength
     public double attack;
-    public double abilityAttack;
-    public double meleeCritRate;
     public double meleeCritPower;
+    public double defense;
+
+    [Space]  // Intellect
+    public double abilityAttack;
     public double abilityCritRate;
     public double abilityCritPower;
-    public double defense;
+
+    [Space] // Dexterity
+    public double meleeCritRate;
     public double dodgeRate;
     public double movementSpeed;
-    public bool dead;
-    public StatsPreset presetStats;
+
+    [HideInInspector] public bool dead;
 
     private CharacterStatsSaver saver;
     private double nextLevelXP;
-    private static readonly double firstLevelXP = 50;
+    private static readonly double firstLevelXP = 100;
 
     private void Awake()
     {
         saver = GetComponent<CharacterStatsSaver>();
         if (presetStats != null)
+        {
             LoadPresetStats();
+            UpdateStatsEffects();
+            RefreshHpAndAp();
+        }
     }
 
     private void Start()
@@ -90,6 +107,8 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         currentHP = presetStats.maxHP;
         currentAP = presetStats.maxAP;
         strength = presetStats.strength;
+        intellect = presetStats.intellect;
+        dexterity = presetStats.dexterity;
         attack = presetStats.attack;
         abilityAttack = presetStats.abilityAttack;
         meleeCritRate = presetStats.meleeCritRate;
@@ -101,6 +120,65 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         movementSpeed = presetStats.movementSpeed;
         dead = false;
     }
+
+    public void LevelUpStats()
+    {
+        strength += level;
+        intellect += level;
+        dexterity += level;
+    }
+
+    public void IncreseStrength(double amount)
+    {
+        strength += amount;
+    }
+
+    public void IncreaseIntellect(double amount)
+    {
+        intellect += amount;
+    }
+
+    public void IncreaseDexterity(double amount)
+    {
+        dexterity += amount;
+    }
+
+    public void RefreshHpAndAp()
+    {
+        currentHP = maxHP;
+        currentAP = maxAP;
+    }
+
+    public void UpdateStatsEffects()
+    {
+        StrengthStatsEffect();
+        IntellectStatsEffect();
+        DexterityStatsEffect();
+    }
+
+    private void StrengthStatsEffect()
+    {
+        attack += Math.Round(attack * strength / nextLevelXP);
+        meleeCritPower += Math.Round(meleeCritPower * strength / nextLevelXP);
+        defense += Math.Round(defense * strength / nextLevelXP);
+        maxHP += Math.Round(maxHP * strength / nextLevelXP);
+    }
+
+    private void IntellectStatsEffect()
+    {
+        abilityAttack += Math.Round(abilityAttack * intellect / nextLevelXP);
+        abilityCritPower += Math.Round(abilityCritPower * intellect / nextLevelXP);
+        abilityCritRate += Math.Round(abilityCritRate * intellect / nextLevelXP);
+        maxAP += Math.Round(maxAP * intellect / nextLevelXP);
+    }
+
+    private void DexterityStatsEffect()
+    {
+        dodgeRate += Math.Round(dodgeRate * dexterity / nextLevelXP);
+        meleeCritRate += Math.Round(meleeCritRate * dexterity / nextLevelXP);
+        movementSpeed += Math.Round(movementSpeed * dexterity / nextLevelXP);
+    }
+
 
     public void UseAbilityPoints(double amount)
     {
@@ -123,7 +201,7 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 
     private double NextLevelXPAmount()
     {
-        if (XP == 0)
+        if (level == 1)
             return firstLevelXP;
         return Math.Round(XP + XP * 1.5);
     }
@@ -132,6 +210,9 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
     {
         level++;
         SetNextLevelXP();
+        LevelUpStats();
+        UpdateStatsEffects();
+        RefreshHpAndAp();
     }
 
     public bool Ding()

@@ -20,7 +20,7 @@ public class RegenerateAP : AbilityAction
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        return;
+        effectTotal = 0;
     }
 
     public override void ResetEffectTotal()

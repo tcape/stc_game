@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: RockGolemStatsPreset
   m_EditorClassIdentifier: 
   level: 3
-  gold: 100
   XP: 15
+  gold: 100
+  strength: 0
+  intellect: 0
+  dexterity: 0
   maxHP: 200
   maxAP: 100
-  strength: 20
-  attack: 7
+  attack: 20
   abilityAttack: 5
   meleeCritRate: 0.25
   meleeCritPower: 2

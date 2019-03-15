@@ -104,5 +104,19 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                 }
             }
         }
+
+        public void RemoveAllEffects()
+        {
+            foreach (var ability in activeAbilites)
+            {
+                foreach (var action in ability.actions)
+                {
+                    action.RemoveEffect(this);
+                    action.ResetEffectTotal();
+                }
+            }
+
+            activeAbilites.Clear();
+        }
     }
 }

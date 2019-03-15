@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: EnemyBaseStatsPreset
   m_EditorClassIdentifier: 
   level: 1
-  gold: 10
   XP: 5
+  gold: 10
+  strength: 0
+  intellect: 0
+  dexterity: 0
   maxHP: 100
   maxAP: 100
-  strength: 10
   attack: 15
   abilityAttack: 5
   meleeCritRate: 0.1

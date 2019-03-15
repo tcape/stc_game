@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.CharacterBehavior.Combat;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,8 @@ namespace Assets.Scripts.MonoBehaviors
 {
     public class CharacterStatsSaver : Saver
     {
-
         public CharacterStats characterStats;
-
-        //private void Awake()
-        //{
-        //    characterStats = GetComponent<CharacterStats>();
-        //}
+        public AbilityManager manager;
 
         protected override void Load()
         {
@@ -27,8 +23,11 @@ namespace Assets.Scripts.MonoBehaviors
 
         protected override void Save()
         {
-            characterStats = GetComponent<CharacterStats>();
+            manager = GetComponent<AbilityManager>();
+            manager.RemoveAllEffects();
 
+            characterStats = GetComponent<CharacterStats>();
+            
             saveData.Save(key, characterStats);
         }
 
