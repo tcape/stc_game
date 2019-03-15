@@ -121,6 +121,13 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         dead = false;
     }
 
+    public void LevelUpStats(double str, double intel, double dex)
+    {
+        strength += str;
+        intellect += intel;
+        dexterity += dex;
+    }
+
     public void LevelUpStats()
     {
         strength += level;
