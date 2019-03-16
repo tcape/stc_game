@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd6f3dbfa5fa0b40afcfdc411e46da6, type: 3}
   m_Name: GoblinChiefStatsPreset
   m_EditorClassIdentifier: 
+  level: 3
+  XP: 100
+  gold: 100
+  strength: 0
+  intellect: 0
+  dexterity: 0
   maxHP: 300
   maxAP: 100
-  strength: 10
-  attack: 10
+  attack: 30
   abilityAttack: 5
   meleeCritRate: 0.25
   meleeCritPower: 2

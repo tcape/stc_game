@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd6f3dbfa5fa0b40afcfdc411e46da6, type: 3}
   m_Name: RockGolemStatsPreset
   m_EditorClassIdentifier: 
+  level: 3
+  XP: 15
+  gold: 100
+  strength: 0
+  intellect: 0
+  dexterity: 0
   maxHP: 200
   maxAP: 100
-  strength: 10
-  attack: 7
+  attack: 20
   abilityAttack: 5
   meleeCritRate: 0.25
   meleeCritPower: 2
