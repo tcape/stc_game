@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
+  m_Name: Stun
+  m_EditorClassIdentifier: 
+  abilityType: 1
+  targetType: 1
+  actions:
+  - {fileID: 11400000, guid: a1240488a6e45404c8a9f83d3edce03e, type: 2}
+  - {fileID: 11400000, guid: 70575111ddfbae24e9691ac06832a90b, type: 2}
+  animationTrigger: Ability1
+  cooldown: 5
+  duration: 5
+  cost: 20
+  hotkey: 32
+  range: 5
+  startTime: 53.7324
+  target: {fileID: 0}

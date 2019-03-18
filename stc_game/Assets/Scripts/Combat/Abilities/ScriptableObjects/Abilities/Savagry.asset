@@ -21,7 +21,7 @@ MonoBehaviour:
   cooldown: 10
   duration: 10
   cost: 30
-  hotkey: 52
+  hotkey: 50
   range: 0
-  startTime: 36.161716
+  startTime: 16.74736
   target: {fileID: 0}
