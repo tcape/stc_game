@@ -9,13 +9,8 @@ public abstract class Saver : MonoBehaviour
 {
     public string uniqueIdentifier;             // A unique string set by a scene designer to identify what is being saved.
     public SaveData saveData;                   // Reference to the SaveData scriptable object where the data is stored.
-
-
-    public string key;                       // A string to identify what is being saved.  This should be set using information about the data as well as the uniqueIdentifier.
-
-
+    [HideInInspector] public string key;                       // A string to identify what is being saved.  This should be set using information about the data as well as the uniqueIdentifier.
     private SceneController sceneController;    // Reference to the SceneController so that this can subscribe to events that happen before and after scene loads.
-
 
     private void Awake()
     {
@@ -30,9 +25,11 @@ public abstract class Saver : MonoBehaviour
         key = SetKey ();
     }
 
-
     private void OnEnable()
     {
+
+        if (!sceneController)
+            sceneController = FindObjectOfType<SceneController>();
         // Subscribe the Save function to the BeforeSceneUnload event.
         sceneController.BeforeSceneUnload += Save;
 
@@ -40,16 +37,16 @@ public abstract class Saver : MonoBehaviour
         sceneController.AfterSceneLoad += Load;
     }
 
-
     private void OnDisable()
     {
+        if (!sceneController)
+            sceneController = FindObjectOfType<SceneController>();
         // Unsubscribe the Save function from the BeforeSceneUnloud event.
         sceneController.BeforeSceneUnload -= Save;
 
         // Unsubscribe the Load function from the AfterSceneLoad event.
         sceneController.AfterSceneLoad -= Load;
     }
-
 
     // This function will be called in awake and must return the intended key.
     // The key must be totally unique across all Saver scripts.
