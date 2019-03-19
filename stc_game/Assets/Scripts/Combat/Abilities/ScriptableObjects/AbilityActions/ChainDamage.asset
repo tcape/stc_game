@@ -19,4 +19,4 @@ MonoBehaviour:
   interval: 0
   effectTotal: 0
   target: {fileID: 0}
-  lastTick: 0
+  lastTick: 5.115622

@@ -14,6 +14,9 @@ public class StateController : MonoBehaviour
     public Camera cam;
     public GameObject destination;
     public List<Transform> waypointList;
+    public SaveData playerSaveData;
+    public const string startingPositionKey = "startingPosition";
+    public string startingPositionName = "";
     [HideInInspector] public CharacterStats characterStats;
     [HideInInspector] public Animator animator;
     [HideInInspector] public float stateTimeElapsed;
@@ -115,5 +118,10 @@ public class StateController : MonoBehaviour
     private void OnExitState()
     {
         stateTimeElapsed = 0;
+    }
+
+    public void CauseAggro()
+    {
+        currentState = aggroState;
     }
 }

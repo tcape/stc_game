@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd6f3dbfa5fa0b40afcfdc411e46da6, type: 3}
   m_Name: HeroBaseStatsPreset
   m_EditorClassIdentifier: 
-  maxHP: 5000
-  maxAP: 100
+  level: 1
+  XP: 0
+  gold: 0
   strength: 10
-  attack: 20
+  intellect: 5
+  dexterity: 7
+  maxHP: 500
+  maxAP: 150
+  attack: 15
   abilityAttack: 10
-  meleeCritRate: 0.33
-  meleeCritPower: 2.5
-  abilityCritRate: 0.33
-  abilityCritPower: 2.5
-  defense: 1
-  dodgeRate: 0.1
-  movementSpeed: 9
+  meleeCritRate: 0.25
+  meleeCritPower: 2
+  abilityCritRate: 0.25
+  abilityCritPower: 2
+  defense: 9
+  dodgeRate: 0.15
+  movementSpeed: 7

@@ -22,9 +22,9 @@ public class SceneController : MonoBehaviour
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
     public string startingSceneName;
     // The name of the scene that should be loaded first.
-    //public string initialStartingPositionName = "DoorToMarket";
+    //public string initialStartingPositionName = "TownCenter";
     // The name of the StartingPosition in the first scene to be loaded.
-    //public SaveData playerSaveData;                 // Reference to the ScriptableObject which stores the name of the StartingPosition in the next scene.
+    public SaveData playerSaveData;                 // Reference to the ScriptableObject which stores the name of the StartingPosition in the next scene.
 
 
     private bool isFading;                          // Flag used to determine if the Image is currently fading to or from black.
@@ -50,7 +50,7 @@ public class SceneController : MonoBehaviour
         faderCanvasGroup.alpha = 1f;
 
         // Write the initial starting position to the playerSaveData so it can be loaded by the player when the first scene is loaded.
-        //playerSaveData.Save(PlayerMovement.startingPositionKey, initialStartingPositionName);
+        //playerSaveData.Save(StateController.startingPositionKey, initialStartingPositionName);
 
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
@@ -79,8 +79,9 @@ public class SceneController : MonoBehaviour
         // Start fading to black and wait for it to finish before continuing.
         yield return StartCoroutine(Fade(1f));
 
+        // If this event has any subscribers, call it.
+        BeforeSceneUnload?.Invoke();
 
-        loadingText.enabled = true;
         // If this event has any subscribers, call it.
         if (BeforeSceneUnload != null)
             BeforeSceneUnload();
@@ -92,10 +93,12 @@ public class SceneController : MonoBehaviour
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
 
         // If this event has any subscribers, call it.
+        AfterSceneLoad?.Invoke();
+
+        // If this event has any subscribers, call it.
         if (AfterSceneLoad != null)
             AfterSceneLoad();
 
-        loadingText.enabled = false;
         // Start fading back in and wait for it to finish before exiting the function.
         yield return StartCoroutine(Fade(0f));
     }
