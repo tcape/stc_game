@@ -678,20 +678,20 @@ MonoBehaviour:
   level: 0
   XP: 0
   gold: 0
-  strength: 0
-  intellect: 0
-  dexterity: 0
   maxHP: 0
   maxAP: 0
   currentHP: 0
   currentAP: 0
+  strength: 0
+  intellect: 0
+  dexterity: 0
   attack: 0
-  abilityAttack: 0
-  meleeCritRate: 0
   meleeCritPower: 0
+  defense: 0
+  abilityAttack: 0
   abilityCritRate: 0
   abilityCritPower: 0
-  defense: 0
+  meleeCritRate: 0
   dodgeRate: 0
   movementSpeed: 0
   dead: 0
@@ -7844,6 +7844,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HPCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022223707132014070, guid: 9da651808f0e8f54caf7b9f2ffa36840,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4905222141746595192, guid: 9da651808f0e8f54caf7b9f2ffa36840,
         type: 3}

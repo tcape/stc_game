@@ -45,6 +45,11 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
     private double nextLevelXP;
     private static readonly double firstLevelXP = 100;
 
+    public double GetNextLevel()
+    {
+        return nextLevelXP;
+    }
+
     private void Awake()
     {
         saver = GetComponent<CharacterStatsSaver>();

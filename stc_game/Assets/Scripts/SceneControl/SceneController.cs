@@ -26,9 +26,12 @@ public class SceneController : MonoBehaviour
 
 
     private bool isFading;                          // Flag used to determine if the Image is currently fading to or from black.
+    private HUDController hud;
 
     private void Awake()
     {
+        hud = FindObjectOfType<HUDController>();
+
         if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -51,6 +54,7 @@ public class SceneController : MonoBehaviour
 
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
+        hud.FindPlayerObject();
 
         // Once the scene is finished loading, start fading in.
         StartCoroutine(Fade(0f));
@@ -83,6 +87,7 @@ public class SceneController : MonoBehaviour
 
         // Start loading the given scene and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
+        hud.FindPlayerObject();
 
         // If this event has any subscribers, call it.
         AfterSceneLoad?.Invoke();
