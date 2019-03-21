@@ -12,22 +12,26 @@ namespace Assets.Scripts.CharacterBehavior.Combat
     {
         public List<Ability> myAbilities;
         private List<Ability> activeAbilites;
+        private AbilitySaver saver;
         [HideInInspector] public CharacterStats stats;
         [HideInInspector] public Animator animator;
         [HideInInspector] public StateController controller;
 
         private void Awake()
         {
+            saver = GetComponent<AbilitySaver>();
             stats = GetComponent<CharacterStats>();
             animator = GetComponent<Animator>();
             activeAbilites = new List<Ability>();
             controller = GetComponent<StateController>();
-            foreach (var ability in myAbilities)
+        }
+
+        private void Start()
+        {
+            if (gameObject.CompareTag("Player"))
             {
-                if (ability.targetType == TargetType.Self)
-                    ability.target = gameObject;
-                if (ability.abilityType == AbilityType.AlwaysActive)
-                    activeAbilites.Add(ability);
+                LoadSavedAbilities();
+                ActivatePassiveAbilites();
             }
         }
 
@@ -41,10 +45,10 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                     {
                         ability.target = gameObject;
                     }
-                   else
+                    else
                         ability.target = controller.target;
 
-                    if(ability.CanUse(this))
+                    if (ability.CanUse(this))
                     {
                         activeAbilites.Add(ability);
                         stats.UseAbilityPoints(ability.cost);
@@ -57,7 +61,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                             action.Act(this);
                         }
                     }
-                    
+
                 }
             }
 
@@ -65,7 +69,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             {
                 if (ability.target.GetComponent<CharacterStats>().dead)
                 {
-                    foreach(var action in ability.actions)
+                    foreach (var action in ability.actions)
                     {
                         action.RemoveEffect(this);
                     }
@@ -85,7 +89,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
                     activeAbilites.Remove(ability);
                 }
-               
+
                 else
                 {
                     foreach (var action in ability.actions)
@@ -102,6 +106,31 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                         }
                     }
                 }
+            }
+        }
+
+        private void ActivatePassiveAbilites()
+        {
+            foreach (var ability in myAbilities)
+            {
+                if (ability.targetType == TargetType.Self)
+                    ability.target = gameObject;
+                if (ability.abilityType == AbilityType.Passive)
+                    activeAbilites.Add(ability);
+            }
+        }
+       
+
+        private void LoadSavedAbilities()
+        {
+            var savedAbilities = new List<Ability>();
+            if (saver.saveData.Load(saver.key, ref savedAbilities))
+            {
+                myAbilities = savedAbilities;
+            }
+            else
+            {
+                Debug.Log("Abilities not found!");
             }
         }
 

@@ -9,8 +9,14 @@ namespace Assets.Scripts.MonoBehaviors
 {
     public class CharacterStatsSaver : Saver
     {
-        public CharacterStats characterStats;
-        public AbilityManager manager;
+        private CharacterStats characterStats;
+        private AbilityManager manager;
+
+        private void Awake()
+        {
+            characterStats = GetComponent<CharacterStats>();
+            manager = GetComponent<AbilityManager>();
+        }
 
         protected override void Load()
         {

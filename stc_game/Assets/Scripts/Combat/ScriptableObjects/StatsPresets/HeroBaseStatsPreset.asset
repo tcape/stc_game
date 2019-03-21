@@ -17,7 +17,7 @@ MonoBehaviour:
   gold: 0
   strength: 10
   intellect: 5
-  dexterity: 10
+  dexterity: 7
   maxHP: 500
   maxAP: 150
   attack: 15
@@ -28,4 +28,4 @@ MonoBehaviour:
   abilityCritPower: 2
   defense: 9
   dodgeRate: 0.15
-  movementSpeed: 7.5
+  movementSpeed: 7

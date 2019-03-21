@@ -7,7 +7,7 @@ using UnityEngine;
 
 
 public enum TargetType { Self, Enemy };
-public enum AbilityType { AlwaysActive, Activate };
+public enum AbilityType { Passive, Activate };
 
 [CreateAssetMenu (menuName ="Ability/Ability")]
 public class Ability : ScriptableObject, IAbility
