@@ -47,7 +47,7 @@ public class HUDController : MonoBehaviour
 
     private void UpdateXPBar()
     {
-        var scaleValue = (float)(stats.XP / stats.GetNextLevel());
+        var scaleValue = (float)((stats.XP - stats.GetTotalXP()) / (stats.GetNextLevel() - stats.GetTotalXP()));
         experienceBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
     }
 }

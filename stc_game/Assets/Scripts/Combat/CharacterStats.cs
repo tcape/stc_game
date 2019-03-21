@@ -43,11 +43,17 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
 
     private CharacterStatsSaver saver;
     private double nextLevelXP;
+    private double totalXP = 0;
     private static readonly double firstLevelXP = 100;
 
     public double GetNextLevel()
     {
         return nextLevelXP;
+    }
+
+    public double GetTotalXP()
+    {
+        return totalXP;
     }
 
     private void Awake()
@@ -221,6 +227,7 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
     public void LevelUp()
     {
         level++;
+        totalXP = nextLevelXP;
         SetNextLevelXP();
         LevelUpStats();
         UpdateStatsEffects();
