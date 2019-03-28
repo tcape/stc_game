@@ -90,10 +90,11 @@ public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
         gold = savedStats.gold;
         XP = savedStats.XP;
         nextLevelXP = savedStats.nextLevelXP;
+        totalXP = savedStats.totalXP;
         maxHP = savedStats.maxHP;
         maxAP = savedStats.maxAP;
         currentHP = savedStats.currentHP;
-        currentAP = savedStats.maxAP;
+        currentAP = savedStats.currentAP;
         strength = savedStats.strength;
         attack = savedStats.attack;
         abilityAttack = savedStats.abilityAttack;
