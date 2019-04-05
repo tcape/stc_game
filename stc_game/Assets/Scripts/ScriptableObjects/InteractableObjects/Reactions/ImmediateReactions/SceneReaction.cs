@@ -2,11 +2,13 @@
 // Though there is a delay while the scene fades out,
 // this is done with the SceneController class and so
 // this is just a Reaction not a DelayedReaction.
+using UnityEngine.SceneManagement;
+
 public class SceneReaction : Reaction
 {
     public string sceneName;                    // The name of the scene to be loaded.
     public string startingPointInLoadedScene;   // The name of the StartingPosition in the newly loaded scene.
-    //public SaveData playerSaveData;             // Reference to the save data asset that will store the StartingPosition.
+    public SaveData playerSaveData;             // Reference to the save data asset that will store the StartingPosition.
 
 
     private SceneController sceneController;    // Reference to the SceneController to actually do the loading and unloading of scenes.
@@ -20,8 +22,13 @@ public class SceneReaction : Reaction
 
     protected override void ImmediateReaction()
     {
+        //if (sceneName.Equals(GameStrings.Scenes.TownScene) && 
+        //    SceneManager.GetActiveScene().name.Equals(GameStrings.Scenes.DungeonScene))
+        //{
+        //    playerSaveData.Save()
+        //}
         // Save the StartingPosition's name to the data asset.
-        //playerSaveData.Save(PlayerMovement.startingPositionKey, startingPointInLoadedScene);
+        //playerSaveData.Save(SpawnManager.startingPositionKey, startingPointInLoadedScene);
 
         // Start the scene loading process.
         sceneController.FadeAndLoadScene(this.sceneName);

@@ -14,6 +14,9 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
+        transform.position = GameObject.FindGameObjectWithTag("CameraData").transform.position;
+        transform.rotation = GameObject.FindGameObjectWithTag("CameraData").transform.rotation;
+
     }
 
     // Update is called once per frame

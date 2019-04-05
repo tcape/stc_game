@@ -24,9 +24,9 @@ public class SceneController : MonoBehaviour
     // The name of the StartingPosition in the first scene to be loaded.
     public SaveData playerSaveData;                 // Reference to the ScriptableObject which stores the name of the StartingPosition in the next scene.
 
-
     private bool isFading;                          // Flag used to determine if the Image is currently fading to or from black.
     private HUDController hud;
+    private SpawnManager spawnManager;
 
     private void Awake()
     {
@@ -54,6 +54,9 @@ public class SceneController : MonoBehaviour
 
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
+
+        spawnManager = FindObjectOfType<SpawnManager>();
+        spawnManager.SetScenes(SceneManager.GetActiveScene().name, SceneManager.GetActiveScene().name);
         hud.FindPlayerObject();
 
         // Once the scene is finished loading, start fading in.
@@ -82,12 +85,19 @@ public class SceneController : MonoBehaviour
         // If this event has any subscribers, call it.
         BeforeSceneUnload?.Invoke();
 
+        string previousSceneName = SceneManager.GetActiveScene().name;
+
         // Unload the current active scene.
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
         // Start loading the given scene and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
+
+        spawnManager = FindObjectOfType<SpawnManager>();
+        spawnManager.SetScenes(previousSceneName, sceneName);
+
         hud.FindPlayerObject();
+
 
         // If this event has any subscribers, call it.
         AfterSceneLoad?.Invoke();

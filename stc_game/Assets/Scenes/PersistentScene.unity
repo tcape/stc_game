@@ -159,6 +159,9 @@ MonoBehaviour:
   fadeDuration: 1
   startingSceneName: Town
   playerSaveData: {fileID: 11400000, guid: e4869754167ae794f94650072ac8718e, type: 2}
+  sceneSaveData:
+  - {fileID: 11400000, guid: 96f3ee22fc077164db8ea76b099166b4, type: 2}
+  - {fileID: 11400000, guid: fe4d5db9020505c4e821921654ff70eb, type: 2}
 --- !u!1 &166014971
 GameObject:
   m_ObjectHideFlags: 0
