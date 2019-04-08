@@ -73,6 +73,11 @@ public class MoveToDestination : CharacterAction
         if (controller.target == null)
         {
             controller.navMeshAgent.stoppingDistance = 1f;
+            // rotation bug
+            if (controller.navMeshAgent.velocity.magnitude < 0.1f)
+                controller.navMeshAgent.angularSpeed = 0;
+            else
+                controller.navMeshAgent.angularSpeed = controller.stats.rotationSpeed;
             return;
         }
         // otherwise, check speed
@@ -80,6 +85,7 @@ public class MoveToDestination : CharacterAction
         {
             var speed = controller.navMeshAgent.velocity.magnitude;
             // if speed is very slow or stopped, look at the target
+
             if (speed < 0.1f)
             {
                 Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
@@ -97,5 +103,7 @@ public class MoveToDestination : CharacterAction
             if (distance > controller.stats.stoppingDistance && distance <= controller.stats.meleeAttackRadius)
                 controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
+
+        
     }
 }

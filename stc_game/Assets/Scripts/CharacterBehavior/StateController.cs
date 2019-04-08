@@ -36,6 +36,8 @@ public class StateController : MonoBehaviour
         {
             target = null;
         }
+        SetupAI(true, GetComponent<StateController>().waypointList);
+
     }
 
     private void Awake()
@@ -48,7 +50,7 @@ public class StateController : MonoBehaviour
         head = transform.position;
         startPosition = transform.position;
         startRotation = transform.rotation;
-        SetupAI(true, GetComponent<StateController>().waypointList);
+        //SetupAI(true, GetComponent<StateController>().waypointList);
         characterStats = GetComponent<CharacterStats>();
 
     }

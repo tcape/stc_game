@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    public string name;
+    public string spawnPointName;
 
     private void OnValidate()
     {
-        name = gameObject.name;
+        spawnPointName = gameObject.name;
     }
 }

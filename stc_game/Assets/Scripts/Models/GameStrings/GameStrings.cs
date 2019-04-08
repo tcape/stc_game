@@ -13,4 +13,12 @@ namespace GameStrings
         public const string LoginScene = "Login";
         public const string PersistentScene = "PersistentScene";
     }
+
+    public static class Positions
+    {
+        public const string GameStartPosition = "GameStartPosition";
+        public const string InTownPosition = "InTownPosition";
+        public const string CaveEntrancePosition = "CaveEntrancePosition";
+        public const string DungeonStartPosition = "DungeonStartPosition";
+    }
 }
