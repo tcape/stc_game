@@ -15,7 +15,7 @@ public class TargetDeadDecision : Decision
     {
         if (controller.target.GetComponent<CharacterStats>().dead)
         {
-            controller.target = null;
+            controller.target = null; // might be problem after revive
             return true;
         }
         return false;
