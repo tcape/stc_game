@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd6f3dbfa5fa0b40afcfdc411e46da6, type: 3}
   m_Name: PatrolSkeletonPreset
   m_EditorClassIdentifier: 
-  level: 2
-  gold: 10
+  level: 1
   XP: 10
+  gold: 10
+  strength: 0
+  intellect: 0
+  dexterity: 0
   maxHP: 100
   maxAP: 0
-  strength: 0
   attack: 18
   abilityAttack: 0
   meleeCritRate: 0.2
