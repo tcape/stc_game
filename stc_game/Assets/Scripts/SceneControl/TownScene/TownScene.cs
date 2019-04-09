@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Devdog.QuestSystemPro.UI;
+using Devdog.QuestSystemPro;
 
 public class TownScene : MonoBehaviour
 {
     private int num = 0;
+
+    private void Start()
+    {
+        QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
+    }
 
     private void Update()
     {
