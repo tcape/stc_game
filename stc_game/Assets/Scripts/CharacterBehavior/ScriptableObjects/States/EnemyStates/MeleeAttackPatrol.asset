@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 652a37efe793b014a98576b83761fc6f, type: 3}
-  m_Name: MeleeAttack
+  m_Name: MeleeAttackPatrol
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 11400000, guid: 9f39c978126e1da4e9ab738f81cad159, type: 2}
