@@ -20,6 +20,7 @@ public class TargetController : MonoBehaviour
     {
         hero = GameObject.FindGameObjectWithTag("Player");
         target = GameObject.FindGameObjectWithTag("Target");
+        destination = GameObject.FindGameObjectWithTag("Destination");
         zone = hero.GetComponentInChildren<CombatZoneController>();
         controller = hero.GetComponent<StateController>();
     }
@@ -47,7 +48,7 @@ public class TargetController : MonoBehaviour
                 destination.GetComponent<DestinationController>().target = target;
         }
 
-        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetMouseButton(0))
         {
             target = GameObject.FindGameObjectWithTag("Target");
             transform.position = new Vector3(0, -1000, 0);
