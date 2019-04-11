@@ -88,6 +88,13 @@ MonoBehaviour:
     Mobs","69a8b01f-d793-4150-a5b7-61832912ec77":"MWAAAHAHAHAHAHA!","44885260-6639-4605-a1d0-61475d9a1318":"Kill
     the Goblin Chief, Illamuwa","f5f49c46-b218-4fbb-90d7-fa6e7a624e3e":"Defeat the
     Goblin Chief in the final room in the caverns to the north and obtain his axe.","f7f13fa4-5a43-4cd7-ba1d-8f9bdd09ae95":"Kill
-    the Goblin Chief","6a0fe14f-49f4-442a-b119-ee45fb374ffa":"Pending"},"_localizedObjects":{"740ca4d8-7941-4483-904e-392f33131535":null,"722c5bd5-9aa8-4066-ba71-8ca3c77e1dc6":null,"80cee3ee-1d59-49f6-8cd8-c4662593f223":null,"accf70f4-738c-446d-a14d-13eaccac826f":null,"ba0d88dd-d01d-4ea5-93ad-4507db7c78fa":null}}'
+    the Goblin Chief","6a0fe14f-49f4-442a-b119-ee45fb374ffa":"Pending","b8deb7f6-3e18-4dd1-a049-4cfae08db7a9":"Walk
+    To Town","63f9967f-8368-4f19-b082-ae24b031e416":"Walk To Town","8d51fd5a-a664-463b-8be1-c508494da0d3":"Discovered:
+    {0}/{2} locations","5f5d7f14-6ff7-4d1f-b7a4-697b04a50b7c":"Walk to town and talk
+    to blacksmith","ad29bccf-fcc0-40b7-83bf-ac7cdb0b4873":"Walk to town (complete)","f6fb0dbc-359a-4017-a008-a36e950ed8cb":"completed
+    walk to town.","77982dd8-1798-4823-9a57-879fd472540a":"completed walk to town","05896338-23dd-4de9-a5ea-12017a8314a5":"Defeat
+    Illamuwa","c7ccf68c-46f6-40e0-a4f8-417c40c938f0":"Defeat the goblin chief","8b4a8a61-697f-40bf-b1b2-287b52e857fc":"Defeat
+    Goblin Chief","8a4db0a0-7b73-43b2-90a1-9dc1b2b9fbd0":"Defeated {0}/{2} Goblin
+    Chief"},"_localizedObjects":{"740ca4d8-7941-4483-904e-392f33131535":null,"722c5bd5-9aa8-4066-ba71-8ca3c77e1dc6":null,"80cee3ee-1d59-49f6-8cd8-c4662593f223":null,"accf70f4-738c-446d-a14d-13eaccac826f":null,"ba0d88dd-d01d-4ea5-93ad-4507db7c78fa":null}}'
   _objectReferences: []
   _lang: en-US

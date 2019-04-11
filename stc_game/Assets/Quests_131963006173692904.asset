@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9739c21834b07e4b982fe8342184783, type: 3}
-  m_Name: Quests_131952009038653694
+  m_Name: Quests_131963006173692904
   m_EditorClassIdentifier: 
   quests:
-  - {fileID: 11400000, guid: 1a3b834ac5f48dd4c92126c8637651df, type: 2}
+  - {fileID: 11400000, guid: a161f8bdfc5290d4da63f4d145246261, type: 2}
   achievements: []

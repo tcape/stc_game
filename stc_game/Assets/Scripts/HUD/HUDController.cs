@@ -17,10 +17,13 @@ public class HUDController : MonoBehaviour
 
     public void Update()
     {
-        UpdateHPBar();
-        UpdateAPBar();
-        UpdateGoldCount();
-        UpdateXPBar();
+        if (stats)
+        {
+            UpdateHPBar();
+            UpdateAPBar();
+            UpdateGoldCount();
+            UpdateXPBar();
+        }
     }
 
     public void FindPlayerObject()
