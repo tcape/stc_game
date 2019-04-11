@@ -18,7 +18,6 @@ public class SceneController : MonoBehaviour
 
 
     public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
-    public Text loadingText;
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
     public string startingSceneName;
     // The name of the scene that should be loaded first.
@@ -48,7 +47,6 @@ public class SceneController : MonoBehaviour
     private IEnumerator Start()
     {
         startingSceneName = GameStrings.Scenes.TownScene;
-        loadingText.enabled = false;
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;
 
@@ -79,16 +77,11 @@ public class SceneController : MonoBehaviour
     // This is the coroutine where the 'building blocks' of the script are put together.
     private IEnumerator FadeAndSwitchScenes(string sceneName)
     {
-        loadingText.enabled = false;
         // Start fading to black and wait for it to finish before continuing.
         yield return StartCoroutine(Fade(1f));
 
         // If this event has any subscribers, call it.
         BeforeSceneUnload?.Invoke();
-
-        // If this event has any subscribers, call it.
-        if (BeforeSceneUnload != null)
-            BeforeSceneUnload();
 
         // Unload the current active scene.
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
@@ -100,10 +93,6 @@ public class SceneController : MonoBehaviour
 
         // If this event has any subscribers, call it.
         AfterSceneLoad?.Invoke();
-
-        // If this event has any subscribers, call it.
-        if (AfterSceneLoad != null)
-            AfterSceneLoad();
 
         // Start fading back in and wait for it to finish before exiting the function.
         yield return StartCoroutine(Fade(0f));
