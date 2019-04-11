@@ -12,7 +12,7 @@ public class TownScene : MonoBehaviour
 
     private void Start()
     {
-        QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
+        
     }
 
     private void Update()

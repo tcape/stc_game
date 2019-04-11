@@ -13,7 +13,6 @@ public class DungeonScene : MonoBehaviour
     void Start()
     {
 
-        QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
     }
 
     // Update is called once per frame

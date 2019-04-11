@@ -1,4 +1,5 @@
-﻿using Devdog.QuestSystemPro.UI;
+﻿using Devdog.QuestSystemPro;
+using Devdog.QuestSystemPro.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,5 +26,6 @@ public class PersistentScene : MonoBehaviour
     private void Start()
     {
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
+        QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
     }
 }
