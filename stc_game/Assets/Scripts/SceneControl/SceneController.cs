@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // This script exists in the Persistent scene and manages the content
 // based scene's loading.  It works on a principle that the
@@ -87,6 +88,7 @@ public class SceneController : MonoBehaviour
 
         // Start loading the given scene and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
+
         hud.FindPlayerObject();
 
         // If this event has any subscribers, call it.
