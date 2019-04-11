@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 
 [CreateAssetMenu(menuName = "PluggableAI/Actions/MoveToDestination")]
 public class MoveToDestination : CharacterAction
@@ -91,7 +91,7 @@ public class MoveToDestination : CharacterAction
                 Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
                 if (deltaVec != Vector3.zero)
                 {
-                    controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
+                   controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * 10);
                 }
             }
         }
@@ -103,7 +103,6 @@ public class MoveToDestination : CharacterAction
             if (distance > controller.stats.stoppingDistance && distance <= controller.stats.meleeAttackRadius)
                 controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
-
         
     }
 }

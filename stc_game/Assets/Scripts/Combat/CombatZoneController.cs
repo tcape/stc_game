@@ -5,10 +5,12 @@ using UnityEngine;
 public class CombatZoneController : MonoBehaviour
 {
     public List<GameObject> zoneEnemies;
+    private StateController controller;
 
     private void Awake()
     {
         zoneEnemies = new List<GameObject>();
+        controller = GetComponentInParent<StateController>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,6 +23,8 @@ public class CombatZoneController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.gameObject == controller.target)
+            controller.target = null;
         zoneEnemies.Remove(other.gameObject);
     }
 

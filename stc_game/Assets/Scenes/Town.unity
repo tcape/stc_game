@@ -16441,7 +16441,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086545255}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 65530e0294b22454f9eb3ba44a050e86, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 9514733bdb8907147af1bfa8c4117eff, type: 2}
   m_EnableTreeColliders: 1
@@ -16615,20 +16615,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1500602422}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1100324903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100324902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27df0ebb5390a8d4b8db1843cb3db386, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPositions: {fileID: 471178843}
-  reviveInTown: 0
 --- !u!4 &1100324914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6682497449651926683, guid: af19b5ff0ae4d234aa03d691158e769a,
@@ -20428,11 +20414,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1986477471}
     m_Modifications:
-    - target: {fileID: 3117532947188422943, guid: 69ca0f59d2c13eb4fa4500f68d9f3c34,
-        type: 3}
-      propertyPath: m_Name
-      value: Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 6677762530829689721, guid: 69ca0f59d2c13eb4fa4500f68d9f3c34,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20492,6 +20473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2000036
+      objectReference: {fileID: 0}
+    - target: {fileID: 3117532947188422943, guid: 69ca0f59d2c13eb4fa4500f68d9f3c34,
+        type: 3}
+      propertyPath: m_Name
+      value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 2817237313016650674, guid: 69ca0f59d2c13eb4fa4500f68d9f3c34,
         type: 3}
@@ -20642,32 +20628,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6660010313895972001, guid: af19b5ff0ae4d234aa03d691158e769a,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 6677762531957449283, guid: af19b5ff0ae4d234aa03d691158e769a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6677762531957449283, guid: af19b5ff0ae4d234aa03d691158e769a,
-        type: 3}
-      propertyPath: m_Acceleration
-      value: 85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6677762531957449283, guid: af19b5ff0ae4d234aa03d691158e769a,
-        type: 3}
-      propertyPath: m_AngularSpeed
-      value: 8000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4228770494993514180, guid: af19b5ff0ae4d234aa03d691158e769a,
-        type: 3}
-      propertyPath: stats
+    - target: {fileID: 1100324903, guid: af19b5ff0ae4d234aa03d691158e769a, type: 3}
+      propertyPath: spawnPositions
       value: 
-      objectReference: {fileID: 11400000, guid: fa41d1fee3c8e80449eacdf361d468f9,
-        type: 2}
+      objectReference: {fileID: 471178843}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af19b5ff0ae4d234aa03d691158e769a, type: 3}
 --- !u!4 &1501097524 stripped

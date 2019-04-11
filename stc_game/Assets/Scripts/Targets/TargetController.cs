@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TargetController : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class TargetController : MonoBehaviour
                 destination.GetComponent<DestinationController>().target = target;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             target = GameObject.FindGameObjectWithTag("Target");
             transform.position = new Vector3(0, -1000, 0);

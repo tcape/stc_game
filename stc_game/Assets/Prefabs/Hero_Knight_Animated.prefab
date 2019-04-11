@@ -387,6 +387,9 @@ GameObject:
   - component: {fileID: 4228770494993514180}
   - component: {fileID: 6677762530178994010}
   - component: {fileID: 6677762530178994011}
+  - component: {fileID: 1100324903}
+  - component: {fileID: 1100324905}
+  - component: {fileID: 1100324904}
   m_Layer: 2
   m_Name: Hero_Knight_Animated
   m_TagString: Player
@@ -565,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac8c24f485e1eb469da375c17c81d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 891a9caf9ca3b0c46b4e3342740f67b4, type: 2}
+  stats: {fileID: 11400000, guid: fa41d1fee3c8e80449eacdf361d468f9, type: 2}
   startState: {fileID: 11400000, guid: 28dbb17189a597943a4fc685e2685ab0, type: 2}
   currentState: {fileID: 0}
   remainState: {fileID: 11400000, guid: 0406b70cff80efd4abd34c012c4bb820, type: 2}
@@ -573,7 +576,6 @@ MonoBehaviour:
   aggroSergent: {fileID: 0}
   target: {fileID: 0}
   cam: {fileID: 0}
-  destination: {fileID: 0}
   waypointList: []
   playerSaveData: {fileID: 0}
   startingPositionName: 
@@ -598,7 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: myStats
-  saveData: {fileID: 11400000, guid: e4869754167ae794f94650072ac8718e, type: 2}
+  saveData: {fileID: 0}
   key: 
 --- !u!114 &6677762530178994011
 MonoBehaviour:
@@ -613,8 +615,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: myAbilities
-  saveData: {fileID: 11400000, guid: e4869754167ae794f94650072ac8718e, type: 2}
+  saveData: {fileID: 0}
   key: 
+--- !u!114 &1100324903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676624513183486173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27df0ebb5390a8d4b8db1843cb3db386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPositions: {fileID: 0}
+  reviveInTown: 0
+--- !u!114 &1100324905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676624513183486173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969b4628f00612c40bd9089989a20874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerSelector: {fileID: 0}
+--- !u!114 &1100324904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676624513183486173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7053bfe59ceae9d4ab01f9998aaa2dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCamera: {fileID: 0}
+  playAudio: 1
+  playAnimations: 1
 --- !u!1 &6676628208511062611
 GameObject:
   m_ObjectHideFlags: 0

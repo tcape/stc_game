@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DestinationController : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class DestinationController : MonoBehaviour
         target = gameObject;
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButton(0))
         {
@@ -73,4 +74,7 @@ public class DestinationController : MonoBehaviour
         if (distance <= 1)
             transform.position = new Vector3(0, -1000, 0);
     }
+
+  
 }
+
