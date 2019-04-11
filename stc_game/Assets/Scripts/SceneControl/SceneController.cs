@@ -101,9 +101,7 @@ public class SceneController : MonoBehaviour
         hud.FindPlayerObject();
 
         // If this event has any subscribers, call it.
-        AfterSceneLoad?.Invoke();
-
-        
+        AfterSceneLoad?.Invoke();       
 
         // Start fading back in and wait for it to finish before exiting the function.
         yield return StartCoroutine(Fade(0f));
@@ -156,9 +154,3 @@ public class SceneController : MonoBehaviour
         faderCanvasGroup.blocksRaycasts = false;
     }
 }
-        yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
-
-        hud.FindPlayerObject();
-
-
-        // If this event has any subscribers, call it.

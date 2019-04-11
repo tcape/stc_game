@@ -227,10 +227,9 @@ MonoBehaviour:
   faderCanvasGroup: {fileID: 1595152081}
   fadeDuration: 1
   startingSceneName: Town
+  previousSceneName: 
+  currentSceneName: 
   playerSaveData: {fileID: 11400000, guid: e4869754167ae794f94650072ac8718e, type: 2}
-  sceneSaveData:
-  - {fileID: 11400000, guid: 96f3ee22fc077164db8ea76b099166b4, type: 2}
-  - {fileID: 11400000, guid: fe4d5db9020505c4e821921654ff70eb, type: 2}
 --- !u!1 &166014971
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22433276, guid: 1e8543ffa7f667c45b5225bd2a0b94fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22470404, guid: 1e8543ffa7f667c45b5225bd2a0b94fb, type: 3}
       propertyPath: m_AnchorMin.y
@@ -709,6 +708,14 @@ PrefabInstance:
     - target: {fileID: 22468806, guid: 1e8543ffa7f667c45b5225bd2a0b94fb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491560, guid: 1e8543ffa7f667c45b5225bd2a0b94fb, type: 3}
+      propertyPath: onWindowShowBringToForeground
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491560, guid: 1e8543ffa7f667c45b5225bd2a0b94fb, type: 3}
+      propertyPath: onClickBringToForeground
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e8543ffa7f667c45b5225bd2a0b94fb, type: 3}
@@ -1560,6 +1567,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11422566, guid: b5acabd1c2a301e4b953d280fa75da62, type: 3}
+      propertyPath: onWindowShowBringToForeground
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422566, guid: b5acabd1c2a301e4b953d280fa75da62, type: 3}
+      propertyPath: onClickBringToForeground
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5acabd1c2a301e4b953d280fa75da62, type: 3}
 --- !u!224 &1259479024 stripped
@@ -2166,10 +2181,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2185,7 +2200,7 @@ Canvas:
   m_GameObject: {fileID: 2065521955}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2195,7 +2210,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &2065521959
 RectTransform:
