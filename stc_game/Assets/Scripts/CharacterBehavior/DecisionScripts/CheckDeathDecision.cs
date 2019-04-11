@@ -15,18 +15,27 @@ public class CheckDeathDecision : Decision
     {
         if (controller.characterStats.dead)
         {
-            if (controller.GetComponent<GoldDrop>())
-                controller.GetComponent<GoldDrop>().DropGold();
-
-            controller.target.GetComponent<CharacterStats>().GainXP(controller.characterStats.XP);
-            controller.animator.SetBool("Dead", true);
-            controller.gameObject.layer = 2;
-            controller.navMeshAgent.enabled = false;
-            controller.GetComponent<Rigidbody>().isKinematic = true;
-            controller.GetComponent<CapsuleCollider>().enabled = false;
+            Die(controller);
             return true;
         }
 
         return false;
+    }
+
+    private void Die(StateController controller)
+    {
+        if (controller.GetComponent<GoldDrop>())
+            controller.GetComponent<GoldDrop>().DropGold();
+
+        if (controller.gameObject.CompareTag("Enemy"))
+        {
+            controller.target.GetComponent<CharacterStats>().GainXP(controller.characterStats.XP);
+        }
+        
+        controller.animator.SetBool("Dead", true);
+        controller.gameObject.layer = 2;
+        controller.navMeshAgent.enabled = false;
+        controller.GetComponent<Rigidbody>().isKinematic = true;
+        controller.GetComponent<CapsuleCollider>().enabled = false;
     }
 }
