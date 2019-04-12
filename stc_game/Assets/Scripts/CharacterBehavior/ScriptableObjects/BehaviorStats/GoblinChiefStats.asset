@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906d839498b35d14691445d6822b7d3e, type: 3}
   m_Name: GoblinChiefStats
   m_EditorClassIdentifier: 
-  headOffset: 1.7
-  headGizmoRadius: 0.5
+  headOffset: 2
+  headGizmoRadius: 0.8
+  stoppingDistance: 3
   stopFollowDistance: 20
   patrolStopDistance: 0.2
   rotationSpeed: 15
   aggroDistance: 15
+  meleeAttackRadius: 5
   waitTime: 5
   patrolSpeed: 3
-  chaseSpeed: 9
+  chaseSpeed: 8.8

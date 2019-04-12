@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu (menuName ="PluggableAI/Actions/MeleeAttack")]
+[CreateAssetMenu(menuName = "PluggableAI/Actions/MeleeAttack")]
 public class MeleeAttackAction : CharacterAction
 {
     public override void Act(StateController controller)
@@ -13,9 +13,15 @@ public class MeleeAttackAction : CharacterAction
 
     private void MeleeAttack(StateController controller)
     {
+        if (controller.target.Equals(null))
+        {
+            return;
+        }
         // look at target
         Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
         controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
+
+        controller.navMeshAgent.SetDestination(controller.transform.position);
 
         controller.animator.SetBool("Attacking", true);
 
@@ -33,5 +39,7 @@ public class MeleeAttackAction : CharacterAction
         {
             controller.animator.SetInteger("Attack", 1);
         }
+        
     }
+
 }

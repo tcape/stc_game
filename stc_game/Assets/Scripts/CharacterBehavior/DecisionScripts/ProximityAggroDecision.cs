@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu (menuName ="PluggableAI/Decisions/ProximityAggro")]
 public class ProximityAggroDecision : Decision
 {
+
     public override bool Decide(StateController controller)
     {
         return  Proximity(controller);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4433853144909754}
   - component: {fileID: 33317909810101244}
   - component: {fileID: 23701031044341392}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Tree_Pine_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4320883887219790}
   - component: {fileID: 205816532301938180}
-  m_Layer: 0
+  - component: {fileID: 6005548077743591730}
+  m_Layer: 2
   m_Name: SM_Tree_Pine_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,6 +135,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23137049528668130}
   m_Enabled: 1
+--- !u!136 &6005548077743591730
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858709007138160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.59, z: 0}
 --- !u!1 &1891816287853304
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +160,7 @@ GameObject:
   - component: {fileID: 4330190805953166}
   - component: {fileID: 33899514990880048}
   - component: {fileID: 23137049528668130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Tree_Pine_Large_01_LOD_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
