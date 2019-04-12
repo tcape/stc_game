@@ -11,11 +11,9 @@ public class StateController : MonoBehaviour
     public State aggroState;
     public GameObject aggroSergent;
     public GameObject target;
-    public Camera cam;
     public List<Transform> waypointList;
-    public SaveData playerSaveData;
-    //public const string startingPositionKey = "startingPosition";
-    //public string startingPositionName = "";
+    public Camera cam;
+    private SaveData playerSaveData;
     [HideInInspector] public CharacterStats characterStats;
     [HideInInspector] public Animator animator;
     [HideInInspector] public float stateTimeElapsed;
@@ -27,10 +25,6 @@ public class StateController : MonoBehaviour
 
     private bool aiActive;
 
-    private void OnValidate()
-    {
-    }
-
 
     private void Start()
     {
@@ -41,19 +35,18 @@ public class StateController : MonoBehaviour
             playerSaveData = Resources.Load<SaveData>("SaveData/PlayerSaveData");
         }
         SetupAI(true, GetComponent<StateController>().waypointList);
-
     }
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        characterStats = GetComponent<CharacterStats>();
         target = GameObject.FindGameObjectWithTag("Player");
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         head = transform.position;
         startPosition = transform.position;
         startRotation = transform.rotation;
-        characterStats = GetComponent<CharacterStats>();
     }
 
     public void SetupAI(bool aiActivationFromCharacter, List<Transform> waypointsFromCharacter)
@@ -76,8 +69,7 @@ public class StateController : MonoBehaviour
         if (!aiActive)
             return;
         currentState.UpdateState(this);
-
-      }
+    }
 
 
     private void FixedUpdate()

@@ -73,10 +73,6 @@ public class DestinationController : MonoBehaviour
 
         if (distance <= 1)
             transform.position = new Vector3(0, -1000, 0);
-
-       
     }
-
-  
 }
 

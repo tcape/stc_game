@@ -15,8 +15,6 @@ public class SceneController : MonoBehaviour
     public static SceneController Instance;
     public event Action BeforeSceneUnload;          // Event delegate that is called just before a scene is unloaded.
     public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
-
-
     public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
     public string startingSceneName;
@@ -26,10 +24,8 @@ public class SceneController : MonoBehaviour
     //public string initialStartingPositionName = "TownCenter";
     // The name of the StartingPosition in the first scene to be loaded.
     public SaveData playerSaveData;                 // Reference to the ScriptableObject which stores the name of the StartingPosition in the next scene.
-
     private bool isFading;                          // Flag used to determine if the Image is currently fading to or from black.
     private HUDController hud;
-    private SpawnManager spawnManager;
 
     private void Awake()
     {
@@ -44,8 +40,6 @@ public class SceneController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        
     }
 
     private IEnumerator Start()
@@ -94,7 +88,6 @@ public class SceneController : MonoBehaviour
 
         // Unload the current active scene.
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-
         
         // Start loading the given scene and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
@@ -120,8 +113,6 @@ public class SceneController : MonoBehaviour
 
         // Set the newly loaded scene as the active scene (this marks it as the one to be unloaded next).
         SceneManager.SetActiveScene(newlyLoadedScene);
-
-        
     }
 
 

@@ -27,8 +27,6 @@ public class SpawnManager : MonoBehaviour
             transform.position = startPosition.position;
             transform.rotation = startPosition.rotation;
         }
-
-        Debug.Log("Spawn position not set");
     }
    
     private void SetStartPosition(string previous, string current)
