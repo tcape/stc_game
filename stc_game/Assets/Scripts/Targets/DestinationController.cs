@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DestinationController : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class DestinationController : MonoBehaviour
         target = gameObject;
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButton(0))
         {
@@ -38,7 +39,7 @@ public class DestinationController : MonoBehaviour
                 else
                 {
                     target = null;
-                    transform.position = hit.point;
+                    transform.position = hit.point + floorOffset;
                 }
             }
         }
@@ -74,3 +75,4 @@ public class DestinationController : MonoBehaviour
             transform.position = new Vector3(0, -1000, 0);
     }
 }
+

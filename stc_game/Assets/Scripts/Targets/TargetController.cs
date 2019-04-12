@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TargetController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class TargetController : MonoBehaviour
     {
         hero = GameObject.FindGameObjectWithTag("Player");
         target = GameObject.FindGameObjectWithTag("Target");
+        destination = GameObject.FindGameObjectWithTag("Destination");
         zone = hero.GetComponentInChildren<CombatZoneController>();
         controller = hero.GetComponent<StateController>();
     }

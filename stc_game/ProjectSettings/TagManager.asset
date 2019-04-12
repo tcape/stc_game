@@ -10,6 +10,7 @@ TagManager:
   - Boss1
   - Destination
   - NPC
+  - CameraData
   layers:
   - Default
   - TransparentFX

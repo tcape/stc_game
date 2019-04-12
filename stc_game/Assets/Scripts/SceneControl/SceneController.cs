@@ -15,17 +15,15 @@ public class SceneController : MonoBehaviour
     public static SceneController Instance;
     public event Action BeforeSceneUnload;          // Event delegate that is called just before a scene is unloaded.
     public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
-
-
     public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
     public string startingSceneName;
+    public string previousSceneName;
+    public string currentSceneName;
     // The name of the scene that should be loaded first.
     //public string initialStartingPositionName = "TownCenter";
     // The name of the StartingPosition in the first scene to be loaded.
     public SaveData playerSaveData;                 // Reference to the ScriptableObject which stores the name of the StartingPosition in the next scene.
-
-
     private bool isFading;                          // Flag used to determine if the Image is currently fading to or from black.
     private HUDController hud;
 
@@ -47,6 +45,8 @@ public class SceneController : MonoBehaviour
     private IEnumerator Start()
     {
         startingSceneName = GameStrings.Scenes.TownScene;
+        previousSceneName = startingSceneName;
+        currentSceneName = startingSceneName;
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;
 
@@ -55,6 +55,7 @@ public class SceneController : MonoBehaviour
 
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
+
         hud.FindPlayerObject();
 
         // Once the scene is finished loading, start fading in.
@@ -83,16 +84,17 @@ public class SceneController : MonoBehaviour
         // If this event has any subscribers, call it.
         BeforeSceneUnload?.Invoke();
 
+        previousSceneName = SceneManager.GetActiveScene().name;
+
         // Unload the current active scene.
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-
+        
         // Start loading the given scene and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
-
         hud.FindPlayerObject();
 
         // If this event has any subscribers, call it.
-        AfterSceneLoad?.Invoke();
+        AfterSceneLoad?.Invoke();       
 
         // Start fading back in and wait for it to finish before exiting the function.
         yield return StartCoroutine(Fade(0f));
@@ -101,6 +103,8 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator LoadSceneAndSetActive(string sceneName)
     {
+        currentSceneName = sceneName;
+
         // Allow the given scene to load over several frames and add it to the already loaded scenes (just the Persistent scene at this point).
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
