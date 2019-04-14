@@ -12,13 +12,13 @@ namespace Assets.Scripts.CharacterBehavior.Drops
         public GameObject gold;
         private GameObject goldInstance;
         public Vector3 offset;
-        private CharacterStats stats;
+        private Stats stats;
         private bool dropped;
 
         private void Start()
         {
             goldInstance = Instantiate(gold);
-            stats = GetComponent<CharacterStats>();
+            stats = GetComponent<CharacterStats>().stats;
             goldInstance.GetComponent<Gold>().SetAmount(stats.gold);
             goldInstance.SetActive(false);
             dropped = false;

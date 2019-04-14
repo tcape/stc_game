@@ -20700,6 +20700,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero_Knight_Animated
       objectReference: {fileID: 0}
+    - target: {fileID: 6676624513183486173, guid: af19b5ff0ae4d234aa03d691158e769a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676624513183486173, guid: af19b5ff0ae4d234aa03d691158e769a,
+        type: 3}
+      propertyPath: m_TagString
+      value: HeroInScene
+      objectReference: {fileID: 0}
     - target: {fileID: 6682497449651926683, guid: af19b5ff0ae4d234aa03d691158e769a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23815,7 +23825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 31.447, y: -37, z: 1.186}
 --- !u!1 &1867800752
 GameObject:
@@ -30030,7 +30040,7 @@ GameObject:
   - component: {fileID: 1986477471}
   m_Layer: 0
   m_Name: Hero and Camera
-  m_TagString: Untagged
+  m_TagString: HeroAndCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30049,7 +30059,7 @@ Transform:
   - {fileID: 1100324914}
   - {fileID: 690182270}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1986609416
 PrefabInstance:
@@ -31101,7 +31111,7 @@ Transform:
   m_LocalScale: {x: 10, y: 5, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2134046015 stripped
 GameObject:

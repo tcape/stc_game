@@ -15,22 +15,52 @@ public class Hero : MonoBehaviour
     //public Equipment equipment;
     public AbilityManager abilityManager;
     public GameObject prefab;
+    private bool statsLoaded;
+    private bool abilitiesLoaded;
 
 
     private void Awake()
     {
-        gameCharacter = FindObjectOfType<GameCharacter>();
-        if (!gameCharacter)
-        {
-            Debug.Log("Game character not loaded.");
-            return;
-        }
+        statsLoaded = false;
+        abilitiesLoaded = false;
+        gameCharacter = PersistentScene.Instance.GameCharacter;
         heroName = gameCharacter.Name;
         heroClass = gameCharacter.HeroClass;
         characterStats = GetComponent<CharacterStats>();
+        abilityManager = GetComponent<AbilityManager>();
         // inventory = GetComponent<Inventory>();
         // equpment = GetCompnent<Equipment>();
-        abilityManager = GetComponent<AbilityManager>();
         prefab = gameObject;
+        DontDestroyOnLoad(prefab);
+    }
+
+    private void Start()
+    {
+        
+        //if (!statsLoaded)
+        //    characterStats.saver.Load();
+        //if (!abilitiesLoaded)
+        //    abilityManager.saver.Load();
+        //if (!characterStats)
+        //    LoadCharacterStats();
+        //if (abilityManager.myAbilities.Count.Equals(0))
+        //    LoadAbilities();
+    }
+
+    public void LoadCharacterStats()
+    {
+        characterStats.LoadSavedStats(gameCharacter.Stats);
+        statsLoaded = true;
+    }
+
+    public void LoadAbilities()
+    {
+        abilityManager.LoadAbilites(gameCharacter.Abilities);
+        abilitiesLoaded = true;
+    }
+
+    private void OnDestroy()
+    {
+        //statsLoaded = false;
     }
 }

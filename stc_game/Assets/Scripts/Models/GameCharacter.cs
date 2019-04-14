@@ -12,15 +12,25 @@ public enum HeroClass
 }
 
 [Serializable]
-public class GameCharacter : MonoBehaviour
+public class GameCharacter
 {
     public string Name;
     public HeroClass HeroClass;
-    public StatsPreset StatsPreset;
-    public List<Ability> Abilities;
+    public Stats Stats;
+    public List<string> Abilities;
+    //"public QuestDatabase QuestDatabase;
     //public List<Item> Items;
     //public List<EquipableItem> Equipment;
-    public GameObject Prefab;
-    public QuestDatabase questDatabase;
+    public string PrefabResource;
 
+    public GameCharacter(string name, HeroClass heroClass, Stats stats, List<string> abilities, string prefabResource)
+    {
+        Name = name;
+        HeroClass = heroClass;
+        Stats = stats;
+        Abilities = abilities;
+        PrefabResource = prefabResource;
+       // QuestDatabase = questDatabase;
+    }
 }
+

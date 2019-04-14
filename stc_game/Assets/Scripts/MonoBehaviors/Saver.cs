@@ -14,8 +14,9 @@ public abstract class Saver : MonoBehaviour
 
     private void Awake()
     {
+        
         // Find the SceneController and store a reference to it.
-        sceneController = FindObjectOfType<SceneController>();
+        sceneController = SceneController.Instance;
 
         // If the SceneController couldn't be found throw an exception so it can be added.
         if(!sceneController)
@@ -30,7 +31,7 @@ public abstract class Saver : MonoBehaviour
         if (gameObject.CompareTag("Player"))
             saveData = Resources.Load<SaveData>("SaveData/PlayerSaveData");
         if (!sceneController)
-            sceneController = FindObjectOfType<SceneController>();
+            sceneController = SceneController.Instance;
         // Subscribe the Save function to the BeforeSceneUnload event.
         sceneController.BeforeSceneUnload += Save;
 
@@ -41,7 +42,7 @@ public abstract class Saver : MonoBehaviour
     private void OnDisable()
     {
         if (!sceneController)
-            sceneController = FindObjectOfType<SceneController>();
+            sceneController = SceneController.Instance;
         // Unsubscribe the Save function from the BeforeSceneUnloud event.
         sceneController.BeforeSceneUnload -= Save;
 
@@ -56,10 +57,10 @@ public abstract class Saver : MonoBehaviour
 
     // This function will be called just before a scene is unloaded.
     // It must call saveData.Save and pass in the key and the relevant data.
-    protected abstract void Save ();
+    public abstract void Save ();
 
 
     // This function will be called just after a scene is finished loading.
     // It must call saveData.Load with a ref parameter to get the data out.
-    protected abstract void Load ();
+    public abstract void Load ();
 }

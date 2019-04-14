@@ -12,7 +12,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
     {
         public List<Ability> myAbilities;
         private List<Ability> activeAbilites;
-        private AbilitySaver saver;
+        public AbilitySaver saver;
         [HideInInspector] public CharacterStats stats;
         [HideInInspector] public Animator animator;
         [HideInInspector] public StateController controller;
@@ -51,7 +51,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                     if (ability.CanUse(this))
                     {
                         activeAbilites.Add(ability);
-                        stats.UseAbilityPoints(ability.cost);
+                        stats.stats.UseAbilityPoints(ability.cost);
                         ability.TriggerAnimator(this);
                         ability.startTime = Time.time;
                         foreach (var action in ability.actions)
@@ -67,7 +67,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
             foreach (var ability in activeAbilites)
             {
-                if (ability.target.GetComponent<CharacterStats>().dead)
+                if (ability.target.GetComponent<CharacterStats>().stats.dead)
                 {
                     foreach (var action in ability.actions)
                     {
@@ -106,6 +106,15 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                         }
                     }
                 }
+            }
+        }
+
+        public void LoadAbilites(List<string> abilities)
+        {
+            myAbilities = new List<Ability>();
+            foreach(var ability in abilities)
+            {
+                myAbilities.Add(Resources.Load<Ability>("Abilities/" + ability));
             }
         }
 

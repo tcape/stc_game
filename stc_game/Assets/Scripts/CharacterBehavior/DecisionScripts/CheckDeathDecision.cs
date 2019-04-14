@@ -13,7 +13,7 @@ public class CheckDeathDecision : Decision
 
     private bool CheckDeath(StateController controller)
     {
-        if (controller.characterStats.dead)
+        if (controller.characterStats.stats.dead)
         {
             Die(controller);
             return true;
@@ -29,7 +29,7 @@ public class CheckDeathDecision : Decision
 
         if (controller.gameObject.CompareTag("Enemy"))
         {
-            controller.target.GetComponent<CharacterStats>().GainXP(controller.characterStats.XP);
+            controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
         }
         
         controller.animator.SetBool("Dead", true);

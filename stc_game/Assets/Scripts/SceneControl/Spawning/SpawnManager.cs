@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
         // Start Game
         else if (previous.Equals(GameStrings.Scenes.TownScene) && current.Equals(GameStrings.Scenes.TownScene))
         {
-            startPosition = spawnPositions.spawnPoints.Where(p => p.name.Equals(GameStrings.Positions.GameStartPosition)).SingleOrDefault().transform;
+            startPosition = spawnPositions.spawnPoints.Where(p => p.name.Equals(GameStrings.Positions.CaveEntrancePosition)).SingleOrDefault().transform;
         }
         // Town to Dungeon
         else if (previous.Equals(GameStrings.Scenes.TownScene) && current.Equals(GameStrings.Scenes.DungeonScene))

@@ -15,7 +15,7 @@ public class RegenerateAP : AbilityAction
     public override void Act(AbilityManager manager)
     {
         UpdateEffectTotal();
-        manager.stats.GainAbilityPoints(amount);
+        manager.stats.stats.GainAbilityPoints(amount);
     }
 
     public override void RemoveEffect(AbilityManager manager)

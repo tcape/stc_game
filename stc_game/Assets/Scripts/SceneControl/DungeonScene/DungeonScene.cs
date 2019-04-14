@@ -7,18 +7,25 @@ using UnityEngine;
 public class DungeonScene : MonoBehaviour
 {
     private int num = 0;
+    private SceneController sceneController;
+    private GameObject hero;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        sceneController = SceneController.Instance;
 
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (sceneController && PersistentScene.Instance)
+        {
+            if (sceneController.previousSceneName.Equals(GameStrings.Scenes.TownScene))
+            {
+                hero = Instantiate(Resources.Load(PersistentScene.Instance.GameCharacter.PrefabResource) as GameObject);
+                hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
+                hero.GetComponent<Hero>().characterStats.LoadSavedStats(PersistentScene.Instance.GameCharacter.Stats);
+                hero.GetComponent<Hero>().abilityManager.saver.Load();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

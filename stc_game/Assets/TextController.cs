@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class TextController : MonoBehaviour
 {
-    private CharacterStats stats;
+    private Stats stats;
     private Camera cam;
 
 
     private void Start()
     {
-        stats = GetComponentInParent<CharacterStats>() ;
+        stats = GetComponentInParent<CharacterStats>().stats;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 

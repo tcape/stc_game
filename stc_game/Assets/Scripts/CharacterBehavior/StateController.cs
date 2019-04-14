@@ -34,6 +34,10 @@ public class StateController : MonoBehaviour
             target = null;
             playerSaveData = Resources.Load<SaveData>("SaveData/PlayerSaveData");
         }
+        else
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
         SetupAI(true, GetComponent<StateController>().waypointList);
     }
 
@@ -42,7 +46,6 @@ public class StateController : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         characterStats = GetComponent<CharacterStats>();
-        target = GameObject.FindGameObjectWithTag("Player");
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         head = transform.position;
         startPosition = transform.position;

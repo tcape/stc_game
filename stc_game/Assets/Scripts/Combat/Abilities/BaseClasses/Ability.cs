@@ -36,7 +36,7 @@ public class Ability : ScriptableObject, IAbility
         {
             if (InRange(manager))
             {
-                if (cost <= manager.stats.currentAP)
+                if (cost <= manager.stats.stats.currentAP)
                 {
                     lastCalled = Time.time;
                     

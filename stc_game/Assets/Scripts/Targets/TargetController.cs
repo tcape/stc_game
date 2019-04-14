@@ -16,13 +16,21 @@ public class TargetController : MonoBehaviour
     public StateController controller;
     private int currentTarget = -1;
 
-    private void Awake()
+    private void Start()
     {
         hero = GameObject.FindGameObjectWithTag("Player");
         target = GameObject.FindGameObjectWithTag("Target");
         destination = GameObject.FindGameObjectWithTag("Destination");
         zone = hero.GetComponentInChildren<CombatZoneController>();
         controller = hero.GetComponent<StateController>();
+    }
+    private void Awake()
+    {
+        //hero = GameObject.FindGameObjectWithTag("Player");
+        //target = GameObject.FindGameObjectWithTag("Target");
+        //destination = GameObject.FindGameObjectWithTag("Destination");
+        //zone = hero.GetComponentInChildren<CombatZoneController>();
+        //controller = hero.GetComponent<StateController>();
     }
 
     // Update is called once per frame
