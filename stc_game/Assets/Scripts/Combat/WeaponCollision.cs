@@ -28,9 +28,9 @@ public class WeaponCollision : MonoBehaviour
         {
             hittingTarget = true;
             //Debug.Log("Entered Target");
-            if (!GetComponentInParent<CharacterStats>().dead && (other.gameObject.tag.Equals("Enemy") || other.gameObject.tag.Equals("Player")))
+            if (!GetComponentInParent<CharacterStats>().stats.dead && (other.gameObject.tag.Equals("Enemy") || other.gameObject.tag.Equals("Player")))
             {
-                other.gameObject.GetComponent<CharacterStats>().TakeMeleeDamage(GetComponentInParent<CharacterStats>());
+                other.gameObject.GetComponent<CharacterStats>().stats.TakeMeleeDamage(GetComponentInParent<CharacterStats>());
             }
         }
     }

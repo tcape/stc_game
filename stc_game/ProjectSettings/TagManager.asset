@@ -11,6 +11,9 @@ TagManager:
   - Destination
   - NPC
   - CameraData
+  - HeroAndCamera
+  - GameCharacter
+  - HeroInScene
   layers:
   - Default
   - TransparentFX

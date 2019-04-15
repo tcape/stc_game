@@ -1485,7 +1485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22483760, guid: b5acabd1c2a301e4b953d280fa75da62, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000104904175
+      value: 0.000019403931
       objectReference: {fileID: 0}
     - target: {fileID: 22419630, guid: b5acabd1c2a301e4b953d280fa75da62, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1743,6 +1743,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31da5dbff7ae7234892fc774e34cf859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameCharacter:
+    Name: 
+    HeroClass: 0
+    Stats:
+      level: 0
+      XP: 0
+      gold: 0
+      maxHP: 0
+      maxAP: 0
+      currentHP: 0
+      currentAP: 0
+      strength: 0
+      intellect: 0
+      dexterity: 0
+      attack: 0
+      meleeCritPower: 0
+      defense: 0
+      abilityAttack: 0
+      abilityCritRate: 0
+      abilityCritPower: 0
+      meleeCritRate: 0
+      dodgeRate: 0
+      movementSpeed: 0
+      dead: 0
+      nextLevelXP: 0
+      totalXP: 0
+    Abilities: []
+    PrefabResource: 
   questWindowUI: {fileID: 311173406}
 --- !u!4 &1544097594
 Transform:
@@ -2267,7 +2295,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ffe5068460de04bac105d5735e1af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
+  stats:
+    level: 0
+    XP: 0
+    gold: 0
+    maxHP: 0
+    maxAP: 0
+    currentHP: 0
+    currentAP: 0
+    strength: 0
+    intellect: 0
+    dexterity: 0
+    attack: 0
+    meleeCritPower: 0
+    defense: 0
+    abilityAttack: 0
+    abilityCritRate: 0
+    abilityCritPower: 0
+    meleeCritRate: 0
+    dodgeRate: 0
+    movementSpeed: 0
+    dead: 0
+    nextLevelXP: 0
+    totalXP: 0
   hpBar: {fileID: 1372133464}
   spBar: {fileID: 593543133}
   goldCounter: {fileID: 990760167}

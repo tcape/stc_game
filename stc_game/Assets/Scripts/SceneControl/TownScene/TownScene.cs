@@ -8,15 +8,23 @@ using Devdog.QuestSystemPro;
 
 public class TownScene : MonoBehaviour
 {
+    private SceneController sceneController;
+    private GameObject hero;
+    
     private int num = 0;
 
-    private void Start()
+    private void Awake()
     {
-        
-    }
+        sceneController = SceneController.Instance;
 
-    private void Update()
-    {
+        if (sceneController && PersistentScene.Instance)
+        {
+
+            hero = Instantiate(Resources.Load(PersistentScene.Instance.GameCharacter.PrefabResource) as GameObject);
+            hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
+            hero.GetComponent<Hero>().LoadAbilities();
+            hero.GetComponent<Hero>().LoadCharacterStats();
+        }
         
     }
 
@@ -27,6 +35,4 @@ public class TownScene : MonoBehaviour
             SceneController.Instance.FadeAndLoadScene(GameStrings.Scenes.DungeonScene);
         }
     }
-
-
 }

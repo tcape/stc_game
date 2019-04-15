@@ -30,6 +30,7 @@ public class SceneController : MonoBehaviour
     private void Awake()
     {
         hud = FindObjectOfType<HUDController>();
+        playerSaveData = Resources.Load<SaveData>("SaveData/PlayerSaveData");
 
         if (Instance == null)
         {

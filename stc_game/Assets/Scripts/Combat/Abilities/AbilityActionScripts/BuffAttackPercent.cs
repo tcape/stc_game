@@ -15,12 +15,12 @@ public class BuffAttackPercent : AbilityAction
     public override void Act(AbilityManager manager)
     {
         UpdateEffectTotalPercent(manager);
-        manager.stats.BuffAttack(percentage);
+        manager.stats.stats.BuffAttack(percentage);
     }
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        manager.stats.BuffAttack(-effectTotal);
+        manager.stats.stats.BuffAttack(-effectTotal);
     }
 
     public override void ResetEffectTotal()
@@ -35,6 +35,6 @@ public class BuffAttackPercent : AbilityAction
 
     public void UpdateEffectTotalPercent(AbilityManager manager)
     {
-        effectTotal += manager.stats.attack * percentage;
+        effectTotal += manager.stats.stats.attack * percentage;
     }
 }

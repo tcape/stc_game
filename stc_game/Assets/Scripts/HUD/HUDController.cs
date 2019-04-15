@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HUDController : MonoBehaviour
 {
-    public CharacterStats stats;
+    public Stats stats;
     public GameObject hpBar;
     public GameObject spBar;
     public GameObject goldCounter;
@@ -17,7 +17,7 @@ public class HUDController : MonoBehaviour
 
     public void Update()
     {
-        if (stats)
+        if (stats != null)
         {
             UpdateHPBar();
             UpdateAPBar();
@@ -28,7 +28,7 @@ public class HUDController : MonoBehaviour
 
     public void FindPlayerObject()
     {
-        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>().stats;
     }
 
     private void UpdateHPBar()

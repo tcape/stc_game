@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class APBarController : MonoBehaviour
 {
-    private CharacterStats stats;
+    private Stats stats;
     private Camera cam;
     private Image image;
 
     private void Start()
     {
-        stats = GetComponentInParent<CharacterStats>();
+        stats = GetComponentInParent<CharacterStats>().stats;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         image = GetComponent<Image>();
     }

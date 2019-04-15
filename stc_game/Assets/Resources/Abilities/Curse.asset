@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
+  m_Name: Curse
+  m_EditorClassIdentifier: 
+  abilityType: 1
+  targetType: 1
+  actions:
+  - {fileID: 11400000, guid: a08b223a8787a3549a26b2cb767a748c, type: 2}
+  - {fileID: 11400000, guid: c6adcba9946b9474ab0477e39a249d80, type: 2}
+  animationTrigger: Ability2
+  cooldown: 10
+  duration: 10
+  cost: 15
+  hotkey: 50
+  range: 20
+  startTime: 15.980124
+  target: {fileID: 0}
