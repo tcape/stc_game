@@ -22,6 +22,11 @@ public class DungeonScene : MonoBehaviour
                 hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
                 hero.GetComponent<Hero>().LoadCharacterStats();
                 hero.GetComponent<Hero>().abilityManager.saver.Load();
+                // Turn on hero lights
+                foreach (var light in hero.GetComponentsInChildren<Light>())
+                {
+                    light.enabled = true;
+                }
             }
         }
     }

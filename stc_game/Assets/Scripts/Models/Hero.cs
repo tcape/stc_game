@@ -13,10 +13,7 @@ public class Hero : MonoBehaviour
     //public Inventory inventory;
     //public Equipment equipment;
     public AbilityManager abilityManager;
-    public GameObject prefab;
-    private bool statsLoaded;
-    private bool abilitiesLoaded;
-
+    //public GameObject prefab;
 
     private void Awake()
     {
@@ -26,9 +23,8 @@ public class Hero : MonoBehaviour
         characterStats = GetComponent<CharacterStats>();
         abilityManager = GetComponent<AbilityManager>();
         // inventory = GetComponent<Inventory>();
-        // equpment = GetCompnent<Equipment>();
-        prefab = gameObject;
-        DontDestroyOnLoad(prefab);
+        // equipment = GetCompnent<Equipment>();
+        //prefab = gameObject;
     }
 
     public void LoadCharacterStats()

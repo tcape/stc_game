@@ -30,6 +30,7 @@ public class PersistentScene : MonoBehaviour
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
 
         // Substitue GameCharacter to be replaced by GameCharacter data from database
+        // This is just for testing
         GameCharacter = new GameCharacter(
                                             "WarriorTest",
                                             HeroClass.Warrior,
@@ -61,9 +62,11 @@ public class PersistentScene : MonoBehaviour
                                             new List<string>()
                                             {
                                                "RegenerateAP",
-                                               "IronSkin"
+                                               "IronSkin",
+                                               "Savagry",
+                                               "Cleave",
+                                               "Sprint"
                                             }
-                                            //Resources.Load<QuestDatabase>(""),
                                             );
 
                                             

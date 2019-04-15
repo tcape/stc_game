@@ -18,10 +18,10 @@ public class GameCharacter
     public HeroClass HeroClass;
     public Stats Stats;
     public List<string> Abilities;
+    public string PrefabResource;
     //public QuestDatabase QuestDatabase;
     //public List<Item> Items;
     //public List<EquipableItem> Equipment;
-    public string PrefabResource;
 
     public GameCharacter(string name, HeroClass heroClass, Stats stats, List<string> abilities)
     {
@@ -39,7 +39,6 @@ public class GameCharacter
                 PrefabResource = "Prefabs/MagePrefab";
                 break;
         }
-       // QuestDatabase = questDatabase;
     }
 }
 

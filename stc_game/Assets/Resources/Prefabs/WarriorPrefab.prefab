@@ -434,7 +434,6 @@ MonoBehaviour:
   heroClass: 0
   characterStats: {fileID: 0}
   abilityManager: {fileID: 0}
-  prefab: {fileID: 0}
 --- !u!95 &6771378569556295899
 Animator:
   serializedVersion: 3
@@ -571,6 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presetStats: {fileID: 11400000, guid: 60815d262ac529444943265745265efd, type: 2}
+  saver: {fileID: 0}
   stats:
     level: 0
     XP: 0
@@ -594,7 +594,6 @@ MonoBehaviour:
     dead: 0
     nextLevelXP: 0
     totalXP: 0
-  saver: {fileID: 0}
 --- !u!114 &6677762530178994011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7841,7 +7840,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.96827203, b: 0.7971698, a: 1}
   m_Intensity: 10
-  m_Range: 4.66
+  m_Range: 4.8
   m_SpotAngle: 34
   m_CookieSize: 10
   m_Shadows:
@@ -7908,8 +7907,8 @@ Light:
   m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.9591195, b: 0.5707547, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.57254905, g: 0.8430423, b: 1, a: 1}
+  m_Intensity: 1.8
   m_Range: 1.0175285
   m_SpotAngle: 30
   m_CookieSize: 10
