@@ -28,6 +28,8 @@ public class PersistentScene : MonoBehaviour
     {
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
+
+        // Substitue GameCharacter to be replaced by GameCharacter data from database
         GameCharacter = new GameCharacter(
                                             "WarriorTest",
                                             HeroClass.Warrior,
@@ -56,16 +58,19 @@ public class PersistentScene : MonoBehaviour
                                                 nextLevelXP = 100
                                             }
                                             ,
-                                            //Resources.Load<StatsPreset>("StatsPresets/WarriorBaseStats"),
                                             new List<string>()
                                             {
                                                "RegenerateAP",
                                                "IronSkin"
-                                            },
+                                            }
                                             //Resources.Load<QuestDatabase>(""),
-                                            "Prefabs/WarriorPrefab"
                                             );
 
                                             
+    }
+
+    public void SaveGameCharacterStats(Stats saveStats)
+    {
+        GameCharacter.Stats = saveStats;
     }
 }

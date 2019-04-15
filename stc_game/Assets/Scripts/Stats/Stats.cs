@@ -7,7 +7,6 @@ using UnityEngine;
 public class Stats
 {
     [Space]
-
     [SerializeField] public double level;
     [SerializeField] public double XP;
     [SerializeField] public double gold;
@@ -41,30 +40,6 @@ public class Stats
     [SerializeField] public double nextLevelXP;
     [SerializeField] public double totalXP;
     [HideInInspector] public static readonly double firstLevelXP = 100;
-
-    //public Stats(double level, double xP, double gold, double maxHP, double maxAP, double currentHP, double currentAP, double strength, double intellect, double dexterity, double attack, double meleeCritPower, double defense, double abilityAttack, double abilityCritRate, double abilityCritPower, double meleeCritRate, double dodgeRate, double movementSpeed, bool dead)
-    //{
-    //    this.level = level;
-    //    XP = xP;
-    //    this.gold = gold;
-    //    this.maxHP = maxHP;
-    //    this.maxAP = maxAP;
-    //    this.currentHP = currentHP;
-    //    this.currentAP = currentAP;
-    //    this.strength = strength;
-    //    this.intellect = intellect;
-    //    this.dexterity = dexterity;
-    //    this.attack = attack;
-    //    this.meleeCritPower = meleeCritPower;
-    //    this.defense = defense;
-    //    this.abilityAttack = abilityAttack;
-    //    this.abilityCritRate = abilityCritRate;
-    //    this.abilityCritPower = abilityCritPower;
-    //    this.meleeCritRate = meleeCritRate;
-    //    this.dodgeRate = dodgeRate;
-    //    this.movementSpeed = movementSpeed;
-    //    this.dead = dead;
-    //}
 
     public void LoadSavedStats(Stats savedStats)
     {

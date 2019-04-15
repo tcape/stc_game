@@ -30,14 +30,14 @@ namespace Assets.Scripts.MonoBehaviors
             {
                 return;
             }
-            Stats stats = new Stats();
+            // loading from persistent scene's GameCharacter
             characterStats = PersistentScene.Instance.GameCharacter.Stats;
+
+            //Stats stats = new Stats();
             //if (saveData.Load(key, ref stats))
             //{
             //    characterStats = stats;
-                
             //}
-
         }
 
         public override void Save()
@@ -46,8 +46,10 @@ namespace Assets.Scripts.MonoBehaviors
             manager.RemoveAllEffects();
 
             characterStats = GetComponent<CharacterStats>().stats;
-            saveData.Save(key, characterStats);
-            PersistentScene.Instance.GameCharacter.Stats = characterStats;
+            //saveData.Save(key, characterStats);
+
+            // Saving to persistent scene's GameCharacter
+            PersistentScene.Instance.SaveGameCharacterStats(characterStats);
         }
 
         protected override string SetKey()

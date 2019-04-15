@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class Hero : MonoBehaviour
 {
     private GameCharacter gameCharacter;
@@ -21,8 +20,6 @@ public class Hero : MonoBehaviour
 
     private void Awake()
     {
-        statsLoaded = false;
-        abilitiesLoaded = false;
         gameCharacter = PersistentScene.Instance.GameCharacter;
         heroName = gameCharacter.Name;
         heroClass = gameCharacter.HeroClass;
@@ -34,33 +31,13 @@ public class Hero : MonoBehaviour
         DontDestroyOnLoad(prefab);
     }
 
-    private void Start()
-    {
-        
-        //if (!statsLoaded)
-        //    characterStats.saver.Load();
-        //if (!abilitiesLoaded)
-        //    abilityManager.saver.Load();
-        //if (!characterStats)
-        //    LoadCharacterStats();
-        //if (abilityManager.myAbilities.Count.Equals(0))
-        //    LoadAbilities();
-    }
-
     public void LoadCharacterStats()
     {
-        characterStats.LoadSavedStats(gameCharacter.Stats);
-        statsLoaded = true;
+        characterStats.stats.LoadSavedStats(gameCharacter.Stats);
     }
 
     public void LoadAbilities()
     {
         abilityManager.LoadAbilites(gameCharacter.Abilities);
-        abilitiesLoaded = true;
-    }
-
-    private void OnDestroy()
-    {
-        //statsLoaded = false;
     }
 }

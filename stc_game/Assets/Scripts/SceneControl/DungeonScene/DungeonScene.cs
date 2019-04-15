@@ -14,15 +14,13 @@ public class DungeonScene : MonoBehaviour
     private void Awake()
     {
         sceneController = SceneController.Instance;
-
-
         if (sceneController && PersistentScene.Instance)
         {
             if (sceneController.previousSceneName.Equals(GameStrings.Scenes.TownScene))
             {
                 hero = Instantiate(Resources.Load(PersistentScene.Instance.GameCharacter.PrefabResource) as GameObject);
                 hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
-                hero.GetComponent<Hero>().characterStats.LoadSavedStats(PersistentScene.Instance.GameCharacter.Stats);
+                hero.GetComponent<Hero>().LoadCharacterStats();
                 hero.GetComponent<Hero>().abilityManager.saver.Load();
             }
         }

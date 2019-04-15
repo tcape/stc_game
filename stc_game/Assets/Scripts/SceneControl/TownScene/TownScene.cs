@@ -15,34 +15,16 @@ public class TownScene : MonoBehaviour
 
     private void Awake()
     {
-        sceneController = FindObjectOfType<SceneController>();
-        
-       
+        sceneController = SceneController.Instance;
+
         if (sceneController && PersistentScene.Instance)
         {
-             // if first time being loaded
-            if (sceneController.previousSceneName.Equals(GameStrings.Scenes.TownScene))
-            {
-              
-                hero = Instantiate(Resources.Load(PersistentScene.Instance.GameCharacter.PrefabResource) as GameObject);
-                hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
-                hero.GetComponent<Hero>().LoadAbilities();
-                hero.GetComponent<Hero>().LoadCharacterStats();
-            }
-            else
-            {
-                hero = Instantiate(Resources.Load(PersistentScene.Instance.GameCharacter.PrefabResource) as GameObject);
-                hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
-                //hero.GetComponent<Hero>().characterStats.saver.Load();
-                //hero.GetComponent<Hero>().abilityManager.saver.Load();
-            }
-            
-        }
-        
-    }
 
-    private void Update()
-    {
+            hero = Instantiate(Resources.Load(PersistentScene.Instance.GameCharacter.PrefabResource) as GameObject);
+            hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
+            hero.GetComponent<Hero>().LoadAbilities();
+            hero.GetComponent<Hero>().LoadCharacterStats();
+        }
         
     }
 
@@ -53,6 +35,4 @@ public class TownScene : MonoBehaviour
             SceneController.Instance.FadeAndLoadScene(GameStrings.Scenes.DungeonScene);
         }
     }
-
-
 }

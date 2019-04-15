@@ -18,18 +18,27 @@ public class GameCharacter
     public HeroClass HeroClass;
     public Stats Stats;
     public List<string> Abilities;
-    //"public QuestDatabase QuestDatabase;
+    //public QuestDatabase QuestDatabase;
     //public List<Item> Items;
     //public List<EquipableItem> Equipment;
     public string PrefabResource;
 
-    public GameCharacter(string name, HeroClass heroClass, Stats stats, List<string> abilities, string prefabResource)
+    public GameCharacter(string name, HeroClass heroClass, Stats stats, List<string> abilities)
     {
         Name = name;
         HeroClass = heroClass;
         Stats = stats;
         Abilities = abilities;
-        PrefabResource = prefabResource;
+
+        switch(heroClass)
+        {
+            case HeroClass.Warrior:
+                PrefabResource = "Prefabs/WarriorPrefab";
+                break;
+            case HeroClass.Mage:
+                PrefabResource = "Prefabs/MagePrefab";
+                break;
+        }
        // QuestDatabase = questDatabase;
     }
 }
