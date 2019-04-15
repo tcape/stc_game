@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 
 [CreateAssetMenu(menuName = "PluggableAI/Actions/MoveToDestination")]
 public class MoveToDestination : CharacterAction
@@ -73,6 +73,11 @@ public class MoveToDestination : CharacterAction
         if (controller.target == null)
         {
             controller.navMeshAgent.stoppingDistance = 1f;
+            // rotation bug
+            if (controller.navMeshAgent.velocity.magnitude < 0.1f)
+                controller.navMeshAgent.angularSpeed = 0;
+            else
+                controller.navMeshAgent.angularSpeed = controller.stats.rotationSpeed;
             return;
         }
         // otherwise, check speed
@@ -80,12 +85,13 @@ public class MoveToDestination : CharacterAction
         {
             var speed = controller.navMeshAgent.velocity.magnitude;
             // if speed is very slow or stopped, look at the target
+
             if (speed < 0.1f)
             {
                 Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
                 if (deltaVec != Vector3.zero)
                 {
-                    controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
+                   controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * 10);
                 }
             }
         }
@@ -97,5 +103,6 @@ public class MoveToDestination : CharacterAction
             if (distance > controller.stats.stoppingDistance && distance <= controller.stats.meleeAttackRadius)
                 controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
+        
     }
 }

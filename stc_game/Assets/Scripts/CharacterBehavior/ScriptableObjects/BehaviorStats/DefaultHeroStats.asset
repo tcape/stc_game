@@ -17,7 +17,7 @@ MonoBehaviour:
   stoppingDistance: 2
   stopFollowDistance: 20
   patrolStopDistance: 3.72
-  rotationSpeed: 15
+  rotationSpeed: 8000
   aggroDistance: 13
   meleeAttackRadius: 2.5
   waitTime: 3
