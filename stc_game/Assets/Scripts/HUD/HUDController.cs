@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
     public Stats stats;
     public GameObject hpBar;
-    public GameObject spBar;
+    public GameObject apBar;
     public GameObject goldCounter;
     public GameObject experienceBar;
 
@@ -34,13 +35,16 @@ public class HUDController : MonoBehaviour
     private void UpdateHPBar()
     {
         var scaleValue = (float)(stats.currentHP / stats.maxHP);
-        hpBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
+        //hpBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
+        hpBar.GetComponent<Image>().fillAmount = scaleValue;
     }
 
     private void UpdateAPBar()
     {
         var scaleValue = (float)(stats.currentAP / stats.maxAP);
-        spBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
+        //apBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
+        apBar.GetComponent<Image>().fillAmount = scaleValue;
+
     }
 
     private void UpdateGoldCount()
