@@ -83,6 +83,7 @@ public class SaveData : ResettableScriptableObject
         boolKeyValuePairLists.Clear ();
         intKeyValuePairLists.Clear ();
         stringKeyValuePairLists.Clear ();
+        abilityListKeyValuePairLists.Clear();
         vector3KeyValuePairLists.Clear ();
         quaternionKeyValuePairLists.Clear ();
         characterStatsKeyValuePairLists.Clear();

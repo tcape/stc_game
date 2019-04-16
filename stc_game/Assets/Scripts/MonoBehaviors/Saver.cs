@@ -27,7 +27,8 @@ public abstract class Saver : MonoBehaviour
 
     private void OnEnable()
     {
-
+        if (gameObject.CompareTag("Player"))
+            saveData = Resources.Load<SaveData>("SaveData/PlayerSaveData");
         if (!sceneController)
             sceneController = FindObjectOfType<SceneController>();
         // Subscribe the Save function to the BeforeSceneUnload event.

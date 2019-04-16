@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CharacterStats : MonoBehaviour, IDamageable, IHealable, IBuffable
+public class CharacterStats : MonoBehaviour
 {
     public StatsPreset presetStats;
 
