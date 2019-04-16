@@ -21,7 +21,7 @@ namespace Assets.Scripts.CharacterBehavior.Drops
         {
             if (other.CompareTag("Player"))
             {
-                other.GetComponent<CharacterStats>().GainGold(amount);
+                other.GetComponent<CharacterStats>().stats.GainGold(amount);
                 Destroy(gameObject);
             }
         }

@@ -273,9 +273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac941ad8b7d10240868f11c9fbf81e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraData: {fileID: 0}
   target: {fileID: 0}
   smoothness: 5
+  viewMin: 30
+  viewMax: 65
 --- !u!1 &4667294174877156182
 GameObject:
   m_ObjectHideFlags: 0

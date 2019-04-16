@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyHealthBarController : MonoBehaviour
 {
-    private CharacterStats stats;
+    private Stats stats;
     private StateController hero;
     public GameObject parent;
     public GameObject child;
 
     private void Start()
     {
-        stats = GetComponentInParent<CharacterStats>();
+        stats = GetComponentInParent<CharacterStats>().stats;
         hero = GameObject.FindGameObjectWithTag("Player").GetComponent<StateController>();
         parent = transform.parent.gameObject;
         child = transform.GetChild(0).gameObject;

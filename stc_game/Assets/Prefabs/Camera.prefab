@@ -529,3 +529,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   smoothness: 5
+  viewMin: 30
+  viewMax: 65

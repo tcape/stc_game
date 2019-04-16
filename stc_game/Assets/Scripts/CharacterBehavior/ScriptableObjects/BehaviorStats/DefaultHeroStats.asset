@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headOffset: 1.7
   headGizmoRadius: 0.5
-  stoppingDistance: 2
+  stoppingDistance: 3
   stopFollowDistance: 20
   patrolStopDistance: 3.72
   rotationSpeed: 8000
   aggroDistance: 13
-  meleeAttackRadius: 2.5
+  meleeAttackRadius: 3.5
   waitTime: 3
   patrolSpeed: 2.5
   chaseSpeed: 7

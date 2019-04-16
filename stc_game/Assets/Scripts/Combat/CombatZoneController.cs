@@ -16,7 +16,7 @@ public class CombatZoneController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (( other.gameObject.tag.Equals("Enemy") || other.gameObject.tag.Equals("NPC"))
-            && !other.gameObject.GetComponent<CharacterStats>().dead
+            && !other.gameObject.GetComponent<CharacterStats>().stats.dead
             && other.isTrigger)
             zoneEnemies.Add(other.gameObject);
     }
@@ -32,7 +32,7 @@ public class CombatZoneController : MonoBehaviour
     {
         foreach (var enemy in zoneEnemies)
         {
-            if (enemy.GetComponent<CharacterStats>().dead)
+            if (enemy.GetComponent<CharacterStats>().stats.dead)
                 zoneEnemies.Remove(enemy);
         }
     }

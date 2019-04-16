@@ -14,13 +14,13 @@ public class BuffDefense : AbilityAction
     }
     public override void Act(AbilityManager manager)
     {
-        manager.stats.BuffDefense(amount);
+        manager.stats.stats.BuffDefense(amount);
         UpdateEffectTotal();
     }
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        manager.stats.BuffDefense(-effectTotal);
+        manager.stats.stats.BuffDefense(-effectTotal);
     }
 
     public override void ResetEffectTotal()

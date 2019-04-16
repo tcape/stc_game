@@ -15,7 +15,7 @@ public class StopMeleeAttackDecision : Decision
     private bool OutOfMeleeRange(StateController controller)
     {
         var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
-        if (distance > controller.stats.meleeAttackRadius || controller.target.GetComponent<CharacterStats>().dead)
+        if (distance > controller.stats.meleeAttackRadius || controller.target.GetComponent<CharacterStats>().stats.dead)
         {
             return true;
         }

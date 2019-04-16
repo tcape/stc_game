@@ -19,6 +19,7 @@ public class MeleeAttackAction : CharacterAction
         }
         // look at target
         Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
+
         controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
 
         controller.navMeshAgent.SetDestination(controller.transform.position);

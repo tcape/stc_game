@@ -8,7 +8,7 @@ public class HitboxCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!GetComponentInParent<CharacterStats>().dead && other.gameObject.tag.Equals("Enemy"))
+        if (!GetComponentInParent<CharacterStats>().stats.dead && other.gameObject.tag.Equals("Enemy"))
         {
             touching.Add(other.gameObject);
         }

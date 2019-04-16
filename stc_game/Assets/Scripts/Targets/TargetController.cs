@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class TargetController : MonoBehaviour
 {
-
     public Camera cam;
     public GameObject target;
     public GameObject hero;
@@ -16,7 +15,7 @@ public class TargetController : MonoBehaviour
     public StateController controller;
     private int currentTarget = -1;
 
-    private void Awake()
+    private void Start()
     {
         hero = GameObject.FindGameObjectWithTag("Player");
         target = GameObject.FindGameObjectWithTag("Target");
@@ -32,6 +31,7 @@ public class TargetController : MonoBehaviour
         {
             AdvanceTarget();
             controller.target = zone.zoneEnemies[currentTarget];
+            target.SetActive(true);
         }
 
         if (controller.target == null)
@@ -44,20 +44,22 @@ public class TargetController : MonoBehaviour
             // TODO: set active
             target = hero.GetComponent<StateController>().target;
             transform.position = target.transform.position + floorOffset;
+            target.SetActive(true);
             if (!hero.GetComponent<StateController>().currentState.isAggro)
                 destination.GetComponent<DestinationController>().target = target;
         }
 
         if (Input.GetMouseButton(0))
         {
-            target = GameObject.FindGameObjectWithTag("Target");
-            transform.position = new Vector3(0, -1000, 0);
+           
+            target.SetActive(true);
             transform.position = transform.position;
         }
 
         // Keep transform below target object if no mouse click
         if (target && target.tag.Equals("Enemy") || target.tag.Equals("NPC"))
         {
+            target.SetActive(true);
             transform.position = target.transform.position + floorOffset;
         }
         else

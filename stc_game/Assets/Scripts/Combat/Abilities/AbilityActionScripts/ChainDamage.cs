@@ -18,7 +18,7 @@ public class ChainDamage : AbilityAction
 
     public override void Act(AbilityManager manager)
     {
-        target.GetComponent<CharacterStats>().TakeDamage(amount);
+        target.GetComponent<CharacterStats>().stats.TakeDamage(amount);
         damaged.Add(target);
 
         //if target's collider is touching others, they take damage too
@@ -26,7 +26,7 @@ public class ChainDamage : AbilityAction
         {
             if (!damaged.Contains(enemy))
             {
-                enemy.GetComponent<CharacterStats>().TakeDamage(amount);
+                enemy.GetComponent<CharacterStats>().stats.TakeDamage(amount);
                 damaged.Add(enemy);
             }
                 
@@ -34,7 +34,7 @@ public class ChainDamage : AbilityAction
             foreach (var e in enemy.GetComponent<HitboxCollision>().touching)
                 if (!damaged.Contains(e))
                 {
-                    e.GetComponent<CharacterStats>().TakeDamage(amount);
+                    e.GetComponent<CharacterStats>().stats.TakeDamage(amount);
                     damaged.Add(e);
                 }
         }
