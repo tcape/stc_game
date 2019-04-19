@@ -25,7 +25,15 @@ public class TargetController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
+    {
+       if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            UpdateTarget();
+        }
+    }
+
+    private void UpdateTarget()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -51,7 +59,7 @@ public class TargetController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-           
+
             target.SetActive(true);
             transform.position = transform.position;
         }
