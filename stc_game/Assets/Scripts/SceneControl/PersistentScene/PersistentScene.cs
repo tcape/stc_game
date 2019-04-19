@@ -9,7 +9,7 @@ public class PersistentScene : MonoBehaviour
 {
     public static PersistentScene Instance;
     public GameCharacter GameCharacter;
-
+    public ReviveController reviveController;
     public QuestWindowUI questWindowUI;
     private void Awake()
     {
@@ -28,6 +28,7 @@ public class PersistentScene : MonoBehaviour
     {
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
+        reviveController = FindObjectOfType<ReviveController>();
 
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing

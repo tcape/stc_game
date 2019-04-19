@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Awake()
     {
+        reviveInTown = PersistentScene.Instance.reviveController.reviveInTown;
         sceneController = FindObjectOfType<SceneController>();
         spawnPositions = FindObjectOfType<SpawnPositions>();
         if (!sceneController)
@@ -20,6 +21,13 @@ public class SpawnManager : MonoBehaviour
             startPosition = spawnPositions.spawnPoints.First().transform;
             transform.position = startPosition.position;
             transform.rotation = startPosition.rotation;
+        }
+        else if(reviveInTown)
+        {
+            startPosition = spawnPositions.spawnPoints.Where(p => p.name.Equals(GameStrings.Positions.InTownPosition)).SingleOrDefault().transform;
+            transform.position = startPosition.position;
+            transform.rotation = startPosition.rotation;
+            PersistentScene.Instance.reviveController.reviveInTown = false;
         }
         else
         {
