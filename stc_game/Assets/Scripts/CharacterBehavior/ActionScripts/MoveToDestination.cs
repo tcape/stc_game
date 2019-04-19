@@ -9,8 +9,12 @@ public class MoveToDestination : CharacterAction
 {
     public override void Act(StateController controller)
     {
-        GetInputAndMove(controller);
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            GetInputAndMove(controller);
+        }
     }
+    
 
     private void GetInputAndMove(StateController controller)
     {

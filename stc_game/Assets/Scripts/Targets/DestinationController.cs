@@ -23,6 +23,14 @@ public class DestinationController : MonoBehaviour
 
     private void Update()
     {
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            UpdateDestination();
+        }
+    }
+
+    private void UpdateDestination()
+    {
         if (Input.GetMouseButton(0))
         {
             // raycast at mouse position
