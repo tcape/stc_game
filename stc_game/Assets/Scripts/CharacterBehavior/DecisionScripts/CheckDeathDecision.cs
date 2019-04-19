@@ -32,6 +32,11 @@ public class CheckDeathDecision : Decision
             controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
         }
         
+        if (controller.gameObject.CompareTag("Player"))
+        {
+            PersistentScene.Instance.GameCharacter.Stats.dead = true;
+        }
+
         controller.animator.SetBool("Dead", true);
         controller.gameObject.layer = 2;
         controller.navMeshAgent.enabled = false;

@@ -35,7 +35,7 @@ public class Stats
     [SerializeField] public double dodgeRate;
     [SerializeField] public double movementSpeed;
 
-    [HideInInspector] public bool dead;
+    public bool dead;
 
     [SerializeField] public double nextLevelXP;
     [SerializeField] public double totalXP;

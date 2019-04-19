@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 
 public class Hero : MonoBehaviour
 {
@@ -10,6 +10,11 @@ public class Hero : MonoBehaviour
     public string heroName;
     public HeroClass heroClass;
     public CharacterStats characterStats;
+    public Animator animator;
+    public NavMeshAgent navMeshAgent;
+    public Rigidbody rigidbody;
+    public CapsuleCollider physicsCollider;
+    public StateController stateController;
     //public Inventory inventory;
     //public Equipment equipment;
     public AbilityManager abilityManager;
@@ -22,6 +27,11 @@ public class Hero : MonoBehaviour
         heroClass = gameCharacter.HeroClass;
         characterStats = GetComponent<CharacterStats>();
         abilityManager = GetComponent<AbilityManager>();
+        animator = GetComponent<Animator>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        rigidbody = GetComponent<Rigidbody>();
+        physicsCollider = GetComponent<CapsuleCollider>();
+        stateController = GetComponent<StateController>();
         // inventory = GetComponent<Inventory>();
         // equipment = GetCompnent<Equipment>();
         //prefab = gameObject;
