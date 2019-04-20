@@ -9270,7 +9270,7 @@ GameObject:
   - component: {fileID: 448502628}
   - component: {fileID: 448502629}
   m_Layer: 0
-  m_Name: ReviveInTownPosition
+  m_Name: InTownPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9303,7 +9303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a46947d2b0e3d449ac061e3d8aed402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPointName: ReviveInTownPosition
+  spawnPointName: InTownPosition
 --- !u!1001 &452185122
 PrefabInstance:
   m_ObjectHideFlags: 0
