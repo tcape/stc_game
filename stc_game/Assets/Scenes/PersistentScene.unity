@@ -849,6 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reviveAtEntrance: {fileID: 1810753475}
+  reviveCanvas: {fileID: 0}
   reviveInTown: 0
 --- !u!1 &350954241
 GameObject:

@@ -7,22 +7,18 @@ using UnityEngine.UI;
 public class ReviveController : MonoBehaviour
 {
     public GameObject reviveAtEntrance;
-    private Canvas reviveCanvas;
+    public Canvas reviveCanvas;
     public bool reviveInTown;
 
     private void Awake()
     {
         reviveCanvas = gameObject.GetComponent<Canvas>();
+        reviveCanvas.enabled = false;
         reviveInTown = false;
     }
 
     private void Update()
     {
-        if (PersistentScene.Instance.GameCharacter.Stats.dead)
-            reviveCanvas.enabled = true;
-        else
-            reviveCanvas.enabled = false;
-
         if (SceneController.Instance.currentSceneName.Equals(GameStrings.Scenes.TownScene))
             reviveAtEntrance.SetActive(false);
         else
@@ -31,6 +27,9 @@ public class ReviveController : MonoBehaviour
 
     public void ReviveInTown()
     {
+        // disable the revive canvas
+        reviveCanvas.enabled = false;
+
         reviveInTown = true;
         // get dead hero
         var deadPlayer = GameObject.FindGameObjectWithTag("Player");
@@ -40,11 +39,9 @@ public class ReviveController : MonoBehaviour
 
         // destroy dead hero
         if (SceneController.Instance.currentSceneName.Equals(GameStrings.Scenes.TownScene))
-        {
             Destroy(deadPlayer);
-        }
 
-        // load and switch scenes to town scene (this will also save hero's stats to persistent GameCharacter)
+        // Fade and switch scenes to town scene (this will also save hero's stats to persistent GameCharacter)
         SceneController.Instance.FadeAndLoadScene(GameStrings.Scenes.TownScene);
 
         // get new hero
@@ -53,22 +50,19 @@ public class ReviveController : MonoBehaviour
 
         // set values for hero's components
         PersistentScene.Instance.GameCharacter.Stats.dead = false;
-        hero.characterStats.stats.dead = false;
-        hero.animator.SetBool("Dead", false);
-        hero.navMeshAgent.enabled = true;
-        hero.rigidbody.isKinematic = false;
-        hero.physicsCollider.enabled = true;
-        hero.stateController.currentState = hero.stateController.startState;
+
+        hero.SetReviveComponents();
 
         // give hero some HP
         hero.characterStats.stats.currentHP = hero.characterStats.stats.maxHP;
-
-        // disable the revive canvas
-        reviveCanvas.enabled = false;
+        
     }
 
     public void ReviveAtBody()
     {
+        // disable the revive canvas
+        reviveCanvas.enabled = false;
+
         // get dead hero
         var player = GameObject.FindGameObjectWithTag("Player");
         var hero = player.GetComponent<Hero>();
@@ -84,33 +78,25 @@ public class ReviveController : MonoBehaviour
         hero.animator.SetBool("Dead", false);
 
         // set values for hero's components
-        hero.navMeshAgent.enabled = true;
-        hero.rigidbody.isKinematic = false;
-        hero.physicsCollider.enabled = true;
-        hero.stateController.currentState = hero.stateController.startState;
-        hero.abilityManager.ActivatePassiveAbilites();
+        hero.SetReviveComponents();
 
-        // disable the revive canvas
-        reviveCanvas.enabled = false;
-
+      
         // take away some gold? or remove some durability from equipment(not yet implemented)
         //hero.characterStats.stats.LoseGold(100);
     }
 
     public void ReviveAtEntrance()
     {
-        PersistentScene.Instance.GameCharacter.Stats.dead = false;
+        // disable the revive canvas
+        reviveCanvas.enabled = false;
 
-        StartCoroutine(MoveHero());
+        StartCoroutine(MoveHeroToEntrance());
     }
 
-    private IEnumerator MoveHero()
+    private IEnumerator MoveHeroToEntrance()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
         var hero = player.GetComponent<Hero>();
-
-        // set hero's dead stat to false
-        hero.characterStats.stats.dead = false;
 
         // save stats to persistent GameCharacter
         PersistentScene.Instance.SaveGameCharacterStats(hero.characterStats.stats);
@@ -120,6 +106,11 @@ public class ReviveController : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
+        // set hero's dead stat to false
+        hero.characterStats.stats.dead = false;
+
+        PersistentScene.Instance.GameCharacter.Stats.dead = false;
+
         // give hero some HP
         hero.characterStats.stats.BuffCurrentHP(hero.characterStats.stats.maxHP / 2);
 
@@ -127,11 +118,7 @@ public class ReviveController : MonoBehaviour
         hero.SetHeroTransform(GameStrings.Positions.DungeonStartPosition);
 
         // set values for hero's components
-        hero.navMeshAgent.enabled = true;
-        hero.rigidbody.isKinematic = false;
-        hero.physicsCollider.enabled = true;
-        hero.stateController.currentState = hero.stateController.startState;
-        hero.abilityManager.ActivatePassiveAbilites();
+        hero.SetReviveComponents();
 
         // drop some gold maybe?
 

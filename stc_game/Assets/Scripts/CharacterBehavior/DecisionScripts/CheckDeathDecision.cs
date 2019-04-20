@@ -35,6 +35,7 @@ public class CheckDeathDecision : Decision
         if (controller.gameObject.CompareTag("Player"))
         {
             PersistentScene.Instance.GameCharacter.Stats.dead = true;
+            PersistentScene.Instance.reviveController.reviveCanvas.enabled = true;
         }
 
         controller.animator.SetBool("Dead", true);

@@ -20,8 +20,6 @@ public class Hero : MonoBehaviour
     //public Inventory inventory;
     //public Equipment equipment;
     
-    //public GameObject prefab;
-
     private void Awake()
     {
         gameCharacter = PersistentScene.Instance.GameCharacter;
@@ -37,7 +35,6 @@ public class Hero : MonoBehaviour
         spawner = GetComponent<SpawnManager>();
         // inventory = GetComponent<Inventory>();
         // equipment = GetCompnent<Equipment>();
-        //prefab = gameObject;
     }
 
     public void LoadCharacterStats()
@@ -55,5 +52,15 @@ public class Hero : MonoBehaviour
         var spawnPoint = spawner.GetSpawnPoint(spawnPositionName);
         transform.position = spawnPoint.position;
         transform.rotation = spawnPoint.rotation;
+    }
+
+    public void SetReviveComponents()
+    {
+        characterStats.stats.dead = false;
+        animator.SetBool("Dead", false);
+        navMeshAgent.enabled = true;
+        rigidbody.isKinematic = false;
+        physicsCollider.enabled = true;
+        stateController.currentState = stateController.startState;
     }
 }
