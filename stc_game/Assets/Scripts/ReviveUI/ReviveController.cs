@@ -112,8 +112,10 @@ public class ReviveController : MonoBehaviour
         // set hero's dead stat to false
         hero.characterStats.stats.dead = false;
 
+        // save stats to persistent GameCharacter
         PersistentScene.Instance.SaveGameCharacterStats(hero.characterStats.stats);
 
+        // Fade out
         yield return StartCoroutine(SceneController.Instance.FadeOut());
 
         yield return new WaitForSeconds(1f);
@@ -137,7 +139,8 @@ public class ReviveController : MonoBehaviour
         hero.animator.SetBool("Dead", false);
 
         yield return new WaitForSeconds(1f);
-
+        
+        // Fade in
         yield return StartCoroutine(SceneController.Instance.FadeIn());
     }
 }
