@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,7 +39,7 @@ public class ReviveController : MonoBehaviour
         PersistentScene.Instance.SaveGameCharacterStats(deadHero.characterStats.stats);
 
         // destroy dead hero
-        if(SceneController.Instance.currentSceneName.Equals(GameStrings.Scenes.TownScene))
+        if (SceneController.Instance.currentSceneName.Equals(GameStrings.Scenes.TownScene))
         {
             Destroy(deadPlayer);
         }
@@ -58,7 +59,7 @@ public class ReviveController : MonoBehaviour
         hero.rigidbody.isKinematic = false;
         hero.physicsCollider.enabled = true;
         hero.stateController.currentState = hero.stateController.startState;
-       
+
         // give hero some HP
         hero.characterStats.stats.currentHP = hero.characterStats.stats.maxHP;
 
@@ -81,7 +82,7 @@ public class ReviveController : MonoBehaviour
 
         // trigger the revive animation
         hero.animator.SetBool("Dead", false);
-        
+
         // set values for hero's components
         hero.navMeshAgent.enabled = true;
         hero.rigidbody.isKinematic = false;
@@ -98,17 +99,45 @@ public class ReviveController : MonoBehaviour
 
     public void ReviveAtEntrance()
     {
-        // give hero some HP
+        PersistentScene.Instance.GameCharacter.Stats.dead = false;
 
-        // set hero's dead stat to false
-
-        // save hero's stats to persistent GameCharacter
-
-        // intantiate new hero at entrance point
-
-        // destroy dead hero's GameObject
-
-        // drop some gold maybe?
+        StartCoroutine(MoveHero());
     }
 
+    private IEnumerator MoveHero()
+    {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        var hero = player.GetComponent<Hero>();
+
+        // set hero's dead stat to false
+        hero.characterStats.stats.dead = false;
+
+        PersistentScene.Instance.SaveGameCharacterStats(hero.characterStats.stats);
+
+        yield return StartCoroutine(SceneController.Instance.FadeOut());
+
+        yield return new WaitForSeconds(1f);
+
+        // give hero some HP
+        hero.characterStats.stats.BuffCurrentHP(hero.characterStats.stats.maxHP / 2);
+
+        // move hero to entrance
+        hero.SetHeroTransform(GameStrings.Positions.DungeonStartPosition);
+
+        // set values for hero's components
+        hero.navMeshAgent.enabled = true;
+        hero.rigidbody.isKinematic = false;
+        hero.physicsCollider.enabled = true;
+        hero.stateController.currentState = hero.stateController.startState;
+        hero.abilityManager.ActivatePassiveAbilites();
+
+        // drop some gold maybe?
+
+        // trigger the revive animation
+        hero.animator.SetBool("Dead", false);
+
+        yield return new WaitForSeconds(1f);
+
+        yield return StartCoroutine(SceneController.Instance.FadeIn());
+    }
 }

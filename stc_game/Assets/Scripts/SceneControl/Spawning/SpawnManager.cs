@@ -16,24 +16,22 @@ public class SpawnManager : MonoBehaviour
         reviveInTown = PersistentScene.Instance.reviveController.reviveInTown;
         sceneController = FindObjectOfType<SceneController>();
         spawnPositions = FindObjectOfType<SpawnPositions>();
+
         if (!sceneController)
         {
             startPosition = spawnPositions.spawnPoints.First().transform;
-            transform.position = startPosition.position;
-            transform.rotation = startPosition.rotation;
+            SetTransform(startPosition);
         }
         else if(reviveInTown)
         {
             startPosition = spawnPositions.spawnPoints.Where(p => p.name.Equals(GameStrings.Positions.InTownPosition)).SingleOrDefault().transform;
-            transform.position = startPosition.position;
-            transform.rotation = startPosition.rotation;
+            SetTransform(startPosition);
             PersistentScene.Instance.reviveController.reviveInTown = false;
         }
         else
         {
             SetStartPosition(sceneController.previousSceneName, sceneController.currentSceneName);
-            transform.position = startPosition.position;
-            transform.rotation = startPosition.rotation;
+            SetTransform(startPosition);
         }
     }
    
@@ -45,6 +43,7 @@ public class SpawnManager : MonoBehaviour
         if (previous.Equals(GameStrings.Scenes.DungeonScene) && current.Equals(GameStrings.Scenes.TownScene))
         {
             startPosition = spawnPositions.spawnPoints.Where(p => p.name.Equals(GameStrings.Positions.CaveEntrancePosition)).SingleOrDefault().transform;
+
         }
         // Start Game
         else if (previous.Equals(GameStrings.Scenes.TownScene) && current.Equals(GameStrings.Scenes.TownScene))
@@ -58,5 +57,17 @@ public class SpawnManager : MonoBehaviour
         }
         else
             Debug.Log("Spawn position not set");
+    }
+
+    public void SetTransform(Transform setTransform)
+    {
+        transform.position = setTransform.position;
+        transform.rotation = setTransform.rotation;
+    }
+
+    public Transform GetSpawnPoint(string spawnPositionName)
+    {
+        var spawnPoint = spawnPositions.spawnPoints.Where(p => p.name.Equals(spawnPositionName)).SingleOrDefault().transform;
+        return spawnPoint;
     }
 }

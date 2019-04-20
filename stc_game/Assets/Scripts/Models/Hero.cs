@@ -10,14 +10,16 @@ public class Hero : MonoBehaviour
     public string heroName;
     public HeroClass heroClass;
     public CharacterStats characterStats;
+    public AbilityManager abilityManager;
     public Animator animator;
     public NavMeshAgent navMeshAgent;
     public Rigidbody rigidbody;
     public CapsuleCollider physicsCollider;
     public StateController stateController;
+    public SpawnManager spawner;
     //public Inventory inventory;
     //public Equipment equipment;
-    public AbilityManager abilityManager;
+    
     //public GameObject prefab;
 
     private void Awake()
@@ -32,6 +34,7 @@ public class Hero : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         physicsCollider = GetComponent<CapsuleCollider>();
         stateController = GetComponent<StateController>();
+        spawner = GetComponent<SpawnManager>();
         // inventory = GetComponent<Inventory>();
         // equipment = GetCompnent<Equipment>();
         //prefab = gameObject;
@@ -45,5 +48,12 @@ public class Hero : MonoBehaviour
     public void LoadAbilities()
     {
         abilityManager.LoadAbilites(gameCharacter.Abilities);
+    }
+
+    public void SetHeroTransform(string spawnPositionName)
+    {
+        var spawnPoint = spawner.GetSpawnPoint(spawnPositionName);
+        transform.position = spawnPoint.position;
+        transform.rotation = spawnPoint.rotation;
     }
 }
