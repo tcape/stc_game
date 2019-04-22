@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
+  m_Name: MainLanguageDb
+  m_EditorClassIdentifier: 
+  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"9d915740-ad6c-4ca5-890d-8218fdf76953":"Killed
+    {0} / {2} Goblin Chief","e7d0117b-9b70-4ddc-a094-deac664933de":"I feel as though
+    I''m not ready to talk to you yet.","112184d4-5e92-4b2d-a926-4321250b1fd3":"Defeat
+    Illamuwa","d6f17a10-22f7-4d52-8a11-918eb98758c1":"Nope","729f0368-c25a-43d9-8bf6-7f6cbe26b1c1":"Hello
+    hero! A journey awaits you...","f15a58bf-c682-4b11-bc5a-6413e416e075":"Walk to
+    Town","54bc1ff7-0879-4deb-ae5f-96bf77ba439a":"Walk to Town","03594656-cc34-43db-b384-6d50fdf26f56":"Discovered
+    {0} / {2} location","8d29a5d0-7aad-43f3-98bf-5ee782744e5b":"Walk To Town","ba2cf313-1715-4db4-93f9-c0c2082276be":"Walk
+    To Town","5234994b-66ce-4ccf-ab25-654415ca5fbc":"Walk To Town","53b275ca-35db-40fd-afe2-0aba6878af73":"Discovered
+    {0} / {2} locations","5eead35e-1978-4db5-80b8-0e376e12cbb9":"Okay","2446d8fb-802c-4dd1-9fd9-e5df0b94e8a0":"The
+    Town needs your help? do you wish to be a hero?","affbff1d-351c-41e6-bf9e-ef14642aa5cd":"Go
+    to town and talk to the blacksmith.","07d02f43-afd2-42ae-a538-8eaa77fd22b1":"Turn
+    quest in at blacksmith.","d3386487-91e7-4f6b-8233-6c689b809aa8":"Defeat the goblin
+    chief.","fab04c07-e84d-41e0-b30a-a91b398db0fa":"Defeat Goblin Chief","00e56c83-47b7-4bf1-922f-d8467cd09caf":"Greetings
+    hero!","9a106ffd-fa78-4449-bfed-a89f42fff765":"Yes","4f999924-b39c-4416-a2c7-17b5dad5afdd":"No","c128a677-28d8-4741-acd8-38debc2c3462":"There
+    is a dirty goblin chief that is taking hold of the cavern up north! We used to
+    go there to mine for materials, and now we can''t because of his occupation! Destroy
+    him!","c07cd0fe-ae73-49e4-bf1b-53b622b8f941":"Please destroy the goblin chief!","ae42898b-e3dc-4bdc-92fa-333418df4c10":"You
+    defeated him!! thank you!"},"_localizedObjects":{}}'
+  _objectReferences: []
+  _lang: en-US

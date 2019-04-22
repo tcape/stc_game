@@ -85,7 +85,7 @@ namespace Devdog.General.Editors
             DrawGettingStarted();
             GUILayout.EndArea();
 
-            GUILayout.BeginArea(new Rect(SingleColWidth + (SingleColWidth / 50), 0, SingleColWidth + 10, 360));
+            GUILayout.BeginArea(new Rect(SingleColWidth + (SingleColWidth / 50), 0, SingleColWidth + 10, window.position.height));
             DrawMailSignupForm();
             GUILayout.EndArea();
 

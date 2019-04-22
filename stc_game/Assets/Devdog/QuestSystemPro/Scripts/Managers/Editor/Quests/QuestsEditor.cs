@@ -158,9 +158,9 @@ namespace Devdog.QuestSystemPro.Editors
             base.RemoveItem(i);
         }
 
-        public override void EditItem(Quest quest)
+        public override void EditItem(Quest quest, int index)
         {
-            base.EditItem(quest);
+            base.EditItem(quest, index);
 
             Undo.ClearUndo(_previousItem);
             Undo.RecordObject(quest, QuestSystemPro.ProductName + "_item");
@@ -216,7 +216,7 @@ namespace Devdog.QuestSystemPro.Editors
 
             DrawSidebarRowElement(item.name.message, 160);
             DrawSidebarRowElement(item.GetType().Name, 120);
-            bool t = DrawSidebarRowElementToggle(true, "", "VisibilityToggle", 20);
+            bool t = DrawSidebarRowElementToggle(true, "", "AssetLabel Icon", 20);
             if (t == false) // User clicked view icon
                 AssetDatabase.OpenAsset(selectedItem);
 
