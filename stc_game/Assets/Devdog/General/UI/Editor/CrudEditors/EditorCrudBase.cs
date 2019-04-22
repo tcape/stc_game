@@ -122,7 +122,7 @@ namespace Devdog.General.Editors
             window.Repaint();
 
             if(editOnceAdded)
-                EditItem(item);
+                EditItem(item, tempList.Count - 1);
         }
 
         public virtual void RemoveItem(int index)
@@ -146,7 +146,7 @@ namespace Devdog.General.Editors
             return EditorReflectionUtility.CreateDeepClone<T>(crudList[index]);
         }
         
-        public virtual void EditItem(T item)
+        public virtual void EditItem(T item, int index)
         {
             GUI.FocusControl("SearchField");
             selectedItem = item;
@@ -166,7 +166,7 @@ namespace Devdog.General.Editors
             GUI.backgroundColor = (item.Equals(selectedItem)) ? new Color(0, 1.0f, 0, 0.3f) : new Color(0, 0, 0, 0.0f);
 
             if (GUI.Button(rect, "", "MeTransitionSelectHead"))
-                ClickedSidebarRowElement(item);
+                ClickedSidebarRowElement(item, i);
 
             GUI.backgroundColor = Color.white;
 
@@ -178,9 +178,9 @@ namespace Devdog.General.Editors
             EditorGUILayout.BeginHorizontal(GUILayout.Height(30.0f));
         }
 
-        protected virtual void ClickedSidebarRowElement(T item)
+        protected virtual void ClickedSidebarRowElement(T item, int index)
         {
-            EditItem(item);
+            EditItem(item, index);
         }
 
         protected virtual void DrawSidebarRowElement(string text, int width, int height = -1)
@@ -402,7 +402,7 @@ namespace Devdog.General.Editors
 
             // Edit item if only 1 search result
             if (searchResultIndexItem != -1 && _searchResultCount == 1)
-                EditItem(crudList[searchResultIndexItem]);
+                EditItem(crudList[searchResultIndexItem], searchResultIndexItem);
 
             if (_searchResultCount == 0 && isSearching)
             {

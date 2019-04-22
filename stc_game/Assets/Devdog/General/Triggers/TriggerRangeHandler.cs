@@ -53,6 +53,7 @@ namespace Devdog.General
             if (player != null)
             {
                 _playersInRange.Add(player);
+                player.triggerHandler.triggersInRange.Add(_trigger);
                 _trigger.NotifyCameInRange(player);
             }
         }
@@ -63,6 +64,7 @@ namespace Devdog.General
             if (player != null)
             {
                 _trigger.NotifyWentOutOfRange(player);
+                player.triggerHandler.triggersInRange.Remove(_trigger);
                 _playersInRange.Remove(player);
             }
         }

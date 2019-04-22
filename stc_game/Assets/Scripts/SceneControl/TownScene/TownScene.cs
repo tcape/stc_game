@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Devdog.QuestSystemPro.UI;
-using Devdog.QuestSystemPro;
+
 
 public class TownScene : MonoBehaviour
 {
