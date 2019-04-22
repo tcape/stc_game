@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 public class PersistentScene : MonoBehaviour
 {
     public static PersistentScene Instance;
+    public User user;
+    public UserService userService = UserService.Instance;
     public GameCharacter GameCharacter;
 
     public QuestWindowUI questWindowUI;
@@ -34,6 +36,8 @@ public class PersistentScene : MonoBehaviour
 
         dialogueUI = GameObject.FindObjectOfType<DialogueUI>();
         DialogueManager.instance.dialogueUI = PersistentScene.Instance.dialogueUI;
+
+
 
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
