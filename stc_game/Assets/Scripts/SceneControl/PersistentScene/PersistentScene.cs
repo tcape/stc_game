@@ -82,4 +82,13 @@ public class PersistentScene : MonoBehaviour
     {
         GameCharacter.Stats = saveStats;
     }
+
+    private void HandleLoadUserCallback()
+    {
+        user = userService.User;
+        if (user == null || user._id == "")
+        {
+            userService.CreateUser();
+        }
+    }
 }
