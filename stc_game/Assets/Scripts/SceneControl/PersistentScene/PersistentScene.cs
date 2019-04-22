@@ -37,7 +37,8 @@ public class PersistentScene : MonoBehaviour
         dialogueUI = GameObject.FindObjectOfType<DialogueUI>();
         DialogueManager.instance.dialogueUI = PersistentScene.Instance.dialogueUI;
 
-
+        userService.LoadUserCallback += HandleLoadUserCallback;
+        userService.GetUser(AuthService.Instance.authUser.sub);
 
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
