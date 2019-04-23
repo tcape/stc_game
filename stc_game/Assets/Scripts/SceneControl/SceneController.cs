@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 // This script exists in the Persistent scene and manages the content
 // based scene's loading.  It works on a principle that the
@@ -144,5 +145,18 @@ public class SceneController : MonoBehaviour
 
         // Stop the CanvasGroup from blocking raycasts so input is no longer ignored.
         faderCanvasGroup.blocksRaycasts = false;
+    }
+
+    public IEnumerator FadeOut()
+    {
+        if (!isFading)
+        {
+           yield return StartCoroutine(Fade(1f));
+        }
+    }
+
+    public IEnumerator FadeIn()
+    {
+        yield return StartCoroutine(Fade(0f));
     }
 }

@@ -35,7 +35,7 @@ public class Stats
     [SerializeField] public double dodgeRate;
     [SerializeField] public double movementSpeed;
 
-    [HideInInspector] public bool dead;
+    public bool dead;
 
     [SerializeField] public double nextLevelXP;
     [SerializeField] public double totalXP;
@@ -53,6 +53,8 @@ public class Stats
         currentHP = savedStats.currentHP;
         currentAP = savedStats.currentAP;
         strength = savedStats.strength;
+        intellect = savedStats.intellect;
+        dexterity = savedStats.dexterity;
         attack = savedStats.attack;
         abilityAttack = savedStats.abilityAttack;
         meleeCritRate = savedStats.meleeCritRate;
@@ -342,7 +344,10 @@ public class Stats
 
     public void BuffCurrentHP(double amount)
     {
-        currentHP += Math.Round(amount);
+        if (currentHP + Math.Round(amount) <= maxHP)
+            currentHP += Math.Round(amount);
+        else
+            currentHP = maxHP;
     }
 
     public void BuffCurrentHP(float percentage)
