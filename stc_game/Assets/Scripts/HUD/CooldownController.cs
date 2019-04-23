@@ -19,12 +19,11 @@ public class CooldownController : MonoBehaviour
     private void OnGUI()
     {
         ability = abilitySlot.GetComponent<AbilitySlot>().ability;
-       
     }
 
     private void Update()
     {
-        if (ability.startTime != 0f)
+        if (ability && ability.startTime != 0f)
         {
             if (ability.startTime <= Time.time)
                 cooldown.fillAmount = 1f - (Time.time - ability.startTime) / ability.cooldown;
