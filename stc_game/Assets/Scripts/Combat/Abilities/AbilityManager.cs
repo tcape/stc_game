@@ -118,7 +118,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             }
         }
 
-        private void ActivatePassiveAbilites()
+        public void ActivatePassiveAbilites()
         {
             foreach (var ability in myAbilities)
             {

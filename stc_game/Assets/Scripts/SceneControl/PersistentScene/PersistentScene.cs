@@ -11,7 +11,7 @@ public class PersistentScene : MonoBehaviour
 {
     public static PersistentScene Instance;
     public GameCharacter GameCharacter;
-
+    public ReviveController reviveController;
     public QuestWindowUI questWindowUI;
     public DialogueUI dialogueUI;
     private void Awake()
@@ -31,6 +31,7 @@ public class PersistentScene : MonoBehaviour
     {
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
+        reviveController = FindObjectOfType<ReviveController>();
 
         dialogueUI = GameObject.FindObjectOfType<DialogueUI>();
         DialogueManager.instance.dialogueUI = PersistentScene.Instance.dialogueUI;
