@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public enum TargetType { Self, Enemy };
 public enum AbilityType { Passive, Activate };
@@ -12,6 +12,7 @@ public enum AbilityType { Passive, Activate };
 [CreateAssetMenu (menuName ="Ability/Ability")]
 public class Ability : ScriptableObject, IAbility
 {
+    public Sprite sprite;
     public AbilityType abilityType;
     public TargetType targetType;
     public List<AbilityAction> actions;

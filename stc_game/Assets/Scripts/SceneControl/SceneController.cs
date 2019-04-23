@@ -16,6 +16,7 @@ public class SceneController : MonoBehaviour
     public static SceneController Instance;
     public event Action BeforeSceneUnload;          // Event delegate that is called just before a scene is unloaded.
     public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
+    public event Action FirstSceneLoad;
     public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
     public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
     public string startingSceneName;
@@ -57,6 +58,8 @@ public class SceneController : MonoBehaviour
 
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
+
+        AfterSceneLoad?.Invoke();
 
         hud.FindPlayerObject();
 

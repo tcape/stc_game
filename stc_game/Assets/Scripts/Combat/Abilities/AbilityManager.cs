@@ -32,7 +32,18 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             {
                 LoadSavedAbilities();
                 ActivatePassiveAbilites();
+                SetHudAbilityManager();
             }
+        }
+
+        private void SetHudAbilityManager()
+        {
+            PersistentScene.Instance.actionBar.abilityManager = this;
+        }
+
+        private void SetHudAbilities()
+        {
+            PersistentScene.Instance.actionBar.myAbilities = myAbilities;
         }
 
         private void Update()
@@ -155,6 +166,30 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             }
 
             activeAbilites.Clear();
+        }
+
+        public void ActivateAbility(Ability ability)
+        {
+            if (ability.targetType.Equals(TargetType.Self))
+            {
+                ability.target = gameObject;
+            }
+            else
+                ability.target = controller.target;
+
+            if (ability.CanUse(this))
+            {
+                activeAbilites.Add(ability);
+                stats.stats.UseAbilityPoints(ability.cost);
+                ability.TriggerAnimator(this);
+                ability.startTime = Time.time;
+                foreach (var action in ability.actions)
+                    action.target = ability.target;
+                foreach (var action in ability.actions.Where(t => t.type.Equals(ActionType.Instant)))
+                {
+                    action.Act(this);
+                }
+            }
         }
     }
 }

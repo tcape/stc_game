@@ -10,7 +10,9 @@ public class PersistentScene : MonoBehaviour
     public static PersistentScene Instance;
     public GameCharacter GameCharacter;
     public ReviveController reviveController;
+    public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
+
     private void Awake()
     {
         if (Instance == null)
@@ -29,6 +31,7 @@ public class PersistentScene : MonoBehaviour
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
         reviveController = FindObjectOfType<ReviveController>();
+        actionBar = FindObjectOfType<ActionBarController>();
 
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
@@ -70,6 +73,8 @@ public class PersistentScene : MonoBehaviour
                                             }
                                             );
 
+        actionBar.myAbilities = GameCharacter.GetAbilities();
+        actionBar.Refresh();
                                             
     }
 
