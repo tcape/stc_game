@@ -10,10 +10,11 @@ public class HUDController : MonoBehaviour
     public GameObject apBar;
     public GameObject goldCounter;
     public GameObject experienceBar;
+    private Transform goldTransform;
 
     public void Awake()
     {
-        
+        goldTransform = GetComponentInChildren<Canvas>().transform;
     }
 
     public void Update()
@@ -49,7 +50,7 @@ public class HUDController : MonoBehaviour
 
     private void UpdateGoldCount()
     {
-        goldCounter.GetComponent<UnityEngine.UI.Text>().text = stats.gold.ToString();
+        goldCounter.GetComponent<Text>().text = stats.gold.ToString();
     }
 
     private void UpdateXPBar()
