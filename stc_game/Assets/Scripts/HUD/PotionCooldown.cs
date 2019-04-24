@@ -29,5 +29,4 @@ public class PotionCooldown : MonoBehaviour
     {
         startTime = Time.time;
     }
-
 }

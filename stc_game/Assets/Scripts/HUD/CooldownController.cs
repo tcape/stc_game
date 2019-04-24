@@ -21,19 +21,18 @@ public class CooldownController : MonoBehaviour
 
     private void OnGUI()
     {
-        ability = abilitySlot.GetComponent<AbilitySlot>().ability;
-
+        if (!ability)
+            ability = abilitySlot.GetComponent<AbilitySlot>().ability;
     }
 
     private void Update()
     {
         if (ability)  
         {
-            if (ability.startTime < Time.time)
+            if (ability.OnCooldown())
                 cooldown.fillAmount = 1f - (Time.time - ability.startTime) / ability.cooldown;
         }
     }
-
 
     private void OnEnable()
     {
@@ -43,7 +42,7 @@ public class CooldownController : MonoBehaviour
     private void OnDisable()
     {
         SceneController.Instance.AfterSceneLoad -= GetAbilityManager;
-        abilityManager.abilityUsed -= StartCooldown;
+        abilityManager.AbilityUsed -= StartCooldown;
     }
 
     public void StartCooldown()
@@ -56,8 +55,6 @@ public class CooldownController : MonoBehaviour
         if (!abilityManager)
             abilityManager = FindObjectOfType<Hero>().abilityManager;
         if (abilityManager)
-            abilityManager.abilityUsed += StartCooldown;
+            abilityManager.AbilityUsed += StartCooldown;
     }
-
-
 }

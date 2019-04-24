@@ -59,6 +59,15 @@ public class Ability : ScriptableObject, IAbility
         return false;
     }
 
+    public bool OnCooldown()
+    {
+        if (Time.time > lastCalled + cooldown)
+        {
+            return false;
+        }
+        return true;
+    }
+
     public bool InRange(AbilityManager manager)
     {
         if (targetType.Equals(TargetType.Self))

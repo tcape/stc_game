@@ -10,7 +10,6 @@ public class ActionBarController : MonoBehaviour
     [SerializeField] public AbilityManager abilityManager;
     [SerializeField] public List<Ability> myAbilities = new List<Ability>();
     private SceneController sceneController;
-    private Hero hero;
 
     private void Awake()
     {
@@ -38,29 +37,24 @@ public class ActionBarController : MonoBehaviour
 
     private void OnValidate()
     {
-
         if (abilitySlots.Length == 0)
         {
             var slots = transform.GetComponentsInChildren<AbilitySlot>();
 
             abilitySlots = slots;
         }
-
         Refresh();
-            
     }
 
     public void Refresh()
     {
-        int i = 0;
         if (myAbilities.Count > 0)
         {
-            for (; i < myAbilities.Count; i++)
+            for (var i = 0; i < myAbilities.Count; i++)
             {
                 abilitySlots[i].ability = myAbilities[i];
             }
         }
-      
     }
 
     private void LoadAbilities()
