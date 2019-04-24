@@ -6,18 +6,18 @@ public enum PotionType { HP, AP };
 
 public class PotionButton : MonoBehaviour
 {
+    public Transform parent;
     public PotionType type;
     public float cooldown;
-    private PotionCooldown potionCooldown;
+    public PotionCooldown potionCooldown;
 
     private void Start()
     {
-        potionCooldown = gameObject.GetComponentInChildren<PotionCooldown>();
+        potionCooldown = parent.GetComponentInChildren<PotionCooldown>();
     }
 
     public void UsePotion()
     {
-
         var stats = FindObjectOfType<Hero>().characterStats.stats;
 
         if (potionCooldown.image.fillAmount == 0f)
@@ -30,7 +30,5 @@ public class PotionButton : MonoBehaviour
             if (type == PotionType.AP)
                 stats.BuffCurrentAP(stats.maxAP);
         }
-
     }
-
 }

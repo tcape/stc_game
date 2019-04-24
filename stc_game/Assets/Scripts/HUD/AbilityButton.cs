@@ -8,11 +8,13 @@ public class AbilityButton : MonoBehaviour
     [SerializeField] public Transform parent;
     [SerializeField] private Sprite image;
     private Ability ability;
+    private CooldownController cooldown;
 
 
     private void OnGUI()
     {
         ability = parent.GetComponent<AbilitySlot>().ability;
+        cooldown = parent.GetComponentInChildren<CooldownController>();
     }
 
     public void ExecuteAbility()
@@ -20,6 +22,7 @@ public class AbilityButton : MonoBehaviour
         var manager = parent.GetComponentInParent<ActionBarController>().abilityManager;
 
         manager.ActivateAbility(ability);
+       // cooldown.StartCooldown();
     }
 
 }

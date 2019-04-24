@@ -16,12 +16,10 @@ public class PotionCooldown : MonoBehaviour
         image = GetComponent<Image>();
         image.fillAmount = 0;
     }
-
-
-
+    
     private void Update()
     {
-        if (startTime <= Time.time)
+        if (startTime < Time.time)
         {
             image.fillAmount = 1f - (Time.time - startTime) / cooldown;
         }

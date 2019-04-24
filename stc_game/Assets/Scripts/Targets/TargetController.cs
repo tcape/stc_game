@@ -27,10 +27,7 @@ public class TargetController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-       if (!EventSystem.current.IsPointerOverGameObject())
-        {
-            UpdateTarget();
-        }
+        UpdateTarget();
     }
 
     private void UpdateTarget()
@@ -57,7 +54,7 @@ public class TargetController : MonoBehaviour
                 destination.GetComponent<DestinationController>().target = target;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
 
             target.SetActive(true);

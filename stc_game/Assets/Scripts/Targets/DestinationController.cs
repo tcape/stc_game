@@ -23,15 +23,12 @@ public class DestinationController : MonoBehaviour
 
     private void Update()
     {
-        if (!EventSystem.current.IsPointerOverGameObject())
-        {
-            UpdateDestination();
-        }
+        UpdateDestination();
     }
 
     private void UpdateDestination()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             // raycast at mouse position
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -53,7 +50,7 @@ public class DestinationController : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && !EventSystem.current.IsPointerOverGameObject())
         {
             // raycast at mouse position
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);

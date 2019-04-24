@@ -20,9 +20,20 @@ public class ActionBarController : MonoBehaviour
         abilitySlots = slots;
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        sceneController.AfterSceneLoad += GetAbilityManager;
+    }
 
+    private void OnDisable()
+    {
+        sceneController.AfterSceneLoad -= GetAbilityManager;
+    }
+
+    private void GetAbilityManager()
+    {
+        if (!abilityManager)
+            abilityManager = FindObjectOfType<Hero>().abilityManager;
     }
 
     private void OnValidate()

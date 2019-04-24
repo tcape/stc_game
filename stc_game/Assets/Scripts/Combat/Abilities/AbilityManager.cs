@@ -11,8 +11,9 @@ namespace Assets.Scripts.CharacterBehavior.Combat
     public class AbilityManager : MonoBehaviour
     {
         public List<Ability> myAbilities;
-        private List<Ability> activeAbilites;
+        public List<Ability> activeAbilites;
         public AbilitySaver saver;
+        public event Action abilityUsed;
         [HideInInspector] public CharacterStats stats;
         [HideInInspector] public Animator animator;
         [HideInInspector] public StateController controller;
@@ -52,26 +53,27 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             {
                 if (Input.GetKeyDown(ability.hotkey))
                 {
-                    if (ability.targetType.Equals(TargetType.Self))
-                    {
-                        ability.target = gameObject;
-                    }
-                    else
-                        ability.target = controller.target;
+                    //if (ability.targetType.Equals(TargetType.Self))
+                    //{
+                    //    ability.target = gameObject;
+                    //}
+                    //else
+                    //    ability.target = controller.target;
 
-                    if (ability.CanUse(this))
-                    {
-                        activeAbilites.Add(ability);
-                        stats.stats.UseAbilityPoints(ability.cost);
-                        ability.TriggerAnimator(this);
-                        ability.startTime = Time.time;
-                        foreach (var action in ability.actions)
-                            action.target = ability.target;
-                        foreach (var action in ability.actions.Where(t => t.type.Equals(ActionType.Instant)))
-                        {
-                            action.Act(this);
-                        }
-                    }
+                    //if (ability.CanUse(this))
+                    //{
+                    //    activeAbilites.Add(ability);
+                    //    stats.stats.UseAbilityPoints(ability.cost);
+                    //    ability.TriggerAnimator(this);
+                    //    ability.startTime = Time.time;
+                    //    foreach (var action in ability.actions)
+                    //        action.target = ability.target;
+                    //    foreach (var action in ability.actions.Where(t => t.type.Equals(ActionType.Instant)))
+                    //    {
+                    //        action.Act(this);
+                    //    }
+                    //}
+                    ActivateAbility(ability);
 
                 }
             }
@@ -170,6 +172,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
         public void ActivateAbility(Ability ability)
         {
+
             if (ability.targetType.Equals(TargetType.Self))
             {
                 ability.target = gameObject;
@@ -179,6 +182,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
 
             if (ability.CanUse(this))
             {
+                abilityUsed?.Invoke();
                 activeAbilites.Add(ability);
                 stats.stats.UseAbilityPoints(ability.cost);
                 ability.TriggerAnimator(this);
