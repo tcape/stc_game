@@ -127,6 +127,7 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             {
                 AbilityUsed?.Invoke();
                 activeAbilites.Add(ability);
+                stats.stats.UseAbilityPoints(ability.cost);
                 ability.TriggerAnimator(this);
                 ability.startTime = Time.time;
                 foreach (var action in ability.actions)
