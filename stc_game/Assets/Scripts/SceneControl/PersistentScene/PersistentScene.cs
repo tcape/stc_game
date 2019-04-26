@@ -1,4 +1,6 @@
 ﻿using Devdog.QuestSystemPro;
+using Devdog.QuestSystemPro.Dialogue;
+using Devdog.QuestSystemPro.Dialogue.UI;
 using Devdog.QuestSystemPro.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,11 +10,14 @@ using UnityEngine.SceneManagement;
 public class PersistentScene : MonoBehaviour
 {
     public static PersistentScene Instance;
+    public User user;
+    public UserService userService = UserService.Instance;
     public GameCharacter GameCharacter;
     public ReviveController reviveController;
     public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
-
+    public DialogueUI dialogueUI;
+    private HUDController hud;
     private void Awake()
     {
         if (Instance == null)
@@ -28,10 +33,18 @@ public class PersistentScene : MonoBehaviour
 
     private void Start()
     {
+        hud = FindObjectOfType<HUDController>();
+        hud.gameObject.SetActive(false);
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
         reviveController = FindObjectOfType<ReviveController>();
         actionBar = FindObjectOfType<ActionBarController>();
+
+        dialogueUI = GameObject.FindObjectOfType<DialogueUI>();
+        DialogueManager.instance.dialogueUI = PersistentScene.Instance.dialogueUI;
+
+        userService.LoadUserCallback += HandleLoadUserCallback;
+        userService.GetUser(AuthService.Instance.authUser.sub);
 
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
@@ -81,5 +94,18 @@ public class PersistentScene : MonoBehaviour
     public void SaveGameCharacterStats(Stats saveStats)
     {
         GameCharacter.Stats = saveStats;
+    }
+
+    private void HandleLoadUserCallback()
+    {
+        user = userService.user;
+        StartCoroutine(LoadGameScene());
+    }
+
+    private IEnumerator LoadGameScene()
+    {
+        yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
+        hud.FindPlayerObject();
+        hud.gameObject.SetActive(true);
     }
 }

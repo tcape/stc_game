@@ -13,6 +13,7 @@ namespace Devdog.General
 
         [SerializeField]
         private BestTriggerSelectorBase _selector;
+
         public BestTriggerSelectorBase selector
         {
             get { return _selector; }
@@ -37,10 +38,12 @@ namespace Devdog.General
             }
         }
 
-        protected readonly List<TriggerBase> triggersInRange = new List<TriggerBase>();
+        public List<TriggerBase> triggersInRange { get; protected set; }
 
         protected PlayerTriggerHandlerBase()
-        { }
+        {
+            triggersInRange = new List<TriggerBase>();
+        }
         
         protected virtual void Awake()
         {

@@ -5,6 +5,7 @@ namespace Devdog.General
 {
     public interface IPlayerTriggerHandler
     {
+        List<TriggerBase> triggersInRange { get; }
         BestTriggerSelectorBase selector { get; set; }
 
         TriggerBase selectedTrigger { get; }

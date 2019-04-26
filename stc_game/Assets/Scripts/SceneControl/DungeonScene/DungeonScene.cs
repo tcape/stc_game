@@ -1,6 +1,4 @@
-﻿using Devdog.QuestSystemPro;
-using Devdog.QuestSystemPro.UI;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
