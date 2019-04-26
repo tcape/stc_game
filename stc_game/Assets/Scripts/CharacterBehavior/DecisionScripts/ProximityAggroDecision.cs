@@ -14,7 +14,11 @@ public class ProximityAggroDecision : Decision
 
     private bool Proximity(StateController controller)
     {
-        var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
-        return distance < controller.stats.aggroDistance;
+        if(controller.target)
+        {
+            var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
+            return distance < controller.stats.aggroDistance;
+        }
+        return false;
     }
 }
