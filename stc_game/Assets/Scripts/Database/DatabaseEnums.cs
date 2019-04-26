@@ -1,5 +1,5 @@
 ﻿namespace DatabaseEnums
 {
-    public enum DatabaseCollections { players };
+    public enum DatabaseCollections { players, playerstest };
 
 }

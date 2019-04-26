@@ -43,7 +43,7 @@ public class AuthService {
         LoginUICallback(res);
     }
 
-    // takes a user data result and stores the user
+    // takes a user data result and sets the user
     private void ReadUserCallback(AsyncOperation res)
     {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;

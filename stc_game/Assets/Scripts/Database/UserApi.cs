@@ -7,14 +7,14 @@ using System.Collections;
 public class UserApi
 {
     public static UserApi Instance { get; } = new UserApi();
-    static DatabaseCollections playerCollection = DatabaseCollections.players;
+    static DatabaseCollections playerCollection = DatabaseCollections.playerstest;
     public event Action<AsyncOperation> ReadCallback;
 
     public void CreateOrUpdate(User user)
     {
         if(user._id == "")
         {
-            BaseApi.Post(playerCollection, user);
+            BaseApi.Post(playerCollection, new NewUser(user.CharacterName, user.UserAuthenticationId)).completed += ReadCallback; ;
         }
         else
         {

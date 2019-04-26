@@ -13,9 +13,9 @@ public class PersistentScene : MonoBehaviour
     public User user;
     public UserService userService = UserService.Instance;
     public GameCharacter GameCharacter;
-
     public QuestWindowUI questWindowUI;
     public DialogueUI dialogueUI;
+    private HUDController hud;
     private void Awake()
     {
         if (Instance == null)
@@ -31,6 +31,8 @@ public class PersistentScene : MonoBehaviour
 
     private void Start()
     {
+        hud = FindObjectOfType<HUDController>();
+        hud.gameObject.SetActive(false);
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
 
@@ -90,10 +92,14 @@ public class PersistentScene : MonoBehaviour
 
     private void HandleLoadUserCallback()
     {
-        user = userService.User;
-        if (user == null || user._id == "")
-        {
-            userService.CreateUser();
-        }
+        user = userService.user;
+        StartCoroutine(LoadGameScene());
+    }
+
+    private IEnumerator LoadGameScene()
+    {
+        yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
+        hud.FindPlayerObject();
+        hud.gameObject.SetActive(true);
     }
 }

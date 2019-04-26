@@ -1,12 +1,9 @@
 ﻿using System;
 
 [Serializable]
-public class User
+public class User: NewUser
 {
     public string _id;
-    public string CharacterName;
-    public CharacterBaseModel Character;
-    public string UserAuthenticationId;
 
     public User()
     {

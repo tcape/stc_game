@@ -13,25 +13,29 @@ public static class BaseApi
         {
             throw new System.Exception("No user authentication was supplied");
         }
-        UnityWebRequest www = UnityWebRequest.Get(databaseURI + collection.ToString() + "?={'userAuthId': '" + userAuthId + "'}");
+        string query = databaseURI + collection.ToString() + "?q={\"UserAuthenticationId\": \"" + userAuthId + "\"}".Replace(@"\","");
+        UnityWebRequest www = UnityWebRequest.Get(query);
         addHeaders(www);
-
         return www.SendWebRequest();
     }
 
     public static UnityWebRequestAsyncOperation Put<T>(DatabaseCollections collection, T data, string objectId)
     {
-        UnityWebRequest www = UnityWebRequest.Put(databaseURI + collection.ToString() + "/" + objectId, JsonUtility.ToJson(data));
+        byte[] bytes = new System.Text.UTF8Encoding().GetBytes(JsonUtility.ToJson(data));
+        UnityWebRequest www = UnityWebRequest.Put(databaseURI + collection.ToString() + "/" + objectId, "PUT");
+        www.uploadHandler = new UploadHandlerRaw(bytes);
+        www.uploadHandler.contentType = "application/json";
         addHeaders(www);
-
-
         return www.SendWebRequest();
     }
 
     public static UnityWebRequestAsyncOperation Post<T>(DatabaseCollections collection, T data)
     {
-        string lmao = Regex.Unescape(JsonUtility.ToJson(data));
-        UnityWebRequest www = UnityWebRequest.Post(databaseURI + collection.ToString(), JsonUtility.ToJson(data));
+        byte[] bytes = new System.Text.UTF8Encoding().GetBytes(JsonUtility.ToJson(data));
+
+        UnityWebRequest www = UnityWebRequest.Post(databaseURI + collection.ToString(), "POST");
+        www.uploadHandler = new UploadHandlerRaw(bytes);
+        www.uploadHandler.contentType = "application/json";
         addHeaders(www);
         return www.SendWebRequest();
     }
@@ -48,7 +52,7 @@ public static class BaseApi
     {
         webRequest.SetRequestHeader("cache-control", "no-cache");
         webRequest.SetRequestHeader("x-apikey", apiKey);
-        webRequest.SetRequestHeader("content-type", "application/json");
+        webRequest.SetRequestHeader("Content-Type", "application/json");
     }
 
 
