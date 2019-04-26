@@ -15,8 +15,13 @@ public class ActionBarController : MonoBehaviour
     {
         sceneController = SceneController.Instance;
         var slots = transform.GetComponentsInChildren<AbilitySlot>();
-
         abilitySlots = slots;
+    }
+
+    private void Start()
+    {
+        PersistentScene.Instance.actionBar = this;
+        SetupActionBar();
     }
 
     private void OnEnable()
@@ -43,10 +48,11 @@ public class ActionBarController : MonoBehaviour
 
             abilitySlots = slots;
         }
-        Refresh();
+
+        LoadAbilities();
     }
 
-    public void Refresh()
+    public void LoadAbilities()
     {
         if (myAbilities.Count > 0)
         {
@@ -57,12 +63,10 @@ public class ActionBarController : MonoBehaviour
         }
     }
 
-    private void LoadAbilities()
+    private void SetupActionBar()
     {
-        var slots = transform.GetComponentsInChildren<AbilitySlot>();
-        for (var i = 0; i < abilitySlots.Length; i++)
-        {
-            slots[i].ability = myAbilities[i];
-        }
+        myAbilities = PersistentScene.Instance.GameCharacter.GetAbilities();
+        enabled = true;
+        LoadAbilities();
     }
 }

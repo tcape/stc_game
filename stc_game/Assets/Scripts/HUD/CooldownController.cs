@@ -42,7 +42,6 @@ public class CooldownController : MonoBehaviour
     private void OnDisable()
     {
         SceneController.Instance.AfterSceneLoad -= GetAbilityManager;
-        abilityManager.AbilityUsed -= StartCooldown;
     }
 
     public void StartCooldown()

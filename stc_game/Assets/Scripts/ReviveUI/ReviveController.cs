@@ -9,20 +9,25 @@ public class ReviveController : MonoBehaviour
     public GameObject reviveAtEntrance;
     public Canvas reviveCanvas;
     public bool reviveInTown;
+    private SceneController sceneController;
 
     private void Awake()
     {
         reviveCanvas = gameObject.GetComponent<Canvas>();
         reviveCanvas.enabled = false;
         reviveInTown = false;
+        sceneController = SceneController.Instance;
     }
 
     private void Update()
     {
-        if (SceneController.Instance.currentSceneName.Equals(GameStrings.Scenes.TownScene))
-            reviveAtEntrance.SetActive(false);
-        else
-            reviveAtEntrance.SetActive(true);
+        if (sceneController)
+        {
+            if (sceneController.currentSceneName.Equals(GameStrings.Scenes.TownScene))
+                reviveAtEntrance.SetActive(false);
+            else
+                reviveAtEntrance.SetActive(true);
+        }
     }
 
     public void ReviveInTown()
