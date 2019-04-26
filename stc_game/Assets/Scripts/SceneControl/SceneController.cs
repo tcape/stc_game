@@ -60,6 +60,7 @@ public class SceneController : MonoBehaviour
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
 
+        AfterSceneLoad?.Invoke();
         // Once the scene is finished loading, start fading in.
         StartCoroutine(Fade(0f));
     }

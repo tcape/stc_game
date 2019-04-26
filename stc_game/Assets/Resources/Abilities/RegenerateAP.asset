@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: RegenerateAP
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 608c5e9e43191b94d916de4cda5cdca2, type: 3}
   abilityType: 0
   targetType: 0
   actions:
@@ -22,5 +23,5 @@ MonoBehaviour:
   cost: 0
   hotkey: 0
   range: 0
-  startTime: 0
+  startTime: 3.056391
   target: {fileID: 0}

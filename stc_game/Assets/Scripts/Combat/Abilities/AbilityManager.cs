@@ -11,8 +11,9 @@ namespace Assets.Scripts.CharacterBehavior.Combat
     public class AbilityManager : MonoBehaviour
     {
         public List<Ability> myAbilities;
-        private List<Ability> activeAbilites;
+        public List<Ability> activeAbilites;
         public AbilitySaver saver;
+        public event Action AbilityUsed;
         [HideInInspector] public CharacterStats stats;
         [HideInInspector] public Animator animator;
         [HideInInspector] public StateController controller;
@@ -32,80 +33,38 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             {
                 LoadSavedAbilities();
                 ActivatePassiveAbilites();
+                SetHudAbilityManager();
             }
+        }
+
+        private void SetHudAbilityManager()
+        {
+            PersistentScene.Instance.actionBar.abilityManager = this;
+        }
+
+        private void SetHudAbilities()
+        {
+            PersistentScene.Instance.actionBar.myAbilities = myAbilities;
         }
 
         private void Update()
         {
+            // get input and activate 
             foreach (var ability in myAbilities)
             {
                 if (Input.GetKeyDown(ability.hotkey))
                 {
-                    if (ability.targetType.Equals(TargetType.Self))
-                    {
-                        ability.target = gameObject;
-                    }
-                    else
-                        ability.target = controller.target;
-
-                    if (ability.CanUse(this))
-                    {
-                        activeAbilites.Add(ability);
-                        stats.stats.UseAbilityPoints(ability.cost);
-                        ability.TriggerAnimator(this);
-                        ability.startTime = Time.time;
-                        foreach (var action in ability.actions)
-                            action.target = ability.target;
-                        foreach (var action in ability.actions.Where(t => t.type.Equals(ActionType.Instant)))
-                        {
-                            action.Act(this);
-                        }
-                    }
-
+                    ActivateAbility(ability);
                 }
             }
 
             foreach (var ability in activeAbilites)
             {
-                if (ability.target.GetComponent<CharacterStats>().stats.dead)
-                {
-                    foreach (var action in ability.actions)
-                    {
-                        action.RemoveEffect(this);
-                    }
+                // if target dead, remove effects and abililty from active
+                RemoveFromDeadTargets(ability);
 
-                    activeAbilites.Remove(ability);
-                }
-
-                if (ability.startTime + ability.duration <= Time.time && ability.abilityType == AbilityType.Activate)
-                {
-                    foreach (var action in ability.actions)
-                    {
-                        if (action.persistance.Equals(ActionPersistance.Temporary))
-                            action.RemoveEffect(this);
-
-                        action.ResetEffectTotal();
-                    }
-
-                    activeAbilites.Remove(ability);
-                }
-
-                else
-                {
-                    foreach (var action in ability.actions)
-                    {
-                        if (action.type.Equals(ActionType.Periodic))
-                        {
-                            if (Time.time > action.lastTick + action.interval)
-                            {
-                                // do the stuff
-                                action.Act(this);
-                                // update last tick
-                                action.lastTick = Time.time;
-                            }
-                        }
-                    }
-                }
+                // update temporary and periodic ability effects
+                UpdateTemporaryAndPeriodicAbilityEffects(ability);
             }
         }
 
@@ -129,7 +88,6 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             }
         }
        
-
         private void LoadSavedAbilities()
         {
             var savedAbilities = new List<Ability>();
@@ -153,8 +111,77 @@ namespace Assets.Scripts.CharacterBehavior.Combat
                     action.ResetEffectTotal();
                 }
             }
-
             activeAbilites.Clear();
+        }
+
+        public void ActivateAbility(Ability ability)
+        {
+            if (ability.targetType.Equals(TargetType.Self))
+            {
+                ability.target = gameObject;
+            }
+            else
+                ability.target = controller.target;
+
+            if (ability.CanUse(this))
+            {
+                AbilityUsed?.Invoke();
+                activeAbilites.Add(ability);
+                stats.stats.UseAbilityPoints(ability.cost);
+                ability.TriggerAnimator(this);
+                ability.startTime = Time.time;
+                foreach (var action in ability.actions)
+                    action.target = ability.target;
+                foreach (var action in ability.actions.Where(t => t.type.Equals(ActionType.Instant)))
+                {
+                    action.Act(this);
+                }
+            }
+        }
+
+        private void RemoveFromDeadTargets(Ability ability)
+        {
+            if (ability.target.GetComponent<CharacterStats>().stats.dead)
+            {
+                foreach (var action in ability.actions)
+                {
+                    action.RemoveEffect(this);
+                }
+
+                activeAbilites.Remove(ability);
+            }
+        }
+
+        private void UpdateTemporaryAndPeriodicAbilityEffects(Ability ability)
+        {
+            if (ability.startTime + ability.duration <= Time.time && ability.abilityType == AbilityType.Activate)
+            {
+                foreach (var action in ability.actions)
+                {
+                    if (action.persistance.Equals(ActionPersistance.Temporary))
+                        action.RemoveEffect(this);
+
+                    action.ResetEffectTotal();
+                }
+
+                activeAbilites.Remove(ability);
+            }
+            else
+            {
+                foreach (var action in ability.actions)
+                {
+                    if (action.type.Equals(ActionType.Periodic))
+                    {
+                        if (Time.time > action.lastTick + action.interval)
+                        {
+                            // do the stuff
+                            action.Act(this);
+                            // update last tick
+                            action.lastTick = Time.time;
+                        }
+                    }
+                }
+            }
         }
     }
 }
