@@ -42,11 +42,6 @@ namespace Assets.Scripts.CharacterBehavior.Combat
             PersistentScene.Instance.actionBar.abilityManager = this;
         }
 
-        private void SetHudAbilities()
-        {
-            PersistentScene.Instance.actionBar.myAbilities = myAbilities;
-        }
-
         private void Update()
         {
             // get input and activate 

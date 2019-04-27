@@ -10,7 +10,6 @@ public class AbilityButton : MonoBehaviour
     private Ability ability;
     private CooldownController cooldown;
 
-
     private void OnGUI()
     {
         ability = parent.GetComponent<AbilitySlot>().ability;
@@ -22,7 +21,6 @@ public class AbilityButton : MonoBehaviour
         var manager = parent.GetComponentInParent<ActionBarController>().abilityManager;
 
         manager.ActivateAbility(ability);
-       // cooldown.StartCooldown();
     }
 
 }
