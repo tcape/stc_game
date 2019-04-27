@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class AbilityButton : MonoBehaviour
 {
-    [SerializeField] public Transform parent;
-    [SerializeField] private Sprite image;
+    [SerializeField]
+    public Transform parent;
+    [SerializeField]
+    private Sprite image;
     private Ability ability;
     private CooldownController cooldown;
 

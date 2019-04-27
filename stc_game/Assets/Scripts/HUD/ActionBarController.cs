@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class ActionBarController : MonoBehaviour
 {
-    [SerializeField]  public AbilitySlot[] abilitySlots;
-    [SerializeField] public AbilityManager abilityManager;
-    [SerializeField] public List<Ability> myAbilities = new List<Ability>();
+    [SerializeField]
+    public AbilitySlot[] abilitySlots;
+    [SerializeField]
+    public AbilityManager abilityManager;
+    [SerializeField]
+    public List<Ability> myAbilities = new List<Ability>();
     private SceneController sceneController;
 
     private void Awake()

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PotionCooldown : MonoBehaviour
 {
-    [SerializeField] public Transform parent;
+    [SerializeField]
+    public Transform parent;
     private float cooldown;
     public Image image;
     public float startTime;

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class AbilitySlot : MonoBehaviour
 {
-    [SerializeField] public Ability ability;
-    [SerializeField] public Transform parent;
+    [SerializeField]
+    public Ability ability;
+    [SerializeField]
+    public Transform parent;
     public AbilityManager abilityManager;
     private SceneController sceneController;
 
