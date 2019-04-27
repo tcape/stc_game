@@ -80,8 +80,6 @@ public class PersistentScene : MonoBehaviour
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
         reviveController = FindObjectOfType<ReviveController>();
-        
-        //actionBar = FindObjectOfType<ActionBarController>();  => This returns null every time, not sure why
 
         dialogueUI = GameObject.FindObjectOfType<DialogueUI>();
         DialogueManager.instance.dialogueUI = PersistentScene.Instance.dialogueUI;
