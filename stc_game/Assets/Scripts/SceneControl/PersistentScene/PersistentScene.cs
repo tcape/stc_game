@@ -14,6 +14,7 @@ public class PersistentScene : MonoBehaviour
     public UserService userService = UserService.Instance;
     public GameCharacter GameCharacter;
     public ReviveController reviveController;
+    public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
     public DialogueUI dialogueUI;
     private HUDController hud;
@@ -28,6 +29,48 @@ public class PersistentScene : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Substitue GameCharacter to be replaced by GameCharacter data from database
+        // This is just for testing
+        // moved this from Start to Awake for now so abilities are can be loaded
+        GameCharacter = new GameCharacter(
+                                           "WarriorTest",
+                                           HeroClass.Warrior,
+                                           new Stats()
+                                           {
+                                               level = 1,
+                                               XP = 0,
+                                               gold = 0,
+                                               maxHP = 500,
+                                               maxAP = 150,
+                                               currentHP = 500,
+                                               currentAP = 150,
+                                               strength = 10,
+                                               intellect = 5,
+                                               dexterity = 7,
+                                               attack = 15,
+                                               meleeCritPower = 2,
+                                               defense = 9,
+                                               abilityAttack = 10,
+                                               abilityCritRate = 0.25,
+                                               abilityCritPower = 2,
+                                               meleeCritRate = 0.25,
+                                               dodgeRate = 0.15,
+                                               movementSpeed = 7,
+                                               dead = false,
+                                               nextLevelXP = 100
+                                           }
+                                           ,
+                                           new List<string>()
+                                           {
+                                               "RegenerateAP",
+                                               "IronSkin",
+                                               "Savagry",
+                                               "Cleave",
+                                               "Sprint"
+                                           }
+                                           );
+
     }
 
     private void Start()
@@ -37,54 +80,23 @@ public class PersistentScene : MonoBehaviour
         questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
         reviveController = FindObjectOfType<ReviveController>();
+        
+        //actionBar = FindObjectOfType<ActionBarController>();  => This returns null every time, not sure why
 
         dialogueUI = GameObject.FindObjectOfType<DialogueUI>();
         DialogueManager.instance.dialogueUI = PersistentScene.Instance.dialogueUI;
 
         userService.LoadUserCallback += HandleLoadUserCallback;
-        userService.GetUser(AuthService.Instance.authUser.sub);
 
-        // Substitue GameCharacter to be replaced by GameCharacter data from database
-        // This is just for testing
-        GameCharacter = new GameCharacter(
-                                            "WarriorTest",
-                                            HeroClass.Warrior,
-                                            new Stats()
-                                            {
-                                                level = 1,
-                                                XP = 0,
-                                                gold = 0,
-                                                maxHP = 500,
-                                                maxAP = 150,
-                                                currentHP = 500,
-                                                currentAP = 150,
-                                                strength = 10,
-                                                intellect = 5,
-                                                dexterity = 7,
-                                                attack = 15,
-                                                meleeCritPower = 2,
-                                                defense = 9,
-                                                abilityAttack = 10,
-                                                abilityCritRate = 0.25,
-                                                abilityCritPower = 2,
-                                                meleeCritRate = 0.25,
-                                                dodgeRate = 0.15,
-                                                movementSpeed = 7,
-                                                dead = false,
-                                                nextLevelXP = 100
-                                            }
-                                            ,
-                                            new List<string>()
-                                            {
-                                               "RegenerateAP",
-                                               "IronSkin",
-                                               "Savagry",
-                                               "Cleave",
-                                               "Sprint"
-                                            }
-                                            );
+        if (UserService.Instance.user._id != "")
+        {
+            userService.GetUser(AuthService.Instance.authUser.sub);
+        }
+        else // for now so we can start from persistent scene without having to login
+        {
+            StartCoroutine(LoadGameScene());
+        }
 
-                                            
     }
 
     public void SaveGameCharacterStats(Stats saveStats)

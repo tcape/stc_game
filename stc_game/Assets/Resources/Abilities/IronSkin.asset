@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: IronSkin
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 6a2435243a6448f4182b3bfd029a2ee4, type: 3}
   abilityType: 1
   targetType: 0
   actions:
@@ -23,5 +24,5 @@ MonoBehaviour:
   cost: 20
   hotkey: 49
   range: 0
-  startTime: 7.281873
+  startTime: 40.205833
   target: {fileID: 0}
