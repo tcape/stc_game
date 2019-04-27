@@ -39,5 +39,15 @@ public class GameCharacter
                 break;
         }
     }
+
+    public List<Ability> GetAbilities()
+    {
+        var abilities = new List<Ability>();
+        foreach(var str in Abilities)
+        {
+            abilities.Add(Resources.Load<Ability>("Abilities/" + str));
+        }
+        return abilities;
+    }
 }
 

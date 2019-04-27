@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -9,17 +10,29 @@ public class ReviveController : MonoBehaviour
     public GameObject reviveAtEntrance;
     public Canvas reviveCanvas;
     public bool reviveInTown;
+    private SceneController sceneController;
 
     private void Awake()
     {
         reviveCanvas = gameObject.GetComponent<Canvas>();
         reviveCanvas.enabled = false;
         reviveInTown = false;
+        sceneController = SceneController.Instance;
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (SceneController.Instance.currentSceneName.Equals(GameStrings.Scenes.TownScene))
+        sceneController.AfterSceneLoad += EnableEntranceReviveButton;
+    }
+
+    private void OnDisable()
+    {
+        sceneController.AfterSceneLoad -= EnableEntranceReviveButton;
+    }
+
+    private void EnableEntranceReviveButton()
+    {
+        if (sceneController.currentSceneName.Equals(GameStrings.Scenes.TownScene))
             reviveAtEntrance.SetActive(false);
         else
             reviveAtEntrance.SetActive(true);
