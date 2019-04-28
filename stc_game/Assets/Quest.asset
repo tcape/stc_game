@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0763b70f85cfe5f4e93fd923c8b3d84a, type: 3}
   m_Name: Quest
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"ID":2,"name":{"_key":"05896338-23dd-4de9-a5ea-12017a8314a5"},"description":{"_key":"c7ccf68c-46f6-40e0-a4f8-417c40c938f0"},"icon":null,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Defeat
-    Goblin Chief","description":{"_key":"8b4a8a61-697f-40bf-b1b2-287b52e857fc"},"statusMessage":{"_key":"8a4db0a0-7b73-43b2-90a1-9dc1b2b9fbd0"},"_icon":null,"_progressCap":1.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
-  _objectReferences: []
+  _serializedJsonString: '{"ID":2,"name":{"_key":"05896338-23dd-4de9-a5ea-12017a8314a5"},"description":{"_key":"c7ccf68c-46f6-40e0-a4f8-417c40c938f0"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+  _objectReferences:
+  - {fileID: 0}
   ID: 2
   name:
     _key: 05896338-23dd-4de9-a5ea-12017a8314a5
