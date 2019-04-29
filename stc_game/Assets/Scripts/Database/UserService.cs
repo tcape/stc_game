@@ -27,8 +27,7 @@ public class UserService
 
     public void CreateUser()
     {
-        user.UserAuthenticationId = AuthService.Instance.authUser.sub;
-        user.CharacterName = AuthService.Instance.authUser.nickname;
+        user = new User(AuthService.Instance.authUser.nickname, AuthService.Instance.authUser.sub);
         userApi.CreateOrUpdate(user);
     }
 

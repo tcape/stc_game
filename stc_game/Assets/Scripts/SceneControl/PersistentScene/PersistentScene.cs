@@ -77,12 +77,12 @@ public class PersistentScene : MonoBehaviour
     {
         hud = FindObjectOfType<HUDController>();
         hud.gameObject.SetActive(false);
-        questWindowUI = GameObject.FindObjectOfType<QuestWindowUI>();
-        QuestManager.instance.questWindowUI = PersistentScene.Instance.questWindowUI;
+        questWindowUI = FindObjectOfType<QuestWindowUI>();
+        QuestManager.instance.questWindowUI = questWindowUI;
         reviveController = FindObjectOfType<ReviveController>();
 
-        dialogueUI = GameObject.FindObjectOfType<DialogueUI>();
-        DialogueManager.instance.dialogueUI = PersistentScene.Instance.dialogueUI;
+        dialogueUI = FindObjectOfType<DialogueUI>();
+        DialogueManager.instance.dialogueUI = dialogueUI;
 
         userService.LoadUserCallback += HandleLoadUserCallback;
 
