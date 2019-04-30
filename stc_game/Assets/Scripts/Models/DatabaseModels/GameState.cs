@@ -6,5 +6,5 @@ public class GameState
 {
     public string UserId;
     public string CharacterId;
-    public List<string> Abilities;
+    // Add GameState save fields here
 }
