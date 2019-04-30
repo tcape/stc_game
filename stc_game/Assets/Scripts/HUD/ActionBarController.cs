@@ -59,9 +59,9 @@ public class ActionBarController : MonoBehaviour
     {
         if (myAbilities.Count > 0)
         {
-            for (var i = 0; i < myAbilities.Count; i++)
+            for (var i = 0; i < myAbilities.Count - 1; i++)
             {
-                abilitySlots[i].ability = myAbilities[i];
+                abilitySlots[i].ability = myAbilities[i + 1];
             }
         }
     }
