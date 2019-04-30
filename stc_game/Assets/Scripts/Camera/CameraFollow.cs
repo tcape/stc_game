@@ -17,6 +17,7 @@ public class CameraFollow : MonoBehaviour
         var cameraTransform = GameObject.FindGameObjectWithTag("CameraData").transform;
         transform.position = target.transform.position + cameraTransform.position;
         transform.rotation = cameraTransform.rotation;
+        GetComponent<Camera>().fieldOfView = 50;
     }
 
     // Update is called once per frame
