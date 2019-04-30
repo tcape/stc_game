@@ -2796,7 +2796,7 @@ RectTransform:
   - {fileID: 1259479024}
   - {fileID: 1573222504}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5229,7 +5229,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11458064, guid: 449cfd712c7e3a44e97e738c99760601, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 25
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458064, guid: 449cfd712c7e3a44e97e738c99760601, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11458064, guid: 449cfd712c7e3a44e97e738c99760601, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 449cfd712c7e3a44e97e738c99760601, type: 3}

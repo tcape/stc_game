@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
   m_Name: MainLanguageDb
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"5177cd5d-190a-42d9-ab10-2449d8a1176c":"Hero,
+  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"4a78a4f7-1a6f-4515-a3ac-8ef1c6a7d973":"and
+    now we can''t because of his occupation! Destroy him!","5177cd5d-190a-42d9-ab10-2449d8a1176c":"Hero,
     thank you for saving our land!","9d915740-ad6c-4ca5-890d-8218fdf76953":"Killed
     {0} / {2} Goblin Chief","e7d0117b-9b70-4ddc-a094-deac664933de":"I feel as though
     I''m not ready to talk to you yet.","112184d4-5e92-4b2d-a926-4321250b1fd3":"Defeat
@@ -28,8 +29,8 @@ MonoBehaviour:
     chief.","fab04c07-e84d-41e0-b30a-a91b398db0fa":"Defeat Goblin Chief","00e56c83-47b7-4bf1-922f-d8467cd09caf":"Greetings
     hero!","9a106ffd-fa78-4449-bfed-a89f42fff765":"Yes","4f999924-b39c-4416-a2c7-17b5dad5afdd":"No","c128a677-28d8-4741-acd8-38debc2c3462":"There
     is a dirty goblin chief that is taking hold of the cavern up north! We used to
-    go there to mine for materials, and now we can''t because of his occupation! Destroy
-    him!","c07cd0fe-ae73-49e4-bf1b-53b622b8f941":"Please destroy the goblin chief!","ae42898b-e3dc-4bdc-92fa-333418df4c10":"You
-    defeated him!! thank you!"},"_localizedObjects":{}}'
+    go there to mine for materials, ","c07cd0fe-ae73-49e4-bf1b-53b622b8f941":"Please
+    destroy the goblin chief!","ae42898b-e3dc-4bdc-92fa-333418df4c10":"You defeated
+    him!! thank you!"},"_localizedObjects":{}}'
   _objectReferences: []
   _lang: en-US
