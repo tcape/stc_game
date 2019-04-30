@@ -14,7 +14,7 @@ public class UserApi
     {
         if(user._id == "")
         {
-            BaseApi.Post(playerCollection, new NewUser(user.CharacterName, user.UserAuthenticationId)).completed += ReadCallback; ;
+            BaseApi.Post(playerCollection, new BaseUser(user.Name, user.UserAuthenticationId)).completed += ReadCallback;
         }
         else
         {
