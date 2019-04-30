@@ -13,7 +13,8 @@ namespace Devdog.QuestSystemPro.Dialogue.UI
         public void Repaint(PlayerDecision dec, Edge edge, bool canUse)
         {
             decision = dec;
-            text.text = decision.option.message;
+            // original code: text.text = decision.option.message;
+            text.text = "OK";
             button.interactable = canUse;
         }
     }
