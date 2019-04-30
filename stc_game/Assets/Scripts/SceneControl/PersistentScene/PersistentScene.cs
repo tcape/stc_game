@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PersistentScene : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PersistentScene : MonoBehaviour
     public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
     public DialogueUI dialogueUI;
-    private HUDController hud;
+    public HUDController hud;
     private void Awake()
     {
         if (Instance == null)
