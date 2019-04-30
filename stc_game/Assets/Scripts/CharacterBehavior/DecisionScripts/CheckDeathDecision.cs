@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.CharacterBehavior.Drops;
+using Devdog.QuestSystemPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,10 @@ public class CheckDeathDecision : Decision
         if (controller.gameObject.CompareTag("Enemy"))
         {
             controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
+            if (controller.gameObject.GetComponent<SetQuestProgressOnKilled>())
+            {
+                controller.gameObject.GetComponent<SetQuestProgressOnKilled>().OnKilled();
+            }
         }
         
         if (controller.gameObject.CompareTag("Player"))
