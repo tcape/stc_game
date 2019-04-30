@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
   m_Name: MainLanguageDb
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"5177cd5d-190a-42d9-ab10-2449d8a1176c":"Hero,
     thank you for saving our land!","9d915740-ad6c-4ca5-890d-8218fdf76953":"Killed
     {0} / {2} Goblin Chief","e7d0117b-9b70-4ddc-a094-deac664933de":"I feel as though
