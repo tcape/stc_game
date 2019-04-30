@@ -21,6 +21,8 @@ public class SceneController : MonoBehaviour
     public string startingSceneName;
     public string previousSceneName;
     public string currentSceneName;
+    // Loading Text from Fader Canvas
+    public Text loadingText;
     // The name of the scene that should be loaded first.
     //public string initialStartingPositionName = "TownCenter";
     // The name of the StartingPosition in the first scene to be loaded.
@@ -47,6 +49,7 @@ public class SceneController : MonoBehaviour
         startingSceneName = GameStrings.Scenes.TownScene;
         previousSceneName = startingSceneName;
         currentSceneName = startingSceneName;
+        loadingText.enabled = false;
         // Set the initial alpha to start off with a black screen.
         faderCanvasGroup.alpha = 1f;
 
@@ -57,10 +60,13 @@ public class SceneController : MonoBehaviour
 
     public IEnumerator LoadFirstScene()
     {
+        loadingText.enabled = true;
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
 
         AfterSceneLoad?.Invoke();
+
+        loadingText.enabled = false;
         // Once the scene is finished loading, start fading in.
         StartCoroutine(Fade(0f));
     }
@@ -84,6 +90,9 @@ public class SceneController : MonoBehaviour
         // Start fading to black and wait for it to finish before continuing.
         yield return StartCoroutine(Fade(1f));
 
+        loadingText.text = "Loading " + sceneName + "...";
+        loadingText.enabled = true;
+
         // If this event has any subscribers, call it.
         BeforeSceneUnload?.Invoke();
 
@@ -96,7 +105,9 @@ public class SceneController : MonoBehaviour
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
 
         // If this event has any subscribers, call it.
-        AfterSceneLoad?.Invoke();       
+        AfterSceneLoad?.Invoke();
+
+        loadingText.enabled = false;
 
         // Start fading back in and wait for it to finish before exiting the function.
         yield return StartCoroutine(Fade(0f));
