@@ -10,15 +10,17 @@ public class Stats
     [SerializeField] public double level;
     [SerializeField] public double XP;
     [SerializeField] public double gold;
-    [Space]
-    [SerializeField] public double maxHP;
-    [SerializeField] public double maxAP;
+
+    [SerializeField] public double maxHP; //put on strength as SubStat
+    [SerializeField] public double maxAP; //put on intellect as SubStat
+
     [SerializeField] public double currentHP;
     [SerializeField] public double currentAP;
     [Space]
     [SerializeField] public double strength;
     [SerializeField] public double intellect;
     [SerializeField] public double dexterity;
+
 
     [Space] // Strength
     [SerializeField] public double attack;
