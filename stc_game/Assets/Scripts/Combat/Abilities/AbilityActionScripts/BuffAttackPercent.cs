@@ -15,15 +15,15 @@ public class BuffAttackPercent : AbilityAction
     public override void Act(AbilityManager manager)
     {
         UpdateEffectTotalPercent(manager);
-        manager.stats.stats.BuffAttack(percentage);
+        // manager.stats.stats.BuffAttack(percentage);
         manager.heroStats.strength.attack.AddModifier(new StatModifier(percentage, ModType.PercentAdd, this));
 
     }
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        manager.stats.stats.BuffAttack(-effectTotal);
-        manager.heroStats.strength.attack.RemoveModifier(new StatModifier(percentage, ModType.PercentAdd, this));
+        // manager.stats.stats.BuffAttack(-effectTotal);
+        manager.heroStats.strength.attack.RemoveAllModifiersFromSource(this);
     }
 
     public override void ResetEffectTotal()
@@ -38,6 +38,6 @@ public class BuffAttackPercent : AbilityAction
 
     public void UpdateEffectTotalPercent(AbilityManager manager)
     {
-        effectTotal += manager.stats.stats.attack * percentage;
+        //effectTotal += manager.stats.stats.attack * percentage;
     }
 }

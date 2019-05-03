@@ -39,13 +39,13 @@ public class HUDController : MonoBehaviour
 
     private void UpdateHPBar()
     {
-        var scaleValue = (float)(stats.currentHP / stats.maxHP);
+        var scaleValue = (float)(stats.currentHP / stats.strength.MaxHP());
         hpBar.GetComponent<Image>().fillAmount = scaleValue;
     }
 
     private void UpdateAPBar()
     {
-        var scaleValue = (float)(stats.currentAP / stats.maxAP);
+        var scaleValue = (float)(stats.currentAP / stats.intellect.MaxAP());
         apBar.GetComponent<Image>().fillAmount = scaleValue;
     }
 

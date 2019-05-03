@@ -23,7 +23,7 @@ public class HPBarController : MonoBehaviour
         //transform.LookAt(cam.transform.position - v);
         //transform.Rotate(0, 180, 0);
 
-        image.fillAmount = (float) (stats.currentHP / stats.maxHP);
+        image.fillAmount = (float) (stats.currentHP / stats.strength.MaxHP());
 
     }
 }

@@ -11,37 +11,31 @@ public class Stats
     [SerializeField] public double XP;
     [SerializeField] public double gold;
 
-    [SerializeField] public double maxHP; //put on strength as SubStat
-    [SerializeField] public double maxAP; //put on intellect as SubStat
-
     [SerializeField] public double currentHP;
     [SerializeField] public double currentAP;
+
     [Space]
-    [SerializeField] public double strength;
-    [SerializeField] public double intellect;
-    [SerializeField] public double dexterity;
+    [SerializeField] public Strength strength;
+    [SerializeField] public Intellect intellect;
+    [SerializeField] public Dexterity dexterity;
 
-
-    [Space] // Strength
-    [SerializeField] public double attack;
-    [SerializeField] public double meleeCritPower;
-    [SerializeField] public double defense;
-
-    [Space]  // Intellect
-    [SerializeField] public double abilityAttack;
-    [SerializeField] public double abilityCritRate;
-    [SerializeField] public double abilityCritPower;
-
-    [Space] // Dexterity
-    [SerializeField] public double meleeCritRate;
-    [SerializeField] public double dodgeRate;
-    [SerializeField] public double movementSpeed;
-
+    [Space]
     public bool dead;
-
     [SerializeField] public double nextLevelXP;
     [SerializeField] public double totalXP;
     [HideInInspector] public static readonly double firstLevelXP = 100;
+
+    private void Awake()
+    {
+        SetupMainStats();
+    }
+
+    private void SetupMainStats()
+    {
+        strength.stats = this;
+        intellect.stats = this;
+        dexterity.stats = this;
+    }
 
     public void LoadSavedStats(Stats savedStats)
     {
@@ -50,22 +44,22 @@ public class Stats
         XP = savedStats.XP;
         nextLevelXP = savedStats.nextLevelXP;
         totalXP = savedStats.totalXP;
-        maxHP = savedStats.maxHP;
-        maxAP = savedStats.maxAP;
+        strength.maxHP.baseValue = savedStats.strength.maxHP.baseValue;
+        intellect.maxAP.baseValue = savedStats.intellect.maxAP.baseValue;
         currentHP = savedStats.currentHP;
         currentAP = savedStats.currentAP;
-        strength = savedStats.strength;
-        intellect = savedStats.intellect;
-        dexterity = savedStats.dexterity;
-        attack = savedStats.attack;
-        abilityAttack = savedStats.abilityAttack;
-        meleeCritRate = savedStats.meleeCritRate;
-        meleeCritPower = savedStats.meleeCritPower;
-        abilityCritRate = savedStats.abilityCritRate;
-        abilityCritPower = savedStats.abilityCritPower;
-        defense = savedStats.defense;
-        dodgeRate = savedStats.dodgeRate;
-        movementSpeed = savedStats.movementSpeed;
+        strength.baseValue = savedStats.strength.baseValue;
+        intellect.baseValue = savedStats.intellect.baseValue;
+        dexterity.baseValue = savedStats.dexterity.baseValue;
+        strength.attack.baseValue = savedStats.strength.attack.baseValue;
+        intellect.abilityAttack.baseValue = savedStats.intellect.abilityAttack.baseValue;
+        dexterity.meleeCritRate.baseValue = savedStats.dexterity.meleeCritRate.baseValue;
+        strength.meleeCritPower.baseValue = savedStats.strength.meleeCritPower.baseValue;
+        intellect.abilityCritRate.baseValue = savedStats.intellect.abilityCritRate.baseValue;
+        intellect.abilityCritPower.baseValue = savedStats.intellect.abilityCritPower.baseValue;
+        strength.defense.baseValue = savedStats.strength.defense.baseValue;
+        dexterity.dodgeRate.baseValue = savedStats.dexterity.dodgeRate.baseValue;
+        dexterity.movementSpeed.baseValue = savedStats.dexterity.movementSpeed.baseValue;
         dead = savedStats.dead;
     }
 
@@ -79,71 +73,18 @@ public class Stats
         return totalXP;
     }
 
-    public void LevelUpStats(double str, double intel, double dex)
-    {
-        strength += str;
-        intellect += intel;
-        dexterity += dex;
-    }
-
     public void LevelUpStats()
     {
-        strength += level;
-        intellect += level;
-        dexterity += level;
-    }
-
-    public void IncreseStrength(double amount)
-    {
-        strength += amount;
-    }
-
-    public void IncreaseIntellect(double amount)
-    {
-        intellect += amount;
-    }
-
-    public void IncreaseDexterity(double amount)
-    {
-        dexterity += amount;
+        strength.IncreaseBaseValue(level);
+        intellect.IncreaseBaseValue(level);
+        dexterity.IncreaseBaseValue(level);
     }
 
     public void RefreshHpAndAp()
     {
-        currentHP = maxHP;
-        currentAP = maxAP;
+        currentHP = strength.maxHP.Value;
+        currentAP = intellect.maxAP.Value;
     }
-
-    public void UpdateStatsEffects()
-    {
-        StrengthStatsEffect();
-        IntellectStatsEffect();
-        DexterityStatsEffect();
-    }
-
-    private void StrengthStatsEffect()
-    {
-        attack += Math.Round(attack * strength / nextLevelXP);
-        meleeCritPower += Math.Round(meleeCritPower * strength / nextLevelXP);
-        defense += Math.Round(defense * strength / nextLevelXP);
-        maxHP += Math.Round(maxHP * strength / nextLevelXP);
-    }
-
-    private void IntellectStatsEffect()
-    {
-        abilityAttack += Math.Round(abilityAttack * intellect / nextLevelXP);
-        abilityCritPower += Math.Round(abilityCritPower * intellect / nextLevelXP);
-        abilityCritRate += Math.Round(abilityCritRate * intellect / nextLevelXP);
-        maxAP += Math.Round(maxAP * intellect / nextLevelXP);
-    }
-
-    private void DexterityStatsEffect()
-    {
-        dodgeRate += Math.Round(dodgeRate * dexterity / nextLevelXP);
-        meleeCritRate += Math.Round(meleeCritRate * dexterity / nextLevelXP);
-        movementSpeed += Math.Round(movementSpeed * dexterity / nextLevelXP);
-    }
-
 
     public void UseAbilityPoints(double amount)
     {
@@ -155,8 +96,8 @@ public class Stats
     public void GainAbilityPoints(double amount)
     {
         currentAP += amount;
-        if (currentAP > maxAP)
-            currentAP = maxAP;
+        if (currentAP > intellect.maxAP.Value)
+            currentAP = intellect.maxAP.currentValue;
     }
 
     public void SetNextLevelXP()
@@ -177,7 +118,6 @@ public class Stats
         totalXP = nextLevelXP;
         SetNextLevelXP();
         LevelUpStats();
-        UpdateStatsEffects();
         RefreshHpAndAp();
     }
 
@@ -228,7 +168,7 @@ public class Stats
     {
         // Dodge?
         var dodgeRoll = UnityEngine.Random.Range(0.0f, 1f);
-        if (dodgeRoll <= dodgeRate)
+        if (dodgeRoll <= dexterity.dodgeRate.currentValue)
         {
             if (other.gameObject.tag.Equals("Player"))
             {
@@ -239,31 +179,26 @@ public class Stats
 
         // Crit?
         var critRoll = UnityEngine.Random.Range(0.0f, 1f);
-        if (critRoll <= other.stats.meleeCritRate)
+        if (critRoll <= other.stats.dexterity.MeleeCritRate())
         {
 
             if (other.gameObject.tag.Equals("Player"))
             {
                 Debug.Log("CRIT");
-                Debug.Log(other.stats.attack * other.stats.meleeCritPower - defense);
+                Debug.Log(other.stats.strength.Attack() * other.stats.strength.MeleeCritPower() - strength.Defense());
             }
 
-            return other.stats.attack * other.stats.meleeCritPower - defense;
+            return other.stats.strength.Attack() * other.stats.strength.MeleeCritPower() - strength.Defense();
         }
         else
         {
             if (other.gameObject.tag.Equals("Player"))
             {
                 Debug.Log("NORMAL");
-                Debug.Log(other.stats.attack - defense);
+                Debug.Log(other.stats.strength.Attack() - strength.Defense());
             }
-            return other.stats.attack - defense;
+            return other.stats.strength.Attack() - strength.Defense();
         }
-    }
-
-    public void TakeAbilityDamage(CharacterStats other)
-    {
-        TakeDamage(CalculateAblilityDamage(other));
     }
 
     public void TakeAbilityDamage(CharacterStats other, double multiplier)
@@ -271,85 +206,39 @@ public class Stats
         TakeDamage(CalculateAbilityDamage(other, multiplier));
     }
 
-
-    public double CalculateAblilityDamage(CharacterStats other)
-    {
-        throw new System.NotImplementedException();
-    }
-
     public double CalculateAbilityDamage(CharacterStats other, double multiplier)
     {
-        
+
         // Crit?
         var critRoll = UnityEngine.Random.Range(0.0f, 1f);
-        if (critRoll <= other.stats.abilityCritRate)
+        if (critRoll <= other.stats.intellect.AbilityCritRate())
         {
 
             if (other.gameObject.tag.Equals("Player"))
             {
                 Debug.Log("CRIT");
-                Debug.Log(other.stats.abilityAttack * multiplier * other.stats.abilityCritPower - defense);
+                Debug.Log(other.stats.intellect.AbilityAttack() * multiplier * other.stats.intellect.AbilityCritPower() - strength.Defense());
             }
 
-            return other.stats.abilityAttack * multiplier * other.stats.abilityCritPower - defense;
+            return other.stats.intellect.AbilityAttack() * multiplier * other.stats.intellect.AbilityCritPower() - strength.Defense();
         }
         else
         {
             if (other.gameObject.tag.Equals("Player"))
             {
                 Debug.Log("NORMAL");
-                Debug.Log(other.stats.abilityAttack * multiplier - defense);
+                Debug.Log(other.stats.intellect.AbilityAttack() * multiplier - strength.defense.currentValue);
             }
-            return other.stats.abilityAttack * multiplier - defense;
+            return other.stats.intellect.AbilityAttack() * multiplier - strength.defense.currentValue;
         }
-    }
-
-    public void Heal(double amount)
-    {
-        if (!dead)
-        {
-            if (currentHP >= 0)
-                currentHP += amount;
-            if (currentHP > maxHP)
-            {
-                currentHP = maxHP;
-            }
-        }
-    }
-
-    public void Heal(float percentage)
-    {
-        Heal(maxHP * percentage);
-    }
-
-    // *************** Buffs ****************** //
-
-    public void BuffMaxHP(double amount)
-    {
-        maxHP += Math.Round(amount);
-    }
-
-    public void BuffMaxHP(float percentage)
-    {
-        BuffMaxHP(maxHP * percentage);
-    }
-
-    public void BuffMaxAP(double amount)
-    {
-        maxAP += Math.Round(amount);
-    }
-
-    public void BuffMaxAP(float percentage)
-    {
-        BuffMaxAP(maxHP * percentage);
     }
 
     public void BuffCurrentHP(double amount)
     {
-        if (currentHP + Math.Round(amount) <= maxHP)
+        if (currentHP + Math.Round(amount) <= strength.MaxHP())
             currentHP += Math.Round(amount);
         else
-            currentHP = maxHP;
+            currentHP = strength.MaxHP();
     }
 
     public void BuffCurrentHP(float percentage)
@@ -365,105 +254,5 @@ public class Stats
     public void BuffCurrentAP(float percentage)
     {
         BuffCurrentAP(currentAP * percentage);
-    }
-
-    public void BuffStrength(double amount)
-    {
-        strength += Math.Round(amount);
-    }
-
-    public void BuffStrength(float percentage)
-    {
-        BuffStrength(strength * percentage);
-    }
-
-    public void BuffAttack(double amount)
-    {
-        attack += Math.Round(amount);
-    }
-
-    public void BuffAttack(float percentage)
-    {
-        BuffAttack(attack * percentage);
-    }
-
-    public void BuffAbilityAttack(double amount)
-    {
-        abilityAttack += Math.Round(amount);
-    }
-
-    public void BuffAbilityAttack(float percentage)
-    {
-        BuffAbilityAttack(abilityAttack * percentage);
-    }
-
-    public void BuffMeleeCritRate(double amount)
-    {
-        meleeCritRate += Math.Round(amount);
-    }
-
-    public void BuffMeleeCritRate(float percentage)
-    {
-        BuffMeleeCritRate(meleeCritRate * percentage);
-    }
-
-    public void BuffMeleeCritPower(double amount)
-    {
-        meleeCritPower += Math.Round(amount);
-    }
-
-    public void BuffMeleeCritPower(float percentage)
-    {
-        BuffMeleeCritPower(meleeCritPower * percentage);
-    }
-
-    public void BuffAbilityCritRate(double amount)
-    {
-        abilityCritRate += Math.Round(amount);
-    }
-
-    public void BuffAbilityCritRate(float percentage)
-    {
-        BuffAbilityCritRate(abilityCritRate * percentage);
-    }
-
-    public void BuffAbilityCritPower(double amount)
-    {
-        abilityCritPower += Math.Round(amount);
-    }
-
-    public void BuffAbilityCritPower(float percentage)
-    {
-        BuffAbilityCritPower(abilityCritPower * percentage);
-    }
-
-    public void BuffDefense(double amount)
-    {
-        defense += Math.Round(amount);
-    }
-
-    public void BuffDefense(float percentage)
-    {
-        BuffDefense(defense * percentage);
-    }
-
-    public void BuffDodgeRate(double amount)
-    {
-        dodgeRate += Math.Round(amount);
-    }
-
-    public void BuffDodgeRate(float percentage)
-    {
-        BuffDodgeRate(dodgeRate * percentage);
-    }
-
-    public void BuffMovementSpeed(double amount)
-    {
-        movementSpeed += Math.Round(amount);
-    }
-
-    public void BuffMovementSpeed(float percentage)
-    {
-        BuffMovementSpeed(movementSpeed * percentage);
     }
 }

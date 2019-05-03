@@ -32,9 +32,10 @@ public class Stat
         statModifiers = new List<StatModifier>();
         StatModifiers = statModifiers.AsReadOnly();
     }
-    public Stat(float value) : this()
+    public Stat(double value) : this()
     {
         baseValue = value;
+        Refresh();
     }
 
     public virtual void AddModifier(StatModifier mod)
@@ -111,5 +112,16 @@ public class Stat
     public void IncreaseBaseValue(double amount)
     {
         baseValue += amount;
+        Refresh();
+    }
+
+    public void Refresh()
+    {
+        if (isDirty || lastBaseValue != baseValue)
+        {
+            lastBaseValue = baseValue;
+            currentValue = CalculateFinalValue();
+            isDirty = false;
+        }
     }
 }

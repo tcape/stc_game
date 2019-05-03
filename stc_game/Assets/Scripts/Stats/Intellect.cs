@@ -6,11 +6,15 @@ using UnityEngine;
 [Serializable]
 public class Intellect : MainStat
 {
-    [SerializeField] SubStat abilityAttack;
-    [SerializeField] SubStat abilityCritPower;
-    [SerializeField] SubStat abilityCritRate;
-    [SerializeField] SubStat maxAP;
+    [SerializeField] public SubStat abilityAttack;
+    [SerializeField] public SubStat abilityCritPower;
+    [SerializeField] public SubStat abilityCritRate;
+    [SerializeField] public SubStat maxAP;
 
+    public Intellect(double value) : base(value)
+    {
+        baseValue = value;
+    }
     private void SetSubStats()
     {
         subStats.Add(abilityAttack);
@@ -25,5 +29,25 @@ public class Intellect : MainStat
         abilityCritPower.mainStat = this;
         abilityCritRate.mainStat = this;
         maxAP.mainStat = this;
+    }
+
+    public double AbilityAttack()
+    {
+        return abilityAttack.Value;
+    }
+
+    public double AbilityCritPower()
+    {
+        return abilityCritPower.Value;
+    }
+
+    public double AbilityCritRate()
+    {
+        return abilityCritRate.Value;
+    }
+
+    public double MaxAP()
+    {
+        return maxAP.Value;
     }
 }

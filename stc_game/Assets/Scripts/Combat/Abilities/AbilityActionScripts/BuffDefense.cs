@@ -14,13 +14,15 @@ public class BuffDefense : AbilityAction
     }
     public override void Act(AbilityManager manager)
     {
-        manager.stats.stats.BuffDefense(amount);
+        // manager.stats.stats.BuffDefense(amount);
+        manager.stats.stats.strength.defense.AddModifier(new StatModifier(amount, ModType.Flat, this));
         UpdateEffectTotal();
     }
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        manager.stats.stats.BuffDefense(-effectTotal);
+        // manager.stats.stats.BuffDefense(-effectTotal);
+        manager.stats.stats.strength.defense.RemoveAllModifiersFromSource(this);
     }
 
     public override void ResetEffectTotal()

@@ -22,7 +22,7 @@ public class CharacterStats : MonoBehaviour
 
     private void Update()
     {
-        GetComponent<NavMeshAgent>().speed = (float)stats.movementSpeed;
+        GetComponent<NavMeshAgent>().speed = (float)stats.dexterity.movementSpeed.currentValue;
     }
 
     public void LoadPresetStats()
@@ -31,22 +31,22 @@ public class CharacterStats : MonoBehaviour
         stats.gold = presetStats.gold;
         stats.XP = presetStats.XP;
         stats.nextLevelXP = stats.NextLevelXPAmount();
-        stats.maxHP = presetStats.maxHP;
-        stats.maxAP = presetStats.maxAP;
+        stats.strength.maxHP.baseValue = presetStats.maxHP;
+        stats.intellect.maxAP.baseValue = presetStats.maxAP;
         stats.currentHP = presetStats.maxHP;
         stats.currentAP = presetStats.maxAP;
-        stats.strength = presetStats.strength;
-        stats.intellect = presetStats.intellect;
-        stats.dexterity = presetStats.dexterity;
-        stats.attack = presetStats.attack;
-        stats.abilityAttack = presetStats.abilityAttack;
-        stats.meleeCritRate = presetStats.meleeCritRate;
-        stats.meleeCritPower = presetStats.meleeCritPower;
-        stats.abilityCritRate = presetStats.abilityCritRate;
-        stats.abilityCritPower = presetStats.abilityCritPower;
-        stats.defense = presetStats.defense;
-        stats.dodgeRate = presetStats.dodgeRate;
-        stats.movementSpeed = presetStats.movementSpeed;
+        stats.strength.baseValue = presetStats.strength;
+        stats.intellect.baseValue = presetStats.intellect;
+        stats.dexterity.baseValue = presetStats.dexterity;
+        stats.strength.attack.baseValue = presetStats.attack;
+        stats.intellect.abilityAttack.baseValue = presetStats.abilityAttack;
+        stats.dexterity.meleeCritRate.baseValue = presetStats.meleeCritRate;
+        stats.strength.meleeCritPower.baseValue = presetStats.meleeCritPower;
+        stats.intellect.abilityCritRate.baseValue = presetStats.abilityCritRate;
+        stats.intellect.abilityCritPower.baseValue = presetStats.abilityCritPower;
+        stats.strength.defense.baseValue = presetStats.defense;
+        stats.dexterity.dodgeRate.baseValue = presetStats.dodgeRate;
+        stats.dexterity.movementSpeed.baseValue = presetStats.movementSpeed;
         stats.dead = false;
     }
 }

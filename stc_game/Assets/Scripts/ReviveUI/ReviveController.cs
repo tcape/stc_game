@@ -67,7 +67,7 @@ public class ReviveController : MonoBehaviour
         hero.SetReviveComponents();
 
         // give hero some HP
-        hero.characterStats.stats.currentHP = hero.characterStats.stats.maxHP;
+        hero.characterStats.stats.currentHP = hero.characterStats.stats.strength.MaxHP();
         
     }
 
@@ -81,7 +81,7 @@ public class ReviveController : MonoBehaviour
         var hero = player.GetComponent<Hero>();
 
         // give hero some HP
-        hero.characterStats.stats.BuffCurrentHP(hero.characterStats.stats.maxHP / 2);
+        hero.characterStats.stats.BuffCurrentHP(hero.characterStats.stats.strength.MaxHP() / 2);
 
         // set hero's dead stat to false
         hero.characterStats.stats.dead = false;
@@ -125,7 +125,7 @@ public class ReviveController : MonoBehaviour
         PersistentScene.Instance.GameCharacter.Stats.dead = false;
 
         // give hero some HP
-        hero.characterStats.stats.BuffCurrentHP(hero.characterStats.stats.maxHP / 2);
+        hero.characterStats.stats.BuffCurrentHP(hero.characterStats.stats.strength.MaxHP() / 2);
 
         // move hero to entrance
         hero.SetHeroTransform(GameStrings.Positions.DungeonStartPosition);
