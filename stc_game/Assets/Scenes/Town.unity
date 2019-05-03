@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Terrain_Mountain_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4626560046774758, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.589056
@@ -9402,6 +9406,10 @@ PrefabInstance:
     - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_Name
       value: SM_Terrain_Mountain_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4626560046774758, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21194,6 +21202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Terrain_Mountain_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4626560046774758, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.950764
@@ -22078,6 +22090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Terrain_Mountain_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4626560046774758, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.385668
@@ -22721,6 +22737,10 @@ PrefabInstance:
     - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_Name
       value: SM_Terrain_Mountain_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4626560046774758, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32420,6 +32440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Terrain_Mountain_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4626560046774758, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_LocalPosition.x
       value: -89.66166
@@ -32712,6 +32736,10 @@ PrefabInstance:
     - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_Name
       value: SM_Terrain_Mountain_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092749142366282, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4626560046774758, guid: 22084b44ff77aa04b8d3f46ea47f9a17, type: 3}
       propertyPath: m_LocalPosition.x
