@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 [Serializable]
-public abstract class MainStat
+public class MainStat : Stat
 {
-    [SerializeField] public double baseValue;
-    [SerializeField] public double currentValue;
-    [SerializeField] public List<StatModifier> statModifiers;
-    
+    [HideInInspector] public HeroStats stats;
+    [HideInInspector] public List<SubStat> subStats;
+
+    private void UpdateSubStats()
+    {
+        foreach (var substat in subStats)
+        {
+            substat.UpdateBaseValue(this);
+        }
+    }
 }

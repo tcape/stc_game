@@ -7,15 +7,25 @@ using UnityEngine;
 [Serializable]
 public class Strength : MainStat
 {
-    [SerializeField] public SubStat[] subStats;
+    [SerializeField] public SubStat attack;
+    [SerializeField] public SubStat meleeCritPower;
+    [SerializeField] public SubStat defense;
+    [SerializeField] public SubStat maxHP;
 
-    public Strength()
+    private void SetSubStats()
     {
-        subStats = new SubStat[4];
-        subStats[0] = new SubStat("Attack");
-        subStats[1] = new SubStat("MeleeCritPower");
-        subStats[2] = new SubStat("Defense");
-        subStats[3] = new SubStat("MaxHP");
+        subStats.Add(attack);
+        subStats.Add(meleeCritPower);
+        subStats.Add(defense);
+        subStats.Add(maxHP);
+    }
+
+    private void SetMainStat()
+    {
+        attack.mainStat = this;
+        meleeCritPower.mainStat = this;
+        defense.mainStat = this;
+        maxHP.mainStat = this;
     }
 
 }

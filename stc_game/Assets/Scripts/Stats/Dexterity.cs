@@ -1,18 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dexterity : MonoBehaviour
+[Serializable]
+public class Dexterity : MainStat
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] SubStat meleeCritRate;
+    [SerializeField] SubStat dodgeRate;
+    [SerializeField] SubStat movementSpeed;
+
+    private void SetSubStats()
     {
-        
+        subStats.Add(meleeCritRate);
+        subStats.Add(dodgeRate);
+        subStats.Add(movementSpeed);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetMainStat()
     {
-        
+        meleeCritRate.mainStat = this;
+        dodgeRate.mainStat = this;
+        movementSpeed.mainStat = this;
     }
 }

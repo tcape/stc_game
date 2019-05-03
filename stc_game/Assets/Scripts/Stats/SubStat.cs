@@ -1,16 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SubStat
+[Serializable]
+public class SubStat : Stat
 {
-    public string name;
-    public double baseValue;
-    public double currentValue;
+    [HideInInspector] public MainStat mainStat; // might not need this
 
-
-    public SubStat(string n)
+    public void UpdateBaseValue(MainStat mainStat)
     {
-        name = n;
+        IncreaseBaseValue(Math.Round(baseValue * mainStat.currentValue / mainStat.stats.nextLevelXP));
     }
 }
