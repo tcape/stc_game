@@ -2,11 +2,12 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class CharacterStats : MonoBehaviour
 {
     public StatsPreset presetStats;
     public CharacterStatsSaver saver;
-    [SerializeField] public Stats stats;
+    public Stats stats;
 
     private void Awake()
     {
@@ -22,7 +23,12 @@ public class CharacterStats : MonoBehaviour
 
     private void Update()
     {
-        GetComponent<NavMeshAgent>().speed = (float)stats.dexterity.movementSpeed.currentValue;
+        GetComponent<NavMeshAgent>().speed = (float)stats.dexterity.movementSpeed.Value;
+    }
+
+    private void OnValidate()
+    {
+        
     }
 
     public void LoadPresetStats()

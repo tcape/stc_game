@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
 
+[Serializable]
 public class Stat
 {
     public double baseValue;
@@ -14,12 +15,7 @@ public class Stat
     {
         get
         {
-            if (isDirty || lastBaseValue != baseValue)
-            {
-                lastBaseValue = baseValue;
-                currentValue = CalculateFinalValue();
-                isDirty = false;
-            }
+            Refresh();
             return currentValue;
         }
     }

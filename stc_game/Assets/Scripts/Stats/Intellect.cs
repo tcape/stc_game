@@ -6,10 +6,10 @@ using UnityEngine;
 [Serializable]
 public class Intellect : MainStat
 {
-    [SerializeField] public SubStat abilityAttack;
-    [SerializeField] public SubStat abilityCritPower;
-    [SerializeField] public SubStat abilityCritRate;
-    [SerializeField] public SubStat maxAP;
+    public SubStat abilityAttack;
+    public SubStat abilityCritPower;
+    public SubStat abilityCritRate;
+    public SubStat maxAP;
 
     public Intellect(double value) : base(value)
     {

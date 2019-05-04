@@ -15,9 +15,9 @@ public class Stats
     [SerializeField] public double currentAP;
 
     [Space]
-    [SerializeField] public Strength strength;
-    [SerializeField] public Intellect intellect;
-    [SerializeField] public Dexterity dexterity;
+    public Strength strength;
+    public Intellect intellect;
+    public Dexterity dexterity;
 
     [Space]
     public bool dead;
@@ -39,28 +39,28 @@ public class Stats
 
     public void LoadSavedStats(Stats savedStats)
     {
-        level = savedStats.level;
-        gold = savedStats.gold;
-        XP = savedStats.XP;
-        nextLevelXP = savedStats.nextLevelXP;
-        totalXP = savedStats.totalXP;
-        strength.maxHP.baseValue = savedStats.strength.maxHP.baseValue;
-        intellect.maxAP.baseValue = savedStats.intellect.maxAP.baseValue;
-        currentHP = savedStats.currentHP;
-        currentAP = savedStats.currentAP;
-        strength.baseValue = savedStats.strength.baseValue;
-        intellect.baseValue = savedStats.intellect.baseValue;
-        dexterity.baseValue = savedStats.dexterity.baseValue;
-        strength.attack.baseValue = savedStats.strength.attack.baseValue;
-        intellect.abilityAttack.baseValue = savedStats.intellect.abilityAttack.baseValue;
-        dexterity.meleeCritRate.baseValue = savedStats.dexterity.meleeCritRate.baseValue;
-        strength.meleeCritPower.baseValue = savedStats.strength.meleeCritPower.baseValue;
-        intellect.abilityCritRate.baseValue = savedStats.intellect.abilityCritRate.baseValue;
-        intellect.abilityCritPower.baseValue = savedStats.intellect.abilityCritPower.baseValue;
-        strength.defense.baseValue = savedStats.strength.defense.baseValue;
-        dexterity.dodgeRate.baseValue = savedStats.dexterity.dodgeRate.baseValue;
-        dexterity.movementSpeed.baseValue = savedStats.dexterity.movementSpeed.baseValue;
-        dead = savedStats.dead;
+        //level = savedStats.level;
+        //gold = savedStats.gold;
+        //XP = savedStats.XP;
+        //nextLevelXP = savedStats.nextLevelXP;
+        //totalXP = savedStats.totalXP;
+        //strength.maxHP. = savedStats.strength.maxHP.baseValue;
+        //intellect.maxAP.baseValue = savedStats.intellect.maxAP.baseValue;
+        //currentHP = savedStats.currentHP;
+        //currentAP = savedStats.currentAP;
+        //strength.baseValue = savedStats.strength.baseValue;
+        //intellect.baseValue = savedStats.intellect.baseValue;
+        //dexterity.baseValue = savedStats.dexterity.baseValue;
+        //strength.attack.baseValue = savedStats.strength.attack.baseValue;
+        //intellect.abilityAttack.baseValue = savedStats.intellect.abilityAttack.baseValue;
+        //dexterity.meleeCritRate.baseValue = savedStats.dexterity.meleeCritRate.baseValue;
+        //strength.meleeCritPower.baseValue = savedStats.strength.meleeCritPower.baseValue;
+        //intellect.abilityCritRate.baseValue = savedStats.intellect.abilityCritRate.baseValue;
+        //intellect.abilityCritPower.baseValue = savedStats.intellect.abilityCritPower.baseValue;
+        //strength.defense.baseValue = savedStats.strength.defense.baseValue;
+        //dexterity.dodgeRate.baseValue = savedStats.dexterity.dodgeRate.baseValue;
+        //dexterity.movementSpeed.baseValue = savedStats.dexterity.movementSpeed.baseValue;
+        //dead = savedStats.dead;
     }
 
     public double GetNextLevel()

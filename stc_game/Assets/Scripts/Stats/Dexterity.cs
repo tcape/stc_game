@@ -6,9 +6,9 @@ using UnityEngine;
 [Serializable]
 public class Dexterity : MainStat
 {
-    [SerializeField] public SubStat meleeCritRate;
-    [SerializeField] public SubStat dodgeRate;
-    [SerializeField] public SubStat movementSpeed;
+    public SubStat meleeCritRate;
+    public SubStat dodgeRate;
+    public SubStat movementSpeed;
 
     public Dexterity(double value) : base(value)
     {

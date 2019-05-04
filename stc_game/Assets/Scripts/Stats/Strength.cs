@@ -7,10 +7,10 @@ using UnityEngine;
 [Serializable]
 public class Strength : MainStat
 {
-    [SerializeField] public SubStat attack;
-    [SerializeField] public SubStat meleeCritPower;
-    [SerializeField] public SubStat defense;
-    [SerializeField] public SubStat maxHP;
+    public SubStat attack;
+    public SubStat meleeCritPower;
+    public SubStat defense;
+    public SubStat maxHP;
 
     public Strength(double value) : base(value)
     {
@@ -24,6 +24,8 @@ public class Strength : MainStat
         subStats.Add(defense);
         subStats.Add(maxHP);
     }
+
+    // Todo: Update substat base values based on mainstat base values
 
     public void SetMainStat()
     {
