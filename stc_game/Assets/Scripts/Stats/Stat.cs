@@ -28,6 +28,7 @@ public class Stat
         statModifiers = new List<StatModifier>();
         StatModifiers = statModifiers.AsReadOnly();
     }
+
     public Stat(double value) : this()
     {
         baseValue = value;
@@ -38,12 +39,14 @@ public class Stat
     {
         isDirty = true;
         statModifiers.Add(mod);
+        Refresh();
     }
 
     public virtual bool RemoveModifier(StatModifier mod)
     {
         if (statModifiers.Remove(mod))
         {
+            Refresh();
             isDirty = true;
             return true;
         }
@@ -57,6 +60,7 @@ public class Stat
         if (numRemovals > 0)
         {
             isDirty = true;
+            Refresh();
             return true;
         }
         return false;
@@ -120,4 +124,6 @@ public class Stat
             isDirty = false;
         }
     }
+
+
 }

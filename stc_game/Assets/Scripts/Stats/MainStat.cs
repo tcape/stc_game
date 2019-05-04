@@ -15,11 +15,42 @@ public class MainStat : Stat
         baseValue = value;
     }
    
-    private void UpdateSubStats()
+    private void AddSubStatModifiers(object source)
     {
         foreach (var substat in subStats)
         {
-            substat.UpdateBaseValue(this);
+            substat.AddModifierFromMainStat(this, source);
         }
     }
+
+    public void AddStatModifier(StatModifier mod)
+    {
+        isDirty = true;
+        statModifiers.Add(mod);
+
+        AddSubStatModifiers(mod.Source);
+
+        Refresh();
+    }
+
+    public bool RemoveStatModifiersFromSource(object source)
+    {
+
+        int numRemovals = statModifiers.RemoveAll(mod => mod.Source == source);
+
+        if (numRemovals > 0)
+        {
+            isDirty = true;
+            foreach (var substat in subStats)
+            {
+                RemoveAllModifiersFromSource(source);
+            }
+            Refresh();
+            return true;
+        }
+        return false;
+    }
+
+
+
 }

@@ -15,6 +15,7 @@ public class Strength : MainStat
     public Strength(double value) : base(value)
     {
         baseValue = value;
+        Init();
     }
 
     public void SetSubStats()
@@ -54,4 +55,15 @@ public class Strength : MainStat
     {
         return maxHP.Value;
     }
+
+    public void Init()
+    {
+        attack = new SubStat(0);
+        meleeCritPower = new SubStat(0);
+        defense = new SubStat(0);
+        maxHP = new SubStat(0);
+    }
+
+   
+
 }

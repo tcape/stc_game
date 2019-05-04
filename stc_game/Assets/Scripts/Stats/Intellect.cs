@@ -14,7 +14,17 @@ public class Intellect : MainStat
     public Intellect(double value) : base(value)
     {
         baseValue = value;
+        Init();
     }
+
+    public void Init()
+    {
+        abilityAttack = new SubStat(0);
+        abilityCritPower = new SubStat(0);
+        abilityCritRate = new SubStat(0);
+        maxAP = new SubStat(0);
+    }
+
     private void SetSubStats()
     {
         subStats.Add(abilityAttack);
@@ -51,3 +61,4 @@ public class Intellect : MainStat
         return maxAP.Value;
     }
 }
+

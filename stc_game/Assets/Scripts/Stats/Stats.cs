@@ -25,17 +25,17 @@ public class Stats
     [SerializeField] public double totalXP;
     [HideInInspector] public static readonly double firstLevelXP = 100;
 
-    private void Awake()
-    {
-        SetupMainStats();
-    }
+    //private void Awake()
+    //{
+    //    SetupMainStats();
+    //}
 
-    private void SetupMainStats()
-    {
-        strength.stats = this;
-        intellect.stats = this;
-        dexterity.stats = this;
-    }
+    //private void SetupMainStats()
+    //{
+    //    strength.stats = this;
+    //    intellect.stats = this;
+    //    dexterity.stats = this;
+    //}
 
     public void LoadSavedStats(Stats savedStats)
     {
@@ -61,6 +61,18 @@ public class Stats
         //dexterity.dodgeRate.baseValue = savedStats.dexterity.dodgeRate.baseValue;
         //dexterity.movementSpeed.baseValue = savedStats.dexterity.movementSpeed.baseValue;
         //dead = savedStats.dead;
+    }
+
+    public Stats()
+    {
+        Init();
+    }
+
+    public void Init()
+    {
+        strength = new Strength(0);
+        intellect = new Intellect(0);
+        dexterity = new Dexterity(0);
     }
 
     public double GetNextLevel()

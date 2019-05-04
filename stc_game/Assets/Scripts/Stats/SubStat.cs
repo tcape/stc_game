@@ -13,8 +13,10 @@ public class SubStat : Stat
         baseValue = value;
     }
 
-    public void UpdateBaseValue(MainStat mainStat)
+    public void AddModifierFromMainStat(MainStat mainStat, object source)
     {
-        IncreaseBaseValue(Math.Round(baseValue * mainStat.currentValue / mainStat.stats.nextLevelXP));
+        AddModifier(new StatModifier(Math.Round(baseValue * mainStat.currentValue / mainStat.stats.nextLevelXP), ModType.Flat, source));
     }
+
+ 
 }

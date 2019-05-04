@@ -13,6 +13,14 @@ public class Dexterity : MainStat
     public Dexterity(double value) : base(value)
     {
         baseValue = value;
+        Init();
+    }
+
+    public void Init()
+    {
+        meleeCritRate = new SubStat(0);
+        dodgeRate = new SubStat(0);
+        movementSpeed = new SubStat(0);
     }
 
     private void SetSubStats()
