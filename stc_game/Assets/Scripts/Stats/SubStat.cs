@@ -18,5 +18,11 @@ public class SubStat : Stat
         AddModifier(new StatModifier(Math.Round(baseValue * mainStat.currentValue / mainStat.stats.nextLevelXP), ModType.Flat, source));
     }
 
- 
+    public void UpdateModifierFromMainStat()
+    {
+        RemoveAllModifiersFromSource(mainStat);
+        AddModifier(new StatModifier(mainStat.Value / 100, ModType.PercentAdd, mainStat));
+    }
+
+
 }

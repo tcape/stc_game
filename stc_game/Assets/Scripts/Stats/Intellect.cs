@@ -41,6 +41,12 @@ public class Intellect : MainStat
         maxAP.mainStat = this;
     }
 
+    public void Setup()
+    {
+        SetSubStats();
+        SetMainStat();
+    }
+
     public double AbilityAttack()
     {
         return abilityAttack.Value;

@@ -36,6 +36,17 @@ public class Strength : MainStat
         maxHP.mainStat = this;
     }
 
+    public void Setup()
+    {
+        SetSubStats();
+        SetMainStat();
+
+        UpdateSubStatModifiers();
+
+    }
+
+
+
     public double Attack()
     {
         return attack.Value;

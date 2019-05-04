@@ -37,6 +37,12 @@ public class Dexterity : MainStat
         movementSpeed.mainStat = this;
     }
 
+    public void Setup()
+    {
+        SetSubStats();
+        SetMainStat();
+    }
+
     public double MeleeCritRate()
     {
         return meleeCritRate.Value;
