@@ -14,26 +14,25 @@ public class StatModifier
 
     public StatModifier(double value, ModType type, int order)
     {
-        this.Type = type;
-        this.Value = value;
-        this.Order = order;
-        this.Source = null;
+        Type = type;
+        Value = value;
+        Order = order;
+        Source = null;
     }
 
     public StatModifier(double value, ModType type)
     {
-        this.Type = type;
-        this.Value = value;
-        this.Order = (int)type;
-        this.Source = null;
+        Type = type;
+        Value = value;
+        Order = (int)type;
+        Source = null;
     }
 
     public StatModifier(double value, ModType type, object source)
     {
-        this.Type = type;
-        this.Value = value;
-        this.Order = (int)type;
-        this.Source = source;
+        Type = type;
+        Value = value;
+        Order = (int)type;
+        Source = source;
     }
-
 }

@@ -106,7 +106,7 @@ public class Stat
             }
         }
 
-        return Math.Round(finalValue);
+        return Math.Round(finalValue, 4);
     }
 
     public void IncreaseBaseValue(double amount)
@@ -124,6 +124,4 @@ public class Stat
             isDirty = false;
         }
     }
-
-
 }

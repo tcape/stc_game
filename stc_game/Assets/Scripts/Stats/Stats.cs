@@ -25,44 +25,6 @@ public class Stats
     [SerializeField] public double totalXP;
     [HideInInspector] public static readonly double firstLevelXP = 100;
 
-    //private void Awake()
-    //{
-    //    SetupMainStats();
-    //}
-
-    //private void SetupMainStats()
-    //{
-    //    strength.stats = this;
-    //    intellect.stats = this;
-    //    dexterity.stats = this;
-    //}
-
-    public void LoadSavedStats(Stats savedStats)
-    {
-        //level = savedStats.level;
-        //gold = savedStats.gold;
-        //XP = savedStats.XP;
-        //nextLevelXP = savedStats.nextLevelXP;
-        //totalXP = savedStats.totalXP;
-        //strength.maxHP. = savedStats.strength.maxHP.baseValue;
-        //intellect.maxAP.baseValue = savedStats.intellect.maxAP.baseValue;
-        //currentHP = savedStats.currentHP;
-        //currentAP = savedStats.currentAP;
-        //strength.baseValue = savedStats.strength.baseValue;
-        //intellect.baseValue = savedStats.intellect.baseValue;
-        //dexterity.baseValue = savedStats.dexterity.baseValue;
-        //strength.attack.baseValue = savedStats.strength.attack.baseValue;
-        //intellect.abilityAttack.baseValue = savedStats.intellect.abilityAttack.baseValue;
-        //dexterity.meleeCritRate.baseValue = savedStats.dexterity.meleeCritRate.baseValue;
-        //strength.meleeCritPower.baseValue = savedStats.strength.meleeCritPower.baseValue;
-        //intellect.abilityCritRate.baseValue = savedStats.intellect.abilityCritRate.baseValue;
-        //intellect.abilityCritPower.baseValue = savedStats.intellect.abilityCritPower.baseValue;
-        //strength.defense.baseValue = savedStats.strength.defense.baseValue;
-        //dexterity.dodgeRate.baseValue = savedStats.dexterity.dodgeRate.baseValue;
-        //dexterity.movementSpeed.baseValue = savedStats.dexterity.movementSpeed.baseValue;
-        //dead = savedStats.dead;
-    }
-
     public Stats()
     {
         Init();
@@ -73,13 +35,13 @@ public class Stats
         strength = new Strength(0);
         intellect = new Intellect(0);
         dexterity = new Dexterity(0);
-        strength.stats = this;
-        intellect.stats = this;
-        dexterity.stats = this;
     }
 
     public void Setup()
     {
+        strength.stats = this;
+        intellect.stats = this;
+        dexterity.stats = this;
         strength.Setup();
         intellect.Setup();
         dexterity.Setup();

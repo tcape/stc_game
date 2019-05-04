@@ -41,6 +41,7 @@ public class Dexterity : MainStat
     {
         SetSubStats();
         SetMainStat();
+        UpdateSubStatModifiers();
     }
 
     public double MeleeCritRate()

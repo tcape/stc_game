@@ -32,5 +32,4 @@ public class RegenerateAP : AbilityAction
     {
         effectTotal += amount;
     }
-
 }

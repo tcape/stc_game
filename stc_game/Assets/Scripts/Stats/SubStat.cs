@@ -6,23 +6,17 @@ using UnityEngine;
 [Serializable]
 public class SubStat : Stat
 {
-    [HideInInspector] public MainStat mainStat; // might not need this
+    [HideInInspector] public MainStat mainStat;
 
     public SubStat(double value) : base(value)
     {
         baseValue = value;
     }
 
-    public void AddModifierFromMainStat(MainStat mainStat, object source)
-    {
-        AddModifier(new StatModifier(Math.Round(baseValue * mainStat.currentValue / mainStat.stats.nextLevelXP), ModType.Flat, source));
-    }
-
     public void UpdateModifierFromMainStat()
     {
         RemoveAllModifiersFromSource(mainStat);
-        AddModifier(new StatModifier(mainStat.Value / 100, ModType.PercentAdd, mainStat));
+        var modAmount = Value * mainStat.Value / mainStat.stats.nextLevelXP;
+        AddModifier(new StatModifier(modAmount, ModType.Flat, mainStat));
     }
-
-
 }

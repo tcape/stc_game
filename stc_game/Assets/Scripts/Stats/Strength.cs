@@ -26,8 +26,6 @@ public class Strength : MainStat
         subStats.Add(maxHP);
     }
 
-    // Todo: Update substat base values based on mainstat base values
-
     public void SetMainStat()
     {
         attack.mainStat = this;
@@ -40,12 +38,8 @@ public class Strength : MainStat
     {
         SetSubStats();
         SetMainStat();
-
         UpdateSubStatModifiers();
-
     }
-
-
 
     public double Attack()
     {
@@ -74,7 +68,4 @@ public class Strength : MainStat
         defense = new SubStat(0);
         maxHP = new SubStat(0);
     }
-
-   
-
 }

@@ -45,6 +45,7 @@ public class Intellect : MainStat
     {
         SetSubStats();
         SetMainStat();
+        UpdateSubStatModifiers();
     }
 
     public double AbilityAttack()

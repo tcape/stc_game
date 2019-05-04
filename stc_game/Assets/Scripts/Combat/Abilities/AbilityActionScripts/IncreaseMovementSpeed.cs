@@ -15,13 +15,11 @@ public class IncreaseMovementSpeed : AbilityAction
     public override void Act(AbilityManager manager)
     {
         UpdateEffectTotal();
-        // manager.stats.stats.BuffMovementSpeed(amount);
         manager.stats.stats.dexterity.movementSpeed.AddModifier(new StatModifier(amount, ModType.Flat, this));
     }
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        // manager.stats.stats.BuffMovementSpeed(-effectTotal);
         manager.stats.stats.dexterity.movementSpeed.RemoveAllModifiersFromSource(this);
     }
 

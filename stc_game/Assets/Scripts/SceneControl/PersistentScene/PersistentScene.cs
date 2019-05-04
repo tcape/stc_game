@@ -34,6 +34,7 @@ public class PersistentScene : MonoBehaviour
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
         // moved this from Start to Awake for now so abilities are can be loaded
+
         GameCharacter = new GameCharacter(
                                            "WarriorTest",
                                            HeroClass.Warrior,
