@@ -15,7 +15,6 @@ namespace Assets.Scripts.CharacterBehavior.Combat
         public AbilitySaver saver;
         public event Action AbilityUsed;
         [HideInInspector] public CharacterStats stats;
-        //public Stats heroStats;
         [HideInInspector] public Animator animator;
         [HideInInspector] public StateController controller;
 
