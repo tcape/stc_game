@@ -78,6 +78,8 @@ public class PersistentScene : MonoBehaviour
                                            }
                                            );
 
+        GameCharacter.Stats.Setup();
+      
     }
 
     private void Start()

@@ -73,6 +73,16 @@ public class Stats
         strength = new Strength(0);
         intellect = new Intellect(0);
         dexterity = new Dexterity(0);
+        strength.stats = this;
+        intellect.stats = this;
+        dexterity.stats = this;
+    }
+
+    public void Setup()
+    {
+        strength.Setup();
+        intellect.Setup();
+        dexterity.Setup();
     }
 
     public double GetNextLevel()

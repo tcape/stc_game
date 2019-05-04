@@ -13,13 +13,14 @@ public class MainStat : Stat
     public MainStat(double value) : base(value)
     {
         baseValue = value;
+        subStats = new List<SubStat>();
     }
    
-    private void AddSubStatModifiers(object source)
+    public void UpdateSubStatModifiers()
     {
         foreach (var substat in subStats)
         {
-            substat.AddModifierFromMainStat(this, source);
+            substat.UpdateModifierFromMainStat();
         }
     }
 
@@ -28,7 +29,7 @@ public class MainStat : Stat
         isDirty = true;
         statModifiers.Add(mod);
 
-        AddSubStatModifiers(mod.Source);
+        UpdateSubStatModifiers();
 
         Refresh();
     }
@@ -41,10 +42,7 @@ public class MainStat : Stat
         if (numRemovals > 0)
         {
             isDirty = true;
-            foreach (var substat in subStats)
-            {
-                RemoveAllModifiersFromSource(source);
-            }
+            UpdateSubStatModifiers();
             Refresh();
             return true;
         }
