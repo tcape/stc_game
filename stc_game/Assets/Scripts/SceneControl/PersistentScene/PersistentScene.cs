@@ -36,7 +36,7 @@ public class PersistentScene : MonoBehaviour
         // moved this from Start to Awake for now so abilities are can be loaded
         GameCharacter = new GameCharacter(
                                            "WarriorTest",
-                                           HeroClass.Warrior,
+                                           HeroClass.Mage,
                                            new Stats()
                                            {
                                                level = 1,
@@ -46,18 +46,18 @@ public class PersistentScene : MonoBehaviour
                                                maxAP = 150,
                                                currentHP = 500,
                                                currentAP = 150,
-                                               strength = 10,
-                                               intellect = 5,
+                                               strength = 5,
+                                               intellect = 10,
                                                dexterity = 7,
-                                               attack = 15,
+                                               attack = 10,
                                                meleeCritPower = 2,
-                                               defense = 9,
+                                               defense = 5,
                                                abilityAttack = 10,
                                                abilityCritRate = 0.25,
                                                abilityCritPower = 2,
                                                meleeCritRate = 0.25,
                                                dodgeRate = 0.15,
-                                               movementSpeed = 7,
+                                               movementSpeed = 5,
                                                dead = false,
                                                nextLevelXP = 100
                                            }
@@ -65,10 +65,10 @@ public class PersistentScene : MonoBehaviour
                                            new List<string>()
                                            {
                                                "RegenerateAP",
-                                               "IronSkin",
-                                               "Savagry",
-                                               "Cleave",
-                                               "Sprint"
+                                               "Fireball",
+                                               "Curse",
+                                               "Slow",
+                                               "Teleport"
                                            }
                                            );
 
