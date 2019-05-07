@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   persistance: 0
-  amount: 1.5
+  amount: 2
   percentage: 0
-  interval: 1
+  interval: 3
   effectTotal: 0
   target: {fileID: 0}
   lastTick: 0

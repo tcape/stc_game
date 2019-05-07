@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   persistance: 1
-  amount: 5
+  amount: 4
   percentage: 0
   interval: 0
   effectTotal: 0
