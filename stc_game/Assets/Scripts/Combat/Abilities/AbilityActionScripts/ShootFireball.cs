@@ -14,13 +14,8 @@ public class ShootFireball : AbilityAction
         fireball.transform.position = manager.gameObject.transform.position + new Vector3(0, 1.5f, 0);
         var values = fireball.GetComponent<Fireball>();
         values.damage = amount;
-
         var rb = fireball.GetComponent<Rigidbody>();
-
         rb.velocity = (target.transform.position - fireball.transform.position).normalized * 15;
-
-
-        
     }
 
     public override void RemoveEffect(AbilityManager manager)
