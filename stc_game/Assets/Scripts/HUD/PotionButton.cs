@@ -25,10 +25,10 @@ public class PotionButton : MonoBehaviour
             potionCooldown.StartCooldown();
 
             if (type == PotionType.HP)
-                stats.BuffCurrentHP(stats.maxHP);
+                stats.BuffCurrentHP(stats.strength.MaxHP());
 
             if (type == PotionType.AP)
-                stats.BuffCurrentAP(stats.maxAP);
+                stats.BuffCurrentAP(stats.intellect.MaxAP());
         }
     }
 }

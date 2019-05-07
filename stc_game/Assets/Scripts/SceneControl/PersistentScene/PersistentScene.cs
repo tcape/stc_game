@@ -34,30 +34,37 @@ public class PersistentScene : MonoBehaviour
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
         // moved this from Start to Awake for now so abilities are can be loaded
+
         GameCharacter = new GameCharacter(
                                            "WarriorTest",
-                                           HeroClass.Warrior,
+                                           HeroClass.Mage,
                                            new Stats()
                                            {
                                                level = 1,
                                                XP = 0,
                                                gold = 0,
-                                               maxHP = 500,
-                                               maxAP = 150,
+                                               strength = new Strength(10)
+                                               {
+                                                   maxHP = new SubStat(500),
+                                                   attack = new SubStat(15),
+                                                   meleeCritPower = new SubStat(2),
+                                                   defense = new SubStat(9)
+                                               },
+                                               intellect = new Intellect(5)
+                                               {
+                                                   maxAP = new SubStat(150),
+                                                   abilityAttack = new SubStat(10),
+                                                   abilityCritPower = new SubStat(2),
+                                                   abilityCritRate = new SubStat(0.25)
+                                               },
+                                               dexterity = new Dexterity(7)
+                                               {
+                                                   dodgeRate = new SubStat(0.15),
+                                                   meleeCritRate = new SubStat(0.25),
+                                                   movementSpeed = new SubStat(7)
+                                               },
                                                currentHP = 500,
                                                currentAP = 150,
-                                               strength = 10,
-                                               intellect = 5,
-                                               dexterity = 7,
-                                               attack = 15,
-                                               meleeCritPower = 2,
-                                               defense = 9,
-                                               abilityAttack = 10,
-                                               abilityCritRate = 0.25,
-                                               abilityCritPower = 2,
-                                               meleeCritRate = 0.25,
-                                               dodgeRate = 0.15,
-                                               movementSpeed = 7,
                                                dead = false,
                                                nextLevelXP = 100
                                            }
@@ -65,13 +72,15 @@ public class PersistentScene : MonoBehaviour
                                            new List<string>()
                                            {
                                                "RegenerateAP",
-                                               "IronSkin",
-                                               "Savagry",
-                                               "Cleave",
-                                               "Sprint"
+                                               "Fireball",
+                                               "Curse",
+                                               "Slow",
+                                               "Teleport"
                                            }
                                            );
 
+        GameCharacter.Stats.Setup();
+      
     }
 
     private void Start()
