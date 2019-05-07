@@ -20,4 +20,16 @@ public class User: BaseUser
     {
         _id = "";
     }
+
+    public bool Exists()
+    {
+        if (UserAuthenticationId != "")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
