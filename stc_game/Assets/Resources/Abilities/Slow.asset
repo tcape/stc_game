@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bcd4472ee571746aaf54bf08a9e3c7, type: 3}
   m_Name: Slow
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 320dc2c3f7be3e144a55eafa055df6eb, type: 3}
   abilityType: 1
   targetType: 1
   actions:
@@ -21,7 +22,7 @@ MonoBehaviour:
   cooldown: 5
   duration: 5
   cost: 20
-  hotkey: 32
+  hotkey: 51
   range: 20
-  startTime: 4.5987277
+  startTime: 122.45723
   target: {fileID: 0}
