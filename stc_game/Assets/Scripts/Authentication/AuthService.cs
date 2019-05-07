@@ -34,7 +34,7 @@ public class AuthService {
     // take an authentication result and request user data then call event to store user data
     public void GetUserData(AuthRes authRes)
     {
-        auth.Read(authRes.access_token).completed += ReadUserCallback; ;
+        auth.Read(authRes.access_token).completed += ReadUserCallback;
     }
 
     // upon authenticating, notify the game scene to handle the authentication result

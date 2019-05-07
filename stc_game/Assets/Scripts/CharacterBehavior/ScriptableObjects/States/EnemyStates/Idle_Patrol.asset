@@ -10,16 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 652a37efe793b014a98576b83761fc6f, type: 3}
-  m_Name: Patrol
+  m_Name: Idle_Patrol
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 13dc846cfd7f4cb41bbe743432f79299, type: 2}
+  - {fileID: 11400000, guid: 84cd2e028ba397043a80de82f05af91a, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: dabe6da2e02fddb4ca56b620d14889e4, type: 2}
-    trueState: {fileID: 11400000, guid: 65cc3281130b51e4793e907b36396d08, type: 2}
-    falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
-  - decision: {fileID: 11400000, guid: d34ced6769dc07742abcd1a768129b74, type: 2}
-    trueState: {fileID: 11400000, guid: b47de11e2c2a6a0449aa82ec5a406daf, type: 2}
+  - decision: {fileID: 11400000, guid: 4b0ded892178f704aa34d5628d63fc59, type: 2}
+    trueState: {fileID: 11400000, guid: 13d5ada4e90b5774992125d6e804ae5d, type: 2}
     falseState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   isAggro: 0
