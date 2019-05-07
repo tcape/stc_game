@@ -148,7 +148,6 @@ public class LoginScene : MonoBehaviour
     {
         if (GameCanLoad())
         {
-            loginImage.gameObject.SetActive(false);
             SceneManager.LoadSceneAsync(GameStrings.Scenes.PersistentScene);
         }
         else
