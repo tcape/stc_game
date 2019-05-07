@@ -37,7 +37,7 @@ public class PersistentScene : MonoBehaviour
 
         GameCharacter = new GameCharacter(
                                            "WarriorTest",
-                                           HeroClass.Warrior,
+                                           HeroClass.Mage,
                                            new Stats()
                                            {
                                                level = 1,
@@ -72,10 +72,10 @@ public class PersistentScene : MonoBehaviour
                                            new List<string>()
                                            {
                                                "RegenerateAP",
-                                               "IronSkin",
-                                               "Savagry",
-                                               "Cleave",
-                                               "Sprint"
+                                               "Fireball",
+                                               "Curse",
+                                               "Slow",
+                                               "Teleport"
                                            }
                                            );
 
