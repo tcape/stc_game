@@ -15,13 +15,13 @@ public class Slow : AbilityAction
 
     public override void Act(AbilityManager manager)
     {
-        target.GetComponent<CharacterStats>().stats.BuffMovementSpeed(amount);
+        target.GetComponent<CharacterStats>().stats.dexterity.movementSpeed.AddModifier(new StatModifier(amount, ModType.Flat, this));
         target.GetComponent<StateController>().CauseAggro();
     }
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        target.GetComponent<CharacterStats>().stats.BuffMovementSpeed(-amount);
+        target.GetComponent<CharacterStats>().stats.dexterity.movementSpeed.RemoveAllModifiersFromSource(this);
     }
 
     public override void ResetEffectTotal()

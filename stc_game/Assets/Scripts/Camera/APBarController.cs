@@ -23,7 +23,7 @@ public class APBarController : MonoBehaviour
         //transform.LookAt(cam.transform.position - v);
         //transform.Rotate(0, 180, 0);
 
-        image.fillAmount = (float)(stats.currentAP / stats.maxAP);
+        image.fillAmount = (float)(stats.currentAP / stats.intellect.MaxAP());
 
     }
 }

@@ -22,7 +22,7 @@ public class DamageOverTime : AbilityAction
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        manager.stats.stats.BuffDefense(-effectTotal);
+        return;
     }
 
     public override void ResetEffectTotal()

@@ -39,7 +39,8 @@ public class Hero : MonoBehaviour
 
     public void LoadCharacterStats()
     {
-        characterStats.stats.LoadSavedStats(gameCharacter.Stats);
+        // characterStats.stats.LoadSavedStats(gameCharacter.Stats);
+        characterStats.stats = gameCharacter.Stats;
     }
 
     public void LoadAbilities()
