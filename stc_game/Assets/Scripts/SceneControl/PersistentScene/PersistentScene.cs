@@ -76,37 +76,20 @@ public class PersistentScene : MonoBehaviour
 
     private void Start()
     {
+        // load local resources
         hud = FindObjectOfType<HUDController>();
         hud.gameObject.SetActive(false);
         questWindowUI = FindObjectOfType<QuestWindowUI>();
         QuestManager.instance.questWindowUI = questWindowUI;
         reviveController = FindObjectOfType<ReviveController>();
-
         dialogueUI = FindObjectOfType<DialogueUI>();
         DialogueManager.instance.dialogueUI = dialogueUI;
-
-        userService.LoadUserCallback += HandleLoadUserCallback;
-
-        if (UserService.Instance.user._id != "")
-        {
-            userService.GetUser(AuthService.Instance.authUser.sub);
-        }
-        else // for now so we can start from persistent scene without having to login
-        {
-            StartCoroutine(LoadGameScene());
-        }
-
+        StartCoroutine(LoadGameScene());
     }
 
     public void SaveGameCharacterStats(Stats saveStats)
     {
         GameCharacter.Stats = saveStats;
-    }
-
-    private void HandleLoadUserCallback()
-    {
-        user = userService.user;
-        StartCoroutine(LoadGameScene());
     }
 
     private IEnumerator LoadGameScene()

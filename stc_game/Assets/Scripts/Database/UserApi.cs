@@ -8,13 +8,13 @@ public class UserApi
 {
     public static UserApi Instance { get; } = new UserApi();
     static DatabaseCollections playerCollection = DatabaseCollections.playerstest;
-    public event Action<AsyncOperation> ReadCallback;
+    public event Action<AsyncOperation> ReadUserCallback;
 
     public void CreateOrUpdate(User user)
     {
         if(user._id == "")
         {
-            BaseApi.Post(playerCollection, new BaseUser(user.Name, user.UserAuthenticationId)).completed += ReadCallback;
+            BaseApi.Post(playerCollection, new BaseUser(user.Name, user.UserAuthenticationId)).completed += ReadUserCallback;
         }
         else
         {
@@ -24,7 +24,7 @@ public class UserApi
 
     public void Read(string userId)
     {
-        BaseApi.Get(playerCollection, userId).completed += ReadCallback;
+        BaseApi.Get(playerCollection, userId).completed += ReadUserCallback;
     }
 
     public void Delete(User user)

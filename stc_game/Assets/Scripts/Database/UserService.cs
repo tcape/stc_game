@@ -18,7 +18,7 @@ public class UserService
 
     private UserService()
     {
-        userApi.ReadCallback += HandleReadCallback;
+        userApi.ReadUserCallback += HandleReadUserCallback;
         if (user == null)
         {
             user = new User();
@@ -41,6 +41,7 @@ public class UserService
         userApi.Read(authUserId);
     }
 
+    // This is the function that loads the User from restdb.io into the game
     public void LoadUserData(UnityWebRequest www)
     {
         // Because FromJson is stupid and ridiculous and old and non-modern POS arrays are not supported as unity objs
@@ -60,11 +61,11 @@ public class UserService
                     this.user = userList.users[0];
                 }
                 // If there is no user, it is the first login so create one
-                if (this.user == null || this.user._id == null)
+                if (this.user == null || !this.user.Exists())
                 {
                     CreateUser();
                 }
-                else if (this.user != null)
+                else
                 {
                     LoadUserCallback.Invoke();
                 }
@@ -75,9 +76,13 @@ public class UserService
             }
             
         }
+        else
+        {
+            Debug.Log("Load User failed completed.");
+        }
     }
 
-    public void HandleReadCallback(AsyncOperation res)
+    public void HandleReadUserCallback(AsyncOperation res)
     {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;
         UnityWebRequest www = unityWebRequestAsyncOperation.webRequest;

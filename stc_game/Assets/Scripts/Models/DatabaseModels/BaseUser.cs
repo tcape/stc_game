@@ -9,7 +9,6 @@ public class BaseUser
     public List<CharacterBaseModel> Characters;
     public GameState GameState;
     
-
     public BaseUser()
     {
         Name = "";
