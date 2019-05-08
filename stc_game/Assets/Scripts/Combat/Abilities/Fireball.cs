@@ -5,6 +5,13 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     public double damage;
+    public CharacterStats heroStats;
+
+    private void Start()
+    {
+        heroStats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+        damage = 1;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,7 +19,7 @@ public class Fireball : MonoBehaviour
         {
             if (!other.gameObject.GetComponent<CharacterStats>().stats.dead)
             {
-                other.gameObject.GetComponent<CharacterStats>().stats.TakeDamage(damage);
+                other.gameObject.GetComponent<CharacterStats>().stats.TakeAbilityDamage(heroStats, damage);
                 other.gameObject.GetComponent<StateController>().CauseAggro();
                 Destroy(gameObject);
 
