@@ -19,34 +19,66 @@ public class CheckDeathDecision : Decision
             Die(controller);
             return true;
         }
-
         return false;
     }
 
     private void Die(StateController controller)
     {
-        if (controller.GetComponent<GoldDrop>())
-            controller.GetComponent<GoldDrop>().DropGold();
-
         if (controller.gameObject.CompareTag("Enemy"))
         {
-            controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
-            if (controller.gameObject.GetComponent<SetQuestProgressOnKilled>())
-            {
-                controller.gameObject.GetComponent<SetQuestProgressOnKilled>().OnKilled();
-            }
+            controller.StartCoroutine(EnemyDeath(controller));
         }
         
         if (controller.gameObject.CompareTag("Player"))
         {
-            PersistentScene.Instance.GameCharacter.Stats.dead = true;
-            PersistentScene.Instance.reviveController.reviveCanvas.enabled = true;
+            HeroDeath(controller);
         }
-
+    }
+    
+    private void DisableComponents(StateController controller)
+    {
         controller.animator.SetBool("Dead", true);
         controller.gameObject.layer = 2;
         controller.navMeshAgent.enabled = false;
         controller.GetComponent<Rigidbody>().isKinematic = true;
         controller.GetComponent<CapsuleCollider>().enabled = false;
+    }
+
+    private IEnumerator EnemyDeath(StateController controller)
+    {
+        if (controller.GetComponent<GoldDrop>())
+            controller.GetComponent<GoldDrop>().DropGold();
+
+        controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
+        if (controller.gameObject.GetComponent<SetQuestProgressOnKilled>())
+        {
+            controller.gameObject.GetComponent<SetQuestProgressOnKilled>().OnKilled();
+        }
+
+        DisableComponents(controller);
+
+        yield return DestroyDead(controller.transform);
+    }
+
+    private void HeroDeath(StateController controller)
+    {
+        PersistentScene.Instance.GameCharacter.Stats.dead = true;
+        PersistentScene.Instance.reviveController.reviveCanvas.enabled = true;
+        DisableComponents(controller);
+    }
+
+    private IEnumerator DestroyDead(Transform parent)
+    {
+        // Wait 10 seconds
+        yield return new WaitForSeconds(10f);
+
+        // Instantiate effect
+        var deathEffect = Instantiate(Resources.Load("FX/DeathFX"), parent.transform.position + new Vector3(0, 0.4f, 0), Quaternion.Euler(parent.rotation.eulerAngles + new Vector3(90, 90, 0))) as GameObject;
+        yield return new WaitForSeconds(1f);
+
+        parent.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+        Destroy(parent.gameObject);
     }
 }
