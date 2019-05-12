@@ -32,6 +32,12 @@ public class AuthService {
         auth.Authenticate(authRequest).completed += AuthenticationCallback;
     }
 
+    public void Logout()
+    {
+        PlayerPrefs.DeleteKey(GameStrings.LocalStorage.AuthToken);
+        authUser = new AuthUser();
+    }
+
     // take an authentication result and request user data then call event to store user data
     public void GetAuthUser(AuthRes authRes)
     {

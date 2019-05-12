@@ -10,31 +10,33 @@ using UnityEngine.UI;
 
 public class PersistentScene : MonoBehaviour
 {
-    public static PersistentScene Instance;
+    public static PersistentScene Instance = null;
     public User user;
-    public UserService userService = UserService.Instance;
     public GameCharacter GameCharacter;
     public ReviveController reviveController;
     public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
     public DialogueUI dialogueUI;
     public HUDController hud;
+    public Button logoutButton;
+    public Canvas logoutCanvas;
+
     private void Awake()
     {
         if (Instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
 
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
         // moved this from Start to Awake for now so abilities are can be loaded
-
         GameCharacter = new GameCharacter(
                                            "MageTest",
                                            HeroClass.Mage,
@@ -86,6 +88,8 @@ public class PersistentScene : MonoBehaviour
     private void Start()
     {
         // load local resources
+        logoutButton.onClick.AddListener(onLogout);
+        logoutCanvas.gameObject.SetActive(false);
         hud = FindObjectOfType<HUDController>();
         hud.gameObject.SetActive(false);
         questWindowUI = FindObjectOfType<QuestWindowUI>();
@@ -94,6 +98,11 @@ public class PersistentScene : MonoBehaviour
         dialogueUI = FindObjectOfType<DialogueUI>();
         DialogueManager.instance.dialogueUI = dialogueUI;
         StartCoroutine(LoadGameScene());
+    }
+
+    private void OnEnable()
+    {
+        Debug.Log("Is Showing");
     }
 
     public void SaveGameCharacterStats(Stats saveStats)
@@ -106,5 +115,24 @@ public class PersistentScene : MonoBehaviour
         yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
         hud.FindPlayerObject();
         hud.gameObject.SetActive(true);
+    }
+
+    private void onLogout()
+    {
+        StartCoroutine(Logout());
+    }
+
+    private IEnumerator Logout()
+    {
+        logoutCanvas.gameObject.SetActive(true);
+        UserService.Instance.SaveUser();
+        AuthService.Instance.Logout();
+        yield return SceneManager.LoadSceneAsync(GameStrings.Scenes.LoginScene);
+        ResetPersistentScene();
+    }
+
+    private void ResetPersistentScene()
+    {
+        logoutCanvas.gameObject.SetActive(false);
     }
 }

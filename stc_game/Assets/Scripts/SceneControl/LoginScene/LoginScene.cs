@@ -165,9 +165,11 @@ public class LoginScene : MonoBehaviour
         else return false;
     }
 
-    public void onDestroy()
+    public void OnDestroy()
     {
         authService.AuthenticationCallback -= HandleAuthenticationCallback;
+        authService.UserIsLoggedIn -= HandleUserIsLoggedIn;
+        userService.LoadUserCallback -= HandleLoadUserCallback;
     }
 
     private void SetButtonStates()
