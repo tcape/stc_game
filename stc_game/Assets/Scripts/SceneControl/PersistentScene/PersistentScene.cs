@@ -19,6 +19,7 @@ public class PersistentScene : MonoBehaviour
     public DialogueUI dialogueUI;
     public HUDController hud;
     public Button logoutButton;
+    public Button exitButton;
     public LogoutCanvas logoutCanvas;
 
     private void Awake()
@@ -42,6 +43,7 @@ public class PersistentScene : MonoBehaviour
         // load local resources 
         // (moving all logic from start function to this first time function)
         logoutButton.onClick.AddListener(onLogout);
+        exitButton.onClick.AddListener(onExit);
         logoutCanvas = FindObjectOfType<LogoutCanvas>();
         questWindowUI = FindObjectOfType<QuestWindowUI>();
         reviveController = FindObjectOfType<ReviveController>();
@@ -72,6 +74,11 @@ public class PersistentScene : MonoBehaviour
         logoutCanvas.gameObject.SetActive(true);
         UserService.Instance.SaveUser();
         AuthService.Instance.Logout();
+        Application.Quit();
+    }
+
+    private void onExit()
+    {
         Application.Quit();
     }
 
