@@ -19,7 +19,7 @@ public class PersistentScene : MonoBehaviour
     public DialogueUI dialogueUI;
     public HUDController hud;
     public Button logoutButton;
-    public Canvas logoutCanvas;
+    public LogoutCanvas logoutCanvas;
 
     private void Awake()
     {
@@ -34,6 +34,49 @@ public class PersistentScene : MonoBehaviour
             return;
         }
 
+        InstantiateGameCharacter();
+    }
+
+    private void Start()
+    {
+        // load local resources 
+        // (moving all logic from start function to this first time function)
+        logoutButton.onClick.AddListener(onLogout);
+        logoutCanvas = FindObjectOfType<LogoutCanvas>();
+        questWindowUI = FindObjectOfType<QuestWindowUI>();
+        reviveController = FindObjectOfType<ReviveController>();
+        hud = FindObjectOfType<HUDController>();
+        dialogueUI = FindObjectOfType<DialogueUI>();
+
+        logoutCanvas.gameObject.SetActive(false);
+        hud.gameObject.SetActive(false);
+        QuestManager.instance.questWindowUI = questWindowUI;
+        DialogueManager.instance.dialogueUI = dialogueUI;
+        StartCoroutine(LoadGameScene());
+    }
+
+    public void SaveGameCharacterStats(Stats saveStats)
+    {
+        GameCharacter.Stats = saveStats;
+    }
+
+    private IEnumerator LoadGameScene()
+    {
+        yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
+        hud.FindPlayerObject();
+        hud.gameObject.SetActive(true);
+    }
+
+    private void onLogout()
+    {
+        logoutCanvas.gameObject.SetActive(true);
+        UserService.Instance.SaveUser();
+        AuthService.Instance.Logout();
+        Application.Quit();
+    }
+
+    public void InstantiateGameCharacter()
+    {
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
         // moved this from Start to Awake for now so abilities are can be loaded
@@ -82,57 +125,5 @@ public class PersistentScene : MonoBehaviour
                                            );
 
         GameCharacter.Stats.Setup();
-      
-    }
-
-    private void Start()
-    {
-        // load local resources
-        logoutButton.onClick.AddListener(onLogout);
-        logoutCanvas.gameObject.SetActive(false);
-        hud = FindObjectOfType<HUDController>();
-        hud.gameObject.SetActive(false);
-        questWindowUI = FindObjectOfType<QuestWindowUI>();
-        QuestManager.instance.questWindowUI = questWindowUI;
-        reviveController = FindObjectOfType<ReviveController>();
-        dialogueUI = FindObjectOfType<DialogueUI>();
-        DialogueManager.instance.dialogueUI = dialogueUI;
-        StartCoroutine(LoadGameScene());
-    }
-
-    private void OnEnable()
-    {
-        Debug.Log("Is Showing");
-    }
-
-    public void SaveGameCharacterStats(Stats saveStats)
-    {
-        GameCharacter.Stats = saveStats;
-    }
-
-    private IEnumerator LoadGameScene()
-    {
-        yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
-        hud.FindPlayerObject();
-        hud.gameObject.SetActive(true);
-    }
-
-    private void onLogout()
-    {
-        StartCoroutine(Logout());
-    }
-
-    private IEnumerator Logout()
-    {
-        logoutCanvas.gameObject.SetActive(true);
-        UserService.Instance.SaveUser();
-        AuthService.Instance.Logout();
-        yield return SceneManager.LoadSceneAsync(GameStrings.Scenes.LoginScene);
-        ResetPersistentScene();
-    }
-
-    private void ResetPersistentScene()
-    {
-        logoutCanvas.gameObject.SetActive(false);
     }
 }

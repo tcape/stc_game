@@ -23,6 +23,7 @@ public class TownScene : MonoBehaviour
             hero.transform.parent = GameObject.FindGameObjectWithTag("HeroAndCamera").transform;
             hero.GetComponent<Hero>().LoadAbilities();
             hero.GetComponent<Hero>().LoadCharacterStats();
+            Debug.Log("successish");
         }
         
     }
