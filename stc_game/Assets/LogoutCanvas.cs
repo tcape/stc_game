@@ -10,10 +10,4 @@ public class LogoutCanvas : MonoBehaviour
     {
         logoutCanvas = gameObject.GetComponent<Canvas>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

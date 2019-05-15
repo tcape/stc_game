@@ -41,11 +41,7 @@ public class AuthService {
 
     public bool isLoggedIn()
     {
-        if (PlayerPrefs.GetString(GameStrings.LocalStorage.AuthToken) != "")
-        {
-            return true;
-        }
-        return false;
+        return PlayerPrefs.GetString(GameStrings.LocalStorage.AuthToken) != "";
     }
 
     public void Logout()
