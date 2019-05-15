@@ -21,4 +21,9 @@ namespace GameStrings
         public const string CaveEntrancePosition = "CaveEntrancePosition";
         public const string DungeonStartPosition = "DungeonStartPosition";
     }
+
+    public static class LocalStorage
+    {
+        public const string AuthToken = "AuthToken";
+    }
 }

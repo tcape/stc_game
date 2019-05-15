@@ -10,31 +10,83 @@ using UnityEngine.UI;
 
 public class PersistentScene : MonoBehaviour
 {
-    public static PersistentScene Instance;
+    public static PersistentScene Instance = null;
     public User user;
-    public UserService userService = UserService.Instance;
     public GameCharacter GameCharacter;
     public ReviveController reviveController;
     public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
     public DialogueUI dialogueUI;
     public HUDController hud;
+    public Button logoutButton;
+    public Button exitButton;
+    public LogoutCanvas logoutCanvas;
+
     private void Awake()
     {
         if (Instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
 
+        InstantiateGameCharacter();
+    }
+
+    private void Start()
+    {
+        // load local resources 
+        // (moving all logic from start function to this first time function)
+        logoutButton.onClick.AddListener(onLogout);
+        exitButton.onClick.AddListener(onExit);
+        logoutCanvas = FindObjectOfType<LogoutCanvas>();
+        questWindowUI = FindObjectOfType<QuestWindowUI>();
+        reviveController = FindObjectOfType<ReviveController>();
+        hud = FindObjectOfType<HUDController>();
+        dialogueUI = FindObjectOfType<DialogueUI>();
+
+        logoutCanvas.gameObject.SetActive(false);
+        hud.gameObject.SetActive(false);
+        QuestManager.instance.questWindowUI = questWindowUI;
+        DialogueManager.instance.dialogueUI = dialogueUI;
+        StartCoroutine(LoadGameScene());
+    }
+
+    public void SaveGameCharacterStats(Stats saveStats)
+    {
+        GameCharacter.Stats = saveStats;
+    }
+
+    private IEnumerator LoadGameScene()
+    {
+        yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
+        hud.FindPlayerObject();
+        hud.gameObject.SetActive(true);
+    }
+
+    private void onLogout()
+    {
+        logoutCanvas.gameObject.SetActive(true);
+        UserService.Instance.SaveUser();
+        AuthService.Instance.Logout();
+        Application.Quit();
+    }
+
+    private void onExit()
+    {
+        Application.Quit();
+    }
+
+    public void InstantiateGameCharacter()
+    {
         // Substitue GameCharacter to be replaced by GameCharacter data from database
         // This is just for testing
         // moved this from Start to Awake for now so abilities are can be loaded
-
         GameCharacter = new GameCharacter(
                                            "MageTest",
                                            HeroClass.Mage,
@@ -80,31 +132,5 @@ public class PersistentScene : MonoBehaviour
                                            );
 
         GameCharacter.Stats.Setup();
-      
-    }
-
-    private void Start()
-    {
-        // load local resources
-        hud = FindObjectOfType<HUDController>();
-        hud.gameObject.SetActive(false);
-        questWindowUI = FindObjectOfType<QuestWindowUI>();
-        QuestManager.instance.questWindowUI = questWindowUI;
-        reviveController = FindObjectOfType<ReviveController>();
-        dialogueUI = FindObjectOfType<DialogueUI>();
-        DialogueManager.instance.dialogueUI = dialogueUI;
-        StartCoroutine(LoadGameScene());
-    }
-
-    public void SaveGameCharacterStats(Stats saveStats)
-    {
-        GameCharacter.Stats = saveStats;
-    }
-
-    private IEnumerator LoadGameScene()
-    {
-        yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
-        hud.FindPlayerObject();
-        hud.gameObject.SetActive(true);
     }
 }
