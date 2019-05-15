@@ -35,11 +35,14 @@ public class LoginScene : MonoBehaviour
         emailInput.onValueChanged.AddListener(ValidateEmail);
         passwordInput.onValueChanged.AddListener(ValidatePassword);
 
-
-
         // disable form buttons until user inputs a valid email
         loginImage.gameObject.SetActive(false);
         ToggleButtonStates(false);
+        if (authService.isLoggedIn())
+        {
+            loginImage.gameObject.SetActive(true);
+            authService.LoginExistingUser();
+        }
     }
 
     void Update()
@@ -93,7 +96,7 @@ public class LoginScene : MonoBehaviour
     public void OnLogin()
     {
         loginImage.gameObject.SetActive(true);
-        authService.LoginExistingUser(emailInput.text, passwordInput.text);
+        authService.LoginUserWithEmailAndPassword(emailInput.text, passwordInput.text);
     }
 
     // handles the sign up or the authentication result from the auth service

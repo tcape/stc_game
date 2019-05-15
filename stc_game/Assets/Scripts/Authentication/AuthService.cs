@@ -11,7 +11,7 @@ public class AuthService {
     // instantiating public variables
     private AuthApi auth = AuthApi.Instance;
     public AuthUser authUser { get; private set; }
-    private AuthReq authRequest;
+    private AuthReq authRequest; 
     public event Action<AsyncOperation> AuthenticationCallback;
     public event Action UserIsLoggedIn;
 
@@ -26,21 +26,37 @@ public class AuthService {
     }
 
     // creates an http request with user credentials and attempts to authenticate the user
-    public void LoginExistingUser(string email, string password) {
+    public void LoginUserWithEmailAndPassword(string email, string password) {
 
         authRequest = new AuthReq(email, password);
         auth.Authenticate(authRequest).completed += AuthenticationCallback;
     }
 
+    public void LoginExistingUser()
+    {
+        AuthRes res = new AuthRes();
+        res.access_token = PlayerPrefs.GetString(GameStrings.LocalStorage.AuthToken);
+        GetAuthUser(res);
+    }
+
+    public bool isLoggedIn()
+    {
+        if (PlayerPrefs.GetString(GameStrings.LocalStorage.AuthToken) != "")
+        {
+            return true;
+        }
+        return false;
+    }
+
     public void Logout()
     {
         PlayerPrefs.DeleteKey(GameStrings.LocalStorage.AuthToken);
-        authUser = new AuthUser();
     }
 
     // take an authentication result and request user data then call event to store user data
     public void GetAuthUser(AuthRes authRes)
     {
+        PlayerPrefs.SetString(GameStrings.LocalStorage.AuthToken, authRes.access_token);
         auth.Read(authRes.access_token).completed += GetAuthUserCallback;
     }
 
