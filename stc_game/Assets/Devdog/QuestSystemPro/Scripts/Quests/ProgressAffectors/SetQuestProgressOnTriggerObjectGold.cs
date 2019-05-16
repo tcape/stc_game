@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 using Devdog.General;
@@ -37,8 +37,7 @@ namespace Devdog.QuestSystemPro
             {
                 progress.progress += (float)gold.amount;
                 progress.Execute();
-
-
+                Debug.Log("Gold given to quest onUse " + gold.amount.ToString());
             }
 
             return false;
@@ -50,7 +49,7 @@ namespace Devdog.QuestSystemPro
             {
                 progress.progress += (float)gold.amount;
                 progress.Execute();
-
+                Debug.Log("Gold given to quest onUnuse " + gold.amount.ToString());
             }
 
             return false;
