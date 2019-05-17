@@ -15,14 +15,11 @@ namespace Devdog.QuestSystemPro
             OnUnUse
         }
 
-
-
         public QuestProgressDecorator progress;
 
         [Header("Trigger configuration")]
         [SerializeField]
         private Use _use;
-
 
         public  bool OnTriggerUsed(Player player)
         {
