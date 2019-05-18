@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,12 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Chest Armor
   Icon: {fileID: 21300000, guid: ab0226cd28d392f419078c390d24f898, type: 3}
-  StrengthBonus: 2
-  AgilityBonus: 0
-  IntelligenceBonus: 0
-  VitalityBonus: 4
-  StrengthPercentBonus: 0
-  AgilityPercentBonus: 0
-  IntelligencePercentBonus: 0
-  VitalityPercentBonus: 0
+  characterPanel: {fileID: 0}
+  strengthBonus: 1
+  agilityBonus: 0
+  intellectBonus: 0
+  attackBonus: 0
+  defenseBonus: 1
+  critChanceBonus: 0
+  critPowerBonus: 0
+  abilityCritChanceBonus: 0
+  abilityCritPowerBonus: 0
+  dodgeBonus: 0
+  movementBonus: 0
+  strengthPercentBonus: 0
+  agilityPercentBonus: 0
+  intellectPercentBonus: 0
+  attackPercentBonus: 0
+  defensePercentBonus: 0
+  critChancePercentBonus: 0
+  critPowerPercentBonus: 0
+  abilityCritChancePercentBonus: 0
+  abilityCritPowerPercentBonus: 0
+  dodgePercentBonus: 0
+  movementPercentBonus: 0
   EquipmentType: 1

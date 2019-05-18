@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿/*using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -93,3 +93,4 @@ namespace Kryz.CharacterStats.Examples
 		}
 	}
 }
+*/

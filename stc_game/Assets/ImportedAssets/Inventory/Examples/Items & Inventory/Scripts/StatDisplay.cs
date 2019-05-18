@@ -10,8 +10,8 @@ namespace Kryz.CharacterStats.Examples
 		public Text NameText;
 		public Text ValueText;
 
-		[NonSerialized]
-		public CharacterStat Stat;
+		//[NonSerialized]
+		//public CharacterStat Stat;
 
 		private void OnValidate()
 		{
@@ -22,12 +22,12 @@ namespace Kryz.CharacterStats.Examples
 
 		public void OnPointerEnter(PointerEventData eventData)
 		{
-			StatTooltip.Instance.ShowTooltip(Stat, NameText.text);
+			//StatTooltip.Instance.ShowTooltip(Stat, NameText.text);
 		}
 
 		public void OnPointerExit(PointerEventData eventData)
 		{
-			StatTooltip.Instance.HideTooltip();
+			//StatTooltip.Instance.HideTooltip();
 		}
 	}
 }

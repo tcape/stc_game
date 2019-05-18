@@ -39,15 +39,13 @@ namespace Kryz.CharacterStats.Examples
 
 			sb.Length = 0;
 
-			AddStatText(item.StrengthBonus, " Strength");
-			AddStatText(item.AgilityBonus, " Agility");
-			AddStatText(item.IntelligenceBonus, " Intelligence");
-			AddStatText(item.VitalityBonus, " Vitality");
+			AddStatText(item.strengthBonus, " Strength");
+			AddStatText(item.dexterityBonus, " Agility");
+			AddStatText(item.intellectBonus, " Intelligence");
 
-			AddStatText(item.StrengthPercentBonus * 100, "% Strength");
-			AddStatText(item.AgilityPercentBonus * 100, "% Agility");
-			AddStatText(item.IntelligencePercentBonus * 100, "% Intelligence");
-			AddStatText(item.VitalityPercentBonus * 100, "% Vitality");
+			AddStatText(item.strengthPercentBonus * 100, "% Strength");
+			AddStatText(item.dexterityPercentBonus * 100, "% Agility");
+			AddStatText(item.intellectPercentBonus * 100, "% Intelligence");
 
 			statsText.text = sb.ToString();
 		}

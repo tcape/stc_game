@@ -2,22 +2,14 @@
 
 namespace Kryz.CharacterStats.Examples
 {
-	public class Character : MonoBehaviour
+	public class InventoryManager : MonoBehaviour
 	{
-		public CharacterStat Strength;
-		public CharacterStat Agility;
-		public CharacterStat Intelligence;
-		public CharacterStat Vitality;
-
 		[SerializeField] Inventory inventory;
 		[SerializeField] EquipmentPanel equipmentPanel;
 		[SerializeField] StatPanel statPanel;
 
 		private void Awake()
 		{
-			statPanel.SetStats(Strength, Agility, Intelligence, Vitality);
-			statPanel.UpdateStatValues();
-
 			inventory.OnItemRightClickedEvent += EquipFromInventory;
 			equipmentPanel.OnItemRightClickedEvent += UnequipFromEquipPanel;
 		}

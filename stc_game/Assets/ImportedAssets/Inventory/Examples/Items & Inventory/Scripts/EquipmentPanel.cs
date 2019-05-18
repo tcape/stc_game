@@ -17,7 +17,7 @@ namespace Kryz.CharacterStats.Examples
 				equipmentSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
 			}
 		}
-
+        
 		private void OnValidate()
 		{
 			equipmentSlots = equipmentSlotsParent.GetComponentsInChildren<EquipmentSlot>();

@@ -36,15 +36,11 @@ namespace Kryz.CharacterStats.Examples
             statDisplays = GetComponentsInChildren<StatDisplay>();
         }
 
-        public void SetStats(params CharacterStat[] charStats)
-        {
-            //setup stats? I guess?
-            //currently leaving this empty to avoid breaking external classes before I clean them up
-        }
-
         public void UpdateStatValues()
         {
-            stats = GetComponentInParent<InventoryPlayerTracker>().playerStats;
+            var tracker = GetComponentInParent<InventoryPlayerTracker>();
+            tracker.FindPlayerObject();
+            stats = tracker.playerStats;
 
             strengthValue.GetComponentInChildren<Text>().text = stats.strength.currentValue.ToString();
             dexterityValue.GetComponentInChildren<Text>().text = stats.dexterity.currentValue.ToString();
@@ -55,7 +51,7 @@ namespace Kryz.CharacterStats.Examples
             critMultiValue.GetComponentInChildren<Text>().text = stats.strength.meleeCritPower.currentValue.ToString() + "x";
             spellCritValue.GetComponentInChildren<Text>().text = (stats.intellect.abilityCritRate.currentValue * 100).ToString() + "%";
             spellCritMultiValue.GetComponentInChildren<Text>().text = stats.intellect.abilityCritPower.currentValue.ToString() + "x";
-            dodgeValue.GetComponentInChildren<Text>().text = stats.dexterity.dodgeRate.currentValue.ToString();
+            dodgeValue.GetComponentInChildren<Text>().text = (stats.dexterity.dodgeRate.currentValue * 100).ToString() + "%";
             movementValue.GetComponentInChildren<Text>().text = stats.dexterity.movementSpeed.currentValue.ToString();
         }
     }
