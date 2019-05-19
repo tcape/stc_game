@@ -712,7 +712,7 @@ PrefabInstance:
     - target: {fileID: 6682497449651926683, guid: a92027538263852439b234cd6a1dd83f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7541939
+      value: 0.70504504
       objectReference: {fileID: 0}
     - target: {fileID: 6682497449651926683, guid: a92027538263852439b234cd6a1dd83f,
         type: 3}
@@ -722,7 +722,7 @@ PrefabInstance:
     - target: {fileID: 6682497449651926683, guid: a92027538263852439b234cd6a1dd83f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.65665174
+      value: 0.70916253
       objectReference: {fileID: 0}
     - target: {fileID: 6682497449651926683, guid: a92027538263852439b234cd6a1dd83f,
         type: 3}
@@ -737,7 +737,7 @@ PrefabInstance:
     - target: {fileID: 6682497449651926683, guid: a92027538263852439b234cd6a1dd83f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 97.91
+      value: 89.66601
       objectReference: {fileID: 0}
     - target: {fileID: 6682497449651926683, guid: a92027538263852439b234cd6a1dd83f,
         type: 3}
@@ -21084,14 +21084,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 181
       objectReference: {fileID: 0}
-    - target: {fileID: 3351782, guid: faefc7bf0b06adc4497fd8b1694fad68, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 4cc906de70ac5624b9b10b53b2b6fb9b, type: 3}
     - target: {fileID: 2305866, guid: faefc7bf0b06adc4497fd8b1694fad68, type: 3}
       propertyPath: m_DynamicOccludee
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3351782, guid: faefc7bf0b06adc4497fd8b1694fad68, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 4cc906de70ac5624b9b10b53b2b6fb9b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faefc7bf0b06adc4497fd8b1694fad68, type: 3}
 --- !u!1001 &1038153166
@@ -31186,6 +31186,10 @@ PrefabInstance:
     - target: {fileID: 9166162718886897301, guid: 1110ef42aa85874409d8c983760a3fc2,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13703074, guid: 1110ef42aa85874409d8c983760a3fc2, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
