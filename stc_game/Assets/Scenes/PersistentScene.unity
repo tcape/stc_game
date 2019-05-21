@@ -2092,6 +2092,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699381587}
   m_CullTransparentMesh: 0
+--- !u!1 &727626976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8325416401253924742, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1274455592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &728319245
 GameObject:
   m_ObjectHideFlags: 0
@@ -9025,38 +9031,38 @@ PrefabInstance:
     - target: {fileID: 2687272389533752099, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 205.15068
+      value: 200.75731
       objectReference: {fileID: 0}
     - target: {fileID: 2687272389533752099, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 68.38356
+      value: 65.06024
       objectReference: {fileID: 0}
     - target: {fileID: 2687272389533555577, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75.39726
+      value: 72.4957
       objectReference: {fileID: 0}
     - target: {fileID: 2687272389533555577, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 43.835617
+      value: 44.612736
       objectReference: {fileID: 0}
     - target: {fileID: 2687272389533531691, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 28.054794
+      value: 29.741823
       objectReference: {fileID: 0}
     - target: {fileID: 2687272389533531691, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 29.80822
+      value: 31.600687
       objectReference: {fileID: 0}
     - target: {fileID: 2687272389538290099, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: spellCritMultiValue
       value: 
-      objectReference: {fileID: 1786333107}
+      objectReference: {fileID: 727626976}
     - target: {fileID: 2687272390369122153, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
         type: 3}
       propertyPath: m_IsActive
@@ -13367,12 +13373,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774804430}
   m_CullTransparentMesh: 0
---- !u!1 &1786333107 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8297893496500322549, guid: 5a83699b2d52bbf4aa93cc1f64e47d8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1274455592}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1807882592
 GameObject:
   m_ObjectHideFlags: 0

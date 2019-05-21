@@ -24,7 +24,7 @@ MonoBehaviour:
   critPowerBonus: 0
   abilityCritChanceBonus: 0
   abilityCritPowerBonus: 0
-  dodgeBonus: 2
+  dodgeBonus: 0.02
   movementBonus: 0
   strengthPercentBonus: 0.05
   dexterityPercentBonus: 0

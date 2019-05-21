@@ -44,17 +44,17 @@ namespace Kryz.CharacterStats.Examples
             stats = tracker.playerStats;
 
             characterLevel.GetComponentInChildren<Text>().text = stats.level.ToString();
-            strengthValue.GetComponentInChildren<Text>().text = stats.strength.currentValue.ToString();
-            dexterityValue.GetComponentInChildren<Text>().text = stats.dexterity.currentValue.ToString();
-            intellectValue.GetComponentInChildren<Text>().text = stats.intellect.currentValue.ToString();
-            defenseValue.GetComponentInChildren<Text>().text = stats.strength.defense.currentValue.ToString();
-            attackValue.GetComponentInChildren<Text>().text = stats.strength.attack.currentValue.ToString();
-            critValue.GetComponentInChildren<Text>().text = (stats.dexterity.meleeCritRate.currentValue * 100).ToString() + "%";
-            critMultiValue.GetComponentInChildren<Text>().text = stats.strength.meleeCritPower.currentValue.ToString() + "x";
-            spellCritValue.GetComponentInChildren<Text>().text = (stats.intellect.abilityCritRate.currentValue * 100).ToString() + "%";
-            spellCritMultiValue.GetComponentInChildren<Text>().text = stats.intellect.abilityCritPower.currentValue.ToString() + "x";
-            dodgeValue.GetComponentInChildren<Text>().text = (stats.dexterity.dodgeRate.currentValue * 100).ToString() + "%";
-            movementValue.GetComponentInChildren<Text>().text = stats.dexterity.movementSpeed.currentValue.ToString();
+            strengthValue.GetComponentInChildren<Text>().text = stats.strength.currentValue.ToString("0.##");
+            dexterityValue.GetComponentInChildren<Text>().text = stats.dexterity.currentValue.ToString("0.##");
+            intellectValue.GetComponentInChildren<Text>().text = stats.intellect.currentValue.ToString("0.##");
+            defenseValue.GetComponentInChildren<Text>().text = stats.strength.defense.currentValue.ToString("0.##");
+            attackValue.GetComponentInChildren<Text>().text = stats.strength.attack.currentValue.ToString("0.##");
+            critValue.GetComponentInChildren<Text>().text = (stats.dexterity.meleeCritRate.currentValue * 100).ToString("0.##") + "%";
+            critMultiValue.GetComponentInChildren<Text>().text = stats.strength.meleeCritPower.currentValue.ToString("0.##") + "x";
+            spellCritValue.GetComponentInChildren<Text>().text = (stats.intellect.abilityCritRate.currentValue * 100).ToString("0.##") + "%";
+            spellCritMultiValue.GetComponentInChildren<Text>().text = stats.intellect.abilityCritPower.currentValue.ToString("0.##") + "x";
+            dodgeValue.GetComponentInChildren<Text>().text = (stats.dexterity.dodgeRate.currentValue * 100).ToString("0.#") + "%";
+            movementValue.GetComponentInChildren<Text>().text = stats.dexterity.movementSpeed.currentValue.ToString("0.#");
         }
     }
 }

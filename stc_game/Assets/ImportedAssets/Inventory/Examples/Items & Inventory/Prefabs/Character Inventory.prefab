@@ -5028,6 +5028,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpellCritValue
       objectReference: {fileID: 0}
+    - target: {fileID: 4633874132248585703, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Text
+      value: dodge
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471059041364421018, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Text
+      value: speed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
 --- !u!1 &2687272389545029257 stripped
