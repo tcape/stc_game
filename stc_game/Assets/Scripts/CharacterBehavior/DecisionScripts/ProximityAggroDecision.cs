@@ -14,7 +14,9 @@ public class ProximityAggroDecision : Decision
 
     private bool Proximity(StateController controller)
     {
-        if(controller.target)
+        if (!controller.target)
+            controller.target = GameObject.FindGameObjectWithTag("Player");
+        if(!controller.target.GetComponent<CharacterStats>().stats.dead)
         {
             var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
             return distance < controller.stats.aggroDistance;
