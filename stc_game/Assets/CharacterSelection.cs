@@ -11,7 +11,7 @@ public class CharacterSelection : MonoBehaviour
     public GameObject warrior;
     private GameObject activeCharacter;
 
-    void Start()
+    private void Start()
     {
         mageButton.onClick.AddListener(OnClickMageButton);
         warriorButton.onClick.AddListener(OnClickWarriorButton);
@@ -46,10 +46,9 @@ public class CharacterSelection : MonoBehaviour
         material.renderQueue = -1;
     }
 
-    IEnumerator FadeCharacter(Material material, float lerpDuration)
+    private IEnumerator FadeCharacter(Material material, float lerpDuration)
     {
         SetMaterialToTransparentFade(material);
-
         var meshColor = material.color;
         Color startLerp = new Color(meshColor.r, meshColor.g, meshColor.b, 0f);
         Color targetLerp = new Color(meshColor.r, meshColor.g, meshColor.b, 1f);
@@ -75,12 +74,12 @@ public class CharacterSelection : MonoBehaviour
                 lerping = false;
             }
         }
-
+      
         SetMaterialToOpaque(material);
         yield break;
     }
 
-    public void OnClickMageButton()
+    private void OnClickMageButton()
     {
         if (activeCharacter == warrior)
         {
@@ -88,13 +87,14 @@ public class CharacterSelection : MonoBehaviour
             activeCharacter = mage;
             var teleportEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Effect_2")) as GameObject;
             var poofEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Burst")) as GameObject;
-            teleportEffect.transform.position = mage.transform.position + new Vector3(.3f, 1.7f, 0f);
-            poofEffect.transform.position = mage.transform.position + new Vector3(.1f, 1.4f, 0f);
-            StartCoroutine(FadeCharacter(mage.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.5f));
+            teleportEffect.transform.position = mage.transform.position + new Vector3(-0.3f, 1.7f, 0f);
+            poofEffect.transform.position = mage.transform.position + new Vector3(0f, 1.4f, 0f);
+            StartCoroutine(FadeCharacter(mage.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.6f));
+            MageAnimation();
         }
     }
 
-    public void OnClickWarriorButton()
+    private void OnClickWarriorButton()
     {
         if (activeCharacter == mage)
         {
@@ -103,8 +103,8 @@ public class CharacterSelection : MonoBehaviour
             var warriorEffectBurst = Instantiate(Resources.Load("FX/Warrior_Entrance_Burst")) as GameObject;
             var warriorEntrance = Instantiate(Resources.Load("FX/Warrior_Entrance_Effect")) as GameObject;
             warriorEffectBurst.transform.position = warrior.transform.position + new Vector3(0f, 1.2f, 0f);
-            warriorEntrance.transform.position = warrior.transform.position + new Vector3(-.2f, 1.2f, 0f);
-            StartCoroutine(FadeCharacter(warrior.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.5f));
+            warriorEntrance.transform.position = warrior.transform.position + new Vector3(-0.3f, 1.2f, 0f);
+            StartCoroutine(FadeCharacter(warrior.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.6f));
             StartCoroutine(WarriorAttacks());
         }
     }
@@ -115,8 +115,16 @@ public class CharacterSelection : MonoBehaviour
         animator.SetBool("Attacking", true);
         animator.SetBool("Moving", false);
         animator.SetInteger("Attack", 1);
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(.2f);
+        animator.SetInteger("Attack", 2);
+        yield return new WaitForSeconds(.5f);
         animator.SetInteger("Attack", 0);
         animator.SetBool("Attacking", false);
+    }
+
+    private void MageAnimation()
+    {
+        var animator = mage.GetComponent<Animator>();
+        animator.SetTrigger("MoveAttack1");
     }
 }
