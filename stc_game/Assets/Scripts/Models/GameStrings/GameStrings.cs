@@ -12,6 +12,7 @@ namespace GameStrings
         public const string DungeonScene = "Dungeon";
         public const string LoginScene = "Login";
         public const string PersistentScene = "PersistentScene";
+        public const string CharacterSelectionScene = "CharacterSelectionScene";
     }
 
     public static class Positions

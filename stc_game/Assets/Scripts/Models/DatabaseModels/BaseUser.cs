@@ -29,11 +29,4 @@ public class BaseUser
         UserAuthenticationId = userAuthenticationId;
         Characters = new List<CharacterBaseModel>();
     }
-
-    public BaseUser(string name, string userAuthenticationId, CharacterBaseModel character)
-    {
-        Name = name;
-        UserAuthenticationId = userAuthenticationId;
-        Characters = new List<CharacterBaseModel>();
-    }
 }

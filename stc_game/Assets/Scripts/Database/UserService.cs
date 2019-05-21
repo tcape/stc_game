@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class UserService
 {
     public static UserService Instance { get; } = new UserService();
-    public User user { get; private set; } = new User();
+    public User User { get; private set; } = new User();
     private UserApi userApi = UserApi.Instance;
     public event Action LoadUserCallback;
 
@@ -19,21 +19,21 @@ public class UserService
     private UserService()
     {
         userApi.ReadUserCallback += HandleReadUserCallback;
-        if (user == null)
+        if (User == null)
         {
-            user = new User();
+            User = new User();
         }
     }
 
     public void CreateUser()
     {
-        user = new User(AuthService.Instance.authUser.nickname, AuthService.Instance.authUser.sub);
-        userApi.CreateOrUpdate(user);
+        User = new User(AuthService.Instance.authUser.nickname, AuthService.Instance.authUser.sub);
+        userApi.CreateOrUpdate(User);
     }
 
     public void SaveUser()
     {
-        userApi.CreateOrUpdate(user);
+        userApi.CreateOrUpdate(User);
     }
 
     public void GetUser(string authUserId)
@@ -58,10 +58,10 @@ public class UserService
                 userList = JsonUtility.FromJson<JsonUserWrapper>(jsonUser);
                 if (userList.users.Count > 0)
                 {
-                    this.user = userList.users[0];
+                    this.User = userList.users[0];
                 }
                 // If there is no user, it is the first login so create one
-                if (this.user == null || !this.user.Exists())
+                if (this.User == null || !this.User.Exists())
                 {
                     CreateUser();
                 }
