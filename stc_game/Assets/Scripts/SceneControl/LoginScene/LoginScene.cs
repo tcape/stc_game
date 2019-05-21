@@ -151,7 +151,7 @@ public class LoginScene : MonoBehaviour
     {
         if (GameCanLoad())
         {
-            SceneManager.LoadSceneAsync(GameStrings.Scenes.PersistentScene);
+            SceneManager.LoadSceneAsync(GameStrings.Scenes.CharacterSelectionScene);
         }
         else
         {

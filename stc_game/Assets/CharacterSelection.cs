@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
 {
     public Button mageButton;
     public Button warriorButton;
+    public Button playButton;
     public GameObject mage;
     public GameObject warrior;
     private GameObject activeCharacter;
@@ -15,12 +17,13 @@ public class CharacterSelection : MonoBehaviour
     {
         mageButton.onClick.AddListener(OnClickMageButton);
         warriorButton.onClick.AddListener(OnClickWarriorButton);
+        playButton.onClick.AddListener(OnClickPlayButton);
         warrior = GameObject.Find("WarriorPrefab");
         mage = GameObject.Find("MagePrefab");
         warrior.SetActive(false);
         mage.SetActive(false);
-        activeCharacter = warrior;
-        activeCharacter.SetActive(true);
+        activeCharacter = null;
+        StartCoroutine(LoadCharacter());
     }
 
     private void SetMaterialToTransparentFade(Material material)
@@ -44,6 +47,12 @@ public class CharacterSelection : MonoBehaviour
         material.EnableKeyword("_ALPHABLEND_ON");
         material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
         material.renderQueue = -1;
+    }
+
+    private IEnumerator LoadCharacter()
+    {
+        yield return new WaitForSeconds(.1f);
+        OnClickWarriorButton();
     }
 
     private IEnumerator FadeCharacter(Material material, float lerpDuration)
@@ -84,6 +93,9 @@ public class CharacterSelection : MonoBehaviour
         if (activeCharacter == warrior)
         {
             activeCharacter.SetActive(false);
+        }
+        if (activeCharacter != mage)
+        {
             activeCharacter = mage;
             var teleportEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Effect_2")) as GameObject;
             var poofEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Burst")) as GameObject;
@@ -99,6 +111,9 @@ public class CharacterSelection : MonoBehaviour
         if (activeCharacter == mage)
         {
             activeCharacter.SetActive(false);
+        }
+        if (activeCharacter != warrior)
+        {
             activeCharacter = warrior;
             var warriorEffectBurst = Instantiate(Resources.Load("FX/Warrior_Entrance_Burst")) as GameObject;
             var warriorEntrance = Instantiate(Resources.Load("FX/Warrior_Entrance_Effect")) as GameObject;
@@ -107,6 +122,11 @@ public class CharacterSelection : MonoBehaviour
             StartCoroutine(FadeCharacter(warrior.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.6f));
             StartCoroutine(WarriorAttacks());
         }
+    }
+
+    private void OnClickPlayButton()
+    {
+        SceneManager.LoadSceneAsync(GameStrings.Scenes.PersistentScene);
     }
 
     private IEnumerator WarriorAttacks()
