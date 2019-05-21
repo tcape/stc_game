@@ -16810,6 +16810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Female_Peasant_01
       objectReference: {fileID: 0}
+    - target: {fileID: 108664, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 458256, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
       propertyPath: m_LocalPosition.x
       value: -69.7
@@ -18222,7 +18226,6 @@ Transform:
   - {fileID: 1669932487}
   - {fileID: 1255372231}
   - {fileID: 2026621246}
-  - {fileID: 1410398363}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 4.3980002, z: 0}
@@ -21742,12 +21745,6 @@ Transform:
   m_Father: {fileID: 2095308690}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1410398363 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324,
-    type: 3}
-  m_PrefabInstance: {fileID: 2092701462}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1412912678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4224730186704144, guid: 373ac020d10c6b74e91bfe01a3eb0ae2,
@@ -23831,6 +23828,10 @@ PrefabInstance:
     - target: {fileID: 194510, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
       propertyPath: m_Name
       value: Character_Male_Peasant_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 194510, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 497166, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34078,75 +34079,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d3dc1fd42040a4ca89e58af09e14fc, type: 3}
---- !u!1001 &2092701462
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1077369719}
-    m_Modifications:
-    - target: {fileID: 124030, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_Name
-      value: Character_Goblin_Female_Complete
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.4219604
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.317798
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 4.3980002
-      objectReference: {fileID: 0}
-    - target: {fileID: 474098, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1138544528998633906, guid: 60e7ba47beb39ed4ebd84acccd5ec324,
-        type: 3}
-      propertyPath: aggroState
-      value: 
-      objectReference: {fileID: 11400000, guid: cfe3967bd9845d74eba9d874aba078da,
-        type: 2}
-    - target: {fileID: 2046857015405670074, guid: 60e7ba47beb39ed4ebd84acccd5ec324,
-        type: 3}
-      propertyPath: presetStats
-      value: 
-      objectReference: {fileID: 11400000, guid: 33267c1f3e0869247a68aa139f367d5e,
-        type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 60e7ba47beb39ed4ebd84acccd5ec324, type: 3}
 --- !u!1 &2095308689
 GameObject:
   m_ObjectHideFlags: 0
