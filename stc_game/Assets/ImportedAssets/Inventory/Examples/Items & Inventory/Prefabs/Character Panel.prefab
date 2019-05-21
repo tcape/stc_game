@@ -5814,6 +5814,7 @@ MonoBehaviour:
     dead: 0
     nextLevelXP: 0
     totalXP: 0
+  characterLevel: {fileID: 0}
   strengthValue: {fileID: 0}
   dexterityValue: {fileID: 0}
   intellectValue: {fileID: 0}

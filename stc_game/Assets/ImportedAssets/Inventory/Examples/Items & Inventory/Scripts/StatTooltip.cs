@@ -1,4 +1,4 @@
-﻿/*using System.Text;
+﻿using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +6,7 @@ namespace Kryz.CharacterStats.Examples
 {
 	public class StatTooltip : MonoBehaviour
 	{
+        /*
 		public static StatTooltip Instance;
 
 		[SerializeField] Text statNameText;
@@ -91,6 +92,6 @@ namespace Kryz.CharacterStats.Examples
 			a[0] = char.ToUpper(a[0]);
 			return new string(a);
 		}
+        */
 	}
 }
-*/

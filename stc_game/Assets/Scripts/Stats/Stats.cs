@@ -102,6 +102,9 @@ public class Stats
         totalXP = nextLevelXP;
         SetNextLevelXP();
         LevelUpStats();
+        strength.UpdateSubStatModifiers();
+        dexterity.UpdateSubStatModifiers();
+        intellect.UpdateSubStatModifiers();
         RefreshHpAndAp();
     }
 

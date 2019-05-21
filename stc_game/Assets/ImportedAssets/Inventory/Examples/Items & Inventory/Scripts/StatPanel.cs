@@ -9,6 +9,7 @@ namespace Kryz.CharacterStats.Examples
 
         [SerializeField] Stats stats;
 
+        public GameObject characterLevel;
         public GameObject strengthValue;
         public GameObject dexterityValue;
         public GameObject intellectValue;
@@ -42,6 +43,7 @@ namespace Kryz.CharacterStats.Examples
             tracker.FindPlayerObject();
             stats = tracker.playerStats;
 
+            characterLevel.GetComponentInChildren<Text>().text = stats.level.ToString();
             strengthValue.GetComponentInChildren<Text>().text = stats.strength.currentValue.ToString();
             dexterityValue.GetComponentInChildren<Text>().text = stats.dexterity.currentValue.ToString();
             intellectValue.GetComponentInChildren<Text>().text = stats.intellect.currentValue.ToString();

@@ -3990,11 +3990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 502
       objectReference: {fileID: 0}
     - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4028,6 +4028,66 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: strengthValue
+      value: 
+      objectReference: {fileID: 2687272389544799515}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: dexterityValue
+      value: 
+      objectReference: {fileID: 2687272389544806175}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: intellectValue
+      value: 
+      objectReference: {fileID: 2687272389544798749}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: defenseValue
+      value: 
+      objectReference: {fileID: 2687272389545008485}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: attackValue
+      value: 
+      objectReference: {fileID: 4295698355621027976}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: critValue
+      value: 
+      objectReference: {fileID: 6926604842472908833}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: critMultiValue
+      value: 
+      objectReference: {fileID: 8404651412999229120}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: spellCritValue
+      value: 
+      objectReference: {fileID: 9042118668113506134}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: spellCritDisplayValue
+      value: 
+      objectReference: {fileID: 8325416401253924742}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: dodgeValue
+      value: 
+      objectReference: {fileID: 3063376244500734983}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: movementValue
+      value: 
+      objectReference: {fileID: 7148219519154783850}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: spellCritMultiValue
+      value: 
+      objectReference: {fileID: 8325416401253924742}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: characterLevel
+      value: 
+      objectReference: {fileID: 2687272389545029209}
     - target: {fileID: 163428, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
       propertyPath: m_Name
       value: IntellectValue
@@ -4864,54 +4924,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: strengthValue
-      value: 
-      objectReference: {fileID: 2687272389544799515}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: dexterityValue
-      value: 
-      objectReference: {fileID: 2687272389544806175}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: intellectValue
-      value: 
-      objectReference: {fileID: 2687272389544798749}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: defenseValue
-      value: 
-      objectReference: {fileID: 2687272389545008485}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: attackValue
-      value: 
-      objectReference: {fileID: 4295698355621027976}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: critValue
-      value: 
-      objectReference: {fileID: 6926604842472908833}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: critMultiValue
-      value: 
-      objectReference: {fileID: 8404651412999229120}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: spellCritValue
-      value: 
-      objectReference: {fileID: 9042118668113506134}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: spellCritDisplayValue
-      value: 
-      objectReference: {fileID: 8325416401253924742}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: dodgeValue
-      value: 
-      objectReference: {fileID: 3063376244500734983}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: movementValue
-      value: 
-      objectReference: {fileID: 7148219519154783850}
-    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
-      propertyPath: spellCritMultiValue
-      value: 
-      objectReference: {fileID: 8325416401253924742}
     - target: {fileID: 146020, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
       propertyPath: m_Name
       value: Int Display
@@ -5054,6 +5066,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9094b6ac57147b409aab25e568adbfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2687272389545029209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129568, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2687272389544799515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 162146, guid: 369f87c2a2dd3b246b04552b05534a04,
@@ -5332,11 +5350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -50
+      value: -772
       objectReference: {fileID: 0}
     - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: 741
       objectReference: {fileID: 0}
     - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
       propertyPath: m_SizeDelta.x
