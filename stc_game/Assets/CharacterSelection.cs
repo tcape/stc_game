@@ -20,9 +20,9 @@ public class CharacterSelection : MonoBehaviour
         playButton.onClick.AddListener(OnClickPlayButton);
         warrior = GameObject.Find("WarriorPrefab");
         mage = GameObject.Find("MagePrefab");
+        activeCharacter = warrior;
         warrior.SetActive(false);
         mage.SetActive(false);
-        activeCharacter = null;
         StartCoroutine(LoadCharacter());
     }
 
@@ -52,7 +52,19 @@ public class CharacterSelection : MonoBehaviour
     private IEnumerator LoadCharacter()
     {
         yield return new WaitForSeconds(.1f);
-        OnClickWarriorButton();
+
+        if (UserService.Instance.User.GetActiveCharacter().HeroClass == HeroClass.Warrior)
+        {
+            LoadWarrior();
+        }
+        else if (UserService.Instance.User.GetActiveCharacter().HeroClass == HeroClass.Mage)
+        {
+            LoadMage();
+        }
+        else
+        {
+            Debug.Log("No character found in user object");
+        }
     }
 
     private IEnumerator FadeCharacter(Material material, float lerpDuration)
@@ -93,16 +105,7 @@ public class CharacterSelection : MonoBehaviour
         if (activeCharacter == warrior)
         {
             activeCharacter.SetActive(false);
-        }
-        if (activeCharacter != mage)
-        {
-            activeCharacter = mage;
-            var teleportEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Effect_2")) as GameObject;
-            var poofEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Burst")) as GameObject;
-            teleportEffect.transform.position = mage.transform.position + new Vector3(-0.3f, 1.7f, 0f);
-            poofEffect.transform.position = mage.transform.position + new Vector3(0f, 1.4f, 0f);
-            StartCoroutine(FadeCharacter(mage.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.6f));
-            MageAnimation();
+            LoadMage();
         }
     }
 
@@ -111,17 +114,32 @@ public class CharacterSelection : MonoBehaviour
         if (activeCharacter == mage)
         {
             activeCharacter.SetActive(false);
+            LoadWarrior();
         }
-        if (activeCharacter != warrior)
-        {
-            activeCharacter = warrior;
-            var warriorEffectBurst = Instantiate(Resources.Load("FX/Warrior_Entrance_Burst")) as GameObject;
-            var warriorEntrance = Instantiate(Resources.Load("FX/Warrior_Entrance_Effect")) as GameObject;
-            warriorEffectBurst.transform.position = warrior.transform.position + new Vector3(0f, 1.2f, 0f);
-            warriorEntrance.transform.position = warrior.transform.position + new Vector3(-0.3f, 1.2f, 0f);
-            StartCoroutine(FadeCharacter(warrior.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.6f));
-            StartCoroutine(WarriorAttacks());
-        }
+    }
+
+    private void LoadWarrior()
+    {
+        activeCharacter = warrior;
+        UserService.Instance.User.SelectCharacter(HeroClass.Warrior);
+        var warriorEffectBurst = Instantiate(Resources.Load("FX/Warrior_Entrance_Burst")) as GameObject;
+        var warriorEntrance = Instantiate(Resources.Load("FX/Warrior_Entrance_Effect")) as GameObject;
+        warriorEffectBurst.transform.position = warrior.transform.position + new Vector3(0f, 1.2f, 0f);
+        warriorEntrance.transform.position = warrior.transform.position + new Vector3(-0.3f, 1.2f, 0f);
+        StartCoroutine(FadeCharacter(warrior.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.6f));
+        StartCoroutine(WarriorAttacks());
+    }
+
+    private void LoadMage()
+    {
+        activeCharacter = mage;
+        UserService.Instance.User.SelectCharacter(HeroClass.Mage);
+        var teleportEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Effect_2")) as GameObject;
+        var poofEffect = Instantiate(Resources.Load("FX/Mage_Entrance_Burst")) as GameObject;
+        teleportEffect.transform.position = mage.transform.position + new Vector3(-0.3f, 1.7f, 0f);
+        poofEffect.transform.position = mage.transform.position + new Vector3(0f, 1.4f, 0f);
+        StartCoroutine(FadeCharacter(mage.GetComponentInChildren<SkinnedMeshRenderer>().material, 0.6f));
+        MageAnimation();
     }
 
     private void OnClickPlayButton()

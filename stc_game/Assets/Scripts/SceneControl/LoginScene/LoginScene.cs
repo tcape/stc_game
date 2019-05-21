@@ -161,7 +161,7 @@ public class LoginScene : MonoBehaviour
 
     public bool GameCanLoad()
     {
-        if (userService.user.Exists())
+        if (userService.User.Exists())
         {
             return true;
         }
