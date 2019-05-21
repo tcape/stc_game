@@ -57,6 +57,25 @@ public class PersistentScene : MonoBehaviour
         StartCoroutine(LoadGameScene());
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (exitButton.enabled)
+            {
+                exitButton.enabled = false;
+                logoutButton.gameObject.SetActive(false);
+                exitButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                exitButton.enabled = true;
+                logoutButton.gameObject.SetActive(true);
+                exitButton.gameObject.SetActive(true);
+            }
+        }
+    }
+
     public void SaveGameCharacterStats(Stats saveStats)
     {
         GameCharacter.Stats = saveStats;
