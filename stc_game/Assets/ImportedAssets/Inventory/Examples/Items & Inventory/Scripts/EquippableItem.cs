@@ -28,12 +28,12 @@ namespace Kryz.CharacterStats.Examples
         [Space]
         public int attackBonus;
         public int defenseBonus;
-        public int critChanceBonus;
-        public int critPowerBonus;
-        public int abilityCritChanceBonus;
-        public int abilityCritPowerBonus;
-        public int dodgeBonus;
-        public int movementBonus;
+        public float critChanceBonus;
+        public float critPowerBonus;
+        public float abilityCritChanceBonus;
+        public float abilityCritPowerBonus;
+        public float dodgeBonus;
+        public float movementBonus;
 		[Space]
 		public float strengthPercentBonus;
 		public float dexterityPercentBonus;
@@ -71,44 +71,44 @@ namespace Kryz.CharacterStats.Examples
                 stats.intellect.AddStatModifier(new StatModifier(intellectPercentBonus, ModType.PercentAdd, this));
             //attack
             if (attackBonus != 0)
-                stats.strength.AddStatModifier(new StatModifier(attackBonus, ModType.Flat, this));
+                stats.strength.attack.AddModifier(new StatModifier(attackBonus, ModType.Flat, this));
             if (attackPercentBonus != 0)
-                stats.strength.AddStatModifier(new StatModifier(attackPercentBonus, ModType.PercentAdd, this));
+                stats.strength.attack.AddModifier(new StatModifier(attackPercentBonus, ModType.PercentAdd, this));
             //defense
             if (defenseBonus != 0)
-                stats.strength.AddStatModifier(new StatModifier(defenseBonus, ModType.Flat, this));
+                stats.strength.defense.AddModifier(new StatModifier(defenseBonus, ModType.Flat, this));
             if (defensePercentBonus != 0)
-                stats.strength.AddStatModifier(new StatModifier(defensePercentBonus, ModType.PercentAdd, this));
+                stats.strength.defense.AddModifier(new StatModifier(defensePercentBonus, ModType.PercentAdd, this));
             //crit chance
             if (critChanceBonus != 0)
-                stats.dexterity.AddStatModifier(new StatModifier(critChanceBonus, ModType.Flat, this));
+                stats.dexterity.meleeCritRate.AddModifier(new StatModifier(critChanceBonus, ModType.Flat, this));
             if (critChancePercentBonus != 0)
-                stats.dexterity.AddStatModifier(new StatModifier(critChancePercentBonus, ModType.PercentAdd, this));
+                stats.dexterity.meleeCritRate.AddModifier(new StatModifier(critChancePercentBonus, ModType.PercentAdd, this));
             //crit power
             if (critPowerBonus != 0)
-                stats.strength.AddStatModifier(new StatModifier(critPowerBonus, ModType.Flat, this));
+                stats.strength.meleeCritPower.AddModifier(new StatModifier(critPowerBonus, ModType.Flat, this));
             if (critPowerPercentBonus != 0)
-                stats.strength.AddStatModifier(new StatModifier(critPowerPercentBonus, ModType.PercentAdd, this));
+                stats.strength.meleeCritPower.AddModifier(new StatModifier(critPowerPercentBonus, ModType.PercentAdd, this));
             //ability crit chance
             if (abilityCritChanceBonus != 0)
-                stats.intellect.AddStatModifier(new StatModifier(abilityCritChanceBonus, ModType.Flat, this));
+                stats.intellect.abilityCritRate.AddModifier(new StatModifier(abilityCritChanceBonus, ModType.Flat, this));
             if (abilityCritChancePercentBonus != 0)
-                stats.intellect.AddStatModifier(new StatModifier(abilityCritChancePercentBonus, ModType.PercentAdd, this));
+                stats.intellect.abilityCritRate.AddModifier(new StatModifier(abilityCritChancePercentBonus, ModType.PercentAdd, this));
             //ability crit power
             if (abilityCritPowerBonus != 0)
-                stats.intellect.AddStatModifier(new StatModifier(abilityCritPowerBonus, ModType.Flat, this));
+                stats.intellect.abilityCritPower.AddModifier(new StatModifier(abilityCritPowerBonus, ModType.Flat, this));
             if (abilityCritPowerPercentBonus != 0)
-                stats.intellect.AddStatModifier(new StatModifier(abilityCritPowerPercentBonus, ModType.PercentAdd, this));
+                stats.intellect.abilityCritPower.AddModifier(new StatModifier(abilityCritPowerPercentBonus, ModType.PercentAdd, this));
             //dodge chance
             if (dodgeBonus != 0)
-                stats.dexterity.AddStatModifier(new StatModifier(dodgeBonus, ModType.Flat, this));
+                stats.dexterity.dodgeRate.AddModifier(new StatModifier(dodgeBonus, ModType.Flat, this));
             if (dodgePercentBonus != 0)
-                stats.dexterity.AddStatModifier(new StatModifier(dodgePercentBonus, ModType.PercentAdd, this));
+                stats.dexterity.dodgeRate.AddModifier(new StatModifier(dodgePercentBonus, ModType.PercentAdd, this));
             //movement speed
             if (movementBonus != 0)
-                stats.dexterity.AddStatModifier(new StatModifier(movementBonus, ModType.Flat, this));
+                stats.dexterity.movementSpeed.AddModifier(new StatModifier(movementBonus, ModType.Flat, this));
             if (movementPercentBonus != 0)
-                stats.dexterity.AddStatModifier(new StatModifier(movementPercentBonus, ModType.PercentAdd, this));
+                stats.dexterity.movementSpeed.AddModifier(new StatModifier(movementPercentBonus, ModType.PercentAdd, this));
 
             c.GetComponentInChildren<StatPanel>().UpdateStatValues();
         }
@@ -131,6 +131,9 @@ namespace Kryz.CharacterStats.Examples
             stats.intellect.abilityCritPower.RemoveAllModifiersFromSource(this);
 
             c.GetComponentInChildren<StatPanel>().UpdateStatValues();
+            stats.strength.UpdateSubStatModifiers();
+            stats.dexterity.UpdateSubStatModifiers();
+            stats.intellect.UpdateSubStatModifiers();
         }
     }
 }

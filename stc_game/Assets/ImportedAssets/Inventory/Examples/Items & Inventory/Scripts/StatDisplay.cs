@@ -10,9 +10,6 @@ namespace Kryz.CharacterStats.Examples
 		public Text NameText;
 		public Text ValueText;
 
-		//[NonSerialized]
-		//public CharacterStat Stat;
-
 		private void OnValidate()
 		{
 			Text[] texts = GetComponentsInChildren<Text>();
