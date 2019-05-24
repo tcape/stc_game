@@ -8,16 +8,8 @@ public class InventoryPlayerTracker : MonoBehaviour
 
     private void OnEnable()
     {
-        //SceneController.Instance.AfterSceneLoad += FindPlayerObject;
         FindPlayerObject();
     }
-
-    /*
-    private void OnDisable()
-    {
-        SceneController.Instance.AfterSceneLoad -= FindPlayerObject;
-    }
-    */
 
     public void FindPlayerObject()
     {
