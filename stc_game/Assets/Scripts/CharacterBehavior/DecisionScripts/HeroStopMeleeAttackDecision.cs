@@ -13,7 +13,7 @@ public class HeroStopMeleeAttackDecision : Decision
 
     private bool NotAttacking(StateController controller)
     {
-        if (controller.target.Equals(null))
+        if (!controller.target)
             return true;
 
         // if left-click
