@@ -41,7 +41,8 @@ public class ChainDamage : AbilityAction
 
         foreach (var enemy in damaged)
         {
-            enemy.GetComponent<StateController>().CauseAggro();
+            if (!target.GetComponent<CharacterStats>().stats.dead)
+                enemy.GetComponent<StateController>().CauseAggro();
         }
 
         damaged.Clear();

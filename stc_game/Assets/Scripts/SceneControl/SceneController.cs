@@ -35,12 +35,14 @@ public class SceneController : MonoBehaviour
 
         if (Instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(faderCanvasGroup.gameObject);
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
     }
 
@@ -60,6 +62,7 @@ public class SceneController : MonoBehaviour
 
     public IEnumerator LoadFirstScene()
     {
+        loadingText.text = "Loading...";
         loadingText.enabled = true;
         // Start the first scene loading and wait for it to finish.
         yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));

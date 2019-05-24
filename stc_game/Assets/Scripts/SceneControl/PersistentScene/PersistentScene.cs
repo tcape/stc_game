@@ -10,101 +10,70 @@ using UnityEngine.UI;
 
 public class PersistentScene : MonoBehaviour
 {
-    public static PersistentScene Instance;
-    public User user;
-    public UserService userService = UserService.Instance;
+    public static PersistentScene Instance = null;
+    public User User;
     public GameCharacter GameCharacter;
     public ReviveController reviveController;
     public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
     public DialogueUI dialogueUI;
     public HUDController hud;
+    public Button logoutButton;
+    public Button exitButton;
+    public LogoutCanvas logoutCanvas;
+
     private void Awake()
     {
         if (Instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
-
-        // Substitue GameCharacter to be replaced by GameCharacter data from database
-        // This is just for testing
-        // moved this from Start to Awake for now so abilities are can be loaded
-
-        GameCharacter = new GameCharacter(
-                                           "WarriorTest",
-                                           HeroClass.Warrior,
-                                           new Stats()
-                                           {
-                                               level = 1,
-                                               XP = 0,
-                                               gold = 0,
-                                               strength = new Strength(10)
-                                               {
-                                                   maxHP = new SubStat(500),
-                                                   attack = new SubStat(15),
-                                                   meleeCritPower = new SubStat(2),
-                                                   defense = new SubStat(9)
-                                               },
-                                               intellect = new Intellect(5)
-                                               {
-                                                   maxAP = new SubStat(150),
-                                                   abilityAttack = new SubStat(10),
-                                                   abilityCritPower = new SubStat(2),
-                                                   abilityCritRate = new SubStat(0.25)
-                                               },
-                                               dexterity = new Dexterity(7)
-                                               {
-                                                   dodgeRate = new SubStat(0.15),
-                                                   meleeCritRate = new SubStat(0.25),
-                                                   movementSpeed = new SubStat(7)
-                                               },
-                                               currentHP = 500,
-                                               currentAP = 150,
-                                               dead = false,
-                                               nextLevelXP = 100
-                                           }
-                                           ,
-                                           new List<string>()
-                                           {
-                                               "RegenerateAP",
-                                               "IronSkin",
-                                               "Savagry",
-                                               "Cleave",
-                                               "Sprint"
-                                           }
-                                           );
-
-        GameCharacter.Stats.Setup();
-      
+        User = UserService.Instance.User;
+        GameCharacter = new GameCharacter(User.GetActiveCharacter().Name, User.GetActiveCharacter().HeroClass);
     }
 
     private void Start()
     {
-        hud = FindObjectOfType<HUDController>();
-        hud.gameObject.SetActive(false);
+        // load local resources 
+        // (moving all logic from start function to this first time function)
+        logoutButton.onClick.AddListener(onLogout);
+        exitButton.onClick.AddListener(onExit);
+        logoutCanvas = FindObjectOfType<LogoutCanvas>();
         questWindowUI = FindObjectOfType<QuestWindowUI>();
-        QuestManager.instance.questWindowUI = questWindowUI;
         reviveController = FindObjectOfType<ReviveController>();
-
+        hud = FindObjectOfType<HUDController>();
         dialogueUI = FindObjectOfType<DialogueUI>();
+
+        logoutCanvas.gameObject.SetActive(false);
+        hud.gameObject.SetActive(false);
+        QuestManager.instance.questWindowUI = questWindowUI;
         DialogueManager.instance.dialogueUI = dialogueUI;
+        StartCoroutine(LoadGameScene());
+    }
 
-        userService.LoadUserCallback += HandleLoadUserCallback;
-
-        if (UserService.Instance.user._id != "")
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            userService.GetUser(AuthService.Instance.authUser.sub);
+            if (exitButton.enabled)
+            {
+                exitButton.enabled = false;
+                logoutButton.gameObject.SetActive(false);
+                exitButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                exitButton.enabled = true;
+                logoutButton.gameObject.SetActive(true);
+                exitButton.gameObject.SetActive(true);
+            }
         }
-        else // for now so we can start from persistent scene without having to login
-        {
-            StartCoroutine(LoadGameScene());
-        }
-
     }
 
     public void SaveGameCharacterStats(Stats saveStats)
@@ -112,16 +81,23 @@ public class PersistentScene : MonoBehaviour
         GameCharacter.Stats = saveStats;
     }
 
-    private void HandleLoadUserCallback()
-    {
-        user = userService.user;
-        StartCoroutine(LoadGameScene());
-    }
-
     private IEnumerator LoadGameScene()
     {
         yield return StartCoroutine(SceneController.Instance.LoadFirstScene());
         hud.FindPlayerObject();
         hud.gameObject.SetActive(true);
+    }
+
+    private void onLogout()
+    {
+        logoutCanvas.gameObject.SetActive(true);
+        UserService.Instance.SaveUser();
+        AuthService.Instance.Logout();
+        Application.Quit();
+    }
+
+    private void onExit()
+    {
+        Application.Quit();
     }
 }
