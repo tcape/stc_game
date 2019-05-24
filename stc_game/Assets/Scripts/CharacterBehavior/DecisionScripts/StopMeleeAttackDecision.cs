@@ -9,7 +9,7 @@ public class StopMeleeAttackDecision : Decision
 {
     public override bool Decide(StateController controller)
     {
-        return OutOfMeleeRange(controller);
+        return (OutOfMeleeRange(controller) || HeroDead(controller));
     }
 
     private bool OutOfMeleeRange(StateController controller)
@@ -20,5 +20,12 @@ public class StopMeleeAttackDecision : Decision
             return true;
         }
         else return false;
+    }
+
+    private bool HeroDead(StateController controller)
+    {
+        if (!controller.target)
+            controller.target = GameObject.FindGameObjectWithTag("Player");
+        return controller.target.GetComponent<CharacterStats>().stats.dead;
     }
 }

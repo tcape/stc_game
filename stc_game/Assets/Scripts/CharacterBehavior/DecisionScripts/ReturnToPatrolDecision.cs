@@ -8,10 +8,8 @@ public class ReturnToPatrolDecision : Decision
 {
     public override bool Decide(StateController controller)
     {
-        if (controller.target.GetComponent<StateController>().target == controller.gameObject)
-        {
-            return false;
-        }
-        return true;
+        if (controller.target)
+            return controller.target.GetComponent<CharacterStats>().stats.dead;
+        else return false;
     }
 }
