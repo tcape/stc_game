@@ -23,5 +23,7 @@ public class IdleAction : CharacterAction
             if (!hero.GetComponent<Hero>().characterStats.stats.dead)
                 controller.target = hero.gameObject;
         }
+
+        controller.animator.SetBool("Attacking", false);
     }
 }

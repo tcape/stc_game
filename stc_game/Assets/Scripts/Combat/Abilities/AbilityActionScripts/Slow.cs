@@ -16,7 +16,8 @@ public class Slow : AbilityAction
     public override void Act(AbilityManager manager)
     {
         target.GetComponent<CharacterStats>().stats.dexterity.movementSpeed.AddModifier(new StatModifier(amount, ModType.Flat, this));
-        target.GetComponent<StateController>().CauseAggro();
+        if (!target.GetComponent<CharacterStats>().stats.dead)
+            target.GetComponent<StateController>().CauseAggro();
     }
 
     public override void RemoveEffect(AbilityManager manager)

@@ -20,7 +20,8 @@ public class Fireball : MonoBehaviour
             if (!other.gameObject.GetComponent<CharacterStats>().stats.dead)
             {
                 other.gameObject.GetComponent<CharacterStats>().stats.TakeAbilityDamage(heroStats, damage);
-                other.gameObject.GetComponent<StateController>().CauseAggro();
+                if (!other.gameObject.GetComponent<CharacterStats>().stats.dead)
+                    other.gameObject.GetComponent<StateController>().CauseAggro();
                 Destroy(gameObject);
 
                 var hit = Instantiate(Resources.Load("FX/FireballHit") as GameObject, other.transform);
@@ -29,6 +30,4 @@ public class Fireball : MonoBehaviour
            
         }
     }
-
-
 }
