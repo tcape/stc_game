@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0763b70f85cfe5f4e93fd923c8b3d84a, type: 3}
   m_Name: Quest-DefeatIllamuwa
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"ID":2,"name":{"_key":"112184d4-5e92-4b2d-a926-4321250b1fd3"},"description":{"_key":"d3386487-91e7-4f6b-8233-6c689b809aa8"},"icon":null,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Defeat
-    Goblin Chief","description":{"_key":"fab04c07-e84d-41e0-b30a-a91b398db0fa"},"statusMessage":{"_key":"9d915740-ad6c-4ca5-890d-8218fdf76953"},"_icon":null,"_progressCap":1.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
-  _objectReferences: []
+  _serializedJsonString: '{"ID":2,"name":{"_key":"112184d4-5e92-4b2d-a926-4321250b1fd3"},"description":{"_key":"d3386487-91e7-4f6b-8233-6c689b809aa8"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+  _objectReferences:
+  - {fileID: 0}
   ID: 2
   name:
     _key: 112184d4-5e92-4b2d-a926-4321250b1fd3
