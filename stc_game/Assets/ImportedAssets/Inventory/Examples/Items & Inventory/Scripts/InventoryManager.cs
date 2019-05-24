@@ -4,7 +4,7 @@ namespace Kryz.CharacterStats.Examples
 {
 	public class InventoryManager : MonoBehaviour
 	{
-		[SerializeField] Inventory inventory;
+		[SerializeField] public Inventory inventory;
 		[SerializeField] EquipmentPanel equipmentPanel;
 		[SerializeField] StatPanel statPanel;
 

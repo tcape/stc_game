@@ -10,23 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
-  m_Name: Helmet
+  m_Name: Magic Staff
   m_EditorClassIdentifier: 
-  ItemName: Helmet
-  Icon: {fileID: 21300000, guid: 87630f81fe8754d49bab3fa66b0481cd, type: 3}
+  Id: 0
+  ItemName: Magic Staff
+  Icon: {fileID: 21300000, guid: 4d4c605d347d3df4e8efe737ef79897a, type: 3}
   characterPanel: {fileID: 0}
-  strengthBonus: 0
-  dexterityBonus: 0
-  intellectBonus: 0
-  attackBonus: 0
+  strengthBonus: 1
+  dexterityBonus: 1
+  intellectBonus: 3
+  attackBonus: 1
   defenseBonus: 1
   critChanceBonus: 0
-  critPowerBonus: 0
-  abilityCritChanceBonus: 0
-  abilityCritPowerBonus: 0
-  dodgeBonus: 0.02
+  critPowerBonus: 0.05
+  abilityCritChanceBonus: 0.05
+  abilityCritPowerBonus: 0.05
+  dodgeBonus: 0
   movementBonus: 0
-  strengthPercentBonus: 0.05
+  strengthPercentBonus: 0
   dexterityPercentBonus: 0
   intellectPercentBonus: 0
   attackPercentBonus: 0
@@ -37,4 +38,4 @@ MonoBehaviour:
   abilityCritPowerPercentBonus: 0
   dodgePercentBonus: 0
   movementPercentBonus: 0
-  EquipmentType: 0
+  EquipmentType: 4

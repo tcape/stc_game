@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
-  m_Name: Chest Amor
+  m_Name: Sword
   m_EditorClassIdentifier: 
-  ItemName: Chest Armor
-  Icon: {fileID: 21300000, guid: ab0226cd28d392f419078c390d24f898, type: 3}
+  Id: 0
+  ItemName: Sword
+  Icon: {fileID: 21300000, guid: d4484d350e72d0d49b4a228d0c398abf, type: 3}
   characterPanel: {fileID: 0}
-  strengthBonus: 1
-  agilityBonus: 0
+  strengthBonus: 4
+  dexterityBonus: 4
   intellectBonus: 0
-  attackBonus: 0
-  defenseBonus: 1
+  attackBonus: 5
+  defenseBonus: 0
   critChanceBonus: 0
   critPowerBonus: 0
   abilityCritChanceBonus: 0
@@ -27,7 +28,7 @@ MonoBehaviour:
   dodgeBonus: 0
   movementBonus: 0
   strengthPercentBonus: 0
-  agilityPercentBonus: 0
+  dexterityPercentBonus: 0
   intellectPercentBonus: 0
   attackPercentBonus: 0
   defensePercentBonus: 0
@@ -37,4 +38,4 @@ MonoBehaviour:
   abilityCritPowerPercentBonus: 0
   dodgePercentBonus: 0
   movementPercentBonus: 0
-  EquipmentType: 1
+  EquipmentType: 4

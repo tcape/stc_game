@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
-  m_Name: Gem
+  m_Name: Mage Robe
   m_EditorClassIdentifier: 
-  ItemName: Gem
-  Icon: {fileID: 21300000, guid: fa65d645a34a577419cb9e893a4011fa, type: 3}
+  Id: 0
+  ItemName: Mage Robe
+  Icon: {fileID: 21300000, guid: 1007c3620810afd4e929e8a1ae2e65e2, type: 3}
   characterPanel: {fileID: 0}
-  strengthBonus: 0
-  dexterityBonus: 0
-  intellectBonus: 0
+  strengthBonus: 1
+  dexterityBonus: 1
+  intellectBonus: 3
   attackBonus: 0
-  defenseBonus: 0
+  defenseBonus: 1
   critChanceBonus: 0
   critPowerBonus: 0
-  abilityCritChanceBonus: 0
-  abilityCritPowerBonus: 0
-  dodgeBonus: 0
+  abilityCritChanceBonus: 0.05
+  abilityCritPowerBonus: 0.05
+  dodgeBonus: 0.02
   movementBonus: 0
   strengthPercentBonus: 0
   dexterityPercentBonus: 0
   intellectPercentBonus: 0
-  attackPercentBonus: 1
+  attackPercentBonus: 0
   defensePercentBonus: 0
   critChancePercentBonus: 0
   critPowerPercentBonus: 0
@@ -37,4 +38,4 @@ MonoBehaviour:
   abilityCritPowerPercentBonus: 0
   dodgePercentBonus: 0
   movementPercentBonus: 0
-  EquipmentType: 6
+  EquipmentType: 1

@@ -10,23 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
-  m_Name: Shield
+  m_Name: Helmet
   m_EditorClassIdentifier: 
-  ItemName: Shield
-  Icon: {fileID: 21300000, guid: a15377d51625eb949ae614e8de8c76cd, type: 3}
+  Id: 0
+  ItemName: Helmet
+  Icon: {fileID: 21300000, guid: 87630f81fe8754d49bab3fa66b0481cd, type: 3}
   characterPanel: {fileID: 0}
-  strengthBonus: 1
+  strengthBonus: 0
   dexterityBonus: 0
   intellectBonus: 0
   attackBonus: 0
-  defenseBonus: 3
+  defenseBonus: 1
   critChanceBonus: 0
   critPowerBonus: 0
   abilityCritChanceBonus: 0
   abilityCritPowerBonus: 0
-  dodgeBonus: 0.1
+  dodgeBonus: 0.02
   movementBonus: 0
-  strengthPercentBonus: 0
+  strengthPercentBonus: 0.05
   dexterityPercentBonus: 0
   intellectPercentBonus: 0
   attackPercentBonus: 0
@@ -37,4 +38,4 @@ MonoBehaviour:
   abilityCritPowerPercentBonus: 0
   dodgePercentBonus: 0
   movementPercentBonus: 0
-  EquipmentType: 5
+  EquipmentType: 0

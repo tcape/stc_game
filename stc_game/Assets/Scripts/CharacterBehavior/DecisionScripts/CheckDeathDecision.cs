@@ -49,6 +49,9 @@ public class CheckDeathDecision : Decision
         if (controller.GetComponent<GoldDrop>())
             controller.GetComponent<GoldDrop>().DropGold();
 
+        if (controller.GetComponent<ItemDrop>())
+            controller.GetComponent<ItemDrop>().DropItem();
+
         controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
         if (controller.gameObject.GetComponent<SetQuestProgressOnKilled>())
         {

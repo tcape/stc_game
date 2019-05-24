@@ -33,7 +33,7 @@ public class Hero : MonoBehaviour
         physicsCollider = GetComponent<CapsuleCollider>();
         stateController = GetComponent<StateController>();
         spawner = GetComponent<SpawnManager>();
-        // inventory = GetComponent<Inventory>();
+        //inventory = GetComponent<Inventory>();
         // equipment = GetCompnent<Equipment>();
     }
 

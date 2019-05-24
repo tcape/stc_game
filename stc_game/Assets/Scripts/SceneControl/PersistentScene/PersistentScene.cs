@@ -2,6 +2,7 @@
 using Devdog.QuestSystemPro.Dialogue;
 using Devdog.QuestSystemPro.Dialogue.UI;
 using Devdog.QuestSystemPro.UI;
+using Kryz.CharacterStats.Examples;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class PersistentScene : MonoBehaviour
     public Button logoutButton;
     public Button exitButton;
     public LogoutCanvas logoutCanvas;
+    public Inventory inventory;
 
     private void Awake()
     {
@@ -49,7 +51,7 @@ public class PersistentScene : MonoBehaviour
         reviveController = FindObjectOfType<ReviveController>();
         hud = FindObjectOfType<HUDController>();
         dialogueUI = FindObjectOfType<DialogueUI>();
-
+        inventory = gameObject.GetComponentInChildren<InventoryManager>(true).inventory;
         logoutCanvas.gameObject.SetActive(false);
         hud.gameObject.SetActive(false);
         QuestManager.instance.questWindowUI = questWindowUI;
