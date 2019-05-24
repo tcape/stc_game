@@ -9,7 +9,6 @@ public class BaseUser
     public List<CharacterBaseModel> Characters;
     public GameState GameState;
     
-
     public BaseUser()
     {
         Name = "";
@@ -25,13 +24,6 @@ public class BaseUser
     }
 
     public BaseUser(string name, string userAuthenticationId)
-    {
-        Name = name;
-        UserAuthenticationId = userAuthenticationId;
-        Characters = new List<CharacterBaseModel>();
-    }
-
-    public BaseUser(string name, string userAuthenticationId, CharacterBaseModel character)
     {
         Name = name;
         UserAuthenticationId = userAuthenticationId;

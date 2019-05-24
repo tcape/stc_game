@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
   m_Name: MainLanguageDb
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"NO_KEY":"","4a78a4f7-1a6f-4515-a3ac-8ef1c6a7d973":"and
+  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"aec03867-2e8b-4e28-9eef-856a8b0cb59c":"Go
+    collect 300 gold!","9e8fbe40-be68-4c2a-9cc3-d9ee512cd264":"Remember to spend your
+    gold at the blacksmith!","0c71a6ab-c149-463e-9a9b-1edf045ad022":"I will talk with
+    you once you get acquainted with the blacksmith.","20c8c638-0e23-4b05-a210-975297bb671c":"Go
+    talk to the Blacksmith!","e0b47bac-118f-48c3-9675-12475939ebf6":"Collect 300 Gold.","4a78a4f7-1a6f-4515-a3ac-8ef1c6a7d973":"and
     now we can''t because of his occupation! Destroy him!","5177cd5d-190a-42d9-ab10-2449d8a1176c":"Hero,
     thank you for saving our land!","9d915740-ad6c-4ca5-890d-8218fdf76953":"Killed
     {0} / {2} Goblin Chief","e7d0117b-9b70-4ddc-a094-deac664933de":"I feel as though
@@ -31,6 +35,12 @@ MonoBehaviour:
     is a dirty goblin chief that is taking hold of the cavern up north! We used to
     go there to mine for materials, ","c07cd0fe-ae73-49e4-bf1b-53b622b8f941":"Please
     destroy the goblin chief!","ae42898b-e3dc-4bdc-92fa-333418df4c10":"You defeated
-    him!! thank you!"},"_localizedObjects":{}}'
+    him! Thank you!","d4c77447-31e2-4788-85dd-8562da9b5a37":"Collect 300 Gold.","3d35a618-fc65-41f8-8132-bf415d2b0714":"Collect
+    300 gold","5514599c-94cf-45bd-924e-e04fef1edd28":"Collected {0} / {2} gold","f2aab801-0140-4ef1-bd46-4dc931371dd0":"Hello
+    hero!","5102c7e8-48f6-4ef6-becc-bac543e76659":"Our town has been in deep poverty
+    lately, since Illamuwa has occupied our dungeon.","3f3143fb-8313-4333-951a-70dc96fadf7d":"Will
+    you please go to the caverns to the north to collect 300 gold for the town, hero?","b9d968c8-4ac1-48a6-8f70-dd829430756a":"I
+    feel as though I''m not ready to talk to you yet.","c7aa2b20-0902-4430-a216-7e36a1afb19b":"Thank
+    you for collecting the gold. Feel free to keep it and use it on the town''s wares."},"_localizedObjects":{}}'
   _objectReferences: []
   _lang: en-US

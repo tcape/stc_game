@@ -169,24 +169,25 @@ public class Stats
         if (critRoll <= other.stats.dexterity.MeleeCritRate())
         {
 
-            if (other.gameObject.tag.Equals("Player"))
-            {
-                Debug.Log("CRIT");
-                Debug.Log(other.stats.strength.Attack() * other.stats.strength.MeleeCritPower() - strength.Defense());
-            }
+            //if (other.gameObject.tag.Equals("Player"))
+            //{
+            //    Debug.Log("CRIT");
+            //    Debug.Log(other.stats.strength.Attack() * other.stats.strength.MeleeCritPower() - strength.Defense());
+            //}
 
             return other.stats.strength.Attack() * other.stats.strength.MeleeCritPower() - strength.Defense();
         }
         else
         {
-            if (other.gameObject.tag.Equals("Player"))
-            {
-                Debug.Log("NORMAL");
-                Debug.Log(other.stats.strength.Attack() - strength.Defense());
-            }
+            //if (other.gameObject.tag.Equals("Player"))
+            //{
+            //    Debug.Log("NORMAL");
+            //    Debug.Log(other.stats.strength.Attack() - strength.Defense());
+            //}
             return other.stats.strength.Attack() - strength.Defense();
         }
     }
+
 
     public void TakeAbilityDamage(CharacterStats other, double multiplier)
     {

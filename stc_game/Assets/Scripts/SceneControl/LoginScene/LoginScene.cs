@@ -9,11 +9,13 @@ public class LoginScene : MonoBehaviour
 {
 
     private AuthService authService = AuthService.Instance;
+    private UserService userService = UserService.Instance;
 
     public InputField emailInput;
     public InputField passwordInput;
     public Text statusText;
 
+    public Image loginImage;
     public Button signUpButton;
     public Button loginButton;
 
@@ -23,7 +25,10 @@ public class LoginScene : MonoBehaviour
     void Awake()
     {
         // registering callback for sign-up and login callbacks
-        authService.LoginUICallback += HandleLoginUICallback;
+        authService.AuthenticationCallback += HandleAuthenticationCallback;
+        authService.UserIsLoggedIn += HandleUserIsLoggedIn;
+        userService.LoadUserCallback += HandleLoadUserCallback;
+
         // registering button-click and other triggered events
         signUpButton.onClick.AddListener(OnSignUp);
         loginButton.onClick.AddListener(OnLogin);
@@ -31,7 +36,28 @@ public class LoginScene : MonoBehaviour
         passwordInput.onValueChanged.AddListener(ValidatePassword);
 
         // disable form buttons until user inputs a valid email
+        loginImage.gameObject.SetActive(false);
         ToggleButtonStates(false);
+        if (authService.isLoggedIn())
+        {
+            loginImage.gameObject.SetActive(true);
+            authService.LoginExistingUser();
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (emailInput.GetComponent<InputField>().isFocused)
+            {
+                passwordInput.GetComponent<InputField>().Select();
+            }
+            if (passwordInput.GetComponent<InputField>().isFocused)
+            {
+                loginButton.GetComponent<Button>().Select();
+            }
+        }
     }
 
     private void ValidateEmail(string email)
@@ -63,17 +89,18 @@ public class LoginScene : MonoBehaviour
 
     public void OnSignUp()
     {
+        loginImage.gameObject.SetActive(true);
         authService.SignUpNewUserWithEmailAndPassword(emailInput.text, passwordInput.text);
     }
 
     public void OnLogin()
     {
-        authService.LoginExistingUser(emailInput.text, passwordInput.text);
-
+        loginImage.gameObject.SetActive(true);
+        authService.LoginUserWithEmailAndPassword(emailInput.text, passwordInput.text);
     }
 
     // handles the sign up or the authentication result from the auth service
-    void HandleLoginUICallback(AsyncOperation res)
+    void HandleAuthenticationCallback(AsyncOperation res)
     {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;
         UnityWebRequest www = unityWebRequestAsyncOperation.webRequest;
@@ -106,29 +133,46 @@ public class LoginScene : MonoBehaviour
         else if (www.responseCode.Equals(200))
         {
             AuthRes authRes = JsonUtility.FromJson<AuthRes>(www.downloadHandler.text);
-            authService.GetUserData(authRes);
-            SceneManager.LoadSceneAsync(GameStrings.Scenes.PersistentScene);
+            authService.GetAuthUser(authRes);
         }
     }
 
-    void Update()
+    public void HandleUserIsLoggedIn()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        userService.GetUser(authService.authUser.sub);
+    }
+
+    public void HandleLoadUserCallback()
+    {
+        LoadGame();
+    }
+    
+    public void LoadGame()
+    {
+        if (GameCanLoad())
         {
-            if (emailInput.GetComponent<InputField>().isFocused)
-            {
-                passwordInput.GetComponent<InputField>().Select();
-            }
-            if (passwordInput.GetComponent<InputField>().isFocused)
-            {
-                loginButton.GetComponent<Button>().Select();
-            }
+            SceneManager.LoadSceneAsync(GameStrings.Scenes.CharacterSelectionScene);
+        }
+        else
+        {
+            Debug.Log("Game Cannot Load");
         }
     }
 
-    void onDestroy()
+    public bool GameCanLoad()
     {
-        authService.LoginUICallback -= HandleLoginUICallback;
+        if (userService.User.Exists())
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    public void OnDestroy()
+    {
+        authService.AuthenticationCallback -= HandleAuthenticationCallback;
+        authService.UserIsLoggedIn -= HandleUserIsLoggedIn;
+        userService.LoadUserCallback -= HandleLoadUserCallback;
     }
 
     private void SetButtonStates()

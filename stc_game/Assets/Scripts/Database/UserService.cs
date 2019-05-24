@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class UserService
 {
     public static UserService Instance { get; } = new UserService();
-    public User user { get; private set; } = new User();
+    public User User { get; private set; } = new User();
     private UserApi userApi = UserApi.Instance;
     public event Action LoadUserCallback;
 
@@ -18,22 +18,22 @@ public class UserService
 
     private UserService()
     {
-        userApi.ReadCallback += HandleReadCallback;
-        if (user == null)
+        userApi.ReadUserCallback += HandleReadUserCallback;
+        if (User == null)
         {
-            user = new User();
+            User = new User();
         }
     }
 
     public void CreateUser()
     {
-        user = new User(AuthService.Instance.authUser.nickname, AuthService.Instance.authUser.sub);
-        userApi.CreateOrUpdate(user);
+        User = new User(AuthService.Instance.authUser.nickname, AuthService.Instance.authUser.sub);
+        userApi.CreateOrUpdate(User);
     }
 
     public void SaveUser()
     {
-        userApi.CreateOrUpdate(user);
+        userApi.CreateOrUpdate(User);
     }
 
     public void GetUser(string authUserId)
@@ -41,6 +41,7 @@ public class UserService
         userApi.Read(authUserId);
     }
 
+    // This is the function that loads the User from restdb.io into the game
     public void LoadUserData(UnityWebRequest www)
     {
         // Because FromJson is stupid and ridiculous and old and non-modern POS arrays are not supported as unity objs
@@ -57,14 +58,14 @@ public class UserService
                 userList = JsonUtility.FromJson<JsonUserWrapper>(jsonUser);
                 if (userList.users.Count > 0)
                 {
-                    this.user = userList.users[0];
+                    this.User = userList.users[0];
                 }
                 // If there is no user, it is the first login so create one
-                if (this.user == null || this.user._id == null)
+                if (this.User == null || !this.User.Exists())
                 {
                     CreateUser();
                 }
-                else if (this.user != null)
+                else
                 {
                     LoadUserCallback.Invoke();
                 }
@@ -75,9 +76,13 @@ public class UserService
             }
             
         }
+        else
+        {
+            Debug.Log("Load User failed completed.");
+        }
     }
 
-    public void HandleReadCallback(AsyncOperation res)
+    public void HandleReadUserCallback(AsyncOperation res)
     {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;
         UnityWebRequest www = unityWebRequestAsyncOperation.webRequest;
