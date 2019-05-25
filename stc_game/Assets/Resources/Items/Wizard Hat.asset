@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Wizard Hat
   m_EditorClassIdentifier: 
   Id: 0
+  itemClass: 1
   ItemName: Wizard Hat
   Icon: {fileID: 21300000, guid: 69b0434c22aad20408cfdb9bbe5df554, type: 3}
   characterPanel: {fileID: 0}

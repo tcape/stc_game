@@ -6,7 +6,6 @@ using UnityEngine;
 public class GameItem : MonoBehaviour
 {
     public Item item;
-    public GameObject prefab;
 
     public void Pickup()
     {

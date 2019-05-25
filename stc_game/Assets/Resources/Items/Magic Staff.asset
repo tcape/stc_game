@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Magic Staff
   m_EditorClassIdentifier: 
   Id: 0
+  itemClass: 1
   ItemName: Magic Staff
   Icon: {fileID: 21300000, guid: 4d4c605d347d3df4e8efe737ef79897a, type: 3}
   characterPanel: {fileID: 0}

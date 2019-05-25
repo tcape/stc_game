@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Gem
   m_EditorClassIdentifier: 
   Id: 0
+  itemClass: 2
   ItemName: Gem
   Icon: {fileID: 21300000, guid: fa65d645a34a577419cb9e893a4011fa, type: 3}
   characterPanel: {fileID: 0}
