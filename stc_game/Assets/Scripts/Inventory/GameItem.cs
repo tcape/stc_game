@@ -7,21 +7,5 @@ public class GameItem : MonoBehaviour
 {
     public Item item;
 
-    public void Pickup()
-    {
-        var inventory = PersistentScene.Instance.inventory;
-            
-        if(inventory.AddItem(item))
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Pickup();
-        }
-    }
+   
 }

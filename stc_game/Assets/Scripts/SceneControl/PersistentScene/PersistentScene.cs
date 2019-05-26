@@ -23,6 +23,7 @@ public class PersistentScene : MonoBehaviour
     public Button exitButton;
     public LogoutCanvas logoutCanvas;
     public Inventory inventory;
+    public List<EquippableItem> equipment;
 
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class PersistentScene : MonoBehaviour
         hud = FindObjectOfType<HUDController>();
         dialogueUI = FindObjectOfType<DialogueUI>();
         inventory = gameObject.GetComponentInChildren<InventoryManager>(true).inventory;
+        equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
         logoutCanvas.gameObject.SetActive(false);
         hud.gameObject.SetActive(false);
         QuestManager.instance.questWindowUI = questWindowUI;
@@ -63,18 +65,25 @@ public class PersistentScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if (exitButton.enabled)
-            {
-                exitButton.enabled = false;
-                logoutButton.gameObject.SetActive(false);
-                exitButton.gameObject.SetActive(false);
-            }
-            else
-            {
-                exitButton.enabled = true;
-                logoutButton.gameObject.SetActive(true);
-                exitButton.gameObject.SetActive(true);
-            }
+            ToggleMenu();
+        }
+
+        equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
+    }
+
+    public void ToggleMenu()
+    {
+        if (exitButton.enabled)
+        {
+            exitButton.enabled = false;
+            logoutButton.gameObject.SetActive(false);
+            exitButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            exitButton.enabled = true;
+            logoutButton.gameObject.SetActive(true);
+            exitButton.gameObject.SetActive(true);
         }
     }
 

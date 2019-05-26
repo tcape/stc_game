@@ -7969,6 +7969,7 @@ MonoBehaviour:
   - {fileID: 11400232}
   - {fileID: 11439382}
   - {fileID: 11417996}
+  equipment: []
 --- !u!1 &180976
 GameObject:
   m_ObjectHideFlags: 0

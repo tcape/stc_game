@@ -4,21 +4,46 @@ using UnityEngine;
 
 namespace Kryz.CharacterStats.Examples
 {
-	public class Inventory : MonoBehaviour
-	{
-		[SerializeField] public List<Item> items;
-		[SerializeField] Transform itemsParent;
-		[SerializeField] ItemSlot[] itemSlots;
+    public class Inventory : MonoBehaviour
+    {
+        private HeroClass heroClass;
+        [SerializeField] public List<Item> items;
+        [SerializeField] Transform itemsParent;
+        [SerializeField] ItemSlot[] itemSlots;
 
-		public event Action<Item> OnItemRightClickedEvent;
+        public event Action<Item> OnItemRightClickedEvent;
 
-		private void Start()
-		{
-			for (int i = 0; i < itemSlots.Length; i++)
-			{
-				itemSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
-			}
-		}
+        private void Start()
+        {
+            for (int i = 0; i < itemSlots.Length; i++)
+            {
+                itemSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
+            }
+        }
+
+        private void Awake()
+        {
+            heroClass = PersistentScene.Instance.GameCharacter.HeroClass;
+
+            // will need to check if first time playing the game with character
+            SetStartingItems();
+            RefreshUI();
+        }
+
+        private void SetStartingItems()
+        {
+            switch (heroClass)
+            {
+                case HeroClass.Warrior:
+                    items = Resources.Load<ItemDatabase>("Items/WarriorStartingItems").items;
+                    break;
+                case HeroClass.Mage:
+                    items = Resources.Load<ItemDatabase>("Items/MageStartingItems").items;
+                    break;
+            }
+        }
+    
+        
 
 		private void OnValidate()
 		{

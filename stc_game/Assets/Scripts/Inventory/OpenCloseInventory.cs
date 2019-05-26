@@ -14,7 +14,7 @@ public class OpenCloseInventory : MonoBehaviour
         }
     }
 
-    private void ToggleInventory()
+    public void ToggleInventory()
     {
         if (inventoryPanel.activeSelf)
         {

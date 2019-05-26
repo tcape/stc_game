@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kryz.CharacterStats.Examples
@@ -6,11 +7,17 @@ namespace Kryz.CharacterStats.Examples
 	public class EquipmentPanel : MonoBehaviour
 	{
 		[SerializeField] Transform equipmentSlotsParent;
-		[SerializeField] EquipmentSlot[] equipmentSlots;
+		[SerializeField] public EquipmentSlot[] equipmentSlots;
+        public List<EquippableItem> equipment;
 
 		public event Action<Item> OnItemRightClickedEvent;
 
-		private void Start()
+        private void Awake()
+        {
+            equipment = new List<EquippableItem>();
+        }
+
+        private void Start()
 		{
 			for (int i = 0; i < equipmentSlots.Length; i++)
 			{
@@ -31,6 +38,7 @@ namespace Kryz.CharacterStats.Examples
 				{
 					previousItem = (EquippableItem)equipmentSlots[i].Item;
 					equipmentSlots[i].Item = item;
+                    AddToEquipmentList(item);
 					return true;
 				}
 			}
@@ -45,10 +53,27 @@ namespace Kryz.CharacterStats.Examples
 				if (equipmentSlots[i].Item == item)
 				{
 					equipmentSlots[i].Item = null;
+                    RemoveFromEquipmentList(item);
 					return true;
 				}
 			}
 			return false;
 		}
+
+        private void AddToEquipmentList(EquippableItem item)
+        {
+            if (!equipment.Contains(item))
+            {
+                equipment.Add(item);
+            }
+        }
+
+        private void RemoveFromEquipmentList(EquippableItem item)
+        {
+            if (equipment.Contains(item))
+            {
+                equipment.Remove(item);
+            }
+        }
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.CharacterBehavior.Combat;
+using Kryz.CharacterStats.Examples;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,8 +18,12 @@ public class Hero : MonoBehaviour
     public CapsuleCollider physicsCollider;
     public StateController stateController;
     public SpawnManager spawner;
-    //public Inventory inventory;
-    //public Equipment equipment;
+    public Inventory inventory;
+    public List<EquippableItem> equipment;
+    private GameObject weapon1;
+    private GameObject weapon2;
+    private Item mainWeapon;
+    private Item offWeapon;
     
     private void Awake()
     {
@@ -33,8 +38,32 @@ public class Hero : MonoBehaviour
         physicsCollider = GetComponent<CapsuleCollider>();
         stateController = GetComponent<StateController>();
         spawner = GetComponent<SpawnManager>();
-        //inventory = GetComponent<Inventory>();
-        // equipment = GetCompnent<Equipment>();
+        inventory = PersistentScene.Instance.inventory;
+        equipment = PersistentScene.Instance.equipment;
+        weapon1 = GetComponentInChildren<Weapon1>().gameObject;
+        mainWeapon = weapon1.GetComponent<GameItem>().item;
+        weapon2 = GetComponentInChildren<Weapon2>().gameObject;
+        offWeapon = weapon2.GetComponent<GameItem>().item;
+    }
+
+    private void UpdateEquipment()
+    {
+        equipment = PersistentScene.Instance.equipment;
+
+        if (!equipment.Contains((EquippableItem)mainWeapon))
+            weapon1.SetActive(false);
+        else
+            weapon1.SetActive(true);
+
+        if (!equipment.Contains((EquippableItem)offWeapon))
+            weapon2.SetActive(false);
+        else
+            weapon2.SetActive(true);
+    }
+
+    private void Update()
+    {
+        UpdateEquipment();
     }
 
     public void LoadCharacterStats()
