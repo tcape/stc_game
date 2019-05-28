@@ -17,16 +17,16 @@ MonoBehaviour:
   ItemName: Wand
   Icon: {fileID: 21300000, guid: 882ce518036f87746bc394cc8eac1830, type: 3}
   characterPanel: {fileID: 0}
-  strengthBonus: 1
-  dexterityBonus: 1
-  intellectBonus: 2
+  strengthBonus: 0
+  dexterityBonus: 0
+  intellectBonus: 1
   attackBonus: 0
-  defenseBonus: 1
-  critChanceBonus: 0.02
-  critPowerBonus: 0.02
-  abilityCritChanceBonus: 0
-  abilityCritPowerBonus: 0
-  dodgeBonus: 0.02
+  defenseBonus: 0
+  critChanceBonus: 0
+  critPowerBonus: 0
+  abilityCritChanceBonus: 0.01
+  abilityCritPowerBonus: 0.01
+  dodgeBonus: 0.01
   movementBonus: 0
   strengthPercentBonus: 0
   dexterityPercentBonus: 0

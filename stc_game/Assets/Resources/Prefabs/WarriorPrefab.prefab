@@ -15202,6 +15202,8 @@ GameObject:
   - component: {fileID: 6701286545931923803}
   - component: {fileID: 6870875766580896944}
   - component: {fileID: 7997036652359063929}
+  - component: {fileID: 4861487034445578923}
+  - component: {fileID: 4618069001387578787}
   m_Layer: 2
   m_Name: SM_Wep_Ornate_Sword_01
   m_TagString: Untagged
@@ -15218,7 +15220,7 @@ Transform:
   m_GameObject: {fileID: 6677376581455798911}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 6.6, y: 6.35, z: 0}
-  m_LocalScale: {x: 90, y: 90, z: 90}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 8295525311705213815}
   - {fileID: 6682408777478828707}
@@ -15298,6 +15300,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hittingTarget: 0
   target: {fileID: 0}
+--- !u!114 &4861487034445578923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677376581455798911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0622a806ead65f4419347e8ad25efa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 9cb3ede0f2c16664a8d70485d701f85d, type: 2}
+--- !u!114 &4618069001387578787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6677376581455798911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e773c3adb3ef2574a8c584887ad855dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6677382209553018885
 GameObject:
   m_ObjectHideFlags: 0

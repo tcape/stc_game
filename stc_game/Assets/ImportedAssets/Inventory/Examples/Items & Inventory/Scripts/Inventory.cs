@@ -19,6 +19,8 @@ namespace Kryz.CharacterStats.Examples
             {
                 itemSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
             }
+
+            RefreshUI();
         }
 
         private void Awake()
@@ -35,15 +37,13 @@ namespace Kryz.CharacterStats.Examples
             switch (heroClass)
             {
                 case HeroClass.Warrior:
-                    items = Resources.Load<ItemDatabase>("Items/WarriorStartingItems").items;
+                    items = WarriorStartingItems.startingItems;
                     break;
                 case HeroClass.Mage:
-                    items = Resources.Load<ItemDatabase>("Items/MageStartingItems").items;
+                    items = MageStartingItems.startingItems;
                     break;
             }
         }
-    
-        
 
 		private void OnValidate()
 		{

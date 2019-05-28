@@ -1,7 +1,9 @@
 ﻿using Assets.Scripts.CharacterBehavior.Combat;
 using Kryz.CharacterStats.Examples;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,8 +22,8 @@ public class Hero : MonoBehaviour
     public SpawnManager spawner;
     public Inventory inventory;
     public List<EquippableItem> equipment;
-    private GameObject weapon1;
-    private GameObject weapon2;
+    private Weapon1[] weapon1;
+    private Weapon2[] weapon2;
     private Item mainWeapon;
     private Item offWeapon;
     
@@ -40,30 +42,62 @@ public class Hero : MonoBehaviour
         spawner = GetComponent<SpawnManager>();
         inventory = PersistentScene.Instance.inventory;
         equipment = PersistentScene.Instance.equipment;
-        weapon1 = GetComponentInChildren<Weapon1>().gameObject;
-        mainWeapon = weapon1.GetComponent<GameItem>().item;
-        weapon2 = GetComponentInChildren<Weapon2>().gameObject;
-        offWeapon = weapon2.GetComponent<GameItem>().item;
+        weapon1 = GetComponentsInChildren<Weapon1>(true);
+        mainWeapon = equipment.Where(e => e.EquipmentType.Equals(EquipmentType.Weapon1)).SingleOrDefault();
+        weapon2 = GetComponentsInChildren<Weapon2>(true);
+        offWeapon = equipment.Where(e => e.EquipmentType.Equals(EquipmentType.Weapon2)).SingleOrDefault();
+    }
+
+    private void Start()
+    {
+        UpdateEquipment();
     }
 
     private void UpdateEquipment()
     {
         equipment = PersistentScene.Instance.equipment;
 
-        if (!equipment.Contains((EquippableItem)mainWeapon))
-            weapon1.SetActive(false);
-        else
-            weapon1.SetActive(true);
+        mainWeapon = equipment.Where(e => e.EquipmentType.Equals(EquipmentType.Weapon1)).SingleOrDefault();
+        offWeapon = equipment.Where(e => e.EquipmentType.Equals(EquipmentType.Weapon2)).SingleOrDefault();
+        
+        if (!mainWeapon)
+        {
+            foreach (var weapon in weapon1)
+            {
+                weapon.gameObject.SetActive(false);
+            }
+        }
+        else 
+        {
+            foreach(var weapon in weapon1)
+            {
+                if (weapon.gameObject.GetComponent<GameItem>().item.Equals(mainWeapon))
+                    weapon.gameObject.SetActive(true);
+                else weapon.gameObject.SetActive(false);
+            }
+        }
 
-        if (!equipment.Contains((EquippableItem)offWeapon))
-            weapon2.SetActive(false);
+        if (!offWeapon)
+        {
+            foreach (var weapon in weapon2)
+            {
+                weapon.gameObject.SetActive(false);
+            }
+        }
         else
-            weapon2.SetActive(true);
+        {
+            foreach (var weapon in weapon2)
+            {
+                if (weapon.gameObject.GetComponent<GameItem>().item.Equals(mainWeapon))
+                    weapon.gameObject.SetActive(true);
+                else weapon.gameObject.SetActive(false);
+            }
+        }
     }
 
     private void Update()
     {
-        UpdateEquipment();
+        //UpdateEquipment();
     }
 
     public void LoadCharacterStats()
@@ -92,5 +126,47 @@ public class Hero : MonoBehaviour
         rigidbody.isKinematic = false;
         physicsCollider.enabled = true;
         stateController.currentState = stateController.startState;
+    }
+
+    public void OnEquipmentChange(List<EquippableItem> equippedItems)
+    {
+        equipment = equippedItems;
+
+        mainWeapon = equipment.Where(e => e.EquipmentType.Equals(EquipmentType.Weapon1)).SingleOrDefault();
+        offWeapon = equipment.Where(e => e.EquipmentType.Equals(EquipmentType.Weapon2)).SingleOrDefault();
+
+        if (!mainWeapon)
+        {
+            foreach (var weapon in weapon1)
+            {
+                weapon.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (var weapon in weapon1)
+            {
+                if (weapon.gameObject.GetComponent<GameItem>().item.Equals(mainWeapon))
+                    weapon.gameObject.SetActive(true);
+                else weapon.gameObject.SetActive(false);
+            }
+        }
+
+        if (!offWeapon)
+        {
+            foreach (var weapon in weapon2)
+            {
+                weapon.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (var weapon in weapon2)
+            {
+                if (weapon.gameObject.GetComponent<GameItem>().item.Equals(offWeapon))
+                    weapon.gameObject.SetActive(true);
+                else weapon.gameObject.SetActive(false);
+            }
+        }
     }
 }

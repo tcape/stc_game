@@ -106,6 +106,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 0.79607844}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecColor: {r: 1, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 1, g: 0.2216981, b: 0.2216981, a: 1}
     - _WaterDeepColor: {r: 1, g: 1, b: 1, a: 0}
     - _WaterShallowColor: {r: 0, g: 0, b: 0, a: 0}

@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
-  m_Name: Magic Staff
+  m_Name: AbCritPwrGem
   m_EditorClassIdentifier: 
   Id: 0
-  itemClass: 1
-  ItemName: Magic Staff
-  Icon: {fileID: 21300000, guid: 4d4c605d347d3df4e8efe737ef79897a, type: 3}
+  itemClass: 2
+  ItemName: Ability Crit Pwr Gem
+  Icon: {fileID: 21300000, guid: cb74032f9adc22e4d96e488623a2b502, type: 3}
   characterPanel: {fileID: 0}
-  strengthBonus: 1
-  dexterityBonus: 1
-  intellectBonus: 3
-  attackBonus: 1
-  defenseBonus: 1
+  strengthBonus: 0
+  dexterityBonus: 0
+  intellectBonus: 0
+  attackBonus: 0
+  defenseBonus: 0
   critChanceBonus: 0
-  critPowerBonus: 0.05
-  abilityCritChanceBonus: 0.05
-  abilityCritPowerBonus: 0.05
+  critPowerBonus: 0
+  abilityCritChanceBonus: 0
+  abilityCritPowerBonus: 0.1
   dodgeBonus: 0
   movementBonus: 0
   strengthPercentBonus: 0
@@ -39,4 +39,4 @@ MonoBehaviour:
   abilityCritPowerPercentBonus: 0
   dodgePercentBonus: 0
   movementPercentBonus: 0
-  EquipmentType: 4
+  EquipmentType: 7

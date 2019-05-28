@@ -6,26 +6,40 @@ namespace Kryz.CharacterStats.Examples
 {
 	public class EquipmentPanel : MonoBehaviour
 	{
+        public GameObject characterPanel;
 		[SerializeField] Transform equipmentSlotsParent;
 		[SerializeField] public EquipmentSlot[] equipmentSlots;
         public List<EquippableItem> equipment;
-
 		public event Action<Item> OnItemRightClickedEvent;
+        private Hero hero;
+
+        //private void OnEnable()
+        //{
+        //    SceneController.Instance.AfterSceneLoad += GetHero;
+        //}
+
+        //private void OnDisable()
+        //{
+        //    SceneController.Instance.AfterSceneLoad -= GetHero;
+        //}
 
         private void Awake()
         {
+            characterPanel = GameObject.Find("Character Panel");
             equipment = new List<EquippableItem>();
+            SceneController.Instance.AfterSceneLoad += GetHero;
+            characterPanel.SetActive(false);
         }
 
         private void Start()
-		{
-			for (int i = 0; i < equipmentSlots.Length; i++)
-			{
-				equipmentSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
-			}
-		}
-        
-		private void OnValidate()
+        {
+            for (int i = 0; i < equipmentSlots.Length; i++)
+            {
+                equipmentSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
+            }
+        }
+
+        private void OnValidate()
 		{
 			equipmentSlots = equipmentSlotsParent.GetComponentsInChildren<EquipmentSlot>();
 		}
@@ -38,7 +52,10 @@ namespace Kryz.CharacterStats.Examples
 				{
 					previousItem = (EquippableItem)equipmentSlots[i].Item;
 					equipmentSlots[i].Item = item;
+                    if (previousItem)
+                        RemoveFromEquipmentList(previousItem);
                     AddToEquipmentList(item);
+                    hero.OnEquipmentChange(equipment);
 					return true;
 				}
 			}
@@ -54,6 +71,7 @@ namespace Kryz.CharacterStats.Examples
 				{
 					equipmentSlots[i].Item = null;
                     RemoveFromEquipmentList(item);
+                    hero.OnEquipmentChange(equipment);
 					return true;
 				}
 			}
@@ -74,6 +92,11 @@ namespace Kryz.CharacterStats.Examples
             {
                 equipment.Remove(item);
             }
+        }
+
+        public void GetHero()
+        {
+            hero = GameObject.FindGameObjectWithTag("Player").GetComponent<Hero>();
         }
 	}
 }

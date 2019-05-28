@@ -8,4 +8,5 @@ public class ItemDatabase : ScriptableObject
 {
     public List<Item> items;
 
+    
 }

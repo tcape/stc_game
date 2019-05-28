@@ -55,7 +55,8 @@ public class CheckDeathDecision : Decision
         controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
         if (controller.gameObject.GetComponent<SetQuestProgressOnKilled>())
         {
-            controller.gameObject.GetComponent<SetQuestProgressOnKilled>().OnKilled();
+            if(QuestManager.instance.HasActiveQuest(controller.gameObject.GetComponent<SetQuestProgressOnKilled>().progress.quest))
+                controller.gameObject.GetComponent<SetQuestProgressOnKilled>().OnKilled();
         }
 
         DisableComponents(controller);

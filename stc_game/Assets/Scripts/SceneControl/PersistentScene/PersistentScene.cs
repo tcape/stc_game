@@ -59,6 +59,9 @@ public class PersistentScene : MonoBehaviour
         QuestManager.instance.questWindowUI = questWindowUI;
         DialogueManager.instance.dialogueUI = dialogueUI;
         StartCoroutine(LoadGameScene());
+        exitButton.enabled = false;
+        logoutButton.gameObject.SetActive(false);
+        exitButton.gameObject.SetActive(false);
     }
 
     private void Update()

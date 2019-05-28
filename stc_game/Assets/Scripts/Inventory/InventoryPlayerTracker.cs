@@ -6,9 +6,15 @@ public class InventoryPlayerTracker : MonoBehaviour
 {
     public Stats playerStats;
 
+
     private void OnEnable()
     {
-        FindPlayerObject();
+        SceneController.Instance.AfterSceneLoad += FindPlayerObject;
+    }
+
+    private void OnDisable()
+    {
+        SceneController.Instance.AfterSceneLoad -= FindPlayerObject;
     }
 
     public void FindPlayerObject()
