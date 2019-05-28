@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: 0
   itemClass: 0
   ItemName: Sword
-  Icon: {fileID: 21300000, guid: d4484d350e72d0d49b4a228d0c398abf, type: 3}
+  Icon: {fileID: 21300000, guid: 2f0246cf565e5224a99e583179f7b291, type: 3}
   characterPanel: {fileID: 0}
   strengthBonus: 2
   dexterityBonus: 1

@@ -7961,6 +7961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d513850f827404bb25210b80c6098b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterPanel: {fileID: 0}
   equipmentSlotsParent: {fileID: 22488076}
   equipmentSlots:
   - {fileID: 11427700}
@@ -8478,7 +8479,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d4484d350e72d0d49b4a228d0c398abf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f0246cf565e5224a99e583179f7b291, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

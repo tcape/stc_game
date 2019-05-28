@@ -6,6 +6,12 @@ public class OpenCloseInventory : MonoBehaviour
 {
     public GameObject inventoryPanel;
 
+    private void Awake()
+    {
+        inventoryPanel.SetActive(true);
+        inventoryPanel.SetActive(false);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))

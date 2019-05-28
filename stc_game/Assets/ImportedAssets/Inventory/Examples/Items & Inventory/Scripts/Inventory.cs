@@ -19,8 +19,6 @@ namespace Kryz.CharacterStats.Examples
             {
                 itemSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
             }
-
-            RefreshUI();
         }
 
         private void Awake()
@@ -30,6 +28,7 @@ namespace Kryz.CharacterStats.Examples
             // will need to check if first time playing the game with character
             SetStartingItems();
             RefreshUI();
+            Start();
         }
 
         private void SetStartingItems()
@@ -37,10 +36,10 @@ namespace Kryz.CharacterStats.Examples
             switch (heroClass)
             {
                 case HeroClass.Warrior:
-                    items = WarriorStartingItems.startingItems;
+                    items = new List<Item>();/*WarriorStartingItems.startingItems;*/
                     break;
                 case HeroClass.Mage:
-                    items = MageStartingItems.startingItems;
+                    items = new List<Item>();/*MageStartingItems.startingItems;*/
                     break;
             }
         }

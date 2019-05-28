@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AttackGem
   m_EditorClassIdentifier: 
   Id: 0
-  itemClass: 2
+  itemClass: 0
   ItemName: Attack Gem
   Icon: {fileID: 21300000, guid: 80444ca05aebbeb46af32e6fe938b13a, type: 3}
   characterPanel: {fileID: 0}

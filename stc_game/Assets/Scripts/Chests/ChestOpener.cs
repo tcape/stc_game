@@ -10,7 +10,7 @@ public class ChestOpener : MonoBehaviour
 {
     private Camera cam;
     private Animator animator;
-    private bool opened;
+    public bool opened;
     private GameObject player;
     private HeroClass playerClass;
     public float range;
@@ -25,7 +25,10 @@ public class ChestOpener : MonoBehaviour
         playerClass = player.GetComponent<Hero>().heroClass;
         animator = GetComponent<Animator>();
         animator.SetBool("open", false);
-        opened = false;
+        if (opened)
+        {
+            GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -35,6 +38,11 @@ public class ChestOpener : MonoBehaviour
         {
             OpenAndCloseChest();
         }
+    }
+
+    public void SetOpened(bool o)
+    {
+        opened = o;
     }
 
     private void OpenAndCloseChest()
@@ -74,16 +82,19 @@ public class ChestOpener : MonoBehaviour
     
     private IEnumerator SpawnGold()
     {
-        yield return new WaitForSeconds(1f);
-        var gold = Instantiate(Resources.Load("Prefabs/Gold1"), gameObject.transform) as GameObject;
-        gold.transform.rotation = transform.rotation;
-        gold.transform.position = transform.position + new Vector3(1f, 0.1f, 0f); // need to get this to make gold appear in front of chest everytime
-        gold.GetComponent<Gold>().SetAmount(goldAmount);
+        if (goldAmount > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            var gold = Instantiate(Resources.Load("Prefabs/Gold1"), gameObject.transform) as GameObject;
+            gold.transform.rotation = transform.rotation;
+            gold.transform.position = transform.position + new Vector3(1f, 0.1f, 0f); // need to get this to make gold appear in front of chest everytime
+            gold.GetComponent<Gold>().SetAmount(goldAmount);
+        }
     }
 
     private IEnumerator SpawnItems()
     {
-        float rotation = 0;
+        float rotation = (float)(Math.PI / 4f);
         foreach (var item in items)
         {
             if (item.GetComponent<GameItem>().item.itemClass == ItemClass.Any || 

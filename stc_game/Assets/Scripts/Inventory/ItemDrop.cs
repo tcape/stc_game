@@ -30,7 +30,7 @@ public class ItemDrop : MonoBehaviour
                 {
                     float x = (float)Math.Sin(rotation) * 2f;
                     float z = (float)Math.Cos(rotation) * 2f;
-                    var droppedItem = Instantiate(item, gameObject.transform);
+                    var droppedItem = Instantiate(item);
                     droppedItem.transform.position = transform.position + new Vector3(x, 1.5f, z);
                     droppedItem.transform.rotation = Quaternion.Euler(0, UnityEngine.Random.Range(0f, 360f), 90);
                     rotation += (float)(Math.PI / 4f);

@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: 0
   itemClass: 0
   ItemName: Crystal Sword
-  Icon: {fileID: 21300000, guid: d4484d350e72d0d49b4a228d0c398abf, type: 3}
+  Icon: {fileID: 21300000, guid: bbbb91e652236b24782774f3481fb95b, type: 3}
   characterPanel: {fileID: 0}
   strengthBonus: 3
   dexterityBonus: 2

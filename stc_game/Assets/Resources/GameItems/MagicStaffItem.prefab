@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 362206803574580618}
   - component: {fileID: 1045502256101461854}
   m_Layer: 0
-  m_Name: MagicStaff
+  m_Name: MagicStaffItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0622a806ead65f4419347e8ad25efa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: d44e61e9a315ff6479529812f14d3581, type: 2}
+  item: {fileID: 11400000, guid: 057c4b0ad06ce384cb2d2a2b5460c69b, type: 2}
 --- !u!54 &362206803574580618
 Rigidbody:
   m_ObjectHideFlags: 0

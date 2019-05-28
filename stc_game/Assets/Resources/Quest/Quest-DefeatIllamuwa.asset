@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0763b70f85cfe5f4e93fd923c8b3d84a, type: 3}
   m_Name: Quest-DefeatIllamuwa
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"ID":2,"name":{"_key":"112184d4-5e92-4b2d-a926-4321250b1fd3"},"description":{"_key":"d3386487-91e7-4f6b-8233-6c689b809aa8"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+  _serializedJsonString: '{"ID":2,"name":{"_key":"112184d4-5e92-4b2d-a926-4321250b1fd3"},"description":{"_key":"d3386487-91e7-4f6b-8233-6c689b809aa8"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Defeat
+    Illamuwa","description":{"_key":"307e61d0-d5f3-4106-87e4-77bdd4510c9c"},"statusMessage":{"_key":"315ad8be-e4f6-491a-b132-fb1a8e082e63"},"_icon":0,"_progressCap":1.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
   _objectReferences:
   - {fileID: 0}
   ID: 2

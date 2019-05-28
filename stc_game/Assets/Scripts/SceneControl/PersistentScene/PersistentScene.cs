@@ -52,6 +52,7 @@ public class PersistentScene : MonoBehaviour
         reviveController = FindObjectOfType<ReviveController>();
         hud = FindObjectOfType<HUDController>();
         dialogueUI = FindObjectOfType<DialogueUI>();
+        actionBar = GetComponentInChildren<ActionBarController>();
         inventory = gameObject.GetComponentInChildren<InventoryManager>(true).inventory;
         equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
         logoutCanvas.gameObject.SetActive(false);

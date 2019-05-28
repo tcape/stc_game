@@ -13,15 +13,6 @@ namespace Kryz.CharacterStats.Examples
 		public event Action<Item> OnItemRightClickedEvent;
         private Hero hero;
 
-        //private void OnEnable()
-        //{
-        //    SceneController.Instance.AfterSceneLoad += GetHero;
-        //}
-
-        //private void OnDisable()
-        //{
-        //    SceneController.Instance.AfterSceneLoad -= GetHero;
-        //}
 
         private void Awake()
         {

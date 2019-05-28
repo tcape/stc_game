@@ -88,7 +88,7 @@ public class Hero : MonoBehaviour
         {
             foreach (var weapon in weapon2)
             {
-                if (weapon.gameObject.GetComponent<GameItem>().item.Equals(mainWeapon))
+                if (weapon.gameObject.GetComponent<GameItem>().item.Equals(offWeapon))
                     weapon.gameObject.SetActive(true);
                 else weapon.gameObject.SetActive(false);
             }
