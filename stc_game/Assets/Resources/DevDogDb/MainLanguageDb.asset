@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
   m_Name: MainLanguageDb
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"aec03867-2e8b-4e28-9eef-856a8b0cb59c":"Go
-    collect 300 gold!","9e8fbe40-be68-4c2a-9cc3-d9ee512cd264":"Remember to spend your
-    gold at the blacksmith!","0c71a6ab-c149-463e-9a9b-1edf045ad022":"I will talk with
-    you once you get acquainted with the blacksmith.","20c8c638-0e23-4b05-a210-975297bb671c":"Go
+  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"ca4ad375-895a-4e32-989b-46d81dd4ff9e":"Save
+    my brother!","aec03867-2e8b-4e28-9eef-856a8b0cb59c":"Go collect 300 gold!","9e8fbe40-be68-4c2a-9cc3-d9ee512cd264":"Remember
+    to spend your gold at the blacksmith!","0c71a6ab-c149-463e-9a9b-1edf045ad022":"I
+    will talk with you once you get acquainted with the blacksmith.","20c8c638-0e23-4b05-a210-975297bb671c":"Go
     talk to the Blacksmith!","e0b47bac-118f-48c3-9675-12475939ebf6":"Collect 300 Gold.","4a78a4f7-1a6f-4515-a3ac-8ef1c6a7d973":"and
     now we can''t because of his occupation! Destroy him!","5177cd5d-190a-42d9-ab10-2449d8a1176c":"Hero,
     thank you for saving our land!","9d915740-ad6c-4ca5-890d-8218fdf76953":"Killed
@@ -41,6 +41,16 @@ MonoBehaviour:
     lately, since Illamuwa has occupied our dungeon.","3f3143fb-8313-4333-951a-70dc96fadf7d":"Will
     you please go to the caverns to the north to collect 300 gold for the town, hero?","b9d968c8-4ac1-48a6-8f70-dd829430756a":"I
     feel as though I''m not ready to talk to you yet.","c7aa2b20-0902-4430-a216-7e36a1afb19b":"Thank
-    you for collecting the gold. Feel free to keep it and use it on the town''s wares."},"_localizedObjects":{}}'
+    you for collecting the gold. Feel free to keep it and use it on the town''s wares.","3d4f2999-b22e-4496-aa49-9cffdfcd2c15":"save
+    my brother from the goblins!","793cb201-c320-46a1-a395-afaecdfef33f":"save my
+    brother","df8dc23c-8694-41a5-b082-2aaa68e6a136":"Defeated {0} / {2} goblins","b0039e31-6b5c-40de-89e3-e5132e79c49b":"HERO!!!","3c1cd41a-7239-4a03-9179-ff18aed39ee4":"My
+    brother is being held hostage by goblins. Go Save him please!","5971c1c2-be8f-45b9-8904-292860bef56a":"Go
+    save him!!","cbbc3a1d-0390-4d12-8e20-7bfa430c6eb1":"It seems you defeated all
+    the goblins... yay! Tell my brother it is safe now.","ecd5f5ec-25b0-4e35-8383-af128a835849":"HERO!
+    I''m so scared.","7ed82848-55f2-4a9c-b80b-7597ed6303ec":"Thank you for saving
+    me!","4545d2a5-277e-4d24-833e-a46a3ddfc962":"AHH!! Defeat these goblins!","705b5630-7d50-4537-a23b-6b7d360b7fe6":"Who
+    are all these goblins? Why are they holding me hostage? ","6a26b02b-5a16-4391-acf2-056579016020":"Thank
+    you for saving my brother.","b2e13354-fcd4-45e7-916f-c3701840cfc0":"Thank you
+    for saving me."},"_localizedObjects":{}}'
   _objectReferences: []
   _lang: en-US
