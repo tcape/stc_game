@@ -2,6 +2,7 @@
 using Devdog.QuestSystemPro.Dialogue;
 using Devdog.QuestSystemPro.Dialogue.UI;
 using Devdog.QuestSystemPro.UI;
+using Kryz.CharacterStats.Examples;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,8 @@ public class PersistentScene : MonoBehaviour
     public Button logoutButton;
     public Button exitButton;
     public LogoutCanvas logoutCanvas;
+    public Inventory inventory;
+    public List<EquippableItem> equipment;
 
     private void Awake()
     {
@@ -49,30 +52,42 @@ public class PersistentScene : MonoBehaviour
         reviveController = FindObjectOfType<ReviveController>();
         hud = FindObjectOfType<HUDController>();
         dialogueUI = FindObjectOfType<DialogueUI>();
-
+        actionBar = GetComponentInChildren<ActionBarController>();
+        inventory = gameObject.GetComponentInChildren<InventoryManager>(true).inventory;
+        equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
         logoutCanvas.gameObject.SetActive(false);
         hud.gameObject.SetActive(false);
         QuestManager.instance.questWindowUI = questWindowUI;
         DialogueManager.instance.dialogueUI = dialogueUI;
         StartCoroutine(LoadGameScene());
+        exitButton.enabled = false;
+        logoutButton.gameObject.SetActive(false);
+        exitButton.gameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if (exitButton.enabled)
-            {
-                exitButton.enabled = false;
-                logoutButton.gameObject.SetActive(false);
-                exitButton.gameObject.SetActive(false);
-            }
-            else
-            {
-                exitButton.enabled = true;
-                logoutButton.gameObject.SetActive(true);
-                exitButton.gameObject.SetActive(true);
-            }
+            ToggleMenu();
+        }
+
+        equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
+    }
+
+    public void ToggleMenu()
+    {
+        if (exitButton.enabled)
+        {
+            exitButton.enabled = false;
+            logoutButton.gameObject.SetActive(false);
+            exitButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            exitButton.enabled = true;
+            logoutButton.gameObject.SetActive(true);
+            exitButton.gameObject.SetActive(true);
         }
     }
 

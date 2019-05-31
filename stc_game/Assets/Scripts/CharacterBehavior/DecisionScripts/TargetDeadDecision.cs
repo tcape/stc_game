@@ -13,7 +13,7 @@ public class TargetDeadDecision : Decision
 
     private bool TargetIsDead(StateController controller)
     {
-        if (controller.target && controller.target.GetComponent<CharacterStats>().stats.dead)
+        if (!controller.target || controller.target.GetComponent<CharacterStats>().stats.dead)
         {
             controller.target = null; // might be problem after revive
             return true;

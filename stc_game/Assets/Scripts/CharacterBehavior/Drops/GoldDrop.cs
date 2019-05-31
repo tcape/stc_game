@@ -22,7 +22,7 @@ namespace Assets.Scripts.CharacterBehavior.Drops
             goldInstance.GetComponent<Gold>().SetAmount(stats.gold);
             goldInstance.SetActive(false);
             dropped = false;
-            offset = new Vector3(1f, 0.5f, 1f);
+            offset = new Vector3(1f, 0.1f, 1f);
         }
 
         public void DropGold()
