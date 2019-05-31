@@ -18,11 +18,11 @@ MonoBehaviour:
   actions:
   - {fileID: 11400000, guid: a1240488a6e45404c8a9f83d3edce03e, type: 2}
   - {fileID: 11400000, guid: 557176bbefbe6794a98abb9dfee01743, type: 2}
-  animationTrigger: 
+  animationTrigger: RangeAttack1
   cooldown: 5
   duration: 5
   cost: 20
   hotkey: 51
   range: 20
-  startTime: 122.45723
+  startTime: 154.14217
   target: {fileID: 0}
