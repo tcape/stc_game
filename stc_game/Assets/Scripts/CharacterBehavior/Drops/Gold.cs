@@ -13,6 +13,12 @@ namespace Assets.Scripts.CharacterBehavior.Drops
     public class Gold : MonoBehaviour
     {
         public double amount;
+        private Quest goldQuest;
+
+        private void Awake()
+        {
+            goldQuest = Resources.Load<Quest>("Quest/Quest-CollectGold");
+        }
 
         public void SetAmount(double value)
         {
@@ -25,11 +31,12 @@ namespace Assets.Scripts.CharacterBehavior.Drops
             {
                 other.GetComponent<CharacterStats>().stats.GainGold(amount);
                 Debug.Log("Gold given to hero " + amount.ToString());
-                // Call OnTriggerUsed here for gold quest instead of triggering with range
-                if (QuestManager.instance.HasActiveQuest(other.gameObject.GetComponent<SetQuestProgressOnTriggerObjectGold>().progress.quest))
+               
+                if (QuestManager.instance.HasActiveQuest(goldQuest))
                 {
                     GetComponent<SetQuestProgressOnTriggerObjectGold>().OnTriggerUsed(other.GetComponent<Player>());
                 }
+
                 Destroy(gameObject);
             }
         }

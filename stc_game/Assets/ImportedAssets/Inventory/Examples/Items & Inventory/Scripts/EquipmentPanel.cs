@@ -6,7 +6,7 @@ namespace Kryz.CharacterStats.Examples
 {
 	public class EquipmentPanel : MonoBehaviour
 	{
-        public GameObject characterPanel;
+        public GameObject characterInventory;
 		[SerializeField] Transform equipmentSlotsParent;
 		[SerializeField] public EquipmentSlot[] equipmentSlots;
         public List<EquippableItem> equipment;
@@ -16,10 +16,10 @@ namespace Kryz.CharacterStats.Examples
 
         private void Awake()
         {
-            characterPanel = GameObject.Find("Character Panel");
+            characterInventory = GameObject.Find("Character Inventory");
             equipment = new List<EquippableItem>();
             SceneController.Instance.AfterSceneLoad += GetHero;
-            characterPanel.SetActive(false);
+            characterInventory.GetComponent<Canvas>().enabled = false;
         }
 
         private void Start()
