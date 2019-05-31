@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
   m_Name: MainLanguageDb
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"NO_KEY":"","ca4ad375-895a-4e32-989b-46d81dd4ff9e":"Save
+  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"ca4ad375-895a-4e32-989b-46d81dd4ff9e":"Save
     my brother!","aec03867-2e8b-4e28-9eef-856a8b0cb59c":"Go collect 300 gold!","9e8fbe40-be68-4c2a-9cc3-d9ee512cd264":"Remember
     to spend your gold at the blacksmith!","0c71a6ab-c149-463e-9a9b-1edf045ad022":"I
     will talk with you once you get acquainted with the blacksmith.","20c8c638-0e23-4b05-a210-975297bb671c":"Go
