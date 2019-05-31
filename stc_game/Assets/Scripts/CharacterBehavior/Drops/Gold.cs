@@ -26,7 +26,10 @@ namespace Assets.Scripts.CharacterBehavior.Drops
                 other.GetComponent<CharacterStats>().stats.GainGold(amount);
                 Debug.Log("Gold given to hero " + amount.ToString());
                 // Call OnTriggerUsed here for gold quest instead of triggering with range
-                GetComponent<SetQuestProgressOnTriggerObjectGold>().OnTriggerUsed(other.GetComponent<Player>());
+                if (QuestManager.instance.HasActiveQuest(other.gameObject.GetComponent<SetQuestProgressOnTriggerObjectGold>().progress.quest))
+                {
+                    GetComponent<SetQuestProgressOnTriggerObjectGold>().OnTriggerUsed(other.GetComponent<Player>());
+                }
                 Destroy(gameObject);
             }
         }
