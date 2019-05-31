@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,6 @@ public class OpenCloseInventory : MonoBehaviour
     private void Awake()
     {
         characterInventory = GameObject.Find("Character Inventory").GetComponent<Canvas>();
-        //characterInventory.SetActive(true);
         characterInventory.enabled = false;
     }
 
