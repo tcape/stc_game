@@ -1,15 +1,15 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OpenCloseInventory : MonoBehaviour
 {
-    public GameObject inventoryPanel;
+    public Canvas characterInventory;
 
     private void Awake()
     {
-        inventoryPanel.SetActive(true);
-        inventoryPanel.SetActive(false);
+        characterInventory = GameObject.Find("Character Inventory").GetComponent<Canvas>();
+        characterInventory.enabled = false;
     }
 
     private void Update()
@@ -22,13 +22,13 @@ public class OpenCloseInventory : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if (inventoryPanel.activeSelf)
+        if (characterInventory.enabled)
         {
-            inventoryPanel.SetActive(false);
+            characterInventory.enabled = false;
         }
         else
         {
-            inventoryPanel.SetActive(true);
+            characterInventory.enabled = true;
         }
     }
 }
