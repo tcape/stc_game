@@ -17,11 +17,12 @@ MonoBehaviour:
   targetType: 1
   actions:
   - {fileID: 11400000, guid: 972c3593b9841584483781a4247eafce, type: 2}
+  - {fileID: 11400000, guid: f34f4d301977add4b917e04364cb2e3a, type: 2}
   animationTrigger: Ability3
   cooldown: 5
   duration: 0
   cost: 20
   hotkey: 51
   range: 5
-  startTime: 398.99884
+  startTime: 71.46901
   target: {fileID: 0}

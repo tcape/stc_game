@@ -15,6 +15,7 @@ TagManager:
   - GameCharacter
   - HeroInScene
   - SceneTransition
+  - SoundObject
   layers:
   - Default
   - TransparentFX

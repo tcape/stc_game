@@ -18,6 +18,7 @@ MonoBehaviour:
   actions:
   - {fileID: 11400000, guid: 03eba18aa21e15d41a35094677eba85f, type: 2}
   - {fileID: 11400000, guid: fd83cbabb2bc99d43b54e389c2b7a0b4, type: 2}
+  - {fileID: 11400000, guid: e8a04b0b69d4ae04097ed20dff981bde, type: 2}
   animationTrigger: 
   cooldown: 5
   duration: 0.8

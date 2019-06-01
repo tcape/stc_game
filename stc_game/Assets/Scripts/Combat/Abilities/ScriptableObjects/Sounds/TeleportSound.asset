@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793cecf7919ed0943a72144fd499d603, type: 3}
+  m_Name: TeleportSound
+  m_EditorClassIdentifier: 
+  type: 0
+  persistance: 1
+  amount: 0
+  percentage: 0
+  interval: 0
+  effectTotal: 0
+  target: {fileID: 0}
+  lastTick: 0
+  sound: {fileID: 8300000, guid: b1568e511876de6418dd05f9179da56f, type: 3}
+  volume: 0.1
