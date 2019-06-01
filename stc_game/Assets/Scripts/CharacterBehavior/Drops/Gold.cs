@@ -17,7 +17,7 @@ namespace Assets.Scripts.CharacterBehavior.Drops
 
         private void Awake()
         {
-            goldQuest = Resources.Load<Quest>("Quest/Quest-CollectGold");
+            goldQuest = Resources.Load<Quest>("Quest/Quest-Collect300Gold");
         }
 
         public void SetAmount(double value)
