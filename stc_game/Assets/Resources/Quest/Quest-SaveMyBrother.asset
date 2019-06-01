@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0763b70f85cfe5f4e93fd923c8b3d84a, type: 3}
   m_Name: Quest-SaveMyBrother
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"ID":4,"name":{"_key":"ca4ad375-895a-4e32-989b-46d81dd4ff9e"},"description":{"_key":"3d4f2999-b22e-4496-aa49-9cffdfcd2c15"},"icon":null,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Save
+  _serializedJsonString: '{"ID":4,"name":{"_key":"ca4ad375-895a-4e32-989b-46d81dd4ff9e"},"description":{"_key":"3d4f2999-b22e-4496-aa49-9cffdfcd2c15"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Save
     my brother!","description":{"_key":"793cb201-c320-46a1-a395-afaecdfef33f"},"statusMessage":{"_key":"df8dc23c-8694-41a5-b082-2aaa68e6a136"},"_icon":null,"_progressCap":4.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
-  _objectReferences: []
+  _objectReferences:
+  - {fileID: 0}
   ID: 4
   name:
     _key: ca4ad375-895a-4e32-989b-46d81dd4ff9e

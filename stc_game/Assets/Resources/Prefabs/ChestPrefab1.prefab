@@ -113,7 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea1c82952ed8884bbc074f6974c4343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  opened: 0
+  range: 8
   goldAmount: 100
   items:
   - {fileID: 100508, guid: 86bcb823bedaac84e858895ea3e2f32a, type: 3}
