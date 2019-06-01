@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest-CollectGold
   m_EditorClassIdentifier: 
   _serializedJsonString: '{"ID":3,"name":{"_key":"e0b47bac-118f-48c3-9675-12475939ebf6"},"description":{"_key":"d4c77447-31e2-4788-85dd-8562da9b5a37"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Collect
-    300 gold","description":{"_key":"3d35a618-fc65-41f8-8132-bf415d2b0714"},"statusMessage":{"_key":"5514599c-94cf-45bd-924e-e04fef1edd28"},"_icon":null,"_progressCap":300.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+    300 Gold.","description":{"_key":"522e6c32-623e-4e19-9ccb-64c98d093fd8"},"statusMessage":{"_key":"a5de0476-3622-4781-852e-ad4f5f094721"},"_icon":0,"_progressCap":300.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
   _objectReferences:
   - {fileID: 0}
   ID: 3
