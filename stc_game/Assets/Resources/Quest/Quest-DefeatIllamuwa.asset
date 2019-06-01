@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0763b70f85cfe5f4e93fd923c8b3d84a, type: 3}
   m_Name: Quest-DefeatIllamuwa
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"ID":2,"name":{"_key":"112184d4-5e92-4b2d-a926-4321250b1fd3"},"description":{"_key":"d3386487-91e7-4f6b-8233-6c689b809aa8"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Defeat
-    Illamuwa","description":{"_key":"14e81a88-0fca-4d4c-ac54-ad6d6f8de237"},"statusMessage":{"_key":"f62ed774-7ab7-4170-b98f-017cf7d404d9"},"_icon":0,"_progressCap":1.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
-  _objectReferences:
-  - {fileID: 0}
+  _serializedJsonString: '{"ID":2,"name":{"_key":"90c95b57-355c-442b-b4d3-9ba09839b8ea"},"description":{"_key":"d6c0d6ea-8f3a-41e8-af99-8a34c3486e24"},"icon":null,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Defeat
+    Illamuwa","description":{"_key":"c9c86ab1-1bb1-456b-a340-be42241b3ff2"},"statusMessage":{"_key":"e64ea0aa-8381-4764-ad96-59abeba3f138"},"_icon":null,"_progressCap":1.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+  _objectReferences: []
   ID: 2
   name:
-    _key: 112184d4-5e92-4b2d-a926-4321250b1fd3
+    _key: 90c95b57-355c-442b-b4d3-9ba09839b8ea
   description:
-    _key: d3386487-91e7-4f6b-8233-6c689b809aa8
+    _key: d6c0d6ea-8f3a-41e8-af99-8a34c3486e24
   icon: {fileID: 0}
   autoCompleteWhenTasksAreDone: 0
   taskOrder: 0
