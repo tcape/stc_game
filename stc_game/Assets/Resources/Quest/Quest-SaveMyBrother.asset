@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest-SaveMyBrother
   m_EditorClassIdentifier: 
   _serializedJsonString: '{"ID":4,"name":{"_key":"ca4ad375-895a-4e32-989b-46d81dd4ff9e"},"description":{"_key":"3d4f2999-b22e-4496-aa49-9cffdfcd2c15"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Save
-    my brother!","description":{"_key":"793cb201-c320-46a1-a395-afaecdfef33f"},"statusMessage":{"_key":"df8dc23c-8694-41a5-b082-2aaa68e6a136"},"_icon":null,"_progressCap":4.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+    my brother","description":{"_key":"5f8d0b0b-2fb3-49e6-9e7e-d77728128870"},"statusMessage":{"_key":"aff8b0f0-d6f1-4a23-97a7-31267fc40cb3"},"_icon":0,"_progressCap":4.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
   _objectReferences:
   - {fileID: 0}
   ID: 4

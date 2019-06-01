@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
   m_Name: MainLanguageDb
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"6637244f-438c-4c3c-9930-87f9c3c953a5":"Walk
-    to town","d8c870ef-7068-4d80-9152-718df429d0a2":"Defeated {0} / {2} goblin chief","03ca6b72-5b26-4bd9-af9a-144f39fde96a":"Defeat
-    the goblin chief.","ca4ad375-895a-4e32-989b-46d81dd4ff9e":"Save my brother!","aec03867-2e8b-4e28-9eef-856a8b0cb59c":"Go
+  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"18bb2390-5bf4-444e-9154-d0d267f9e39c":"Walk
+    To Town","6637244f-438c-4c3c-9930-87f9c3c953a5":"Walk to town","d8c870ef-7068-4d80-9152-718df429d0a2":"Defeated
+    {0} / {2} goblin chief","03ca6b72-5b26-4bd9-af9a-144f39fde96a":"Defeat the goblin
+    chief.","ca4ad375-895a-4e32-989b-46d81dd4ff9e":"Save my brother!","aec03867-2e8b-4e28-9eef-856a8b0cb59c":"Go
     collect 300 gold!","9e8fbe40-be68-4c2a-9cc3-d9ee512cd264":"Remember to spend your
     gold at the blacksmith!","0c71a6ab-c149-463e-9a9b-1edf045ad022":"I will talk with
     you once you get acquainted with the blacksmith.","20c8c638-0e23-4b05-a210-975297bb671c":"Go
@@ -53,6 +54,10 @@ MonoBehaviour:
     me!","4545d2a5-277e-4d24-833e-a46a3ddfc962":"AHH!! Defeat these goblins!","705b5630-7d50-4537-a23b-6b7d360b7fe6":"Who
     are all these goblins? Why are they holding me hostage? ","6a26b02b-5a16-4391-acf2-056579016020":"Thank
     you for saving my brother.","b2e13354-fcd4-45e7-916f-c3701840cfc0":"Thank you
-    for saving me.","f2dac977-72ac-4913-868f-a6cff73e0a15":"Discovered {0} / {2} location"},"_localizedObjects":{}}'
+    for saving me.","f2dac977-72ac-4913-868f-a6cff73e0a15":"Discovered {0} / {2} location","97448aa5-4025-44d3-8ef3-1b317f57ab6c":"Discovered
+    {0} / {2} location","14e81a88-0fca-4d4c-ac54-ad6d6f8de237":"Defeat the goblin
+    chief.","f62ed774-7ab7-4170-b98f-017cf7d404d9":"Defeated {0} / {2} goblin chief","522e6c32-623e-4e19-9ccb-64c98d093fd8":"Collect
+    300 Gold.","a5de0476-3622-4781-852e-ad4f5f094721":"Collected {0} / {2} gold","5f8d0b0b-2fb3-49e6-9e7e-d77728128870":"defeat
+    goblins","aff8b0f0-d6f1-4a23-97a7-31267fc40cb3":"defeated {0} / {2} goblins"},"_localizedObjects":{}}'
   _objectReferences: []
   _lang: en-US

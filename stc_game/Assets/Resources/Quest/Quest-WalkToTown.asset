@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest-WalkToTown
   m_EditorClassIdentifier: 
   _serializedJsonString: '{"ID":1,"name":{"_key":"8d29a5d0-7aad-43f3-98bf-5ee782744e5b"},"description":{"_key":"ba2cf313-1715-4db4-93f9-c0c2082276be"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Walk
-    to town","description":{"_key":"6637244f-438c-4c3c-9930-87f9c3c953a5"},"statusMessage":{"_key":"f2dac977-72ac-4913-868f-a6cff73e0a15"},"_icon":null,"_progressCap":1.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+    To Town","description":{"_key":"18bb2390-5bf4-444e-9154-d0d267f9e39c"},"statusMessage":{"_key":"97448aa5-4025-44d3-8ef3-1b317f57ab6c"},"_icon":0,"_progressCap":1.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
   _objectReferences:
   - {fileID: 0}
   ID: 1

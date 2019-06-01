@@ -215,7 +215,7 @@ MonoBehaviour:
   gold: {fileID: 0}
   progress:
     quest: {fileID: 11400000, guid: a697f614205abe54589125384ea08a9d, type: 2}
-    taskName: Collect 300 gold
+    taskName: Collect 300 Gold.
     type: 0
     progress: 0
     useTaskProgressCap: 1
