@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0763b70f85cfe5f4e93fd923c8b3d84a, type: 3}
   m_Name: Quest-SaveMyBrother
   m_EditorClassIdentifier: 
-  _serializedJsonString: '{"ID":4,"name":{"_key":"ca4ad375-895a-4e32-989b-46d81dd4ff9e"},"description":{"_key":"3d4f2999-b22e-4496-aa49-9cffdfcd2c15"},"icon":0,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Save
-    my brother","description":{"_key":"5f8d0b0b-2fb3-49e6-9e7e-d77728128870"},"statusMessage":{"_key":"aff8b0f0-d6f1-4a23-97a7-31267fc40cb3"},"_icon":0,"_progressCap":4.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
-  _objectReferences:
-  - {fileID: 0}
-  ID: 4
+  _serializedJsonString: '{"ID":3,"name":{"_key":"77004d11-fe8d-466a-9667-0ab42268d4f1"},"description":{"_key":"b66c07fb-e0a7-4f4d-b978-64c43f52681b"},"icon":null,"autoCompleteWhenTasksAreDone":false,"taskOrder":0,"_tasks":[{"key":"Save
+    my brother","description":{"_key":"6a25dba5-642e-4d4c-9284-c08bffe06fae"},"statusMessage":{"_key":"fbc32b4f-0133-4d41-a293-d131eb9e0912"},"_icon":null,"_progressCap":4.0,"autoComplete":false,"useTimeLimit":false,"timeLimitInSeconds":300.0,"requirement":0,"giveRewardsOnTaskComplete":false,"rewardGivers":[],"overAchievements":[]}],"onActivationRewardGivers":[],"rewardGivers":[],"maxRepeatTimes":1,"requiresFinishedQuests":[],"conditions":[],"timeHandler":{"failQuestWhenOutOfTime":true,"$type":"Devdog.QuestSystemPro.QuestTimeHandler"}}'
+  _objectReferences: []
+  ID: 3
   name:
-    _key: ca4ad375-895a-4e32-989b-46d81dd4ff9e
+    _key: 77004d11-fe8d-466a-9667-0ab42268d4f1
   description:
-    _key: 3d4f2999-b22e-4496-aa49-9cffdfcd2c15
+    _key: b66c07fb-e0a7-4f4d-b978-64c43f52681b
   icon: {fileID: 0}
   autoCompleteWhenTasksAreDone: 0
   taskOrder: 0
