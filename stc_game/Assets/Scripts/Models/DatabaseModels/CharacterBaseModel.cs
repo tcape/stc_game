@@ -7,7 +7,6 @@ public class CharacterBaseModel
 {
     public string Name;
     public HeroClass HeroClass;
-    public Stats Stats;
     public GameState GameState;
     public bool IsActive;
 

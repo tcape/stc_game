@@ -55,6 +55,8 @@ public class PersistentScene : MonoBehaviour
         actionBar = GetComponentInChildren<ActionBarController>();
         inventory = gameObject.GetComponentInChildren<InventoryManager>(true).inventory;
         equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
+
+        // set up component
         logoutCanvas.gameObject.SetActive(false);
         hud.gameObject.SetActive(false);
         QuestManager.instance.questWindowUI = questWindowUI;
@@ -71,8 +73,6 @@ public class PersistentScene : MonoBehaviour
         {
             ToggleMenu();
         }
-
-        equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
     }
 
     public void ToggleMenu()
