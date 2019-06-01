@@ -170,6 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   heroStats: {fileID: 0}
+  sound: {fileID: 8300000, guid: 02a1f8a1026271748ab491ffd8ff9d5a, type: 3}
+  volume: 0.18
 --- !u!1001 &1568992930357990797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +179,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9161651224415073277}
     m_Modifications:
+    - target: {fileID: 157402, guid: e17af8b75def01d4d804b4eeea9d24e6, type: 3}
+      propertyPath: m_Name
+      value: FireballSwirl
+      objectReference: {fileID: 0}
     - target: {fileID: 427768, guid: e17af8b75def01d4d804b4eeea9d24e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -220,10 +226,6 @@ PrefabInstance:
     - target: {fileID: 427768, guid: e17af8b75def01d4d804b4eeea9d24e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 157402, guid: e17af8b75def01d4d804b4eeea9d24e6, type: 3}
-      propertyPath: m_Name
-      value: FireballSwirl
       objectReference: {fileID: 0}
     - target: {fileID: 19896612, guid: e17af8b75def01d4d804b4eeea9d24e6, type: 3}
       propertyPath: ForceModule.x.scalar
@@ -396,6 +398,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9161651224415073277}
     m_Modifications:
+    - target: {fileID: 100000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
+      propertyPath: m_Name
+      value: Cell_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -439,18 +453,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
-      propertyPath: m_Name
-      value: Cell_03
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19900000, guid: 04da59e1564d91c43a65c98cf6bd0563, type: 3}
       propertyPath: m_Enabled

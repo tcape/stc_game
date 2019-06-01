@@ -30,6 +30,12 @@ public class SoundAction : AbilityAction
 
     public override void RemoveEffect(AbilityManager manager)
     {
+        manager.StartCoroutine(DestroyAudioObject());
+    }
+
+    private IEnumerator DestroyAudioObject()
+    {
+        yield return new WaitForSeconds(source.clip.length);
         Destroy(soundObject);
     }
 
