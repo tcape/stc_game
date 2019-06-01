@@ -8282,7 +8282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progress:
     quest: {fileID: 11400000, guid: d9c003456fc90b34788675ae2a8a0c57, type: 2}
-    taskName: Walk To Town
+    taskName: Walk to town
     type: 0
     progress: 1
     useTaskProgressCap: 1
