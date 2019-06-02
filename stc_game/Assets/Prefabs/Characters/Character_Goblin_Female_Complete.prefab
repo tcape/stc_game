@@ -976,7 +976,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d1c793c412c536a49980d0f236d86e27, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -994,7 +994,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2713685d9b90c4897e1f19bea78896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presetStats: {fileID: 0}
+  presetStats: {fileID: 11400000, guid: 8f0a3bf6e909fe9418fe97398c7b8200, type: 2}
   saver: {fileID: 0}
   stats:
     level: 0

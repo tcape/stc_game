@@ -30,6 +30,7 @@ namespace Kryz.CharacterStats.Examples
         public int defenseBonus;
         public float critChanceBonus;
         public float critPowerBonus;
+        public float abilityBonus;
         public float abilityCritChanceBonus;
         public float abilityCritPowerBonus;
         public float dodgeBonus;
@@ -43,6 +44,7 @@ namespace Kryz.CharacterStats.Examples
         public float defensePercentBonus;
         public float critChancePercentBonus;
         public float critPowerPercentBonus;
+        public float abilityPercentBonus;
         public float abilityCritChancePercentBonus;
         public float abilityCritPowerPercentBonus;
         public float dodgePercentBonus;
@@ -89,6 +91,11 @@ namespace Kryz.CharacterStats.Examples
                 stats.strength.meleeCritPower.AddModifier(new StatModifier(critPowerBonus, ModType.Flat, this));
             if (critPowerPercentBonus != 0)
                 stats.strength.meleeCritPower.AddModifier(new StatModifier(critPowerPercentBonus, ModType.PercentAdd, this));
+            //ability
+            if (abilityBonus != 0)
+                stats.intellect.abilityAttack.AddModifier(new StatModifier(abilityBonus, ModType.Flat, this));
+            if (abilityPercentBonus != 0)
+                stats.intellect.abilityAttack.AddModifier(new StatModifier(abilityPercentBonus, ModType.PercentAdd, this));
             //ability crit chance
             if (abilityCritChanceBonus != 0)
                 stats.intellect.abilityCritRate.AddModifier(new StatModifier(abilityCritChanceBonus, ModType.Flat, this));
