@@ -71,8 +71,6 @@ public class PersistentScene : MonoBehaviour
         {
             ToggleMenu();
         }
-
-        equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
     }
 
     public void ToggleMenu()
