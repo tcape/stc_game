@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2383060}
   - component: {fileID: 5923370000344274727}
   - component: {fileID: 1695626584970893906}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Straightsword_01_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

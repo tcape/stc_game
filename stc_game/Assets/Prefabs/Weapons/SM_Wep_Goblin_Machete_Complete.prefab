@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2375256}
   - component: {fileID: 6666560092439962870}
   - component: {fileID: 4155766069151912049}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Goblin_Machete_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

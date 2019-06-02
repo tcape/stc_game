@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2350298}
   - component: {fileID: 2510079229739563117}
   - component: {fileID: 6712100177518156265}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Goblin_Spear_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
