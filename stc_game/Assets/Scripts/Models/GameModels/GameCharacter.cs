@@ -130,7 +130,7 @@ public class GameCharacter
                 maxHP = new SubStat(500),
                 attack = new SubStat(10),
                 meleeCritPower = new SubStat(2),
-                defense = new SubStat(9)
+                defense = new SubStat(7)
             },
             intellect = new Intellect(5)
             {
