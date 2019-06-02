@@ -12,9 +12,9 @@ public class CharacterBaseModel
 
     public CharacterBaseModel()
     {
-        Name = "Warrior";
         HeroClass = HeroClass.Warrior;
-        IsActive = false;
+        Name = HeroClass.ToString();
+        IsActive = true;
     }
 
     public CharacterBaseModel(string name, HeroClass heroClass)

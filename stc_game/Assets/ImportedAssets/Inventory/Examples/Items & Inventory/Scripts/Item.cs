@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 namespace Kryz.CharacterStats.Examples
 {
@@ -7,7 +8,7 @@ namespace Kryz.CharacterStats.Examples
 	[CreateAssetMenu]
 	public class Item : ScriptableObject
 	{
-        public int Id;
+        public string Id;
         public ItemClass itemClass;
 		public string ItemName;
 		public Sprite Icon;

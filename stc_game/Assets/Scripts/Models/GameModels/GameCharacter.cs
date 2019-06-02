@@ -41,25 +41,22 @@ public class GameCharacter
         Stats.Setup();
     }
 
-    public GameCharacter(string name, HeroClass heroClass, Stats stats, List<string> abilities)
+    public GameCharacter(string name, HeroClass heroClass, Stats stats)
     {
         Name = name;
         HeroClass = heroClass;
         Stats = stats;
-        Abilities = abilities;
 
-        switch (heroClass)
+        if (heroClass == HeroClass.Warrior)
         {
-            case HeroClass.Warrior:
-                PrefabResource = "Prefabs/WarriorPrefab";
-                break;
-            case HeroClass.Mage:
-                PrefabResource = "Prefabs/MagePrefab";
-                break;
+            Abilities = GetWarriorListAbilities();
+            PrefabResource = "Prefabs/WarriorPrefab";
         }
-
-        //this might be codebreaking? If they're already set up
-        Stats.Setup();
+        else if (heroClass == HeroClass.Mage)
+        {
+            Abilities = GetMageListAbilities();
+            PrefabResource = "Prefabs/MagePrefab";
+        }
     }
 
     public List<Ability> GetAbilities()

@@ -17,11 +17,13 @@ public class PersistentScene : MonoBehaviour
     public ReviveController reviveController;
     public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
+    public GameDataSaver gameDataSaver;
     public DialogueUI dialogueUI;
     public HUDController hud;
     public Button logoutButton;
     public Button exitButton;
     public LogoutCanvas logoutCanvas;
+    public InventoryManager inventoryManager;
     public Inventory inventory;
     public List<EquippableItem> equipment;
 
@@ -45,6 +47,7 @@ public class PersistentScene : MonoBehaviour
     {
         // load local resources 
         // (moving all logic from start function to this first time function)
+        gameDataSaver = GetComponent<GameDataSaver>();
         logoutButton.onClick.AddListener(onLogout);
         exitButton.onClick.AddListener(onExit);
         logoutCanvas = FindObjectOfType<LogoutCanvas>();
@@ -53,7 +56,8 @@ public class PersistentScene : MonoBehaviour
         hud = FindObjectOfType<HUDController>();
         dialogueUI = FindObjectOfType<DialogueUI>();
         actionBar = GetComponentInChildren<ActionBarController>();
-        inventory = gameObject.GetComponentInChildren<InventoryManager>(true).inventory;
+        inventoryManager = gameObject.GetComponentInChildren<InventoryManager>(true);
+        inventory = inventoryManager.inventory;
         equipment = gameObject.GetComponentInChildren<EquipmentPanel>(true).equipment;
 
         // set up component
@@ -94,6 +98,33 @@ public class PersistentScene : MonoBehaviour
     public void SaveGameCharacterStats(Stats saveStats)
     {
         GameCharacter.Stats = saveStats;
+    }
+
+    public void LoadGameData()
+    {
+        // Load Game Stats
+        GameCharacter.Stats = UserService.Instance.User.GetActiveCharacter().GameState.Stats;
+
+        // Load Equipment from User into Game Character Equipment
+        foreach (string equipment in User.GetActiveCharacter().GameState.EquippedItems)
+        {
+            var resource = Resources.Load<EquippableItem>("Items/" + equipment);
+            inventory.AddItem(resource);
+            inventoryManager.Equip(resource);
+        }
+
+        // Load Items from User into Game Character Inventory
+        foreach (string item in User.GetActiveCharacter().GameState.Items)
+        {
+            inventory.AddItem(Resources.Load<EquippableItem>("Items/" + item));
+        }
+
+        // Load Quest Progress from User into Game Quests
+        var questStates = QuestManager.instance.GetQuestStates();
+        var userQuestsContainer = User.GetActiveCharacter().GameState.QuestsContainer;
+        questStates.completedQuests = userQuestsContainer.completedQuests;
+        questStates.activeQuests = userQuestsContainer.activeQuests;
+        questStates.achievements = userQuestsContainer.achievements;
     }
 
     private IEnumerator LoadGameScene()
