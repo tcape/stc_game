@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GoblinStatsPreset Lvl2
   m_EditorClassIdentifier: 
   level: 2
-  XP: 100
-  gold: 100
+  XP: 50
+  gold: 50
   strength: 0
   intellect: 0
   dexterity: 0
