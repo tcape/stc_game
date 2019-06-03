@@ -22,6 +22,6 @@ MonoBehaviour:
   duration: 0
   cost: 5
   hotkey: 49
-  range: 30
-  startTime: 850.68274
+  range: 25
+  startTime: 1087.6282
   target: {fileID: 0}
