@@ -16,7 +16,8 @@ public class SubStat : Stat
     public void UpdateModifierFromMainStat()
     {
         RemoveAllModifiersFromSource(mainStat);
-        var modAmount = Value * mainStat.Value / mainStat.stats.nextLevelXP;
+        var stats = PersistentScene.Instance.GameCharacter.Stats;
+        var modAmount = Value * mainStat.Value / stats.nextLevelXP;
         AddModifier(new StatModifier(modAmount, ModType.Flat, mainStat));
     }
 }
