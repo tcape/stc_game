@@ -22942,6 +22942,16 @@ PrefabInstance:
       propertyPath: spawnPositions
       value: 
       objectReference: {fileID: 471178843}
+    - target: {fileID: 3751801983927726292, guid: af19b5ff0ae4d234aa03d691158e769a,
+        type: 3}
+      propertyPath: stats.deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6fef5e1e0142034d9abba3724125d59, type: 3}
+    - target: {fileID: 3751801983927726292, guid: af19b5ff0ae4d234aa03d691158e769a,
+        type: 3}
+      propertyPath: stats.volume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af19b5ff0ae4d234aa03d691158e769a, type: 3}
 --- !u!4 &1501097524 stripped
@@ -24509,7 +24519,7 @@ PrefabInstance:
     - target: {fileID: 4611221137851707112, guid: 39f8e7dec6a78be4bbd1b1f3c79f9f19,
         type: 3}
       propertyPath: m_Volume
-      value: 0.05
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39f8e7dec6a78be4bbd1b1f3c79f9f19, type: 3}

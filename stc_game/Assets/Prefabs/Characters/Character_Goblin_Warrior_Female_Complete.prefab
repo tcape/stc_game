@@ -3206,6 +3206,8 @@ MonoBehaviour:
   presetStats: {fileID: 0}
   saver: {fileID: 0}
   stats:
+    deathSound: {fileID: 8300000, guid: 451e2e1e8f689cc40ac5ab5bede8951e, type: 3}
+    volume: 0.2
     level: 0
     XP: 0
     gold: 0
@@ -3215,6 +3217,8 @@ MonoBehaviour:
       baseValue: 0
       currentValue: 0
       stats:
+        deathSound: {fileID: 0}
+        volume: 0
         level: 0
         XP: 0
         gold: 0
@@ -3224,6 +3228,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -3233,6 +3239,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3279,6 +3287,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3325,6 +3335,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3372,6 +3384,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3397,6 +3411,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3422,6 +3438,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3447,6 +3465,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3469,6 +3489,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -3478,6 +3500,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3524,6 +3548,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3570,6 +3596,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3617,6 +3645,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3642,6 +3672,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3667,6 +3699,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3692,6 +3726,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3714,6 +3750,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -3723,6 +3761,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3769,6 +3809,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3815,6 +3857,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3862,6 +3906,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3887,6 +3933,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3912,6 +3960,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3941,6 +3991,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -3950,6 +4002,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -3996,6 +4050,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4042,6 +4098,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4089,6 +4147,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -4098,6 +4158,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4144,6 +4206,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4190,6 +4254,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4237,6 +4303,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -4246,6 +4314,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4292,6 +4362,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4338,6 +4410,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4385,6 +4459,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -4394,6 +4470,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4440,6 +4518,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4486,6 +4566,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4530,6 +4612,8 @@ MonoBehaviour:
       baseValue: 0
       currentValue: 0
       stats:
+        deathSound: {fileID: 0}
+        volume: 0
         level: 0
         XP: 0
         gold: 0
@@ -4539,6 +4623,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -4548,6 +4634,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4594,6 +4682,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4640,6 +4730,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4687,6 +4779,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4712,6 +4806,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4737,6 +4833,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4762,6 +4860,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4784,6 +4884,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -4793,6 +4895,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4839,6 +4943,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4885,6 +4991,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4932,6 +5040,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4957,6 +5067,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -4982,6 +5094,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5007,6 +5121,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5029,6 +5145,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -5038,6 +5156,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5084,6 +5204,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5130,6 +5252,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5177,6 +5301,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5202,6 +5328,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5227,6 +5355,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5256,6 +5386,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -5265,6 +5397,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5311,6 +5445,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5357,6 +5493,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5404,6 +5542,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -5413,6 +5553,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5459,6 +5601,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5505,6 +5649,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5552,6 +5698,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -5561,6 +5709,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5607,6 +5757,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5653,6 +5805,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5700,6 +5854,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -5709,6 +5865,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5755,6 +5913,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5801,6 +5961,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5845,6 +6007,8 @@ MonoBehaviour:
       baseValue: 0
       currentValue: 0
       stats:
+        deathSound: {fileID: 0}
+        volume: 0
         level: 0
         XP: 0
         gold: 0
@@ -5854,6 +6018,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -5863,6 +6029,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5909,6 +6077,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -5955,6 +6125,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6002,6 +6174,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6027,6 +6201,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6052,6 +6228,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6077,6 +6255,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6099,6 +6279,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -6108,6 +6290,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6154,6 +6338,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6200,6 +6386,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6247,6 +6435,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6272,6 +6462,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6297,6 +6489,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6322,6 +6516,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6344,6 +6540,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -6353,6 +6551,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6399,6 +6599,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6445,6 +6647,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6492,6 +6696,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6517,6 +6723,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6542,6 +6750,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6571,6 +6781,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -6580,6 +6792,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6626,6 +6840,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6672,6 +6888,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6719,6 +6937,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -6728,6 +6948,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6774,6 +6996,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6820,6 +7044,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6867,6 +7093,8 @@ MonoBehaviour:
           baseValue: 0
           currentValue: 0
           stats:
+            deathSound: {fileID: 0}
+            volume: 0
             level: 0
             XP: 0
             gold: 0
@@ -6876,6 +7104,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6922,6 +7152,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0
@@ -6968,6 +7200,8 @@ MonoBehaviour:
               baseValue: 0
               currentValue: 0
               stats:
+                deathSound: {fileID: 0}
+                volume: 0
                 level: 0
                 XP: 0
                 gold: 0

@@ -7,6 +7,13 @@ using UnityEngine;
 public class Stats
 {
     [Space]
+    public AudioClip deathSound;
+    [Range(0.0f, 1.0f)]
+    public float volume;
+    private GameObject soundObject;
+    private AudioSource source;
+
+    [Space]
     [SerializeField] public double level;
     [SerializeField] public double XP;
     [SerializeField] public double gold;
@@ -242,5 +249,17 @@ public class Stats
     public void BuffCurrentAP(float percentage)
     {
         BuffCurrentAP(currentAP * percentage);
+    }
+
+    private IEnumerator PlayDeathAudio()
+    {
+        soundObject = new GameObject("instancedSoundObject");
+        soundObject.AddComponent<AudioSource>();
+        source = soundObject.GetComponent<AudioSource>();
+        source.clip = deathSound;
+        source.volume = volume;
+        source.Play();
+        yield return new WaitForSeconds(source.clip.length);
+        UnityEngine.Object.Destroy(soundObject);
     }
 }
