@@ -122,9 +122,13 @@ public class PersistentScene : MonoBehaviour
         // Load Quest Progress from User into Game Quests
         var questStates = QuestManager.instance.GetQuestStates();
         var userQuestsContainer = User.GetActiveCharacter().GameState.QuestsContainer;
-        questStates.completedQuests = userQuestsContainer.completedQuests;
-        questStates.activeQuests = userQuestsContainer.activeQuests;
-        questStates.achievements = userQuestsContainer.achievements;
+        // dies here
+        if (userQuestsContainer != null)
+        {
+            questStates.completedQuests = userQuestsContainer.completedQuests;
+            questStates.activeQuests = userQuestsContainer.activeQuests;
+            questStates.achievements = userQuestsContainer.achievements;
+        }
     }
 
     private IEnumerator LoadGameScene()

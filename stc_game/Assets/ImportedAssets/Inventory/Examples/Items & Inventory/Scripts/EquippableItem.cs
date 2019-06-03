@@ -115,7 +115,7 @@ namespace Kryz.CharacterStats.Examples
 
 		public void Unequip(InventoryManager c)
 		{
-            var stats = c.GetComponent<InventoryPlayerTracker>().playerStats;
+            var stats = PersistentScene.Instance.GameCharacter.Stats;
 
             stats.strength.RemoveAllModifiersFromSource(this);
             stats.dexterity.RemoveAllModifiersFromSource(this);
