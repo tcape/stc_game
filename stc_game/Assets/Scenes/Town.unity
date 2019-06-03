@@ -1208,8 +1208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress:
-    quest: {fileID: 11400000, guid: 3fab1879b3bcb974c9d895dcb103add9, type: 2}
-    taskName: Save my brother!
+    quest: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618, type: 2}
+    taskName: Save my brother
     type: 0
     progress: 1
     useTaskProgressCap: 1
@@ -7935,7 +7935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493996, guid: a2fda9de525950b47a8498516aac8be3, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 493996, guid: a2fda9de525950b47a8498516aac8be3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8281,8 +8281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress:
-    quest: {fileID: 11400000, guid: d9c003456fc90b34788675ae2a8a0c57, type: 2}
-    taskName: Walk To Town
+    quest: {fileID: 11400000, guid: e24b521fc10a20f42865928914d28d56, type: 2}
+    taskName: Walk to town
     type: 0
     progress: 1
     useTaskProgressCap: 1
@@ -14241,8 +14241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress:
-    quest: {fileID: 11400000, guid: 3fab1879b3bcb974c9d895dcb103add9, type: 2}
-    taskName: Save my brother!
+    quest: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618, type: 2}
+    taskName: Save my brother
     type: 0
     progress: 1
     useTaskProgressCap: 1
@@ -16455,7 +16455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _quests:
-  - {fileID: 11400000, guid: a697f614205abe54589125384ea08a9d, type: 2}
+  - {fileID: 11400000, guid: 2b92c786a64e50f4991dfc38ac8101e9, type: 2}
 --- !u!114 &941318789
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16970,6 +16970,11 @@ PrefabInstance:
       propertyPath: useWhenPlayerComesInRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 975276309, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
+      propertyPath: _quests.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
 --- !u!4 &975276306 stripped
@@ -23713,7 +23718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _quests:
-  - {fileID: 11400000, guid: d9c003456fc90b34788675ae2a8a0c57, type: 2}
+  - {fileID: 11400000, guid: e24b521fc10a20f42865928914d28d56, type: 2}
 --- !u!114 &1586777455
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23995,6 +24000,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.525
       objectReference: {fileID: 0}
+    - target: {fileID: 5531879256678159133, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f,
+        type: 3}
+      propertyPath: _quests.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
 --- !u!4 &1621728115 stripped
@@ -25799,6 +25810,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8667434296554658530, guid: f9c81b98172fd4041bf6be9b616f3ae6,
+        type: 3}
+      propertyPath: _defaultDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: f3adb57cc3e40e247a86a754240198fd,
+        type: 2}
+    - target: {fileID: 8667434296554658530, guid: f9c81b98172fd4041bf6be9b616f3ae6,
+        type: 3}
+      propertyPath: _databases.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9c81b98172fd4041bf6be9b616f3ae6, type: 3}
 --- !u!1 &1807809453 stripped
@@ -26313,8 +26335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _quests:
-  - {fileID: 11400000, guid: d9c003456fc90b34788675ae2a8a0c57, type: 2}
-  - {fileID: 11400000, guid: 13c56d4ec606b1f43bd7b79222929cbf, type: 2}
+  - {fileID: 11400000, guid: e24b521fc10a20f42865928914d28d56, type: 2}
+  - {fileID: 11400000, guid: 368360ecb5aeeb249a85b6d6d6d2ac10, type: 2}
 --- !u!114 &1863143000
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -32690,8 +32712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress:
-    quest: {fileID: 11400000, guid: 3fab1879b3bcb974c9d895dcb103add9, type: 2}
-    taskName: Save my brother!
+    quest: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618, type: 2}
+    taskName: Save my brother
     type: 0
     progress: 1
     useTaskProgressCap: 1
@@ -34515,8 +34537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress:
-    quest: {fileID: 11400000, guid: 3fab1879b3bcb974c9d895dcb103add9, type: 2}
-    taskName: Save my brother!
+    quest: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618, type: 2}
+    taskName: Save my brother
     type: 0
     progress: 1
     useTaskProgressCap: 1

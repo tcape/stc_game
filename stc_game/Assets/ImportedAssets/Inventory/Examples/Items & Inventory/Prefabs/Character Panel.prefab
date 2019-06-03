@@ -7961,7 +7961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d513850f827404bb25210b80c6098b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPanel: {fileID: 0}
+  characterInventory: {fileID: 0}
   equipmentSlotsParent: {fileID: 22488076}
   equipmentSlots:
   - {fileID: 11427700}

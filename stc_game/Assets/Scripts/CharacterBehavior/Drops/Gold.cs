@@ -16,6 +16,12 @@ namespace Assets.Scripts.CharacterBehavior.Drops
         public ParticleSystem pickupEffect;
         private GameObject soundObject;
         private AudioSource source;
+        private Quest goldQuest;
+
+        private void Awake()
+        {
+            goldQuest = Resources.Load<Quest>("Quest/Quest-Collect300Gold");
+        }
 
         public void SetAmount(double value)
         {
@@ -33,6 +39,12 @@ namespace Assets.Scripts.CharacterBehavior.Drops
                 StartCoroutine(PlayPickupAudio());
                 var instance = Instantiate(pickupEffect, transform.position, Quaternion.identity);
                 instance.transform.Rotate(-90, 0, 0);
+               
+                if (QuestManager.instance.HasActiveQuest(goldQuest))
+                {
+                    GetComponent<SetQuestProgressOnTriggerObjectGold>().OnTriggerUsed(other.GetComponent<Player>());
+                }
+
                 Destroy(gameObject);
             }
         }
