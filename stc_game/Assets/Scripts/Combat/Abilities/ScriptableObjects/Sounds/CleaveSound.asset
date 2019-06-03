@@ -21,4 +21,4 @@ MonoBehaviour:
   target: {fileID: 0}
   lastTick: 0
   sound: {fileID: 8300000, guid: 2af18c9937da9994484ae0857c36a3d1, type: 3}
-  volume: 0.1
+  volume: 0.2
