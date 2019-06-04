@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: Wand
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: Wand
   itemClass: 1
   ItemName: Wand
   Icon: {fileID: 21300000, guid: ebdc823715e80bb43b819d78ebdc999f, type: 3}

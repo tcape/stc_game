@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: Helmet
+  itemClass: 0
   ItemName: Helmet
   Icon: {fileID: 21300000, guid: 87630f81fe8754d49bab3fa66b0481cd, type: 3}
   characterPanel: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: MetalHandle
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: MetalHandle
   itemClass: 0
   ItemName: Metal Handle
   Icon: {fileID: 21300000, guid: d6030e0ece0c3654fbf1906113137259, type: 3}
