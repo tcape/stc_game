@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public enum TargetType { Self, Enemy };
 public enum AbilityType { Passive, Activate };
@@ -12,6 +12,7 @@ public enum AbilityType { Passive, Activate };
 [CreateAssetMenu (menuName ="Ability/Ability")]
 public class Ability : ScriptableObject, IAbility
 {
+    public Sprite sprite;
     public AbilityType abilityType;
     public TargetType targetType;
     public List<AbilityAction> actions;
@@ -36,7 +37,7 @@ public class Ability : ScriptableObject, IAbility
         {
             if (InRange(manager))
             {
-                if (cost <= manager.stats.currentAP)
+                if (cost <= manager.stats.stats.currentAP)
                 {
                     lastCalled = Time.time;
                     
@@ -56,6 +57,15 @@ public class Ability : ScriptableObject, IAbility
             Debug.Log(animationTrigger + " on Cooldown");
         }
         return false;
+    }
+
+    public bool OnCooldown()
+    {
+        if (Time.time > lastCalled + cooldown)
+        {
+            return false;
+        }
+        return true;
     }
 
     public bool InRange(AbilityManager manager)

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b75a309ff767a4bb3ede0d5c1d2f6f, type: 3}
+  m_Name: MainLanguageDb
+  m_EditorClassIdentifier: 
+  _serializedJsonString: '{"_lang":"en-US","_localizedStrings":{"NO_KEY":"","4adea5a6-df3e-4586-9557-484bcc4a12a8":"Walk
+    to town","23ce7123-0721-4338-9063-568dd65037cf":"Walk to town\t","ec6a8cb3-d7df-47b4-a02d-7ddba965a17c":"Walk
+    to town","4330b3bb-74fc-4ab2-b01c-6574eb69fbb6":"Discovered {0} / {2} location","90c95b57-355c-442b-b4d3-9ba09839b8ea":"Defeat
+    Illamuwa","d6c0d6ea-8f3a-41e8-af99-8a34c3486e24":"Defeat the goblin chief","c9c86ab1-1bb1-456b-a340-be42241b3ff2":"Defeat
+    the goblin chief","e64ea0aa-8381-4764-ad96-59abeba3f138":"Defeated {0} / {2} goblin
+    chief","77004d11-fe8d-466a-9667-0ab42268d4f1":"Save my brother","b66c07fb-e0a7-4f4d-b978-64c43f52681b":"Save
+    my brother from the goblins","6a25dba5-642e-4d4c-9284-c08bffe06fae":"Save my brother
+    from the goblins","fbc32b4f-0133-4d41-a293-d131eb9e0912":"Defeated {0} / {2} goblins","4484fde3-c7c2-4479-a3b0-d374b7c46219":"Collect
+    300 gold","a38299aa-0537-4b8e-99a3-005062b715aa":"Collect 300 gold","062821e5-49da-4c7f-a053-325b28905c68":"Collect
+    300 gold","2db8368e-7346-4631-85db-b62564726ca8":"Collected {0} / {2} gold","729f0368-c25a-43d9-8bf6-7f6cbe26b1c1":"Greetings
+    hero.","affbff1d-351c-41e6-bf9e-ef14642aa5cd":"Go to town and talk to the blacksmith.","07d02f43-afd2-42ae-a538-8eaa77fd22b1":"Go
+    to town and talk to the blacksmith.","ae42898b-e3dc-4bdc-92fa-333418df4c10":"You
+    defeated the goblin chief. Thank you!","c07cd0fe-ae73-49e4-bf1b-53b622b8f941":"Defeat
+    the goblin chief please.","5177cd5d-190a-42d9-ab10-2449d8a1176c":"Thank you for
+    defeating the goblin chief.","c128a677-28d8-4741-acd8-38debc2c3462":"There is
+    an evil goblin to the north that has taken occupation of our caverns.","4a78a4f7-1a6f-4515-a3ac-8ef1c6a7d973":"And
+    we are unable to go there. Please defeat him!","c7aa2b20-0902-4430-a216-7e36a1afb19b":"Feel
+    free to keep the gold and spend it at the blacksmith.","5102c7e8-48f6-4ef6-becc-bac543e76659":"There
+    is so much gold in the caverns.","3f3143fb-8313-4333-951a-70dc96fadf7d":"Go collect
+    300 and spend it in town.","aec03867-2e8b-4e28-9eef-856a8b0cb59c":"Go collect
+    300 gold.","9e8fbe40-be68-4c2a-9cc3-d9ee512cd264":"Feel free to spend the gold
+    at the blacksmith.","20c8c638-0e23-4b05-a210-975297bb671c":"Go talk to the blacksmith.","b9d968c8-4ac1-48a6-8f70-dd829430756a":"I
+    am not ready to talk to you yet.","f2aab801-0140-4ef1-bd46-4dc931371dd0":"Greetings
+    hero.","0c71a6ab-c149-463e-9a9b-1edf045ad022":"Have a nice day.","e7d0117b-9b70-4ddc-a094-deac664933de":"I
+    am not ready to talk to you yet.","b0039e31-6b5c-40de-89e3-e5132e79c49b":"Hero!!!","6a26b02b-5a16-4391-acf2-056579016020":"Thank
+    you for saving my brother!","5971c1c2-be8f-45b9-8904-292860bef56a":"Please save
+    my brother!","cbbc3a1d-0390-4d12-8e20-7bfa430c6eb1":"Go talk to my brother! Thank
+    you for saving him.","3c1cd41a-7239-4a03-9179-ff18aed39ee4":"There are goblins
+    holding my brother hostage! Save him please.","ecd5f5ec-25b0-4e35-8383-af128a835849":"Hero,
+    I am so scared.","b2e13354-fcd4-45e7-916f-c3701840cfc0":"Thank you for saving
+    me.","7ed82848-55f2-4a9c-b80b-7597ed6303ec":"Thank you for saving me.","4545d2a5-277e-4d24-833e-a46a3ddfc962":"Ahh!
+    Save me.","705b5630-7d50-4537-a23b-6b7d360b7fe6":"These goblins are whack."},"_localizedObjects":{}}'
+  _objectReferences: []
+  _lang: en-US

@@ -11,8 +11,10 @@ public class AuthService {
     // instantiating public variables
     private AuthApi auth = AuthApi.Instance;
     public AuthUser authUser { get; private set; }
-    private AuthReq authRequest;
-    public event Action<AsyncOperation> LoginUICallback;
+    private AuthReq authRequest; 
+    public event Action<AsyncOperation> AuthenticationCallback;
+    public event Action UserIsLoggedIn;
+    public event Action UserIsLoggedOut;
 
     private AuthService() {
     }
@@ -25,26 +27,38 @@ public class AuthService {
     }
 
     // creates an http request with user credentials and attempts to authenticate the user
-    public void LoginExistingUser(string email, string password) {
+    public void LoginUserWithEmailAndPassword(string email, string password) {
 
         authRequest = new AuthReq(email, password);
-        auth.Authenticate(authRequest).completed += AuthCallback;
+        auth.Authenticate(authRequest).completed += AuthenticationCallback;
+    }
+
+    public void LoginExistingUser()
+    {
+        AuthRes res = new AuthRes();
+        res.access_token = PlayerPrefs.GetString(GameStrings.LocalStorage.AuthToken);
+        GetAuthUser(res);
+    }
+
+    public bool isLoggedIn()
+    {
+        return PlayerPrefs.GetString(GameStrings.LocalStorage.AuthToken) != "";
+    }
+
+    public void Logout()
+    {
+        PlayerPrefs.DeleteKey(GameStrings.LocalStorage.AuthToken);
     }
 
     // take an authentication result and request user data then call event to store user data
-    public void GetUserData(AuthRes authRes)
+    public void GetAuthUser(AuthRes authRes)
     {
-        auth.Read(authRes.access_token).completed += ReadUserCallback; ;
+        PlayerPrefs.SetString(GameStrings.LocalStorage.AuthToken, authRes.access_token);
+        auth.Read(authRes.access_token).completed += GetAuthUserCallback;
     }
 
-    // upon authenticating, notify the game scene to handle the authentication result
-    private void AuthCallback (AsyncOperation res)
-    {
-        LoginUICallback(res);
-    }
-
-    // takes a user data result and stores the user
-    private void ReadUserCallback(AsyncOperation res)
+    // takes a authentication user data result and sets the auth user
+    private void GetAuthUserCallback(AsyncOperation res)
     {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;
         UnityWebRequest www = unityWebRequestAsyncOperation.webRequest;
@@ -52,6 +66,13 @@ public class AuthService {
         if (www.responseCode.Equals(200))
         {
             authUser = JsonUtility.FromJson<AuthUser>(www.downloadHandler.text);
+            UserIsLoggedIn.Invoke();
+        }
+        else
+        {
+            Debug.Log("Auth result was not able to get auth user data");
+            Logout();
+            UserIsLoggedOut.Invoke();
         }
     }
 
@@ -61,13 +82,14 @@ public class AuthService {
         UnityWebRequestAsyncOperation unityWebRequestAsyncOperation = res as UnityWebRequestAsyncOperation;
         UnityWebRequest www = unityWebRequestAsyncOperation.webRequest;
 
+        // if success, 
         if (www.responseCode.Equals(200))
         {
-            auth.Authenticate(authRequest).completed += LoginUICallback;
+            auth.Authenticate(authRequest).completed += AuthenticationCallback;
         }
         else
         {
-            LoginUICallback(res);
+            AuthenticationCallback(res);
         }
     }
 }

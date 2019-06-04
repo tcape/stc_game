@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 3
   XP: 15
-  gold: 100
+  gold: 50
   strength: 0
   intellect: 0
   dexterity: 0

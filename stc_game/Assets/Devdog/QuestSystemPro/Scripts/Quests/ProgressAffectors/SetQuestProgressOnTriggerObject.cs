@@ -21,18 +21,18 @@ namespace Devdog.QuestSystemPro
         [SerializeField]
         private Use _use;
 
-
-        public bool OnTriggerUsed(Player player)
+        public  bool OnTriggerUsed(Player player)
         {
             if (_use == Use.OnUse)
             {
                 progress.Execute();
+                
             }
 
             return false;
         }
 
-        public bool OnTriggerUnUsed(Player player)
+        public  bool OnTriggerUnUsed(Player player)
         {
             if (_use == Use.OnUnUse)
             {

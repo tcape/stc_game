@@ -1,0 +1,5714 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4807039785935502254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687272389545029257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0cf0a29fc9ddc14188ad334b0eef3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 2687272389538235375}
+  equipmentPanel: {fileID: 2687272389538276379}
+  statPanel: {fileID: 2687272389538290099}
+--- !u!1 &2687272390718106421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2687272390718106417}
+  - component: {fileID: 2687272390718106418}
+  - component: {fileID: 2687272390718106419}
+  - component: {fileID: 2687272390718106420}
+  - component: {fileID: 4234665771988170203}
+  - component: {fileID: 608902832592980637}
+  m_Layer: 0
+  m_Name: Character Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2687272390718106417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687272390718106421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 2687272389533573775}
+  - {fileID: 2687272390403463636}
+  - {fileID: 2687272390391241471}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!223 &2687272390718106418
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687272390718106421}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &2687272390718106419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687272390718106421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &2687272390718106420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687272390718106421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &4234665771988170203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687272390718106421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b25dd3b30bae646a0e7da4e71b75fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats:
+    deathSound: {fileID: 0}
+    volume: 0
+    level: 0
+    XP: 0
+    gold: 0
+    currentHP: 0
+    currentAP: 0
+    strength:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        deathSound: {fileID: 0}
+        volume: 0
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      attack:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      meleeCritPower:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      defense:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      maxHP:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    intellect:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        deathSound: {fileID: 0}
+        volume: 0
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      abilityAttack:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      abilityCritPower:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      abilityCritRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      maxAP:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    dexterity:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        deathSound: {fileID: 0}
+        volume: 0
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      meleeCritRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      dodgeRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      movementSpeed:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    dead: 0
+    nextLevelXP: 0
+    totalXP: 0
+--- !u!114 &608902832592980637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687272390718106421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e8dfe17cf19384097d0f425753e52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterInventory: {fileID: 0}
+--- !u!1001 &2687272389544907897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2687272390718106417}
+    m_Modifications:
+    - target: {fileID: 129776, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 502
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1208
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1636
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22418220, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22418220, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22418220, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22418220, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22418220, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22418220, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432912, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432912, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432912, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432912, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432912, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432912, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22442018, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22442018, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22442018, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22442018, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22442018, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22442018, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439042, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439042, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439042, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439042, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439042, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439042, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461548, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461548, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461548, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461548, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461548, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461548, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22454452, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22454452, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22454452, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22454452, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22454452, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22454452, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464492, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464492, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464492, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464492, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464492, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464492, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472092, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472092, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472092, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472092, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472092, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472092, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470810, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470810, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470810, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470810, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470810, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22470810, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472998, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472998, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472998, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472998, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472998, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472998, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483324, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483324, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483324, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483324, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483324, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483324, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480692, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480692, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480692, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480692, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480692, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480692, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480914, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480914, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480914, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480914, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480914, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480914, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481618, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481618, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481618, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481618, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481618, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481618, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498922, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498922, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498922, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498922, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498922, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22498922, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22404708, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22404708, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22404708, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22404708, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22404708, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22404708, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405746, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405746, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405746, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405746, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405746, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405746, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230721413720774623, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230721413720774623, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230721413720774623, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230721413720774623, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230721413720774623, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230721413720774623, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931598622165742483, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931598622165742483, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931598622165742483, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931598622165742483, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931598622165742483, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931598622165742483, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22414532, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22414532, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22414532, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22414532, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22414532, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22414532, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22441616, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22441616, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22441616, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22441616, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22441616, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22441616, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22465628, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22465628, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22465628, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22465628, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22465628, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22465628, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485050, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485050, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485050, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485050, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485050, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485050, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482372, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482372, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482372, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482372, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482372, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482372, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490910, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490910, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490910, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490910, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490910, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490910, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: strengthValue
+      value: 
+      objectReference: {fileID: 2687272389544799515}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: dexterityValue
+      value: 
+      objectReference: {fileID: 2687272389544806175}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: intellectValue
+      value: 
+      objectReference: {fileID: 2687272389544798749}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: defenseValue
+      value: 
+      objectReference: {fileID: 2687272389545008485}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: attackValue
+      value: 
+      objectReference: {fileID: 4295698355621027976}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: critValue
+      value: 
+      objectReference: {fileID: 6926604842472908833}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: critMultiValue
+      value: 
+      objectReference: {fileID: 8404651412999229120}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: spellCritValue
+      value: 
+      objectReference: {fileID: 9042118668113506134}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: spellCritDisplayValue
+      value: 
+      objectReference: {fileID: 8325416401253924742}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: dodgeValue
+      value: 
+      objectReference: {fileID: 3063376244500734983}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: movementValue
+      value: 
+      objectReference: {fileID: 7148219519154783850}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: spellCritMultiValue
+      value: 
+      objectReference: {fileID: 8325416401253924742}
+    - target: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: characterLevel
+      value: 
+      objectReference: {fileID: 2687272389545029209}
+    - target: {fileID: 592357413738888171, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 592357413738888171, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 592357413738888171, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 592357413738888171, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 592357413738888171, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 592357413738888171, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562147892074119857, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562147892074119857, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562147892074119857, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562147892074119857, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562147892074119857, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562147892074119857, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650258640343601758, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650258640343601758, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650258640343601758, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650258640343601758, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650258640343601758, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650258640343601758, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168520443433142753, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168520443433142753, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168520443433142753, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168520443433142753, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168520443433142753, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168520443433142753, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217657332813710806, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217657332813710806, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217657332813710806, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217657332813710806, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217657332813710806, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217657332813710806, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834434834074922300, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: Dodge Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 4522567076696590531, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: Crit Multi Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 22440530, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22440530, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22466304, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22466304, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400858, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400858, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146020, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Int Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 163428, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: IntellectValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 162146, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: StrengthValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 168806, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: DexterityValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 198604, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Weapon2 Slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 105122, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Dex Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 100636, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: DefenseValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 111426, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Def Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 109102, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: '--- Divider ---'
+      objectReference: {fileID: 0}
+    - target: {fileID: 122106, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Str Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 945608807612356696, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: Movement Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137247377461883006, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: DodgeValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 744743389527640284, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: Spell Crit Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222102989048345841, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: AttackValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611379538336061092, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: Attack Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002129640904670296, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: CritValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077966667912712723, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: MovementValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224843487710745740, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: Spell Multi Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251785849218362367, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: SpellCritMultiValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902052996489403065, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: CritMultiValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971532278132660260, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: Crit Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356570312802269999, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Name
+      value: SpellCritValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 146982, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Intellect
+      objectReference: {fileID: 0}
+    - target: {fileID: 194432, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Defense
+      objectReference: {fileID: 0}
+    - target: {fileID: 110100, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Strength
+      objectReference: {fileID: 0}
+    - target: {fileID: 126180, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+      propertyPath: m_Name
+      value: Dexterity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471059041364421018, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Text
+      value: speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633874132248585703, guid: 369f87c2a2dd3b246b04552b05534a04,
+        type: 3}
+      propertyPath: m_Text
+      value: dodge
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 369f87c2a2dd3b246b04552b05534a04, type: 3}
+--- !u!1 &2687272389545029257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129776, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2687272389533573775 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 22492918, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2687272389538276379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11464802, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d513850f827404bb25210b80c6098b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2687272389538290099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11472330, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9094b6ac57147b409aab25e568adbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2687272389545029209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129568, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2687272389544799515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 162146, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2687272389544806175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 168806, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2687272389544798749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 163428, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2687272389545008485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100636, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4295698355621027976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2222102989048345841, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6926604842472908833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5002129640904670296, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8404651412999229120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5902052996489403065, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9042118668113506134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6356570312802269999, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8325416401253924742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6251785849218362367, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3063376244500734983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1137247377461883006, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7148219519154783850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5077966667912712723, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2687272389538235375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11425686, guid: 369f87c2a2dd3b246b04552b05534a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272389544907897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83cdbd7009ba494ba721c24bc31b4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &2687272390369162715
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2687272390718106417}
+    m_Modifications:
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482132, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482132, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482132, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482132, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482132, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482132, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427290, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427290, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427290, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427290, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427290, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427290, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22421776, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22421776, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22421776, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22421776, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22421776, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22421776, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bfad9eb7536d8bb4d9de9422d5f46df0, type: 3}
+--- !u!224 &2687272390391241471 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 22490916, guid: bfad9eb7536d8bb4d9de9422d5f46df0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272390369162715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2687272390423182196
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2687272390718106417}
+    m_Modifications:
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -772
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 741
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433816, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433816, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433816, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433816, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433816, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433816, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22417586, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22417586, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22417586, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22417586, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22417586, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22417586, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450686, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450686, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450686, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450686, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450686, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450686, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98484fbd97870af4d8569162460a89bb, type: 3}
+--- !u!224 &2687272390403463636 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 22405792, guid: 98484fbd97870af4d8569162460a89bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2687272390423182196}
+  m_PrefabAsset: {fileID: 0}

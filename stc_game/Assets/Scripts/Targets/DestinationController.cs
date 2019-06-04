@@ -1,27 +1,32 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DestinationController : MonoBehaviour
 {
     public Camera cam;
-    public GameObject hero;
+    public Hero hero;
     public GameObject target;
     public Vector3 floorOffset;
-
+    private StateController controller;
 
     // Start is called before the first frame update
     void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
+        hero = GameObject.FindGameObjectWithTag("Player").GetComponent<Hero>();
+        controller = hero.stateController;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         target = gameObject;
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetMouseButton(0))
+        UpdateDestination();
+    }
+
+    private void UpdateDestination()
+    {
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             // raycast at mouse position
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -38,12 +43,12 @@ public class DestinationController : MonoBehaviour
                 else
                 {
                     target = null;
-                    transform.position = hit.point;
+                    transform.position = hit.point + floorOffset;
                 }
             }
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && !EventSystem.current.IsPointerOverGameObject())
         {
             // raycast at mouse position
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -56,9 +61,9 @@ public class DestinationController : MonoBehaviour
             }
         }
 
-        if (hero.GetComponent<StateController>().target != null)
+        if (controller.target != null)
         {
-            if (hero.GetComponent<StateController>().currentState.isAggro)
+            if (controller.currentState.isAggro)
             {
                 transform.position = new Vector3(0, -1000, 0);
             }
@@ -74,3 +79,4 @@ public class DestinationController : MonoBehaviour
             transform.position = new Vector3(0, -1000, 0);
     }
 }
+

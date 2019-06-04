@@ -9,37 +9,52 @@ namespace Assets.Scripts.MonoBehaviors
 {
     public class CharacterStatsSaver : Saver
     {
-        private CharacterStats characterStats;
+        public Stats characterStats;
         private AbilityManager manager;
+
 
         private void Awake()
         {
-            characterStats = GetComponent<CharacterStats>();
+            characterStats = GetComponent<CharacterStats>().stats;
             manager = GetComponent<AbilityManager>();
-        }
-
-        protected override void Load()
-        {
-            CharacterStats stats = new CharacterStats();
-            if (saveData.Load(key, ref stats))
+            if (gameObject.CompareTag("Player"))
             {
-                characterStats = stats;
+                uniqueIdentifier = "myStats";
             }
+            key = SetKey();
         }
 
-        protected override void Save()
+        public override void Load()
+        {
+            if (SceneController.Instance.previousSceneName.Equals(GameStrings.Scenes.TownScene) && SceneController.Instance.currentSceneName.Equals(GameStrings.Scenes.TownScene))
+            {
+                return;
+            }
+            // loading from persistent scene's GameCharacter
+            characterStats = PersistentScene.Instance.GameCharacter.Stats;
+
+            //Stats stats = new Stats();
+            //if (saveData.Load(key, ref stats))
+            //{
+            //    characterStats = stats;
+            //}
+        }
+
+        public override void Save()
         {
             manager = GetComponent<AbilityManager>();
             manager.RemoveAllEffects();
 
-            characterStats = GetComponent<CharacterStats>();
-            
-            saveData.Save(key, characterStats);
+            characterStats = GetComponent<CharacterStats>().stats;
+            //saveData.Save(key, characterStats);
+
+            // Saving to persistent scene's GameCharacter
+            PersistentScene.Instance.SaveGameCharacterStats(characterStats);
         }
 
         protected override string SetKey()
         {
-            return characterStats.name + characterStats.GetType().FullName + uniqueIdentifier;
+            return uniqueIdentifier;
         }
     }
 }

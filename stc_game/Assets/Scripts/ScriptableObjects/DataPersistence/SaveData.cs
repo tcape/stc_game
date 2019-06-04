@@ -72,7 +72,7 @@ public class SaveData : ResettableScriptableObject
     public KeyValuePairLists<int> intKeyValuePairLists = new KeyValuePairLists<int>();
     public KeyValuePairLists<string> stringKeyValuePairLists = new KeyValuePairLists<string>();
     public KeyValuePairLists<List<Ability>> abilityListKeyValuePairLists = new KeyValuePairLists<List<Ability>>();
-    public KeyValuePairLists<CharacterStats> characterStatsKeyValuePairLists = new KeyValuePairLists<CharacterStats>();
+    public KeyValuePairLists<Stats> characterStatsKeyValuePairLists = new KeyValuePairLists<Stats>();
     //public KeyValuePairLists<Inventory> inventoryKeyValuePairLists = new KeyValuePairLists<Inventory>();
     public KeyValuePairLists<Vector3> vector3KeyValuePairLists = new KeyValuePairLists<Vector3>();
     public KeyValuePairLists<Quaternion> quaternionKeyValuePairLists = new KeyValuePairLists<Quaternion>();
@@ -83,6 +83,7 @@ public class SaveData : ResettableScriptableObject
         boolKeyValuePairLists.Clear ();
         intKeyValuePairLists.Clear ();
         stringKeyValuePairLists.Clear ();
+        abilityListKeyValuePairLists.Clear();
         vector3KeyValuePairLists.Clear ();
         quaternionKeyValuePairLists.Clear ();
         characterStatsKeyValuePairLists.Clear();
@@ -122,7 +123,7 @@ public class SaveData : ResettableScriptableObject
         Save(stringKeyValuePairLists, key, value);
     }
 
-    public void Save(string key, CharacterStats value)
+    public void Save(string key, Stats value)
     {
         Save(characterStatsKeyValuePairLists, key, value);
     }
@@ -163,7 +164,7 @@ public class SaveData : ResettableScriptableObject
         return Load (stringKeyValuePairLists, key, ref value);
     }
 
-    public bool Load(string key, ref CharacterStats value)
+    public bool Load(string key, ref Stats value)
     {
         return Load(characterStatsKeyValuePairLists, key, ref value);
     }

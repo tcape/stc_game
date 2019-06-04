@@ -263,6 +263,7 @@ namespace Devdog.General.Editors.ReflectionDrawers
                 {
                     types = new Type[]
                     {
+                        /*
                         fromType.MakeGenericType(typeof (string)),
                         fromType.MakeGenericType(typeof (bool)),
                         fromType.MakeGenericType(typeof (int)),
@@ -273,6 +274,18 @@ namespace Devdog.General.Editors.ReflectionDrawers
                         fromType.MakeGenericType(typeof (Vector4)),
                         fromType.MakeGenericType(typeof (Quaternion)),
                         fromType.MakeGenericType(typeof (UnityEngine.Object)),
+                        */
+
+                        typeof (string),
+                        typeof (bool),
+                        typeof (int),
+                        typeof (float),
+                        typeof (uint),
+                        typeof (Vector2),
+                        typeof (Vector3),
+                        typeof (Vector4),
+                        typeof (Quaternion),
+                        typeof (UnityEngine.Object),
                     }
                 };
 

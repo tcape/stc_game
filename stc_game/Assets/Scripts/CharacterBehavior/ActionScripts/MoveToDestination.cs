@@ -2,15 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 
 [CreateAssetMenu(menuName = "PluggableAI/Actions/MoveToDestination")]
 public class MoveToDestination : CharacterAction
 {
     public override void Act(StateController controller)
     {
-        GetInputAndMove(controller);
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            GetInputAndMove(controller);
+        }
     }
+    
 
     private void GetInputAndMove(StateController controller)
     {
@@ -56,7 +60,13 @@ public class MoveToDestination : CharacterAction
                 if (hit.collider.gameObject.tag.Equals("Enemy") || hit.collider.gameObject.tag.Equals("NPC"))
                 {
                     controller.target = hit.collider.gameObject;
+
+                  
+
                     var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
+
+                    if (hit.collider.gameObject.tag.Equals("NPC"))
+                        controller.navMeshAgent.stoppingDistance = 2f;
 
                     if (distance > controller.stats.stoppingDistance)
                         controller.navMeshAgent.SetDestination(controller.target.transform.position);
@@ -73,21 +83,23 @@ public class MoveToDestination : CharacterAction
         if (controller.target == null)
         {
             controller.navMeshAgent.stoppingDistance = 1f;
+            // rotation bug
+            if (controller.navMeshAgent.velocity.magnitude < 0.1f)
+                controller.navMeshAgent.angularSpeed = 0;
+            else
+                controller.navMeshAgent.angularSpeed = controller.stats.rotationSpeed;
             return;
         }
-        // otherwise, check speed
+      
         else
         {
-            var speed = controller.navMeshAgent.velocity.magnitude;
-            // if speed is very slow or stopped, look at the target
-            if (speed < 0.1f)
+            
+            Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
+            if (deltaVec != Vector3.zero)
             {
-                Vector3 deltaVec = controller.target.transform.position - controller.transform.position;
-                if (deltaVec != Vector3.zero)
-                {
-                    controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * controller.stats.rotationSpeed);
-                }
+                controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, Quaternion.LookRotation(deltaVec), Time.deltaTime * 10);
             }
+            
         }
 
         if (controller.target.gameObject.tag.Equals("Enemy"))
@@ -97,5 +109,8 @@ public class MoveToDestination : CharacterAction
             if (distance > controller.stats.stoppingDistance && distance <= controller.stats.meleeAttackRadius)
                 controller.navMeshAgent.SetDestination(controller.target.transform.position);
         }
+        
     }
+
+
 }

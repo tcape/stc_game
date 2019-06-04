@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class APBarController : MonoBehaviour
 {
-    private CharacterStats stats;
+    private Stats stats;
     private Camera cam;
     private Image image;
 
     private void Start()
     {
-        stats = GetComponentInParent<CharacterStats>();
+        stats = GetComponentInParent<CharacterStats>().stats;
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         image = GetComponent<Image>();
     }
@@ -23,7 +23,7 @@ public class APBarController : MonoBehaviour
         //transform.LookAt(cam.transform.position - v);
         //transform.Rotate(0, 180, 0);
 
-        image.fillAmount = (float)(stats.currentAP / stats.maxAP);
+        image.fillAmount = (float)(stats.currentAP / stats.intellect.MaxAP());
 
     }
 }

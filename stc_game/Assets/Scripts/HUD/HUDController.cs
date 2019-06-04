@@ -1,23 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
-    public CharacterStats stats;
+    public Stats stats;
     public GameObject hpBar;
-    public GameObject spBar;
+    public GameObject apBar;
     public GameObject goldCounter;
     public GameObject experienceBar;
 
-    public void Awake()
-    {
-        
-    }
-
     public void Update()
     {
-        if (stats)
+        if (stats != null)
         {
             UpdateHPBar();
             UpdateAPBar();
@@ -26,31 +22,41 @@ public class HUDController : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SceneController.Instance.AfterSceneLoad += FindPlayerObject;
+    }
+
+    private void OnDisable()
+    {
+        SceneController.Instance.AfterSceneLoad -= FindPlayerObject;
+    }
+
     public void FindPlayerObject()
     {
-        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>().stats;
     }
 
     private void UpdateHPBar()
     {
-        var scaleValue = (float)(stats.currentHP / stats.maxHP);
-        hpBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
+        var scaleValue = (float)(stats.currentHP / stats.strength.MaxHP());
+        hpBar.GetComponent<Image>().fillAmount = scaleValue;
     }
 
     private void UpdateAPBar()
     {
-        var scaleValue = (float)(stats.currentAP / stats.maxAP);
-        spBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
+        var scaleValue = (float)(stats.currentAP / stats.intellect.MaxAP());
+        apBar.GetComponent<Image>().fillAmount = scaleValue;
     }
 
     private void UpdateGoldCount()
     {
-        goldCounter.GetComponent<UnityEngine.UI.Text>().text = stats.gold.ToString();
+        goldCounter.GetComponent<Text>().text = stats.gold.ToString();
     }
 
     private void UpdateXPBar()
     {
         var scaleValue = (float)((stats.XP - stats.GetTotalXP()) / (stats.GetNextLevel() - stats.GetTotalXP()));
-        experienceBar.transform.localScale = new Vector3(scaleValue, 1f, 1f);
+        experienceBar.GetComponent<Image>().fillAmount = scaleValue;
     }
 }

@@ -12,13 +12,13 @@ public class PositionSaver : Saver
     }
 
 
-    protected override void Save()
+    public override void Save()
     {
         saveData.Save(key, transformToSave.position);
     }
 
 
-    protected override void Load()
+    public override void Load()
     {
         // Create a variable to be passed by reference to the Load function.
         Vector3 position = Vector3.zero;

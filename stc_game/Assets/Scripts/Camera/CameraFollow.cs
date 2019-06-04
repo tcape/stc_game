@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-
     public GameObject target;
     Vector3 offset;
     public float smoothness;
+    public float viewMin;
+    public float viewMax;
     bool b;
 
-    // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
+        var cameraTransform = GameObject.FindGameObjectWithTag("CameraData").transform;
+        transform.position = target.transform.position + cameraTransform.position;
+        transform.rotation = cameraTransform.rotation;
+        GetComponent<Camera>().fieldOfView = 60;
     }
 
     // Update is called once per frame
     void Update()
     {
         // mouse scroll wheel zoom
-        if (Input.GetAxis("Mouse ScrollWheel") > 0 && GetComponent<Camera>().fieldOfView > 35)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 && GetComponent<Camera>().fieldOfView > viewMin)
         {
             GetComponent<Camera>().fieldOfView -= 5;
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0 && GetComponent<Camera>().fieldOfView < 60)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 && GetComponent<Camera>().fieldOfView < viewMax)
         {
             GetComponent<Camera>().fieldOfView += 5;
         }

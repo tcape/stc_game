@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3310536}
   - component: {fileID: 2393102}
   - component: {fileID: 6345200797753581985}
-  m_Layer: 0
-  m_Name: SM_Wep_Goblin_Club_02
+  m_Layer: 2
+  m_Name: SM_Wep_Goblin_Club_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

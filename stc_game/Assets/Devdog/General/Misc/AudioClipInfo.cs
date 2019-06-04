@@ -7,7 +7,7 @@ namespace Devdog.General
     public class AudioClipInfo
     {
         public AudioClip audioClip;
-        public float volume = 1f;
+        public float volume = .2f;
         public float pitch = 1f;
         public bool loop = false;
     }

@@ -16,13 +16,14 @@ public class DamageOverTime : AbilityAction
 
     public override void Act(AbilityManager manager)
     {
-        target.GetComponent<CharacterStats>().TakeAbilityDamage(manager.stats, amount);
-        target.GetComponent<StateController>().CauseAggro();
+        target.GetComponent<CharacterStats>().stats.TakeAbilityDamage(manager.stats, amount);
+        if(!manager.GetComponent<CharacterStats>().stats.dead)
+            target.GetComponent<StateController>().CauseAggro();
     }
 
     public override void RemoveEffect(AbilityManager manager)
     {
-        manager.stats.BuffDefense(-effectTotal);
+        return;
     }
 
     public override void ResetEffectTotal()

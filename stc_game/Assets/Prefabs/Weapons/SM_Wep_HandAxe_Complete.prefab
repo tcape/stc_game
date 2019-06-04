@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3358762}
   - component: {fileID: 2305370}
   - component: {fileID: 1554721659557503598}
-  m_Layer: 0
-  m_Name: SM_Wep_HandAxe_02
+  m_Layer: 2
+  m_Name: SM_Wep_HandAxe_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

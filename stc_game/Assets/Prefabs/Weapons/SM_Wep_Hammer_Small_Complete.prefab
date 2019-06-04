@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2304712}
   - component: {fileID: 86355889232726562}
   - component: {fileID: 7558106048255680881}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Hammer_Small_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,5 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 4ee1f9f5a0580a3488c0176cb02b123d, type: 3}
+  volume: 0.2
   hittingTarget: 0
   target: {fileID: 0}

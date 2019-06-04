@@ -11,9 +11,14 @@ public class AbilitySaver : Saver
     private void Awake()
     {
         manager = GetComponent<AbilityManager>();
+        if (gameObject.CompareTag("Player"))
+        {
+            uniqueIdentifier = "myAbilities";
+        }
+        key = SetKey();
     }
 
-    protected override void Load()
+    public override void Load()
     {
         var checkList = new List<Ability>();
         
@@ -23,7 +28,7 @@ public class AbilitySaver : Saver
         }
     }
 
-    protected override void Save()
+    public override void Save()
     {
         manager = GetComponent<AbilityManager>();
         if (manager)
@@ -37,6 +42,6 @@ public class AbilitySaver : Saver
 
     protected override string SetKey()
     {
-        return manager.name + manager.GetType().FullName + uniqueIdentifier;
+        return uniqueIdentifier;
     }
 }
