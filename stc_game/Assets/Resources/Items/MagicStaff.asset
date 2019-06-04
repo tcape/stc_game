@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: MagicStaff
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: MagicStaff
   itemClass: 1
   ItemName: Magic Staff
   Icon: {fileID: 21300000, guid: 4d4c605d347d3df4e8efe737ef79897a, type: 3}

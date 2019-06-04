@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: Chest Amor
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: Chest Amor
+  itemClass: 0
   ItemName: Chest Armor
   Icon: {fileID: 21300000, guid: ab0226cd28d392f419078c390d24f898, type: 3}
   characterPanel: {fileID: 0}
