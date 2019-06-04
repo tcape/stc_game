@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2360784}
   - component: {fileID: 1212608329193792401}
   - component: {fileID: 424669672809501272}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Crystal_Axe_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

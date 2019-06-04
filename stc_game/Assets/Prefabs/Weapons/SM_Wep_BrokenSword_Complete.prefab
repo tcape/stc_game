@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2352266}
   - component: {fileID: 1839840397230268878}
   - component: {fileID: 3458500702357721064}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_BrokenSword_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

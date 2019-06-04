@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2381910}
   - component: {fileID: 648124993387589154}
   - component: {fileID: 2742070972522822958}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Spear_1_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

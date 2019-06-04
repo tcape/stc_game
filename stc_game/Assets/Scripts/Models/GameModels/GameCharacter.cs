@@ -82,7 +82,7 @@ public class GameCharacter
             strength = new Strength(5)
             {
                 maxHP = new SubStat(500),
-                attack = new SubStat(6),
+                attack = new SubStat(8),
                 meleeCritPower = new SubStat(1.5),
                 defense = new SubStat(5)
             },
@@ -91,12 +91,12 @@ public class GameCharacter
                 maxAP = new SubStat(180),
                 abilityAttack = new SubStat(15),
                 abilityCritPower = new SubStat(2),
-                abilityCritRate = new SubStat(0.25)
+                abilityCritRate = new SubStat(0.2)
             },
             dexterity = new Dexterity(5)
             {
                 dodgeRate = new SubStat(0.15),
-                meleeCritRate = new SubStat(0.25),
+                meleeCritRate = new SubStat(0.2),
                 movementSpeed = new SubStat(5)
             },
             currentHP = 500,
@@ -128,9 +128,9 @@ public class GameCharacter
             strength = new Strength(10)
             {
                 maxHP = new SubStat(500),
-                attack = new SubStat(15),
+                attack = new SubStat(10),
                 meleeCritPower = new SubStat(2),
-                defense = new SubStat(9)
+                defense = new SubStat(7)
             },
             intellect = new Intellect(5)
             {
@@ -142,7 +142,7 @@ public class GameCharacter
             dexterity = new Dexterity(7)
             {
                 dodgeRate = new SubStat(0.15),
-                meleeCritRate = new SubStat(0.25),
+                meleeCritRate = new SubStat(0.15),
                 movementSpeed = new SubStat(7)
             },
             currentHP = 500,

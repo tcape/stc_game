@@ -21,8 +21,8 @@ MonoBehaviour:
   animationTrigger: 
   cooldown: 10
   duration: 5
-  cost: 15
+  cost: 20
   hotkey: 52
   range: 0
-  startTime: 7.5377526
+  startTime: 102.89913
   target: {fileID: 0}

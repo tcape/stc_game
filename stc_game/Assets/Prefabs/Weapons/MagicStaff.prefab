@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2325414}
   - component: {fileID: 5337873147915807779}
   - component: {fileID: 2199265197987293831}
+  m_Layer: 2
+  m_Name: MagicStaff
   m_Layer: 0
   m_Name: MagicStaff
   m_TagString: Untagged
@@ -120,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177044087066190817}
   - component: {fileID: 2634663673161292267}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +213,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4fb14081a0dc74343a107bf85ef86377, type: 3}
       propertyPath: m_Name
       value: Star_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4fb14081a0dc74343a107bf85ef86377, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4fb14081a0dc74343a107bf85ef86377, type: 3}
       propertyPath: m_LocalPosition.x

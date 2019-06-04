@@ -20,10 +20,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c6adcba9946b9474ab0477e39a249d80, type: 2}
   - {fileID: 11400000, guid: 483cc7c74b856c64fa8403fbda34c04b, type: 2}
   animationTrigger: Ability2
-  cooldown: 10
+  cooldown: 15
   duration: 10
-  cost: 15
+  cost: 20
   hotkey: 50
   range: 20
-  startTime: 123.93959
+  startTime: 503.09598
   target: {fileID: 0}

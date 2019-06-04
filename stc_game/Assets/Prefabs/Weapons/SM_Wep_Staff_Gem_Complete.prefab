@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2361258}
   - component: {fileID: 6932135633202806987}
   - component: {fileID: 8681063918406837882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Staff_Gem_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

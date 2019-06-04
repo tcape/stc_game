@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2383984}
   - component: {fileID: 7112811170974022925}
   - component: {fileID: 6215774300573115044}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Hammer_Large_Wood_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

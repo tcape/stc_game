@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2363884}
   - component: {fileID: 1437912615074932775}
   - component: {fileID: 2649012236061187178}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Halberd_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2396408}
   - component: {fileID: 5251041175903317926}
   - component: {fileID: 7276586222937616310}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Hammer_Mace_Sphere_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2334408}
   - component: {fileID: 5338901187946634847}
   - component: {fileID: 90251890729569462}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Ornate_Spear_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

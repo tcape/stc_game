@@ -22,8 +22,8 @@ MonoBehaviour:
   animationTrigger: Ability2
   cooldown: 10
   duration: 10
-  cost: 30
+  cost: 35
   hotkey: 50
   range: 0
-  startTime: 2.6321127
+  startTime: 161.54845
   target: {fileID: 0}

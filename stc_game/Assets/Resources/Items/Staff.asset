@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: 0
   itemClass: 1
   ItemName: Staff
-  Icon: {fileID: 21300000, guid: 4d4c605d347d3df4e8efe737ef79897a, type: 3}
+  Icon: {fileID: 21300000, guid: 7a19175fe8056fd419086adf86e8847e, type: 3}
   characterPanel: {fileID: 0}
   strengthBonus: 0
   dexterityBonus: 0
@@ -24,6 +24,7 @@ MonoBehaviour:
   defenseBonus: 1
   critChanceBonus: 0
   critPowerBonus: 0.01
+  abilityBonus: 1
   abilityCritChanceBonus: 0.01
   abilityCritPowerBonus: 0.01
   dodgeBonus: 0
@@ -35,6 +36,7 @@ MonoBehaviour:
   defensePercentBonus: 0
   critChancePercentBonus: 0
   critPowerPercentBonus: 0
+  abilityPercentBonus: 0
   abilityCritChancePercentBonus: 0
   abilityCritPowerPercentBonus: 0
   dodgePercentBonus: 0

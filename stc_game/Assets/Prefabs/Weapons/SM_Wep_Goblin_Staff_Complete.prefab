@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2316104}
   - component: {fileID: 4143168800641675834}
   - component: {fileID: 8063119774669141446}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Goblin_Staff_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
