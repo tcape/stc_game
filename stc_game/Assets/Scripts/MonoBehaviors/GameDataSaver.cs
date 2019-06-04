@@ -3,6 +3,8 @@ using System.Collections;
 using Devdog.QuestSystemPro;
 using System.Collections.Generic;
 using UnityEngine;
+using Kryz.CharacterStats.Examples;
+using System.Linq;
 
 public class GameDataSaver : Saver
 {
@@ -46,17 +48,22 @@ public class GameDataSaver : Saver
         foreach (var item in equipment)
         {
             dbEquipment.Add(item.Id);
+
         }
         gameState.EquippedItems = dbEquipment;
 
-        // clear equipped inventory
-        equipment.Clear();
+        foreach(var id in dbEquipment)
+        {
+            inventoryManager.Unequip(equipment.Where(e => e.Id.Equals(id)).SingleOrDefault());
+        }
+
+        items.Clear();
 
         // save stats
         gameState.Stats = PersistentScene.Instance.GameCharacter.Stats;
 
         // save quest progress
-        gameState.QuestsContainer = questProgress;
+        // gameState.QuestsContainer = questProgress;
 
         gameState.isDirty = true;
         // save to User Database

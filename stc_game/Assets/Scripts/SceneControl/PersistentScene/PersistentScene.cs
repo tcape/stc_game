@@ -71,6 +71,12 @@ public class PersistentScene : MonoBehaviour
         exitButton.enabled = false;
         logoutButton.gameObject.SetActive(false);
         exitButton.gameObject.SetActive(false);
+
+        if (User.GetActiveCharacter().GameState.isDirty)
+        {
+            LoadGameData();
+            User.GetActiveCharacter().GameState.isDirty = false;
+        }
     }
 
     private void Update()
@@ -80,6 +86,8 @@ public class PersistentScene : MonoBehaviour
             ToggleMenu();
         }
     }
+
+
 
     public void ToggleMenu()
     {
@@ -105,7 +113,9 @@ public class PersistentScene : MonoBehaviour
     public void LoadGameData()
     {
         // Load Game Stats
-        GameCharacter.Stats = UserService.Instance.User.GetActiveCharacter().GameState.Stats;
+        GameCharacter.Stats = GameCharacter.GetStatsFromData(UserService.Instance.User.GetActiveCharacter().GameState.Stats);
+        GameCharacter.Stats.Setup();
+
         Debug.Log(GameCharacter.Stats);
         // Load Equipment from User into Game Character Equipment
         foreach (string equipment in User.GetActiveCharacter().GameState.EquippedItems)
@@ -121,16 +131,16 @@ public class PersistentScene : MonoBehaviour
             inventory.AddItem(Resources.Load<EquippableItem>("Items/" + item));
         }
 
-        // Load Quest Progress from User into Game Quests
-        var questStates = QuestManager.instance.GetQuestStates();
-        var userQuestsContainer = User.GetActiveCharacter().GameState.QuestsContainer;
-        // dies here
-        if (userQuestsContainer != null)
-        {
-            questStates.completedQuests = userQuestsContainer.completedQuests;
-            questStates.activeQuests = userQuestsContainer.activeQuests;
-            questStates.achievements = userQuestsContainer.achievements;
-        }
+        //// Load Quest Progress from User into Game Quests
+        //var questStates = QuestManager.instance.GetQuestStates();
+        //var userQuestsContainer = User.GetActiveCharacter().GameState.QuestsContainer;
+        //// dies here
+        //if (userQuestsContainer != null)
+        //{
+        //    questStates.completedQuests = userQuestsContainer.completedQuests;
+        //    questStates.activeQuests = userQuestsContainer.activeQuests;
+        //    questStates.achievements = userQuestsContainer.achievements;
+        //}
     }
 
     private IEnumerator LoadGameScene()

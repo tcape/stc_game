@@ -69,6 +69,40 @@ public class GameCharacter
         return abilities;
     }
 
+    public Stats GetStatsFromData(Stats data)
+    {
+        return new Stats()
+        {
+            level = data.level,
+            XP = data.XP,
+            gold = data.gold,
+            strength = new Strength(data.strength.baseValue)
+            {
+                maxHP = new SubStat(data.strength.maxHP.baseValue),
+                attack = new SubStat(data.strength.attack.baseValue),
+                meleeCritPower = new SubStat(data.strength.meleeCritPower.baseValue),
+                defense = new SubStat(data.strength.defense.baseValue)
+            },
+            intellect = new Intellect(data.intellect.baseValue)
+            {
+                maxAP = new SubStat(data.intellect.maxAP.baseValue),
+                abilityAttack = new SubStat(data.intellect.abilityAttack.baseValue),
+                abilityCritPower = new SubStat(data.intellect.abilityCritPower.baseValue),
+                abilityCritRate = new SubStat(data.intellect.abilityCritRate.baseValue)
+            },
+            dexterity = new Dexterity(data.dexterity.baseValue)
+            {
+                dodgeRate = new SubStat(data.dexterity.dodgeRate.baseValue),
+                meleeCritRate = new SubStat(data.dexterity.meleeCritRate.baseValue),
+                movementSpeed = new SubStat(data.dexterity.movementSpeed.baseValue)
+            },
+            currentHP = data.currentHP,
+            currentAP = data.currentAP,
+            dead = data.dead,
+            nextLevelXP = data.nextLevelXP
+        };
+    }
+
     private Stats GetMagePresetStats()
     {
         return new Stats()
