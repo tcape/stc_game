@@ -14,6 +14,7 @@ public class AuthService {
     private AuthReq authRequest; 
     public event Action<AsyncOperation> AuthenticationCallback;
     public event Action UserIsLoggedIn;
+    public event Action UserIsLoggedOut;
 
     private AuthService() {
     }
@@ -70,6 +71,8 @@ public class AuthService {
         else
         {
             Debug.Log("Auth result was not able to get auth user data");
+            Logout();
+            UserIsLoggedOut.Invoke();
         }
     }
 

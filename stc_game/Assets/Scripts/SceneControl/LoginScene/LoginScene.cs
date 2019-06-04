@@ -27,6 +27,7 @@ public class LoginScene : MonoBehaviour
         // registering callback for sign-up and login callbacks
         authService.AuthenticationCallback += HandleAuthenticationCallback;
         authService.UserIsLoggedIn += HandleUserIsLoggedIn;
+        authService.UserIsLoggedOut += HandleUserIsLoggedOut;
         userService.LoadUserCallback += HandleLoadUserCallback;
 
         // registering button-click and other triggered events
@@ -140,6 +141,11 @@ public class LoginScene : MonoBehaviour
     public void HandleUserIsLoggedIn()
     {
         userService.GetUser(authService.authUser.sub);
+    }
+
+    public void HandleUserIsLoggedOut()
+    {
+        loginImage.gameObject.SetActive(false);
     }
 
     public void HandleLoadUserCallback()
