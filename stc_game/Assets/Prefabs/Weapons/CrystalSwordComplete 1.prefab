@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1558449996467677716}
   - component: {fileID: 343901444104705332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7063556923144885398}
   - component: {fileID: 7018611949352354718}
   m_Layer: 2
-  m_Name: CrystalSwordComplete
+  m_Name: CrystalSwordComplete 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,6 +237,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4f363e1d62fb6ac4b8ebf719a0ad54e6, type: 3}
       propertyPath: m_Name
       value: Star_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4f363e1d62fb6ac4b8ebf719a0ad54e6, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f363e1d62fb6ac4b8ebf719a0ad54e6, type: 3}
       propertyPath: m_LocalPosition.x

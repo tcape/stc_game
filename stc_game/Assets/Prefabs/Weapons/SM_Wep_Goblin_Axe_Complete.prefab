@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2319772}
   - component: {fileID: 7767038684703293439}
   - component: {fileID: 6916158377189422578}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Goblin_Axe_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

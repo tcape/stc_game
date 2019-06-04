@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2371450}
   - component: {fileID: 2931542188063011913}
   - component: {fileID: 7290415944722691675}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Goblin_Halberd_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

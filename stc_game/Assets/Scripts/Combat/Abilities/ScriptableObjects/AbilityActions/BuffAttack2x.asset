@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   persistance: 1
   amount: 0
-  percentage: 2
+  percentage: 0.2
   interval: 0
   effectTotal: 0
   target: {fileID: 0}

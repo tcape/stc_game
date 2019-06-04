@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2325414}
   - component: {fileID: 5337873147915807779}
   - component: {fileID: 2199265197987293831}
-  m_Layer: 0
-  m_Name: SM_Prop_WizardStaff_02
+  m_Layer: 2
+  m_Name: Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

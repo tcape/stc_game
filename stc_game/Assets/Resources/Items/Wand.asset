@@ -24,6 +24,7 @@ MonoBehaviour:
   defenseBonus: 0
   critChanceBonus: 0
   critPowerBonus: 0
+  abilityBonus: 1
   abilityCritChanceBonus: 0.01
   abilityCritPowerBonus: 0.01
   dodgeBonus: 0.01
@@ -35,6 +36,7 @@ MonoBehaviour:
   defensePercentBonus: 0
   critChancePercentBonus: 0
   critPowerPercentBonus: 0
+  abilityPercentBonus: 0
   abilityCritChancePercentBonus: 0
   abilityCritPowerPercentBonus: 0
   dodgePercentBonus: 0

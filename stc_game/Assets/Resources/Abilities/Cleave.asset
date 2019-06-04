@@ -20,8 +20,8 @@ MonoBehaviour:
   animationTrigger: Ability3
   cooldown: 5
   duration: 0
-  cost: 20
+  cost: 25
   hotkey: 51
   range: 5
-  startTime: 398.99884
+  startTime: 161.60107
   target: {fileID: 0}

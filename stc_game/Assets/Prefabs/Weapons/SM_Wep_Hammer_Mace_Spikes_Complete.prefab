@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2317466}
   - component: {fileID: 7910850609927040942}
   - component: {fileID: 2656469467177345974}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Hammer_Mace_Spikes_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

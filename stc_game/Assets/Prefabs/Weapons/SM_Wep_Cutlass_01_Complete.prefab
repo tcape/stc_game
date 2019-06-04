@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2363828}
   - component: {fileID: 4603415411918676018}
   - component: {fileID: 3599221092472240346}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SM_Wep_Cutlass_01_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

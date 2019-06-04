@@ -6,11 +6,15 @@ public class Fireball : MonoBehaviour
 {
     public double damage;
     public CharacterStats heroStats;
+    private float startTime;
+    private float duration;
 
     private void Start()
     {
         heroStats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
         damage = 1;
+        startTime = Time.time;
+        duration = 10f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +32,14 @@ public class Fireball : MonoBehaviour
                 hit.transform.position = other.gameObject.transform.position + new Vector3(0f, 1.5f, 0);
             }
            
+        }
+    }
+
+    private void Update()
+    {
+        if (startTime < Time.time - duration)
+        {
+            Destroy(gameObject);
         }
     }
 }
