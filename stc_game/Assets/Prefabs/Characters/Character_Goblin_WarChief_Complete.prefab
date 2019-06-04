@@ -3360,6 +3360,7 @@ GameObject:
   - component: {fileID: 6529141008692494347}
   - component: {fileID: 7318591488769944929}
   - component: {fileID: 1431980808679365883}
+  - component: {fileID: -4093857164178778515}
   m_Layer: 0
   m_Name: Character_Goblin_WarChief_Complete
   m_TagString: Enemy
@@ -7595,6 +7596,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: {fileID: 138872, guid: 4fd0c7547143bde4c851c20099915676, type: 3}
   offset: {x: 0.5, y: 0, z: 0.5}
+--- !u!114 &-4093857164178778515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7b40f7e8278e745aa86155afb27fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 451e2e1e8f689cc40ac5ab5bede8951e, type: 3}
+  volume: 0.4
 --- !u!1 &174376
 GameObject:
   m_ObjectHideFlags: 0

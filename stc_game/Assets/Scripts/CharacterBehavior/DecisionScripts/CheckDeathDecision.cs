@@ -24,6 +24,7 @@ public class CheckDeathDecision : Decision
 
     private void Die(StateController controller)
     {
+        controller.StartCoroutine(controller.GetComponent<SoundManager>().PlayDeathAudio());
         if (controller.gameObject.CompareTag("Enemy"))
         {
             controller.StartCoroutine(EnemyDeath(controller));
