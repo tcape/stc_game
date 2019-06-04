@@ -18,6 +18,7 @@ public class PersistentScene : MonoBehaviour
     public ActionBarController actionBar;
     public QuestWindowUI questWindowUI;
     public GameDataSaver gameDataSaver;
+    public bool firstGameLoad;
     public DialogueUI dialogueUI;
     public HUDController hud;
     public Button logoutButton;
@@ -47,6 +48,7 @@ public class PersistentScene : MonoBehaviour
     {
         // load local resources 
         // (moving all logic from start function to this first time function)
+        firstGameLoad = true;
         gameDataSaver = GetComponent<GameDataSaver>();
         logoutButton.onClick.AddListener(onLogout);
         exitButton.onClick.AddListener(onExit);
@@ -104,7 +106,7 @@ public class PersistentScene : MonoBehaviour
     {
         // Load Game Stats
         GameCharacter.Stats = UserService.Instance.User.GetActiveCharacter().GameState.Stats;
-
+        Debug.Log(GameCharacter.Stats);
         // Load Equipment from User into Game Character Equipment
         foreach (string equipment in User.GetActiveCharacter().GameState.EquippedItems)
         {

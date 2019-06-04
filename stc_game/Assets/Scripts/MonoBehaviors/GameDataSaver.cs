@@ -13,7 +13,6 @@ public class GameDataSaver : Saver
 
     public override void Load()
     {
-        // Load is implemented at game launch in persistent scene
         if (PersistentScene.Instance.User.GetActiveCharacter().GameState.isDirty)
         {
             PersistentScene.Instance.LoadGameData();
@@ -37,22 +36,24 @@ public class GameDataSaver : Saver
         foreach (var item in items)
         {
             dbItems.Add(item.Id);
-            inventory.RemoveItem(item);
         }
         gameState.Items = dbItems;
 
+        // clear inventory
+        items.Clear();
 
         // save equipment
         foreach (var item in equipment)
         {
             dbEquipment.Add(item.Id);
-            inventoryManager.Unequip(item);
-            inventory.RemoveItem(item);
         }
         gameState.EquippedItems = dbEquipment;
 
+        // clear equipped inventory
+        equipment.Clear();
+
         // save stats
-        // gameState.Stats = PersistentScene.Instance.GameCharacter.Stats;
+        gameState.Stats = PersistentScene.Instance.GameCharacter.Stats;
 
         // save quest progress
         gameState.QuestsContainer = questProgress;
