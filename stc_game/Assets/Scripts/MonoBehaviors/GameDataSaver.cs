@@ -52,7 +52,7 @@ public class GameDataSaver : Saver
         gameState.EquippedItems = dbEquipment;
 
         // save stats
-        gameState.Stats = PersistentScene.Instance.GameCharacter.Stats;
+        // gameState.Stats = PersistentScene.Instance.GameCharacter.Stats;
 
         // save quest progress
         gameState.QuestsContainer = questProgress;
