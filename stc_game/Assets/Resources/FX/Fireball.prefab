@@ -171,7 +171,7 @@ MonoBehaviour:
   damage: 2
   heroStats: {fileID: 0}
   sound: {fileID: 8300000, guid: 02a1f8a1026271748ab491ffd8ff9d5a, type: 3}
-  volume: 0.18
+  volume: 0.4
 --- !u!1001 &1568992930357990797
 PrefabInstance:
   m_ObjectHideFlags: 0
