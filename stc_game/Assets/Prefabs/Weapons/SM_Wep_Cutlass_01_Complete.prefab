@@ -106,6 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 4ee1f9f5a0580a3488c0176cb02b123d, type: 3}
-  volume: 0.1
+  volume: 0.2
   hittingTarget: 0
   target: {fileID: 0}
