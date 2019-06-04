@@ -1,7 +1,5 @@
 ﻿using Assets.Scripts.CharacterBehavior.BaseClasses;
 using Assets.Scripts.CharacterBehavior.Combat;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Ability/AbilityAction/ShootFireball")]

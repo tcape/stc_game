@@ -39,12 +39,13 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689838579}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 9
   m_Type: 0
   m_Color: {r: 1, g: 0.96827203, b: 0.7971698, a: 1}
   m_Intensity: 10
   m_Range: 4.66
   m_SpotAngle: 34
+  m_InnerSpotAngle: 24.786846
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -54,6 +55,24 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -61,12 +80,15 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &1451025488
@@ -108,12 +130,13 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451025488}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 0.9591195, b: 0.5707547, a: 1}
   m_Intensity: 1
   m_Range: 1.0175285
   m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -123,6 +146,24 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -130,12 +171,15 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 17.06
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &1018938450163938
@@ -675,26 +719,4047 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presetStats: {fileID: 11400000, guid: 2493d41530361d442a198c96f2133872, type: 2}
-  level: 0
-  XP: 0
-  gold: 0
-  maxHP: 0
-  maxAP: 0
-  currentHP: 0
-  currentAP: 0
-  strength: 0
-  intellect: 0
-  dexterity: 0
-  attack: 0
-  meleeCritPower: 0
-  defense: 0
-  abilityAttack: 0
-  abilityCritRate: 0
-  abilityCritPower: 0
-  meleeCritRate: 0
-  dodgeRate: 0
-  movementSpeed: 0
-  dead: 0
+  saver: {fileID: 0}
+  stats:
+    deathSound: {fileID: 8300000, guid: b6fef5e1e0142034d9abba3724125d59, type: 3}
+    volume: 0.2
+    level: 0
+    XP: 0
+    gold: 0
+    currentHP: 0
+    currentAP: 0
+    strength:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        deathSound: {fileID: 0}
+        volume: 0
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      attack:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      meleeCritPower:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      defense:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      maxHP:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    intellect:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        deathSound: {fileID: 0}
+        volume: 0
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      abilityAttack:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      abilityCritPower:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      abilityCritRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      maxAP:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    dexterity:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        deathSound: {fileID: 0}
+        volume: 0
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      meleeCritRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      dodgeRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      movementSpeed:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            deathSound: {fileID: 0}
+            volume: 0
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                deathSound: {fileID: 0}
+                volume: 0
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    dead: 0
+    nextLevelXP: 0
+    totalXP: 0
 --- !u!114 &1910123732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +4775,8 @@ MonoBehaviour:
   myAbilities:
   - {fileID: 11400000, guid: 0f619d9765c5d1c4aaa41853d39c7775, type: 2}
   - {fileID: 11400000, guid: b939ee44887ef9446bc56d34aec29332, type: 2}
+  activeAbilites: []
+  saver: {fileID: 0}
   stats: {fileID: 0}
   animator: {fileID: 0}
   controller: {fileID: 0}
@@ -732,11 +4799,8 @@ MonoBehaviour:
   aggroState: {fileID: 0}
   aggroSergent: {fileID: 0}
   target: {fileID: 0}
-  cam: {fileID: 0}
-  destination: {fileID: 0}
   waypointList: []
-  playerSaveData: {fileID: 0}
-  startingPositionName: 
+  cam: {fileID: 0}
   characterStats: {fileID: 0}
   animator: {fileID: 0}
   stateTimeElapsed: 0
@@ -3542,6 +7606,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
+    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -3659,7 +7724,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    randomRow: 1
+    rowMode: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -4416,8 +8481,61 @@ ParticleSystem:
     inWorldSpace: 0
     randomizePerFrame: 0
   ExternalForcesModule:
+    serializedVersion: 2
     enabled: 0
-    multiplier: 6.94
+    multiplierCurve:
+      serializedVersion: 2
+      minMaxState: 0
+      scalar: 6.94
+      minScalar: 6.94
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
     influenceFilter: 0
     influenceMask:
       serializedVersion: 2
@@ -6767,7 +10885,7 @@ ParticleSystem:
 --- !u!199 &199109094112370016
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7710,6 +11828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+  volume: 0
   hittingTarget: 0
   target: {fileID: 0}
 --- !u!1 &1957386733790094

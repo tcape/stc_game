@@ -24,7 +24,7 @@ public class ChainDamage : AbilityAction
         //if target's collider is touching others, they take damage too
         foreach (var enemy in target.GetComponent<HitboxCollision>().touching)
         {
-            if (!damaged.Contains(enemy))
+            if (!damaged.Contains(enemy) && !enemy.GetComponent<CharacterStats>().stats.dead)
             {
                 enemy.GetComponent<CharacterStats>().stats.TakeDamage(amount);
                 damaged.Add(enemy);
@@ -32,7 +32,7 @@ public class ChainDamage : AbilityAction
                 
             // and enemies they touch
             foreach (var e in enemy.GetComponent<HitboxCollision>().touching)
-                if (!damaged.Contains(e))
+                if (!damaged.Contains(e) && !e.GetComponent<CharacterStats>().stats.dead)
                 {
                     e.GetComponent<CharacterStats>().stats.TakeDamage(amount);
                     damaged.Add(e);

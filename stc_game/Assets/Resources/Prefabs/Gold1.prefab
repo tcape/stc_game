@@ -162,6 +162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 0
+  sound: {fileID: 8300000, guid: d8103d5875b053f4a9a9bdfd0294f013, type: 3}
+  volume: 0.5
+  pickupEffect: {fileID: 448199877144418804, guid: e9466765a22c5a44db8025ee062af901,
+    type: 3}
 --- !u!114 &4072260701684052650
 MonoBehaviour:
   m_ObjectHideFlags: 0

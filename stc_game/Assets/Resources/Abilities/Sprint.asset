@@ -17,7 +17,8 @@ MonoBehaviour:
   targetType: 0
   actions:
   - {fileID: 11400000, guid: 2191ae3f95d86b245bdd2455e13f286e, type: 2}
-  animationTrigger: Ability2
+  - {fileID: 11400000, guid: 26d642fe547622643b4ab630938e1538, type: 2}
+  animationTrigger: 
   cooldown: 10
   duration: 5
   cost: 20

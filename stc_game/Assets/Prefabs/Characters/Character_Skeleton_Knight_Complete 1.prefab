@@ -1204,6 +1204,7 @@ GameObject:
   - component: {fileID: 6355811013363481941}
   - component: {fileID: 6567098165936634360}
   - component: {fileID: 6658224804270058752}
+  - component: {fileID: -3436581900523838358}
   m_Layer: 0
   m_Name: Character_Skeleton_Knight_Complete 1
   m_TagString: Enemy
@@ -5242,6 +5243,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: {fileID: 138872, guid: 4fd0c7547143bde4c851c20099915676, type: 3}
   offset: {x: 0.5, y: 1.5, z: 0.5}
+--- !u!114 &-3436581900523838358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7b40f7e8278e745aa86155afb27fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 762ba66aba07f0e41ac5dad82e84c278, type: 3}
+  volume: 0.4
 --- !u!1 &130074
 GameObject:
   m_ObjectHideFlags: 0
@@ -8578,16 +8593,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 439278}
     m_Modifications:
-    - target: {fileID: 938287107275391201, guid: 4da905a4cebe4104eb8194a5d036a581,
-        type: 3}
-      propertyPath: m_Name
-      value: HPCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 938287107275391201, guid: 4da905a4cebe4104eb8194a5d036a581,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6699850746835995865, guid: 4da905a4cebe4104eb8194a5d036a581,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8693,6 +8698,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 938287107275391201, guid: 4da905a4cebe4104eb8194a5d036a581,
+        type: 3}
+      propertyPath: m_Name
+      value: HPCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 938287107275391201, guid: 4da905a4cebe4104eb8194a5d036a581,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4da905a4cebe4104eb8194a5d036a581, type: 3}
 --- !u!224 &726878380547117975 stripped
@@ -8708,10 +8723,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 403292}
     m_Modifications:
-    - target: {fileID: 148790, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
-      propertyPath: m_Name
-      value: SM_Wep_Straightsword_01_Complete
-      objectReference: {fileID: 0}
     - target: {fileID: 420254, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.2
@@ -8767,6 +8778,10 @@ PrefabInstance:
     - target: {fileID: 420254, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
       propertyPath: m_LocalScale.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 148790, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
+      propertyPath: m_Name
+      value: SM_Wep_Straightsword_01_Complete
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b1b533f1ed9bd458af8a2d9cb29afe, type: 3}
@@ -8858,11 +8873,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 439278}
     m_Modifications:
-    - target: {fileID: 2022223707132014070, guid: 358c22e36491bfa40961b78bd8a6b185,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyHealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 4905222141746595192, guid: 358c22e36491bfa40961b78bd8a6b185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8967,6 +8977,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022223707132014070, guid: 358c22e36491bfa40961b78bd8a6b185,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyHealthBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 358c22e36491bfa40961b78bd8a6b185, type: 3}

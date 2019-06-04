@@ -1,10 +1,6 @@
 ﻿using Devdog.General;
 using Devdog.QuestSystemPro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Scripts.CharacterBehavior.Drops
@@ -13,6 +9,13 @@ namespace Assets.Scripts.CharacterBehavior.Drops
     public class Gold : MonoBehaviour
     {
         public double amount;
+        [Space]
+        public AudioClip sound;
+        [Range(0.0f, 1.0f)]
+        public float volume;
+        public ParticleSystem pickupEffect;
+        private GameObject soundObject;
+        private AudioSource source;
         private Quest goldQuest;
 
         private void Awake()
@@ -31,6 +34,11 @@ namespace Assets.Scripts.CharacterBehavior.Drops
             {
                 other.GetComponent<CharacterStats>().stats.GainGold(amount);
                 Debug.Log("Gold given to hero " + amount.ToString());
+                // Call OnTriggerUsed here for gold quest instead of triggering with range
+                GetComponent<SetQuestProgressOnTriggerObjectGold>().OnTriggerUsed(other.GetComponent<Player>());
+                StartCoroutine(PlayPickupAudio());
+                var instance = Instantiate(pickupEffect, transform.position, Quaternion.identity);
+                instance.transform.Rotate(-90, 0, 0);
                
                 if (QuestManager.instance.HasActiveQuest(goldQuest))
                 {
@@ -39,6 +47,18 @@ namespace Assets.Scripts.CharacterBehavior.Drops
 
                 Destroy(gameObject);
             }
+        }
+
+        private IEnumerator PlayPickupAudio()
+        {
+            soundObject = new GameObject("instancedSoundObject");
+            soundObject.AddComponent<AudioSource>();
+            source = soundObject.GetComponent<AudioSource>();
+            source.clip = sound;
+            source.volume = volume;
+            source.Play();
+            yield return new WaitForSeconds(source.clip.length);
+            Destroy(soundObject);
         }
 
     }

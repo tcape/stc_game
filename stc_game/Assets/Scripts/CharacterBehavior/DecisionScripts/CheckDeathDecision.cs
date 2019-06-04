@@ -24,6 +24,7 @@ public class CheckDeathDecision : Decision
 
     private void Die(StateController controller)
     {
+        controller.StartCoroutine(controller.GetComponent<SoundManager>().PlayDeathAudio());
         if (controller.gameObject.CompareTag("Enemy"))
         {
             controller.StartCoroutine(EnemyDeath(controller));
@@ -53,6 +54,7 @@ public class CheckDeathDecision : Decision
             controller.GetComponent<ItemDrop>().DropItems();
 
         controller.target.GetComponent<CharacterStats>().stats.GainXP(controller.characterStats.stats.XP);
+
         if (controller.gameObject.GetComponent<SetQuestProgressOnKilled>())
         {
             if(QuestManager.instance.HasActiveQuest(controller.gameObject.GetComponent<SetQuestProgressOnKilled>().progress.quest))
