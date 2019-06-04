@@ -7,7 +7,7 @@ using System.Collections;
 public class UserApi
 {
     public static UserApi Instance { get; } = new UserApi();
-    static DatabaseCollections playerCollection = DatabaseCollections.players;
+    static DatabaseCollections playerCollection = DatabaseCollections.playerstest;
     public event Action<AsyncOperation> ReadUserCallback;
 
     public void CreateOrUpdate(User user)
