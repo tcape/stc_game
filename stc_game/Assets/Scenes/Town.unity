@@ -16401,7 +16401,32 @@ PrefabInstance:
       propertyPath: m_Acceleration
       value: 5000
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6768812904214814216, guid: 4e6b31d69852bb449b25f97bfe02624a,
+        type: 3}
+      propertyPath: _dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f7f590976f86d94c8e6b49ee34e7a41,
+        type: 2}
+    - target: {fileID: 9027287436958290853, guid: 4e6b31d69852bb449b25f97bfe02624a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141772567181999889, guid: 4e6b31d69852bb449b25f97bfe02624a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141772567181999889, guid: 4e6b31d69852bb449b25f97bfe02624a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.41
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6096121204853068790, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
+    - {fileID: 5889489509522424014, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
+    - {fileID: 4448831735757680961, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
+    - {fileID: 6768812904214814216, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
 --- !u!1 &941318785 stripped
 GameObject:
@@ -16975,6 +17000,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618,
         type: 2}
+    - target: {fileID: 1955553732, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955553732, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955553732, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be2bbb2411890c147b59423a27c3dc07, type: 3}
 --- !u!4 &975276306 stripped
@@ -23996,6 +24033,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ee4c94eff2794f649a4bf382c185a618,
         type: 2}
+    - target: {fileID: 656930191, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 656930191, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656930191, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ec70d7de4f4c644a7ace1f5f0a2a9f, type: 3}
 --- !u!4 &1621728115 stripped
@@ -24900,10 +24949,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 216422658, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
-      propertyPath: waypointList.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 216422658, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
       propertyPath: waypointList.Array.data[0]
       value: 
       objectReference: {fileID: 1421948943}
@@ -24927,18 +24972,10 @@ PrefabInstance:
       propertyPath: waypointList.Array.data[5]
       value: 
       objectReference: {fileID: 440239234}
-    - target: {fileID: 216422658, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
-      propertyPath: startState
-      value: 
-      objectReference: {fileID: 11400000, guid: a9c4a6b42e1cef74482c5be1d13e831b,
-        type: 2}
-    - target: {fileID: 216422659, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 216422659, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
-      propertyPath: m_Acceleration
-      value: 5000
+    - target: {fileID: 7141772567181999889, guid: 4e6b31d69852bb449b25f97bfe02624a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.57
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e6b31d69852bb449b25f97bfe02624a, type: 3}
@@ -26820,7 +26857,7 @@ GameObject:
   - component: {fileID: 1893718349}
   - component: {fileID: 1893718350}
   m_Layer: 0
-  m_Name: QuestNotificationPatTownGuard
+  m_Name: QuestNotificationPatTownGuard1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
