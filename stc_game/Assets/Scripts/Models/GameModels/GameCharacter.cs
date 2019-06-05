@@ -38,7 +38,6 @@ public class GameCharacter
             Abilities = GetMageListAbilities();
             PrefabResource = "Prefabs/MagePrefab";
         }
-        Stats.Setup();
     }
 
     public GameCharacter(string name, HeroClass heroClass, Stats stats)
