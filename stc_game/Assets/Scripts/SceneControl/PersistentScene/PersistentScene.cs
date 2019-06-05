@@ -41,9 +41,9 @@ public class PersistentScene : MonoBehaviour
             return;
         }
         User = UserService.Instance.User;
+        // Instantiate a new Game Character with preset Stats and setup
         GameCharacter = new GameCharacter(User.GetActiveCharacter().Name, User.GetActiveCharacter().HeroClass);
         GameCharacter.Stats.Setup();
-        firstGameLoad = false;
     }
 
     private void Start()
@@ -73,11 +73,12 @@ public class PersistentScene : MonoBehaviour
         logoutButton.gameObject.SetActive(false);
         exitButton.gameObject.SetActive(false);
 
+        // If game data exists in the database
+        // Override the first stats load using the user data
         if (User.GetActiveCharacter().GameState.isDirty)
         {
-            firstGameLoad = true;
-            LoadGameData();
-            User.GetActiveCharacter().GameState.isDirty = false;
+            GameCharacter.Stats = GameCharacter.GetStatsFromData(UserService.Instance.User.GetActiveCharacter().GameState.Stats);
+            GameCharacter.Stats.Setup();
         }
     }
 
@@ -88,8 +89,6 @@ public class PersistentScene : MonoBehaviour
             ToggleMenu();
         }
     }
-
-
 
     public void ToggleMenu()
     {
@@ -114,17 +113,6 @@ public class PersistentScene : MonoBehaviour
 
     public void LoadGameData()
     {
-        var stats = UserService.Instance.User.GetActiveCharacter().GameState.Stats;
-        // Load Game Stats
-       
-        if (firstGameLoad)
-        {
-            GameCharacter.Stats = GameCharacter.GetStatsFromData(UserService.Instance.User.GetActiveCharacter().GameState.Stats);
-            GameCharacter.Stats.Setup();
-            firstGameLoad = false;
-        }
-
-        Debug.Log(GameCharacter.Stats);
         // Load Equipment from User into Game Character Equipment
         foreach (string equipment in User.GetActiveCharacter().GameState.EquippedItems)
         {
