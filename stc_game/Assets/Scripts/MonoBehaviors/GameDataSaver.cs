@@ -10,7 +10,7 @@ public class GameDataSaver : Saver
 {
     private void Awake()
     {
-        
+        saveData = Resources.Load<SaveData>("SaveData/PlayerSaveData");
     }
 
     public override void Load()
@@ -18,6 +18,10 @@ public class GameDataSaver : Saver
         if (PersistentScene.Instance.User.GetActiveCharacter().GameState.isDirty)
         {
             PersistentScene.Instance.LoadGameData();
+
+            // Load chest data to this saver
+            saveData.boolKeyValuePairLists.keys = PersistentScene.Instance.User.GetActiveCharacter().GameState.ChestSaveData.chestPairListKeys;
+            saveData.boolKeyValuePairLists.values = PersistentScene.Instance.User.GetActiveCharacter().GameState.ChestSaveData.chestPairListValues;
         }
     }
 
@@ -61,6 +65,9 @@ public class GameDataSaver : Saver
 
         // save stats
         gameState.Stats = PersistentScene.Instance.GameCharacter.Stats;
+
+        // save player game saveData (currently only saves chest progress)
+        gameState.ChestSaveData = new ChestSaveData(saveData);
 
         // save quest progress
         // gameState.QuestsContainer = questProgress;

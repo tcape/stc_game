@@ -149,7 +149,7 @@ public class PersistentScene : MonoBehaviour
     private void onLogout()
     {
         logoutCanvas.gameObject.SetActive(true);
-        UserService.Instance.SaveUser();
+        gameDataSaver.Save();
         AuthService.Instance.Logout();
         Application.Quit();
     }

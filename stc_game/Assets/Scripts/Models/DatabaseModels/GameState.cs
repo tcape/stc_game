@@ -6,6 +6,7 @@ using Devdog.QuestSystemPro;
 public class GameState
 {
     public QuestsContainer QuestsContainer;
+    public ChestSaveData ChestSaveData;
     public List<string> Items;
     public List<string> EquippedItems;
     public Stats Stats;
@@ -17,6 +18,21 @@ public class GameState
     }
 
 }
+
+[Serializable]
+public class ChestSaveData
+{
+    public List<string> chestPairListKeys;
+    public List<bool> chestPairListValues;
+
+    public ChestSaveData(SaveData saveData)
+    {
+        chestPairListKeys = saveData.boolKeyValuePairLists.keys;
+        chestPairListValues = saveData.boolKeyValuePairLists.values;
+    }
+}
+
+
 
 
 

@@ -16,6 +16,7 @@ public class ChestOpener : MonoBehaviour
     public float range;
     public double goldAmount;
     public GameObject[] items;
+    public event Action OnChestOpen;
 
     // Start is called before the first frame update
     void Start()
@@ -70,6 +71,7 @@ public class ChestOpener : MonoBehaviour
                         StartCoroutine(Spawn());
                         GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
                         opened = true;
+                        OnChestOpen?.Invoke();
                     }
                 }
                 else if (animator.GetBool("open"))
