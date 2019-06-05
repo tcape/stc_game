@@ -271,7 +271,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.073679924, y: 0.8131712, z: 0.06946935}
+  m_Size: {x: 0.15, y: 0.8131712, z: 0.15}
   m_Center: {x: -0.00000047683716, y: 0.26168478, z: -0.00000005960466}
 --- !u!54 &4968686284878337969
 Rigidbody:
@@ -296,6 +296,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9064833213167322858}
     m_Modifications:
+    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
+      propertyPath: m_Name
+      value: FX_Sparkles (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 406982, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -351,14 +359,6 @@ PrefabInstance:
     - target: {fileID: 406982, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.020000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
-      propertyPath: m_Name
-      value: FX_Sparkles (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19809582, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: InitialModule.maxNumParticles
@@ -487,6 +487,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9064833213167322858}
     m_Modifications:
+    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
+      propertyPath: m_Name
+      value: FX_Sparkles (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 406982, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -542,14 +550,6 @@ PrefabInstance:
     - target: {fileID: 406982, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.020000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
-      propertyPath: m_Name
-      value: FX_Sparkles (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19809582, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: InitialModule.maxNumParticles
@@ -678,6 +678,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9064833213167322858}
     m_Modifications:
+    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
+      propertyPath: m_Name
+      value: FX_Sparkles (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 406982, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -733,14 +741,6 @@ PrefabInstance:
     - target: {fileID: 406982, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.020000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
-      propertyPath: m_Name
-      value: FX_Sparkles (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 110446, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19809582, guid: e859383d9fb42a7419df30c9afd4cf64, type: 3}
       propertyPath: InitialModule.maxNumParticles
