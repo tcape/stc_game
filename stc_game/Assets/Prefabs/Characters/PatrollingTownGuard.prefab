@@ -240,6 +240,11 @@ GameObject:
   - component: {fileID: 216422658}
   - component: {fileID: 216422659}
   - component: {fileID: 3455622707494572134}
+  - component: {fileID: 1763250867}
+  - component: {fileID: 1763250864}
+  - component: {fileID: 1763250865}
+  - component: {fileID: 1763250863}
+  - component: {fileID: 1763250866}
   m_Layer: 0
   m_Name: PatrollingTownGuard
   m_TagString: NPC
@@ -254,7 +259,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216422654}
-  m_LocalRotation: {x: -0, y: 0.5081397, z: -0, w: 0.86127466}
+  m_LocalRotation: {x: 0, y: 0.5081397, z: 0, w: 0.86127466}
   m_LocalPosition: {x: 6.677231, y: -4.187476, z: 5.9240265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -264,6 +269,7 @@ Transform:
   - {fileID: 1551973135}
   - {fileID: 69904816}
   - {fileID: 1205511953}
+  - {fileID: 1974188952}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 61.08, z: 0}
@@ -313,19 +319,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 891a9caf9ca3b0c46b4e3342740f67b4, type: 2}
-  startState: {fileID: 11400000, guid: 13d5ada4e90b5774992125d6e804ae5d, type: 2}
+  startState: {fileID: 11400000, guid: a9c4a6b42e1cef74482c5be1d13e831b, type: 2}
   currentState: {fileID: 0}
   remainState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
-  aggroState: {fileID: 0}
+  aggroState: {fileID: 11400000, guid: 08d96f2ec4aa4b44a885d459d6763042, type: 2}
   aggroSergent: {fileID: 0}
   target: {fileID: 0}
-  cam: {fileID: 0}
-  destination: {fileID: 0}
   waypointList:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cam: {fileID: 0}
   characterStats: {fileID: 0}
   animator: {fileID: 0}
   stateTimeElapsed: 0
@@ -345,10 +352,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 5000
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 10000
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -369,21 +376,3916 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presetStats: {fileID: 11400000, guid: 8f0a3bf6e909fe9418fe97398c7b8200, type: 2}
-  maxHP: 0
-  maxAP: 0
-  currentHP: 0
-  currentAP: 0
-  strength: 0
-  attack: 0
-  abilityAttack: 0
-  meleeCritRate: 0
-  meleeCritPower: 0
-  abilityCritRate: 0
-  abilityCritPower: 0
-  defense: 0
-  dodgeRate: 0
-  movementSpeed: 6
-  dead: 0
+  saver: {fileID: 0}
+  stats:
+    level: 0
+    XP: 0
+    gold: 0
+    currentHP: 0
+    currentAP: 0
+    strength:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      attack:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      meleeCritPower:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      defense:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      maxHP:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    intellect:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      abilityAttack:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      abilityCritPower:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      abilityCritRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      maxAP:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    dexterity:
+      baseValue: 0
+      currentValue: 0
+      stats:
+        level: 0
+        XP: 0
+        gold: 0
+        currentHP: 0
+        currentAP: 0
+        strength:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          attack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          meleeCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          defense:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxHP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        intellect:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          abilityAttack:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritPower:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          abilityCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          maxAP:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dexterity:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+          meleeCritRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          dodgeRate:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+          movementSpeed:
+            baseValue: 0
+            currentValue: 0
+            mainStat:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+        dead: 0
+        nextLevelXP: 0
+        totalXP: 0
+      subStats: []
+      meleeCritRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      dodgeRate:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+      movementSpeed:
+        baseValue: 0
+        currentValue: 0
+        mainStat:
+          baseValue: 0
+          currentValue: 0
+          stats:
+            level: 0
+            XP: 0
+            gold: 0
+            currentHP: 0
+            currentAP: 0
+            strength:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              attack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              meleeCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              defense:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxHP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            intellect:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              abilityAttack:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritPower:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              abilityCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              maxAP:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dexterity:
+              baseValue: 0
+              currentValue: 0
+              stats:
+                level: 0
+                XP: 0
+                gold: 0
+                currentHP: 0
+                currentAP: 0
+                strength:
+                  baseValue: 0
+                  currentValue: 0
+                intellect:
+                  baseValue: 0
+                  currentValue: 0
+                dexterity:
+                  baseValue: 0
+                  currentValue: 0
+                dead: 0
+                nextLevelXP: 0
+                totalXP: 0
+              subStats: []
+              meleeCritRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              dodgeRate:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+              movementSpeed:
+                baseValue: 0
+                currentValue: 0
+                mainStat:
+                  baseValue: 0
+                  currentValue: 0
+            dead: 0
+            nextLevelXP: 0
+            totalXP: 0
+          subStats: []
+    dead: 0
+    nextLevelXP: 0
+    totalXP: 0
+--- !u!114 &1763250867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216422654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3454b3ac6dda1414dad5dfb8838a84db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue: {fileID: 11400000, guid: 31ecb3748af521b43a5441f47e4dc9b0, type: 2}
+  _ownerName: Patrolling Town Guard
+  _ownerIcon: {fileID: 0}
+  _dialogueCamera: {fileID: 0}
+  playAudio: 1
+  playAnimations: 1
+--- !u!114 &1763250864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216422654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07eacf65e124a854889af38bfb46924c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  availableQuest: {fileID: 0}
+  completableQuest: {fileID: 0}
+--- !u!114 &1763250865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216422654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632322e0a058e8479100160b1fc5de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerMouseClick: 1
+  _triggerKeyCode: 323
+  useCursorIcon: 1
+  _cursorIcon:
+    texture: {fileID: 0}
+    hotspot: {x: 0, y: 0}
+    cursorMode: 0
+--- !u!114 &1763250863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216422654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66afe37f7601a046a0dbae5db237c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _quests: []
+--- !u!114 &1763250866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216422654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1eb536610cff39449d3b24129f652d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useWhenPlayerComesInRange: 1
+  blockPlayerInput: 0
+  _window:
+    useDynamicSearch: 0
+    name: 
+    _window: {fileID: 0}
+  useAnimation:
+    motion: {fileID: 0}
+    speed: 1
+    crossFade: 0
+    crossFadeSpeed: 0.3
+  unUseAnimation:
+    motion: {fileID: 0}
+    speed: 1
+    crossFade: 0
+    crossFadeSpeed: 0.3
+  useAudioClip:
+    audioClip: {fileID: 0}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+  unUseAudioClip:
+    audioClip: {fileID: 0}
+    volume: 0.2
+    pitch: 1
+    loop: 0
 --- !u!1 &228718916
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,12 +4802,13 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480818093}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8, g: 0.49845207, b: 0.18431373, a: 1}
   m_Intensity: 1.5
   m_Range: 4
   m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -915,6 +4818,24 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -922,12 +4843,15 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &588858018
@@ -3017,6 +6941,50 @@ Transform:
   m_Father: {fileID: 890947867}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1974188951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974188952}
+  - component: {fileID: 1974188953}
+  m_Layer: 0
+  m_Name: _RangeHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1974188952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974188951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 216422657}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974188953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974188951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fe86cdcb2d03844b81e0cec95d7741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useRange: 3
 --- !u!1 &1992514451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,6 +7206,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4635624409182612, guid: f84f8699501ba614fa340a0907939748, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1332734118872314, guid: f84f8699501ba614fa340a0907939748, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -3251,10 +7223,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Range
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4635624409182612, guid: f84f8699501ba614fa340a0907939748, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198794732552819150, guid: f84f8699501ba614fa340a0907939748,
         type: 3}
