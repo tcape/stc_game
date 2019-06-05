@@ -7,6 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PluggableAI/Decisions/CheckDeath")]
 public class CheckDeathDecision : Decision
 {
+    bool died = false;
+
     public override bool Decide(StateController controller)
     {
         return CheckDeath(controller);
@@ -14,8 +16,9 @@ public class CheckDeathDecision : Decision
 
     private bool CheckDeath(StateController controller)
     {
-        if (controller.characterStats.stats.dead)
+        if (controller.characterStats.stats.dead && !died)
         {
+            died = true;
             Die(controller);
             return true;
         }
@@ -34,6 +37,7 @@ public class CheckDeathDecision : Decision
         {
             HeroDeath(controller);
         }
+        died = false;
     }
     
     private void DisableComponents(StateController controller)
