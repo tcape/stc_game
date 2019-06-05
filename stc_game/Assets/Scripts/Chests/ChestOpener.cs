@@ -96,7 +96,7 @@ public class ChestOpener : MonoBehaviour
 
     private IEnumerator SpawnItems()
     {
-        float rotation = (float)(Math.PI / 4f);
+        float rotation = (float)(Math.PI * gameObject.transform.rotation.eulerAngles.y / 180.0f) - (float)Math.PI / 4f;
         foreach (var item in items)
         {
             if (item.GetComponent<GameItem>().item.itemClass == ItemClass.Any || 
