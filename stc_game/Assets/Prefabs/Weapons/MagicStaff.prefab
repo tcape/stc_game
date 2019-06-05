@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 2325414}
   - component: {fileID: 5337873147915807779}
   - component: {fileID: 2199265197987293831}
+  m_Layer: 2
+  m_Name: MagicStaff
   m_Layer: 0
-  m_Name: SM_Prop_WizardStaff_02
+  m_Name: MagicStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04e8789faa6c4c4f8c090d20a9e9278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 4ee1f9f5a0580a3488c0176cb02b123d, type: 3}
+  volume: 0.1
   hittingTarget: 0
   target: {fileID: 0}
 --- !u!1 &4251138641213861744
@@ -118,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177044087066190817}
   - component: {fileID: 2634663673161292267}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,6 +213,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4fb14081a0dc74343a107bf85ef86377, type: 3}
       propertyPath: m_Name
       value: Star_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4fb14081a0dc74343a107bf85ef86377, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4fb14081a0dc74343a107bf85ef86377, type: 3}
       propertyPath: m_LocalPosition.x

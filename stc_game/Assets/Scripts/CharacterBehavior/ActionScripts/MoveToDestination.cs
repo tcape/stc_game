@@ -65,7 +65,9 @@ public class MoveToDestination : CharacterAction
 
                     var distance = Math.Abs(Vector3.Distance(controller.transform.position, controller.target.transform.position));
 
-                  
+                    if (hit.collider.gameObject.tag.Equals("NPC"))
+                        controller.navMeshAgent.stoppingDistance = 2f;
+
                     if (distance > controller.stats.stoppingDistance)
                         controller.navMeshAgent.SetDestination(controller.target.transform.position);
                 }

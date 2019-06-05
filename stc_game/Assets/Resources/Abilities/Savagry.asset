@@ -18,11 +18,12 @@ MonoBehaviour:
   actions:
   - {fileID: 11400000, guid: 4058dffcad1e8a84aaa846c8d96ba554, type: 2}
   - {fileID: 11400000, guid: 2cce17744fca05847814f996fc0ff8e6, type: 2}
+  - {fileID: 11400000, guid: 256e9329f343f844cb27515e3f2b6567, type: 2}
   animationTrigger: Ability2
   cooldown: 10
   duration: 10
-  cost: 30
+  cost: 35
   hotkey: 50
   range: 0
-  startTime: 45.28431
+  startTime: 161.54845
   target: {fileID: 0}

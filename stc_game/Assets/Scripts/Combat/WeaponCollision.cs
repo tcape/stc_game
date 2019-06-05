@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class WeaponCollision : MonoBehaviour
 {
+    public AudioClip sound = null;
+    [Range(0.0f, 1.0f)]
+    public float volume;
+    private GameObject soundObject;
+    private AudioSource source;
+
     public bool hittingTarget;
     public GameObject target;
 
@@ -30,6 +36,9 @@ public class WeaponCollision : MonoBehaviour
             //Debug.Log("Entered Target");
             if (!GetComponentInParent<CharacterStats>().stats.dead && (other.gameObject.tag.Equals("Enemy") || other.gameObject.tag.Equals("Player")))
             {
+                if(sound != null)
+                    StartCoroutine(PlayHitAudio());
+
                 other.gameObject.GetComponent<CharacterStats>().stats.TakeMeleeDamage(GetComponentInParent<CharacterStats>());
             }
         }
@@ -47,5 +56,17 @@ public class WeaponCollision : MonoBehaviour
             hittingTarget = false;
             //Debug.Log("Exited Target");
         }
+    }
+
+    private IEnumerator PlayHitAudio()
+    {
+        soundObject = new GameObject("instancedSoundObject");
+        soundObject.AddComponent<AudioSource>();
+        source = soundObject.GetComponent<AudioSource>();
+        source.clip = sound;
+        source.volume = volume;
+        source.Play();
+        yield return new WaitForSeconds(source.clip.length);
+        Destroy(soundObject);
     }
 }

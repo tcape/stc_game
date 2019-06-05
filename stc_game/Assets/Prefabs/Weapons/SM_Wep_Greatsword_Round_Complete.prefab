@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3340834}
   - component: {fileID: 2368566}
   - component: {fileID: 5929034490167831064}
-  m_Layer: 0
-  m_Name: SM_Wep_Greatsword_Round_02
+  m_Layer: 2
+  m_Name: SM_Wep_Greatsword_Round_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
