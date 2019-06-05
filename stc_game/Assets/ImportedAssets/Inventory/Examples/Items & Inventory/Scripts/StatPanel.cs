@@ -39,10 +39,11 @@ namespace Kryz.CharacterStats.Examples
 
         public void UpdateStatValues()
         {
-            var tracker = GetComponentInParent<InventoryPlayerTracker>();
-            tracker.FindPlayerObject();
-            stats = tracker.playerStats;
+            //var tracker = GetComponentInParent<InventoryPlayerTracker>();
+            //tracker.FindPlayerObject();
+            //stats = tracker.playerStats;
 
+            stats = PersistentScene.Instance.GameCharacter.Stats;
             characterLevel.GetComponentInChildren<Text>().text = stats.level.ToString();
             strengthValue.GetComponentInChildren<Text>().text = stats.strength.currentValue.ToString("0.##");
             dexterityValue.GetComponentInChildren<Text>().text = stats.dexterity.currentValue.ToString("0.##");

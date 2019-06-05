@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: MageRobe
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: MageRobe
   itemClass: 1
   ItemName: Mage Robe
   Icon: {fileID: 21300000, guid: 1007c3620810afd4e929e8a1ae2e65e2, type: 3}

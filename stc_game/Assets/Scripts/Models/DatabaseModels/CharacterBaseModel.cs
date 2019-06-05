@@ -7,21 +7,22 @@ public class CharacterBaseModel
 {
     public string Name;
     public HeroClass HeroClass;
-    public Stats Stats;
     public GameState GameState;
     public bool IsActive;
 
     public CharacterBaseModel()
     {
-        Name = "Warrior";
         HeroClass = HeroClass.Warrior;
-        IsActive = false;
+        Name = HeroClass.ToString();
+        GameState = new GameState();
+        IsActive = true;
     }
 
     public CharacterBaseModel(string name, HeroClass heroClass)
     {
         Name = name;
         HeroClass = heroClass;
+        GameState = new GameState();
         IsActive = false;
     }
 
@@ -29,6 +30,7 @@ public class CharacterBaseModel
     {
         Name = name;
         HeroClass = heroClass;
+        GameState = new GameState();
         IsActive = isActive;
     }
 }

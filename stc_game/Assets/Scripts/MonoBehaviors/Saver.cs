@@ -17,6 +17,7 @@ public abstract class Saver : MonoBehaviour
         
         // Find the SceneController and store a reference to it.
         sceneController = SceneController.Instance;
+        
 
         // If the SceneController couldn't be found throw an exception so it can be added.
         if(!sceneController)
@@ -29,7 +30,9 @@ public abstract class Saver : MonoBehaviour
     private void OnEnable()
     {
         if (gameObject.CompareTag("Player"))
+        {
             saveData = Resources.Load<SaveData>("SaveData/PlayerSaveData");
+        }   
         if (!sceneController)
             sceneController = SceneController.Instance;
         // Subscribe the Save function to the BeforeSceneUnload event.

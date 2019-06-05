@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: CrystalSword
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: CrystalSword
   itemClass: 0
   ItemName: Crystal Sword
   Icon: {fileID: 21300000, guid: bbbb91e652236b24782774f3481fb95b, type: 3}

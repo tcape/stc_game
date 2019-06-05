@@ -68,7 +68,7 @@ public class SaveData : ResettableScriptableObject
     }
 
     // These are collections for various different data types.
-    public KeyValuePairLists<bool> boolKeyValuePairLists = new KeyValuePairLists<bool> ();
+    public KeyValuePairLists<bool> boolKeyValuePairLists = new KeyValuePairLists<bool>();
     public KeyValuePairLists<int> intKeyValuePairLists = new KeyValuePairLists<int>();
     public KeyValuePairLists<string> stringKeyValuePairLists = new KeyValuePairLists<string>();
     public KeyValuePairLists<List<Ability>> abilityListKeyValuePairLists = new KeyValuePairLists<List<Ability>>();
