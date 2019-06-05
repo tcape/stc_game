@@ -14,6 +14,7 @@ public class CharacterBaseModel
     {
         HeroClass = HeroClass.Warrior;
         Name = HeroClass.ToString();
+        GameState = new GameState();
         IsActive = true;
     }
 
@@ -21,6 +22,7 @@ public class CharacterBaseModel
     {
         Name = name;
         HeroClass = heroClass;
+        GameState = new GameState();
         IsActive = false;
     }
 
@@ -28,6 +30,7 @@ public class CharacterBaseModel
     {
         Name = name;
         HeroClass = heroClass;
+        GameState = new GameState();
         IsActive = isActive;
     }
 }

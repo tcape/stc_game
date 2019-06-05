@@ -112,7 +112,9 @@ public class PersistentScene : MonoBehaviour
 
     public void LoadGameData()
     {
+        var stats = UserService.Instance.User.GetActiveCharacter().GameState.Stats;
         // Load Game Stats
+       
         GameCharacter.Stats = GameCharacter.GetStatsFromData(UserService.Instance.User.GetActiveCharacter().GameState.Stats);
         GameCharacter.Stats.Setup();
 
