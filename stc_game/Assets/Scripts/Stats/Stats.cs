@@ -39,9 +39,9 @@ public class Stats
 
     public void Setup()
     {
-        strength.stats = this;
-        intellect.stats = this;
-        dexterity.stats = this;
+        //strength.stats = this;
+        //intellect.stats = this;
+        //dexterity.stats = this;
         strength.Setup();
         intellect.Setup();
         dexterity.Setup();

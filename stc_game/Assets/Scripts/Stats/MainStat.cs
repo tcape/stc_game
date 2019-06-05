@@ -7,7 +7,7 @@ using UnityEngine;
 [Serializable]
 public class MainStat : Stat
 {
-    [HideInInspector] public Stats stats;
+    //[HideInInspector] public Stats stats;
     [HideInInspector] public List<SubStat> subStats;
 
     public MainStat(double value) : base(value)

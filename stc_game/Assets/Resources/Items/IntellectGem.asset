@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: IntellectGem
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: IntellectGem
   itemClass: 1
   ItemName: Intellect Gem
   Icon: {fileID: 21300000, guid: fa65d645a34a577419cb9e893a4011fa, type: 3}

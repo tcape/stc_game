@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a67ee28b6adf441814e60bcb404307, type: 3}
   m_Name: Staff
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: Staff
   itemClass: 1
   ItemName: Staff
   Icon: {fileID: 21300000, guid: 7a19175fe8056fd419086adf86e8847e, type: 3}
